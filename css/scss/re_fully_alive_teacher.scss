@@ -1,0 +1,1520 @@
+@charset "UTF-8";
+
+//  ************************************* Pearson Custom variables for SCSS(SASS) *************************************
+// paragraph and link text
+$pFontSize: 1rem;
+$pLineHeight: 1.5rem;
+$pFontColor: #000;
+// link text colors
+$linkFontColor: #0073EE;
+$linkHoverFontColor: #0056B3;
+// list
+$listFontSize: 1rem;
+$listLineHeight: 1.725rem;
+// title 01
+$title01FontSize: 1.75rem;
+$title01LineHeight: 2rem;
+// title 02 
+$title02FontSize: 1.625rem;
+$title02LineHeight: 1.85rem;
+// title 03 
+$title03FontSize: 1.3rem;
+$title03LineHeight: 1.85rem;
+//title 04
+$title04FontSize: 1.3rem;
+$title04LineHeight: 1.85rem;
+$title04FontColor: #6D6E75;
+//title 05 
+$title05FontSize: 1.75rem;
+$title05LineHeight: 2.5rem;
+//title 06
+$title06FontSize: 1.15rem;
+$title06LineHeight: 1.5rem;
+//title 07
+$title07FontSize: 1.15rem;
+$title07LineHeight: 1.5rem;
+$title07ArrowFontSize: 150%;
+$title07ArrowLineHeight: 1.5rem;
+//poem 01
+$poem01FontSize: 1.25rem;
+$poem01LineHeight: 2.5rem;
+//blokquotegroup 02
+$blockquotegroup02FontSize: 1.25rem;
+$blockquotegroup02LineHeight: 2.5rem;
+//source citation
+$sourceFontSize: 1rem;
+$sourceLineHeight: 1.5rem;
+//apendix header label & number & text
+$appendixLabelNumberFontSize: 1.5rem;
+$appendixLabelNumberLineHeight: 2rem;
+$appendixTextFontSize: 1.75rem;
+$appendixTextLineHeight: 2rem;
+$appendixTextFontColor: #6D6E75;
+//theme header label & number & text
+$themeLabelNumberFontSize: 1.5rem;
+$themeLabelNumberLineHeight: 2rem;
+$themeLabelNumberColor: #6D6E75;
+$themeTextFontSize: 1.75rem;
+$themeTextLineHeight: 2.5rem;
+//topic header label & number & text
+$topicLabelNumberFontSize: 1.75rem;
+$topicLabelNumberLineHeight: 2.5rem;
+$topicTextFontSize: 1.5rem;
+$topicTextLineHeight: 2rem;
+$topicTextColor: #6D6E75;
+$topicSubtitleFontSize: 1.75rem;
+$topicSubtitleLineHeight: 2.5rem;
+//footnote reference
+$footnoteReferenceFontSize: 0.75rem;
+$footnoteReferenceLineHeight: 1rem;
+//footnote01
+$footnote01FontSize: 0.9rem;
+$footnote01LineHeight: 1.25rem;
+
+//background colors
+$darkgrey_color: #39393B;
+$mediumgrey_color: #75767A;
+$lightgrey_color: #E7E7E8;
+$border_color: #000;
+$border_color2: #C9C9CB;
+$accordion_color: #FFF;
+
+// ************************************* Function to replace spaces with underscore in font names *************************************
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// ************************************* Font mixin for general CSS styling *************************************
+
+@mixin generateGeneralFontCSS($fontSize, $fontLineHeight, $fontColor:null) {
+    font-size: $fontSize;
+    line-height: $fontLineHeight;
+    color: $fontColor;
+}
+
+@mixin genericMargin {
+    margin: 1.5rem 0;
+}
+
+// ************************************* Font mixin for @font-face *************************************
+
+//@mixin font-face($name, $pathname, $path, $svgid, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $pathname, $path, $svgid: null, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+    $src: null;
+    $svgidfinal: "";
+
+    @if $svgid !="" {
+        $svgidfinal: $svgid;
+    }
+
+    @else {
+        $svgidfinal: str-replace($name, " ", "_");
+    }
+
+    //$extmods: (eot: "?iefix",
+    //svg: "#"+ $svgidfinal);
+
+    $formats: (eot: "embedded-opentype",
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        //$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        //$src: append($src, url(quote($path + $pathname + "." + $extmod)) format(quote($format)), comma);
+        $src: append($src, url(quote($path + "/" + $pathname + "." + $ext)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+/* ------------------------------------Load the fonts into CSS-------------------------------------------- */
+@include font-face("StoneSans", "StoneSansIIITCW05-Medium", "../fonts/re_fully_alive_teacher_fonts", null, 400, normal);
+@include font-face("StoneSans", "StoneSansIIITCW05-MediumIt", "../fonts/re_fully_alive_teacher_fonts", null, 400, italic);
+@include font-face("StoneSans", "StoneSansIIITCW05-Bold", "../fonts/re_fully_alive_teacher_fonts", null, 900, normal);
+@include font-face("StoneSans", "StoneSansIIITCW05-BoldIt", "../fonts/re_fully_alive_teacher_fonts", null, 900, italic);
+@include font-face("FFDax", "FFDax-Regular", "../fonts/re_fully_alive_teacher_fonts", null, 400, normal);
+@include font-face("FFDax", "FFDax-RegularItalic", "../fonts/re_fully_alive_teacher_fonts", null, 400, italic);
+@include font-face("FFDax", "FFDax-Medium", "../fonts/re_fully_alive_teacher_fonts", null, 500, normal);
+@include font-face("FFDax", "FFDax-MediumItalic", "../fonts/re_fully_alive_teacher_fonts", null, 500, italic);
+@include font-face("FFDax", "FFDax-Bold", "../fonts/re_fully_alive_teacher_fonts", null, 700, normal);
+@include font-face("FFDax", "FFDax-BoldItalic", "../fonts/re_fully_alive_teacher_fonts", null, 700, italic);
+@include font-face("Cavolini", "CavoliniW05-Condensed", "../fonts/re_fully_alive_teacher_fonts", null, 400, normal);
+@include font-face("Cavolini", "CavoliniW05-CondensedItalic", "../fonts/re_fully_alive_teacher_fonts", null, 400, italic);
+@include font-face("Cavolini", "CavoliniW05-CondensedBold", "../fonts/re_fully_alive_teacher_fonts", null, 700, normal);
+@include font-face("Cavolini", "CavoliniW05-CondensedBoldIt", "../fonts/re_fully_alive_teacher_fonts", null, 700, italic);
+
+// ************************************* Font includes to be used on and inside elements *************************************
+@mixin stoneSans_Medium {
+    font-family: "StoneSans", Arial, sans-serif;
+    font-weight: 400;
+}
+
+@mixin stoneSans_MediumItalic {
+    font-family: "StoneSans", Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin stoneSans_Bold {
+    font-family: "StoneSans", Arial, sans-serif;
+    font-weight: 900;
+}
+
+@mixin stoneSans_BoldItalic {
+    font-family: "StoneSans", Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+@mixin ffDax_Regular {
+    font-family: "FFDax", Geneva, sans-serif;
+    font-weight: 400;
+}
+
+@mixin ffDax_RegularItalic {
+    font-family: "FFDax", Geneva, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin ffDax_Medium {
+    font-family: "FFDax", Geneva, sans-serif;
+    font-weight: 500;
+}
+
+@mixin ffDax_MediumItalic {
+    font-family: "FFDax", Geneva, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+@mixin ffDax_Bold {
+    font-family: "FFDax", Geneva, sans-serif;
+    font-weight: 700;
+}
+
+@mixin ffDax_BoldItalic {
+    font-family: "FFDax", Geneva, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin cavolini_Regular {
+    font-family: "Cavolini", cursive, sans-serif;
+    font-weight: 400;
+}
+
+@mixin cavolini_Italic {
+    font-family: "Cavolini", cursive, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin cavolini_Bold {
+    font-family: "Cavolini", cursive, sans-serif;
+    font-weight: 700;
+}
+
+@mixin cavolini_BoldItalic {
+    font-family: "Cavolini", cursive, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+// *************************************Normalization Styles CSS*************************************
+@mixin NormalizationBaseHtmlCSS {
+    html {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        letter-spacing: 0.015rem;
+        line-height: 1.15rem;
+        -webkit-text-size-adjust: 100%;
+        font-size: 100%;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        -webkit-box-sizing: inherit;
+    }
+
+    :root {
+        -moz-tab-size: 4;
+        tab-size: 4;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 115%;
+        background-color: #FFFFFF;
+    }
+
+    strong {
+        font-weight: bold;
+        text-decoration: inherit;
+    }
+
+    em {
+        font-style: italic;
+        text-decoration: inherit;
+    }
+
+    section,
+    aside,
+    article {
+        display: block;
+        margin: 2rem 0;
+        padding: 0;
+    }
+
+    header {
+        display: block;
+    }
+
+    article:first-of-type {
+        &>section:first-of-type {
+            max-width: 1024px;
+            margin: 0;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+        color: $pFontColor;
+    }
+
+    p,
+    ol,
+    ul,
+    dl {
+        display: block;
+        margin-block-start: 1.5rem;
+        margin-block-end: 1.5rem;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin: 1.5rem 0;
+        color: $pFontColor;
+    }
+
+    ol,
+    ul {
+        @include generateGeneralFontCSS($listFontSize, $listLineHeight);
+
+        &>li {
+            &>p {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+
+    p, a {
+        @include generateGeneralFontCSS($pFontSize, $pLineHeight);
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-inline-start: 40px;
+        padding-left: 40px;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-inline-start: 40px;
+        padding-left: 40px;
+    }
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    dt {
+        display: block;
+        font-weight: bold;
+        line-height: $pLineHeight;
+    }
+
+    dd {
+        display: block;
+        margin-inline-start: 0;
+        margin-left: 0;
+
+        &>p:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    dd:after {
+        display: block;
+        content: "";
+    }
+
+    figure {
+        display: block;
+        margin-block-start: 1.5rem;
+        margin-block-end: 1.5rem;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        margin: 1.5rem auto;
+        padding: 0;
+    }
+
+    img {
+        border-style: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+    }
+
+    figcaption,
+    div {
+        display: block;
+    }
+
+    figcaption {
+        margin: 0.3rem auto 0.5rem auto;
+        text-align: left;
+        padding: 0;
+    }
+
+    blockquote {
+        display: block;
+        margin-block-start: 1.5rem;
+        margin-block-end: 1.5rem;
+        margin-inline-start: 4rem;
+        margin-inline-end: 4rem;
+        margin: 1.5rem;
+        padding: 0;
+    }
+
+    cite {
+        font-style: unset;
+    }
+
+    sup {
+        vertical-align: super;
+        top: 0 !important;
+        font-size: 60% !important;
+    }
+
+    hr {
+        display: block;
+        //unicode-bidi: isolate;
+        margin-block-start: 0.575rem;
+        margin-block-end: 0.575rem;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        margin: 0.575rem auto;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+    }
+
+    caption {
+        display: text-caption;
+        text-align: -webkit-center;
+    }
+
+    table {
+        white-space: normal;
+        line-height: normal;
+        font-weight: normal;
+        font-size: medium;
+        font-style: normal;
+        color: -internal-quirk-inherit;
+        text-align: start;
+        font-variant: normal;
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: grey;
+        min-width: 768px;
+    }
+
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    tfoot {
+        display: table-footer-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+
+    th {
+        font-weight: bold;
+        text-align: -internal-center;
+        display: table-cell;
+        vertical-align: inherit;
+    }
+
+    td {
+        display: table-cell;
+        vertical-align: inherit;
+    }
+
+    details {
+        display: block;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    details[open] {
+        cursor: initial;
+        pointer-events: auto;
+    }
+
+    summary {
+        cursor: pointer;
+        outline: none;
+        display: list-item;
+        pointer-events: auto;
+    }
+
+    @keyframes swingDown {
+        0% {
+            opacity: 0;
+            margin: -1rem 0 0 0;
+        }
+
+        100% {
+            opacity: 1;
+            margin: 0;
+        }
+    }
+
+    @keyframes swingUp {
+        0% {
+            opacity: 1;
+            margin: 0;
+        }
+
+        100% {
+            opacity: 0;
+            margin: -1rem 0 0 0;
+        }
+    }
+}
+
+// *************************************Elements Style CSS*************************************
+@mixin TitleCSS_Elements {
+    .title {
+        margin: 1.5rem 0;
+    }
+
+    .title_01 {
+        @include ffDax_Bold;
+        @include generateGeneralFontCSS($title01FontSize, $title01LineHeight);
+    }
+
+    .title_02 {
+        @include ffDax_Medium;
+        @include generateGeneralFontCSS($title02FontSize, $title02LineHeight);
+    }
+
+    .title_03 {
+        @include ffDax_Bold;
+        @include generateGeneralFontCSS($title03FontSize, $title03LineHeight);
+    }
+
+    .title_04 {
+        @include ffDax_Medium;
+        @include generateGeneralFontCSS($title04FontSize, $title04LineHeight, $title04FontColor);
+    }
+
+    .title_05 {
+        @include cavolini_BoldItalic;
+        @include generateGeneralFontCSS($title05FontSize, $title05LineHeight);
+    }
+
+    .title_06 {
+        @include ffDax_Bold;
+        @include generateGeneralFontCSS($title06FontSize, $title06LineHeight);
+    }
+
+    //title 07 for accordions
+    .title_07 {
+        @include ffDax_Bold;
+        @include generateGeneralFontCSS($title07FontSize, $title07LineHeight);
+        margin: .5rem 0;
+    }
+}
+
+@mixin ListStyleCSS_Elements {
+
+    //ordered list w/o numbers
+    //unordered list w/o bullets
+    //step list
+    .ol_none,
+    .ul_none,
+    .steplist {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    //ordered list w/ letters
+    .ol_01 {
+        list-style-type: none;
+
+        &>li {
+            list-style-type: lower-alpha;
+        }
+    }
+
+    //order list w/ numbers that that at least 4 digits
+    .ol_02 {
+        padding-inline-start: 50px;
+        padding-left: 50px;
+        counter-reset: item;
+        list-style-type: none;
+
+        & li {
+            counter-increment: item attr(data-prefix);
+        }
+
+        & li:before {
+            content: counter(item) " ";
+        }
+    }
+}
+
+@mixin InformalFigureStyleCSS_Elements {
+    .caption {
+        & p:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .design-icon {
+        max-width: 100px;
+        max-height: 100px;
+        width: 100px;
+        height: auto;
+        vertical-align: middle;
+        object-fit: contain;
+    }
+}
+
+@mixin PoemStyleCSS_Elements {
+    .poem {
+        margin: 1.5rem 0;
+
+        & .linegroup,
+        & .line {
+            display: block;
+        }
+    }
+
+    .poem_01 {
+        @include cavolini_Regular;
+        @include generateGeneralFontCSS($poem01FontSize, $poem01LineHeight);
+    }
+
+    .blockquotegroup {
+        margin: 1.5rem 0;
+    }
+
+    //blockquote 01 no standard regular paragraph margins
+    .blockquotegroup_01 {
+        &>.epigraph {
+            & p {
+                margin: 0;
+            }
+        }
+
+        &>.source {
+            &>.lc_align-right {
+                margin-right: 33%;
+            }
+        }
+    }
+
+    //blockquote 02 w/ hand writing font
+    .blockquotegroup_02 {
+        &>.epigraph {
+            & p {
+                @include cavolini_Regular;
+                @include generateGeneralFontCSS($blockquotegroup02FontSize, $blockquotegroup02LineHeight);
+                margin: 0;
+            }
+        }
+    }
+}
+
+// *************************************Layouts Style CSS*************************************
+@mixin ResponsiveGridStyleCSS_Layouts {
+
+    //2 column grid
+    .grid-container {
+        &>.grid-row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 1.5rem 0;
+
+            &>.grid-col:first-of-type:nth-last-of-type(2),
+            &>.grid-col:first-of-type:nth-last-of-type(2)~.grid-col {
+                width: 49%;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(3),
+            &>.grid-col:first-of-type:nth-last-of-type(3)~.grid-col {
+                width: 32%;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(4),
+            &>.grid-col:first-of-type:nth-last-of-type(4)~.grid-col {
+                width: 23.5%;
+            }
+        }
+    }
+
+    //3 column grid
+    //4 column grid
+}
+
+@mixin ListStyleCSS_Layouts {
+
+    .ol_column,
+    .ul_column {
+        -webkit-column-fill: balance;
+        -moz-column-fill: balance;
+        column-fill: balance;
+        list-style-position: outside;
+
+        &>li {
+            margin-right: 1.25rem;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    }
+
+    .ol_column_01,
+    .ul_column_01 {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+    }
+
+    .ol_column_02,
+    .ul_column_02 {
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3;
+    }
+
+    .ol_column_03,
+    .ul_column_03 {
+        -webkit-columns: 4;
+        -moz-columns: 4;
+        columns: 4;
+    }
+
+    //2-column 3 layer hybrid list
+}
+
+@mixin FigureGroupStyleCSS_Layouts {
+    .figuregroup {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &>figcaption:first-child {
+            //flex: 0 0 100%;
+            width: 100%;
+        }
+
+        &>.informalfigure {
+            margin: 0;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(2),
+        &>.informalfigure:first-of-type:nth-last-of-type(2)~.informalfigure {
+            width: 49%;
+        }
+    }
+}
+
+// *************************************Components Style CSS*************************************
+@mixin HeaderStyleCSS_Components {
+    .appendix {
+        &>header {
+            &>.title_01 {
+                @include ffDax_Regular;
+                @include generateGeneralFontCSS($appendixLabelNumberFontSize, $appendixLabelNumberLineHeight);
+
+                &>.text {
+                    @include ffDax_Bold;
+                    @include generateGeneralFontCSS($appendixTextFontSize, $appendixTextLineHeight, $appendixTextFontColor);
+                    display: block;
+                    margin: 1.5rem auto;
+                }
+            }
+        }
+    }
+
+    //Theme Header
+    .part {
+        &>header {
+            &>.title_01 {
+                @include ffDax_Medium;
+                @include generateGeneralFontCSS($themeLabelNumberFontSize, $themeLabelNumberLineHeight, $themeLabelNumberColor);
+
+                &>.design-icon {
+                    margin-bottom: -36px;
+                }
+
+                &>span {
+                    display: block;
+                    margin-left: 1.75rem;
+                    box-shadow: 0 -5px 0 #999;
+                    padding-top: 0.25rem;
+                }
+
+                & .text {
+                    @include generateGeneralFontCSS($themeTextFontSize, $themeTextLineHeight, #000);
+                    display: block;
+                }
+            }
+        }
+    }
+
+    //Topic Header and subtitle
+    .chapter {
+        &>header {
+            &>.title_02 {
+                @include ffDax_Medium;
+                @include generateGeneralFontCSS($topicLabelNumberFontSize, $topicLabelNumberLineHeight);
+
+                &>span {
+                    display: block;
+                    margin-top: -50px;
+                    margin-left: 2.75rem;
+                }
+
+                & .text {
+                    @include generateGeneralFontCSS($topicTextFontSize, $topicTextLineHeight, $topicTextColor);
+                    display: block;
+                }
+
+                &>.subtitle {
+                    @include cavolini_Italic;
+                    @include generateGeneralFontCSS($topicSubtitleFontSize, $topicSubtitleLineHeight);
+                    margin-left: 2.75rem;
+                }
+            }
+        }
+
+        &>header+.blockquotegroup_02:first-of-type {
+            & .epigraph {
+                margin: 1.5rem 4.5rem;
+            }
+
+            & .source {
+                margin: 0 4.5rem;
+            }
+        }
+    }
+}
+
+@mixin FooterStyleCSS_Components {
+
+    //number referencing the footnote
+    .noteref_footnote {
+        @include generateGeneralFontCSS($footnoteReferenceFontSize, $footnoteReferenceLineHeight);
+    }
+
+    .footnote {
+        display: block;
+        margin: 1rem;
+    }
+
+    .footnote_01 {
+        padding-inline-start: 15px;
+        padding-left: 15px;
+        @include generateGeneralFontCSS($footnote01FontSize, $footnote01LineHeight);
+
+        & p {
+            margin: 1rem;
+            @include generateGeneralFontCSS($footnote01FontSize, $footnote01LineHeight);
+        }
+
+        & .xref {
+            text-decoration: none;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: $mediumgrey_color;
+            color: #FFF !important;
+            font-weight: 900;
+            position: relative;
+            top: 3px;
+            border: 1px solid #000;
+            padding-left: 0.1rem;
+            padding-top: 0.05rem;
+        }
+
+        & .xref:visted {
+            text-decoration: none;
+            color: #FFF !important;
+            font-weight: 900;
+        }
+    }
+}
+
+@mixin AccordionStyleCSS_Components {
+
+    //general accordion whole body that is coded for the details summary HTML tag
+    .fx-accordion {
+        width: 100%;
+        margin: calc(1.5rem + 2px) 0;
+        padding: 0;
+        background-color: $accordion_color;
+
+        //general accordion clickable area that is coded for the summary HTML tag
+        &>.fx-accordion-toggle {
+            padding: 0 1.5rem;
+            border-top-width: 10px;
+            border-bottom-width: 10px;
+            border-left-width: 2px;
+            border-right-width: 2px;
+            border-style: solid;
+            border-color: $mediumgrey_color;
+            width: 100%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+
+            &>.title_07 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+            }
+
+            &>.title_07>.fx-accordion-toggle-icon {
+                flex: 0 0 1%;
+                font-size: $title07ArrowFontSize;
+                will-change: transform;
+                transition: transform .5s ease;
+                -webkit-transition: transform .5s ease;
+                -moz-transition: transform .5s ease;
+                -o-transition: transform .5s ease;
+                line-height: $title07ArrowLineHeight;
+                height: 28px;
+            }
+        }
+
+        //when user hovers over the accordion effect
+        //when user clicks the accordion effect and is in an opened state
+        &>.fx-accordion-toggle:hover,
+        &[open]>.fx-accordion-toggle {
+            background-color: $darkgrey_color;
+
+            //The heading title of the accordion - during hover state
+            //The fancy arrow of the accordion - during hover state
+            &>.title_07>span {
+                color: #FFF;
+            }
+        }
+
+        //when the triangle is in opened state of the accordion
+        &[open]>.fx-accordion-toggle>.title_07>.fx-accordion-toggle-icon {
+            transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+            backface-visibility: hidden;
+            display: inline-block;
+        }
+
+        //when the triangle is in default (closed) state of the accordion
+        &:not([open])>.fx-accordion-toggle>.title_07>.fx-accordion-toggle-icon {
+            transform: rotateZ(0deg);
+            -ms-transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+            -moz-transform: rotateZ(0deg);
+            -o-transform: rotateZ(0deg);
+            backface-visibility: hidden;
+            display: inline-block;
+        }
+
+        //when anything (section, ...etc) is clicked on to be in open stated
+        &[open]>.fx-accordion-toggle~* {
+            animation: swingDown .5s ease-out;
+            -webkit-animation: swingDown .5s ease-out;
+            -moz-animation: swingDown .5s ease-out;
+            -o-animation: swingDown .5s ease-out;
+        }
+
+        //when anything (section, ...etc) is clicked on in the opened state already
+        &[open]>.fx-accordion-toggle:active~* {
+            animation: swingUp .5s ease-out;
+            -webkit-animation: swingDown .5s ease-out;
+            -moz-animation: swingDown .5s ease-out;
+            -o-animation: swingDown .5s ease-out;
+        }
+
+        //for chrome and safari browsers to remove the default triangle icon
+        &>.fx-accordion-toggle::-webkit-details-marker {
+            display: none;
+        }
+
+        //for firefox browser to remove the default triangle icon
+        &>.fx-accordion-toggle:first-of-type {
+            list-style-type: none;
+        }
+
+        //usually the section tag that is inside an accordion that wraps everything
+        &>.fx-accordion-toggleable {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 0 1.5rem;
+            border-top: 0;
+            border-left: 2px;
+            border-right: 2px;
+            border-bottom: 10px;
+            border-style: solid;
+            border-color: $mediumgrey_color;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    }
+
+    .fx-accordion_01 {
+        &>.fx-accordion-toggle {
+            &>.title_07>span:first-child {
+                flex: 0 0 calc(95% - 10px);
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@mixin InformalTableStyleCSS_Components {
+    .informaltable {
+        border: 2px solid $border_color;
+        margin: 1.5rem 0;
+        border-collapse: collapse;
+
+        & td,
+        & th {
+            border: 2px dotted $border_color;
+            vertical-align: top;
+            padding: 0 1.5rem;
+        }
+    }
+
+    .informaltable_data-table {
+
+        th,
+        td {
+            padding: 0 4px;
+            text-align: center;
+            min-width: 10px;
+
+            & p {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+
+@mixin NoteStyleCSS_Components {
+    .note {
+        margin: 1.5rem auto;
+        padding: 1px 1.5rem;
+    }
+
+    .note_01 {
+        background-color: $lightgrey_color;
+    }
+
+    .note_02 {
+        border-top-width: 4px;
+        border-left-width: 4px;
+        border-bottom-width: 0;
+        border-right-width: 0;
+        border-style: dotted;
+        border-color: $border_color2;
+    }
+}
+
+// *************************************Generic Anywhere CSS*************************************
+@mixin GenericAnywhereCSS {
+    .text-cavolini {
+        font-family: "Cavolini", cursive, sans-serif !important;
+        font-weight: 400 !important;
+    }
+
+    .text-stonesans {
+        font-family: "StoneSans", Arial, sans-serif !important;
+        font-weight: 400 !important;
+    }
+
+    .text_uppercase {
+        text-transform: uppercase;
+    }
+
+    //pagebreak_01
+
+    .bg_darkgrey {
+        background-color: $darkgrey_color;
+    }
+
+    .bg_mediumgrey {
+        background-color: $mediumgrey_color;
+    }
+
+    .bg_lightgrey {
+        background-color: $lightgrey_color;
+    }
+
+    .bg_gradientgrey {
+        background-image: linear-gradient(to top, $darkgrey_color 0, $mediumgrey_color 33%, $mediumgrey_color 66%, $darkgrey_color 100%);
+    }
+
+    .hr_01 {
+        height: 2px;
+        background-color: #000;
+        color: #000;
+        border: 0;
+    }
+
+    .hr_02 {
+        border: 3px solid black;
+        border-image-source: url("../images/re_fa_teacher_icons/line_img.svg");
+        border-image-slice: 3;
+        border-image-repeat: repeat;
+        width: 50px;
+        margin: 1.5rem auto;
+    }
+
+    .subtitle {
+        margin-left: 1.5rem;
+    }
+
+    .source {
+        & p {
+            @include generateGeneralFontCSS($sourceFontSize, $sourceLineHeight);
+        }
+    }
+
+    .xref {
+        color: #000;
+    }
+
+    .xref:visited {
+        color: #000;
+    }
+
+    .ulink {
+        color: $linkFontColor !important;
+        text-decoration: underline !important;
+    }
+
+    .ulink:hover {
+        color: $linkHoverFontColor !important;
+        text-decoration: underline !important;
+    }
+}
+
+// ************************************* Helper Class CSS*************************************
+@mixin HelperClassCSS {
+    .width-100 {
+        width: 100% !important;
+    }
+
+    .width-95 {
+        width: 95% !important;
+    }
+
+    .width-90 {
+        width: 90% !important;
+    }
+
+    .width-85 {
+        width: 85% !important;
+    }
+
+    .width-75 {
+        width: 75% !important;
+    }
+
+    .width-66 {
+        width: 66.6% !important;
+    }
+
+    .width-57 {
+        width: 57.5% !important;
+    }
+
+    .width-50 {
+        width: 50% !important;
+    }
+
+    .width-40 {
+        width: 40% !important;
+    }
+
+    .width-33 {
+        width: 33.3% !important;
+    }
+
+    .width-30 {
+        width: 30% !important;
+    }
+
+    .width-25 {
+        width: 25% !important;
+    }
+
+    .width-15 {
+        width: 15% !important;
+    }
+
+    .width-10 {
+        width: 10% !important;
+    }
+
+    .width-5 {
+        width: 5% !important;
+    }
+
+    .no-widow {
+        display: inline-block;
+        text-decoration: inherit;
+    }
+
+    .float-right {
+        float: right;
+    }
+
+    .float-left {
+        float: left;
+    }
+
+    .clear-both {
+        clear: both;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    .overflow-x {
+        overflow-x: auto;
+    }
+
+    .lc_align-center {
+        text-align: center;
+    }
+
+    .lc_align-left {
+        text-align: left;
+    }
+
+    .lc_align-right {
+        text-align: right;
+    }
+
+    .margin-0-auto {
+        margin: 0 auto;
+    }
+
+    .margin-left-0 {
+        margin-left: 0 !important;
+    }
+
+    .margin-right-0 {
+        margin-right: 0 !important;
+    }
+
+    .margin-top-0 {
+        margin-top: 0 !important;
+    }
+
+    .margin-bottom-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .margin-top-default {
+        margin-top: 1.5rem !important;
+    }
+
+    .margin-bottom-default {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .margin-default-auto {
+        margin: 1.5rem auto !important;
+    }
+
+    .margin-left-default {
+        margin-left: 1.5rem !important;
+    }
+
+    .margin-right-default {
+        margin-right: 1.5rem !important;
+    }
+
+    .padding-top-0 {
+        padding-top: 0 !important;
+    }
+
+    .padding-bottom-0 {
+        padding-bottom: 0 !important;
+    }
+
+    .padding-left-0 {
+        padding-left: 0 !important;
+    }
+
+    .padding-right-0 {
+        padding-right: 0 !important;
+    }
+
+    .padding-top-default {
+        padding-top: 1.5rem !important;
+    }
+
+    .padding-bottom-default {
+        padding-bottom: 1.5rem !important;
+    }
+
+    .padding-left-default {
+        padding-left: 1.5rem !important;
+    }
+
+    .padding-right-default {
+        padding-right: 1.5rem !important;
+    }
+
+    .section {
+        max-width: 1024px;
+        margin-top: 0;
+        line-height: 1.15rem;
+        -webkit-text-size-adjust: 100%;
+        background-color: #FFF;
+        margin: 0;
+        padding: 0 1.5rem;
+        letter-spacing: 0.015rem;
+    }
+
+    .text-color-white {
+        color: #FFF !important;
+    }
+
+    //table caption element that needs to be below the table, used on the caption tag
+    .table_caption-bottom {
+        caption-side: bottom;
+    }
+
+    //table caption element that needs to be above the table, used on the caption tag
+    .table_caption-top {
+        caption-side: top;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
+// *************************************Layouts Style CSS (<600px)*************************************
+@mixin ResponsiveGridStyleCSS_Layouts_600 {
+    .grid-container {
+        &>.grid-row {
+            flex-direction: column;
+
+            &>.grid-col:first-of-type:nth-last-of-type(2),
+            &>.grid-col:first-of-type:nth-last-of-type(2)~.grid-col,
+            &>.grid-col:first-of-type:nth-last-of-type(3),
+            &>.grid-col:first-of-type:nth-last-of-type(3)~.grid-col,
+            &>.grid-col:first-of-type:nth-last-of-type(4),
+            &>.grid-col:first-of-type:nth-last-of-type(4)~.grid-col {
+                width: 100%;
+                margin: .75rem 0;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(2):first-of-type,
+            &>.grid-col:first-of-type:nth-last-of-type(3):first-of-type,
+            &>.grid-col:first-of-type:nth-last-of-type(4):first-of-type {
+                margin-top: 0;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(2)~.grid-col:last-of-type,
+            &>.grid-col:first-of-type:nth-last-of-type(3)~.grid-col:last-of-type,
+            &>.grid-col:first-of-type:nth-last-of-type(4)~.grid-col:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@mixin ListStyleCSS_Layouts_600 {
+
+    .ol_column_01,
+    .ul_column_01,
+    .ol_column_02,
+    .ul_column_02,
+    .ol_column_03,
+    .ul_column_03 {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
+}
+
+@mixin FigureGroupStyleCSS_Layouts_600 {
+    .figuregroup {
+        flex-direction: column;
+
+        &>.informalfigure:first-of-type {
+            margin-bottom: .75rem;
+        }
+
+        &>.informalfigure:last-of-type {
+            margin-top: .75rem;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(2),
+        &>.informalfigure:first-of-type:nth-last-of-type(2)~.informalfigure {
+            width: 100%;
+        }
+    }
+}
+
+// ************************************* Components Style CSS (<600px)*************************************
+@mixin HeaderStyleCSS_Components_600 {
+    .chapter {
+        &>header {
+            & .epigraph {
+                margin: 1.5rem 2.75rem;
+            }
+
+            & .source {
+                margin: 0 2.75rem;
+            }
+        }
+    }
+}
+
+// ************************************* Helper Class CSS (<600px)*************************************
+@mixin HelperClassCSS_600 {
+
+    .width-95,
+    .width-90,
+    .width-85,
+    .width-75,
+    .width-66,
+    .width-57,
+    .width-50,
+    .width-40,
+    .width-33,
+    .width-30,
+    .width-25,
+    .width-15,
+    .width-10,
+    .width-5 {
+        width: 100% !important;
+    }
+}
+
+/* ------------------------------------Normalization Styles CSS-------------------------------------------- */
+@include NormalizationBaseHtmlCSS;
+/* ------------------------------------Elements Style CSS-------------------------------------------- */
+@include TitleCSS_Elements;
+@include ListStyleCSS_Elements;
+@include InformalFigureStyleCSS_Elements;
+@include PoemStyleCSS_Elements;
+/* ------------------------------------Layouts Styles CSS-------------------------------------------- */
+@include ResponsiveGridStyleCSS_Layouts;
+@include ListStyleCSS_Layouts;
+@include FigureGroupStyleCSS_Layouts;
+/* ------------------------------------Components Styles CSS-------------------------------------------- */
+@include HeaderStyleCSS_Components;
+@include FooterStyleCSS_Components;
+@include AccordionStyleCSS_Components;
+@include InformalTableStyleCSS_Components;
+@include NoteStyleCSS_Components;
+/* ------------------------------------Generic CSS that belongs to anywhere-------------------------------------------- */
+@include GenericAnywhereCSS;
+/* ------------------------------------Helper Class CSS-------------------------------------------- */
+@include HelperClassCSS;
+
+/* ------------------------------------Responsive Big Phones (<600px)--------------------------------- */
+@media only screen and (max-width: 600px) {
+    /* ------------------------------------Layouts Styles CSS-------------------------------------------- */
+    @include ResponsiveGridStyleCSS_Layouts_600;
+    @include ListStyleCSS_Layouts_600;
+    @include FigureGroupStyleCSS_Layouts_600;
+    /* ------------------------------------Components Styles CSS (<600px)-------------------------------------------- */
+    @include HeaderStyleCSS_Components_600;
+    /* ------------------------------------Helper Class CSS (<600px)-------------------------------------------- */
+    @include HelperClassCSS_600;
+}

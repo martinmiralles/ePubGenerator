@@ -1,0 +1,318 @@
+/*----Spinner Classes-----*/
+
+/*----Utility Classes-----*/
+.sr-only {
+     position: absolute;
+     left: -10000px;
+     top: auto;
+     width: 0;
+     height: 0;
+     overflow: hidden;
+}
+.center {
+     display: block;
+     text-align: center;
+}
+.embed-responsive-video {
+     position: relative;
+     display: block;
+     height: 0;
+     padding: 0;
+     overflow: hidden;
+}
+.embed-responsive-video iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     height: 100%;
+     width: 100%;
+     border: 0;
+}
+.embed-responsive-1by1 {
+     padding-bottom: 100%;
+}
+.embed-responsive-4by3 {
+     padding-bottom: 75%;
+}
+.embed-responsive-16by9 {
+     padding-bottom: 56.25%;
+}
+.embed-responsive-21by9 {
+     padding-bottom: 42.85714286%;
+}
+.embed-responsive-audio {
+     position: relative;
+     display: block;
+     height: 45px;
+     padding: 0;
+     text-align: center;
+     border: 0;
+}
+.embed-responsive-audio iframe {
+     display: inline-block;
+     height: 100%;
+     width: 100%;
+     max-width: 450px;
+     border: 0;
+}
+
+.sub-title {
+     font-weight: bold;
+}
+/*
+a:focus {
+     -webkit-box-shadow: 0px 0px 5px  #4D90FE;
+     box-shadow: 0px 0px 5px  #4D90FE;
+}
+*/
+
+/*----Widget Container-----*/
+.widget-container {
+     margin: 15px;
+}
+/*----Accordion------*/
+.accordion {
+     width: 100%;
+     max-width: 650px;
+     margin: auto;
+}
+/*-----Accordion Title-------*/
+
+.accordion-title {
+     position: relative;
+     width: 100%;
+     max-width: 650px;
+}
+.accordion-title.active {
+     border-radius: 7px 7px 0 0;
+}
+.accordion-title-link {
+     display: block;
+     width: 100%;
+     max-width: 648px;
+     border: 1px solid #000000;
+     background-color: #FFFFFF;
+     border-radius: 7px;
+     overflow: hidden;
+}
+.accordion-title-link .text {
+     display: inline-block;
+     width: calc(100% - 110px);
+     font-family: serif;
+     font-variant: normal;
+     vertical-align: middle;
+     font-size: 1.125em;
+     font-weight: bold;
+     color: #000000;
+     box-sizing: border-box;
+}
+.accordion-title-link.active, .accordion-title-link:hover {
+     width: 100%;
+     background-color: #d5deec;
+     border-color: #d5deec;
+}
+.accordion-title-link.video-widget:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/video_icon_default.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-title-link.active.video-widget:before, .accordion-title-link:hover.video-widget:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/video_icon_rollover.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+}
+.accordion-title-link.audio-widget:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/music_icon_default.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-title-link.active.audio-widget:before, .accordion-title-link:hover.audio-widget:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/music_icon_rollover.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-title-link.faith-journey-widget:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/faithjourney_icon_default.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-title-link.active.faith-journey-widget:before, .accordion-title-link:hover.faith-journey-widget:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/faithjourney_icon_rollover.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-title-link.interactive-activity-link:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/interactive_icon_default.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-title-link.active.interactive-activity-link:before, .accordion-title-link:hover.interactive-activity-link:before {
+     display: inline-block;
+     content: "";
+     background-image: url(../img/interactive_icon_rollover.png);
+     background-size: 100% 100%;
+     width: 40px;
+     height: 40px;
+     margin: 10px 5px;
+     vertical-align: middle;
+}
+.accordion-arrow {
+     display: inline-block;
+     color: #000000;
+     font-size: 24px;
+     vertical-align: middle;
+     margin-left: 10px;
+     -webkit-transform: scale(1.5, 1);
+     -moz-transform: scale(1.5, 1);
+     -o-transform: scale(1.5, 1);
+     -ms-transform: scale(1.5, 1);
+     transform: scale(1.5, 1);
+     -webkit-transition: transform 300ms ease-in 0s;
+     -moz-transition: transform 300ms ease-in 0s;
+     -o-transition: transform 300ms ease-in 0s;
+     transition: transform 300ms ease-in 0s;
+}
+.accordion-arrow.custom-icon {
+     display: inline-block;
+     vertical-align: middle;
+     margin-left: 10px;
+     -webkit-transform: scale(-1.5, 1.5);
+     -moz-transform: scale(-1.5, 1.5);
+     -o-transform: scale(-1.5, 1.5);
+     -ms-transform: scale(-1.5, 1.5);
+     transform: scale(-1.5, 1.5);
+}
+.accordion-title-link.active .accordion-arrow {
+     color: #0076b9;
+     -webkit-transform: rotate(180deg) scale(1.5, 1);
+     -moz-transform: rotate(180deg) scale(1.5, 1);
+     -o-transform: rotate(180deg) scale(1.5, 1);
+     -ms-transform: rotate(180deg) scale(1.5, 1);
+     transform: rotate(180deg) scale(1.5, 1);
+}
+.accordion-title-link:hover .accordion-arrow {
+     color: #0076b9;
+}
+/*----- Accordion Content -----*/
+.accordion-content {
+     display: none;
+     width: 100%;
+     max-width: 650px;
+     background-color: #FFFFFF;
+     border: 1px solid #d5deec;
+     border-radius: 7px;
+}
+.accordion-content-wrapper {
+     display: block;
+     padding: 15px;
+}
+
+.multiple-video-assests .sub-title, .multiple-audio-assests .sub-title {
+     margin-bottom: 15px;
+}
+
+/*
+a.spp {
+	color: #006da4;
+	text-decoration: none;
+}
+a.spp:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+iframe.spp {
+	border: 0;
+	margin: 0 0 6px 0;
+	padding: 0;
+}
+.example-container {
+	width: 80%;
+	margin: 20px auto 0 auto;
+	box-shadow: 3px 3px 6px 0px rgba(209,209,209,0.5);
+}
+.example-title {
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin: 0;
+	padding: 5px;
+	background: #007fa9;
+	color: #fff;
+	cursor: pointer;
+	text-align: left;
+	width: 100%;
+	padding-left: 1.75em;
+	text-indent: -1.75em;
+}
+.example-title:hover {
+	background: #066F92;
+}
+.example-title:focus {
+	background: #066F92;
+}
+.example-title::before {
+	font-family: 'FontAwesome';
+	content: "\f0da";
+	color: white;
+	padding: 0 10px;
+}
+.example-title-click::before {
+	font-family: 'FontAwesome';
+	content: "\f0d7";
+}
+.example-content {
+	color: rgb(77,77,77);
+	border: 1px solid #e0e0e0;
+	display: none;
+	padding: 10px 30px 15px 35px;
+	overflow: auto;
+}
+.example-container .click-expand {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+.example-container .expand-example {
+	margin-left: 0;
+	padding: 0;
+}
+.expand-example {
+	padding: 0px 15px;
+	display: none;
+	margin-left: 20px;
+	padding-bottom: 5px;
+}
+*/

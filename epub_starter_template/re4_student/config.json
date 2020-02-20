@@ -1,0 +1,19 @@
+{
+"readspeaker": true,
+"fixed": false,
+"booktitle": "book title goes here",
+"toc" : {
+		"hidetop": true,
+		"illustrations": true,
+		"tables": true,
+		"landmarks": false,
+		"pagelist": false,
+		"guide": true,
+		"counter": false
+		},
+"sms":{
+		"protected" : false,
+		"siteid" : "ePub site id",
+		"loginurl": "custom ePub Login URL"
+		}
+}

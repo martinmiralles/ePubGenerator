@@ -1,0 +1,288 @@
+<html lang="en">
+
+	<head>
+		<title>Religion Standard Component Styles</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="../../css/re6_teacher.css"/>
+
+		<style>
+			body {
+				max-width: 1024px;
+				margin: auto;
+				padding: 50px;
+				font-size: 115%;
+			}
+
+			hr {
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 1.75rem;
+			}
+
+			.code_format {
+				display: block;
+				background-color: #e2f2f2;
+				border: solid #020202;
+				padding: 10px 20px;
+			}
+
+			code {
+				display: block;
+				font-family: monospace;
+				margin-top: -20px;
+				white-space: pre;
+				overflow-x: auto;
+			}
+
+			.code_format * {
+				padding: 0;
+				margin: 0;
+			}
+
+			.grid-col {
+				background-color: #e2f2f2;
+				border: 1px dotted #020202;
+				text-align: center;
+			}
+
+			.template_hr {
+				display: block;
+				height: 10px;
+				border: 0;
+				border-top: 10px solid red;
+				margin: 1rem 0;
+				padding: 0;
+			}
+
+			.code_snippet {
+				color: #600000;
+				font-weight: bold;
+			}
+
+			.main_title {
+				text-align: center;
+				font-size: 3rem;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 3.25rem;
+				letter-spacing: 5px;
+				margin: 0;
+				font-variant: small-caps;
+			}
+
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 99;
+				font-size: 1rem;
+				border: none;
+				outline: none;
+				background-color: black;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+			}
+
+			#myBtn:hover {
+				background-color: red;
+			}
+
+			.links {
+				column-count: 3;
+				column-gap: 40px;
+			}
+
+			.links a {
+				font-weight: unset;
+			}
+
+			.links li {
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+				margin: 0;
+			}
+
+			.links p {
+				margin: 0;
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+			}
+
+			.links ol {
+				list-style-type: upper-alpha;
+			}
+
+			.p-darkred,
+			.p-grey {
+				color: #707070;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.15rem;
+				line-height: 1.65rem;
+			}
+
+			.p-darkred {
+				color: #600000;
+			}
+		</style>
+
+		<script>
+			window.onload = function init() {
+				var codeblock = document.querySelectorAll(".code_format > code");
+				console.log(codeblock);
+				var len = codeblock.length;
+				console.log(typeof(len));
+				for (var i = 0; i < len; i++) {
+					var dom = codeblock[i];
+					var html = dom.innerHTML;
+					var pattern = html.match(/\s*\n[\t\s]*/);
+					var pattern01 = html.match(/\s+\n*$/);
+					var pattern02 = html.match(/^\n*(\<)/);
+					html = html.replace(new RegExp(pattern, "g"), '\n');
+					html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+					html = html.replace(/—/gm, "&#x2014;");
+					html = html.replace(/–/gm, "&#x2013;");
+					var temphtml = html.match(/^[^\n]+\n/gm);
+
+					//html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<'); console.log(temphtml.join(""));
+					var text = document.createTextNode(String(temphtml.join("")));
+					dom.innerHTML = "";
+					dom.appendChild(text);
+				}
+			}
+
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("myBtn").style.display = "block";
+				} else {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</head>
+
+	<body epub:type="bodymatter">
+		<section>
+			<header>
+				<h2 class="p-grey">Card 05: Tabs</h2>
+			</header>
+			<p class="p-grey">[Use this card to style the "Card 05: Tabs" section. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed. Another note is that this card has no main title and can have a maximum of
+				<strong>5 tabs</strong>.]</p>
+
+			<div class="card card_05">
+				<div role="tablist" aria-label="card_tabs" class="nav_tabs">
+					<button class="fx-toggle" role="tab" aria-selected="true" aria-controls="unique_div_tab1" id="unique_id_tab1">
+						Tab 1
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab2" id="unique_id_tab2" tabindex="-1">
+						Tab 2
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab3" id="unique_id_tab3" tabindex="-1">
+						Tab 3
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab4" id="unique_id_tab4" tabindex="-1">
+						Tab 4
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab5" id="unique_id_tab5" tabindex="-1">
+						Tab 5
+					</button>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab1" aria-labelledby="unique_id_tab1">
+					<p>
+						This is your body text of tab 1, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab2" aria-labelledby="unique_id_tab2" hidden="">
+					<p>
+						This is your body text of tab 2, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab3" aria-labelledby="unique_id_tab3" hidden="">
+					<p>
+						This is your body text of tab 3, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab4" aria-labelledby="unique_id_tab4" hidden="">
+					<p>
+						This is your body text of tab 4, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab5" aria-labelledby="unique_id_tab5" hidden="">
+					<p>
+						This is your body text of tab 5, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+			</div>
+
+			<div class="card card_05">
+				<div role="tablist" aria-label="card_tabs" class="nav_tabs">
+					<button class="fx-toggle" role="tab" aria-selected="true" aria-controls="unique_div_tab1-1" id="unique_id_tab01">
+						Tab 1
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab2-2" id="unique_id_tab02" tabindex="-1">
+						Tab 2
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab3-3" id="unique_id_tab03" tabindex="-1">
+						Tab 3
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab4-4" id="unique_id_tab04" tabindex="-1">
+						Tab 4
+					</button>
+					<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab5-5" id="unique_id_tab05" tabindex="-1">
+						Tab 5
+					</button>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab1-1" aria-labelledby="unique_id_tab1">
+					<p>
+						This is your body text of tab 1, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab2-2" aria-labelledby="unique_id_tab2" hidden="">
+					<p>
+						This is your body text of tab 2, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab3-3" aria-labelledby="unique_id_tab3" hidden="">
+					<p>
+						This is your body text of tab 3, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab4-4" aria-labelledby="unique_id_tab4" hidden="">
+					<p>
+						This is your body text of tab 4, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+				<div tabindex="0" role="tabpanel" id="unique_div_tab5-5" aria-labelledby="unique_id_tab5" hidden="">
+					<p>
+						This is your body text of tab 5, which can be any element, layout, and/or component you specify in your markup.
+					</p>
+				</div>
+
+			</div>
+		</section>
+		<script src="../../js/re6_teacher/tabs.js"></script>
+	</body>
+
+</html>

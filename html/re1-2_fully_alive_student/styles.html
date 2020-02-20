@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Religion Styles Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re1-2_fully_alive_student.css" />
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background: white;
+      }
+    
+      h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+    
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+    
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+    
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+    
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+    
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+    
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+        font-size: 1.15rem;
+        margin: 1.5rem 0;
+      }
+    
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+    
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+    
+      #myBtn:hover {
+        background-color: red;
+      }
+    
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+    
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+    
+      .links2 {
+        display: none;
+        width: 100%;
+        font-size: 1.15rem;
+        margin: 1.15rem 0;
+        border: 1px solid black;
+      }
+    
+      .p-darkred,
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+        margin: 1.5rem 0;
+      }
+    
+      .p-darkred {
+        color: #600000;
+      }
+    
+      @media only screen and (max-width: 600px) {
+        .links {
+          display: none;
+        }
+    
+        .links2 {
+          display: block;
+        }
+      }
+    
+      @media only screen and (max-width: 450px) {
+        #myBtn {
+          bottom: 70px;
+          right: 10px;
+        }
+    
+        .main_title {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        var len = codeblock.length;
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          console.log(html);
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          console.log(html);
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.innerText = String(temphtml.join(""));
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Styles</h1>
+        </header>
+        <p class="p-grey">[A style defines the look and feel of an element.]</p>
+        <hr/>
+
+        <ol class="links">
+          <li>
+            <p>
+              <strong>
+                <a href="#text_typeface">Text Typeface</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#heinemann">Heinemann Roman Special</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#kidprint">Kidprint</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#text_emphasis">Text Emphasis</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#strong">Bold</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#em">Italic</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#text-colour">Text Colours</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#black_text-colour">Black Text Colour</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#darkblue_text-colour">Dark Blue Text Colour</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#navyblue_text-colour">Navy Blue Text Colour</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#teal_text-colour">Teal Text Colour</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#darkgreen_text-colour">Dark Green Text Colour</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#background-colour">Background Colours</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#bg_darkyellow">Dark Yellow Background</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_lightyellow">Light Yellow Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_darkorange">Dark orange Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_lightorange">Light Orange Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_purple">Purple Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_royalblue">Royal Blue Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_lightblue">Light Blue Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_darkblue">Dark Blue Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_turquoise">Turquoise Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_palegreen">Pale Green Background
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#bg_seagreen">Sea Green Background
+                  </a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#text_typeface">- Text Typeface -</option>
+          <option value="#heinemann">Heinemann Roman Special</option>
+          <option value="#kidprint">Kidprint</option>
+
+          <option value="#text_emphasis">- Text Emphasis -</option>
+          <option value="#strong">Bold</option>
+          <option value="#em">Italic</option>
+          <option value="#smallcaps">Small Caps</option>
+
+          <option value="#text_emphasis">- Text Colours -</option>
+          <option value="#black_text-colour">Black Text Colour</option>
+          <option value="#darkblue_text-colour">Dark Blue Text Colour</option>
+          <option value="#navyblue_text-colour">Navy Blue Text Colour</option>
+          <option value="#teal_text-colour">Teal Text Colour</option>
+          <option value="#darkgreen_text-colour">Dark Green Text Colour</option>
+
+          <option value="#background-colour">- Background Colours -</option>
+          <option value="#bg_darkyellow">Dark Yellow Background</option>
+          <option value="#bg_lightyellow">Light Yellow Background
+          <option value="#bg_darkorange">Dark orange Background
+          <option value="#bg_lightorange">Light Orange Background</option>
+          <option value="#bg_purple">Purple Background</option>
+          <option value="#bg_royalblue">Royal Blue Background</option>
+          <option value="#bg_lightblue">Light Blue Background</option>
+          <option value="#bg_darkblue">Dark Blue Background</option>
+          <option value="#bg_turquoise">Turquoise Background</option>
+          <option value="#bg_palegreen">Pale Green Background</option>
+          <option value="#bg_seagreen">Sea Green Background</option>
+        </select>
+
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Text Typeface Section Starts -->
+      <section id="text_typeface">
+        <header>
+          <h1>Text Typeface</h1>
+        </header>
+        <p class="p-grey">[This section displays text typefaces that can be applied to any text within an element or
+          component for emphasis.]</p>
+
+        <!-- Heinemann Roman Special Section starts -->
+        <hr id="heinemann" />
+        <section>
+          <header>
+            <h2 class="p-grey">Heinemann Roman Special:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for the Heinemann Roman Special typeface.]</p>
+
+          <p class="text-heinemann">This is normal paragraph text that uses the Heinemann class.</p>
+          <p>By default all paragraph text are using heinemann roman special without the class.</p>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <p class="text-heinemann">This is normal paragraph text that uses the Heinemann class.</p>
+                <p>By default all paragraph text are using heinemann roman special without the class.</p>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Heinemann Roman Special Section ends -->
+
+        <!-- Kidprint Section starts -->
+        <hr id="kidprint" />
+        <section>
+          <header>
+            <h2 class="p-grey">Kidprint:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for the Kidprint typeface.]</p>
+
+          <p class="text-kidprint">This is normal paragraph text that uses the kidprint class.</p>
+        
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <p class="text-kidprint">This is normal paragraph text that uses the kidprint class.</p>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Kidprint Section ends -->
+      </section>
+      <!-- Text Typeface Section Ends -->
+
+      <!-- Text Emphasis Section Starts -->
+      <section id="text_emphasis">
+        <header>
+          <h1>Text Emphasis</h1>
+        </header>
+        <p class="p-grey">[This section displays the bold and italic style that can be applied to any text within an element or component for emphasis.]</p>
+
+        <!-- Strong/Bold Section starts -->
+        <hr id="strong"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Bold:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for bolded text. <strong>Note that there is no bold version of the Kidprint typeface.</strong>]</p>
+          <p>This is normal paragraph text.</p>
+          <p>This is
+            <strong>strong</strong>
+            bolded paragraph text.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <p>This is
+                  <strong>strong</strong>
+                  bolded paragraph text.</p>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Strong/Bold Section ends -->
+
+        <!-- Italic/Em Section Starts -->
+        <hr id="em"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Italic:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for italicize text. <strong>Note that there is no italic version of the Kidprint typeface.</strong>]</p>
+          <p>This is normal paragraph text.</p>
+          <p>This is
+            <em>italic</em>
+            paragraph text.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <p>This is
+                  <em>italic</em>
+                  paragraph text.</p>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Italic/Em Section ends -->
+      </section>
+      <!-- Text Emphasis Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!--Text colour Section starts-->
+      <section id="text-colour">
+        <header>
+          <h1>Text Colours</h1>
+        </header>
+        <p class="p-grey">[This section captures each of the text colours available in RE1 Fully Alive Student ePub.]</p>
+
+        <!-- Black Text Colour Section Starts -->
+        <hr id="black_text-colour"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Black Text Colour:</h2>
+          </header>
+          <p class="p-grey">[This is how "black text colour" will be display. Black is the default colour of all paragraph text.]</p>
+          <div class="width-40">
+            <p>Black Text Colour</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="width-40">
+                  <p>Black Text Colour</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Black Text Colour Section Ends -->
+
+        <!-- Dark Blue Text Colour Section Starts -->
+        <hr id="darkblue_text-colour"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Dark Blue Text Colour:</h2>
+          </header>
+          <p class="p-grey">[This is how "dark blue text colour" will be display.]</p>
+          <div class="width-40">
+            <p class="text-color-darkblue">Dark Blue Text Colour</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="width-40">
+                  <p class="text-color-darkblue">Dark Blue Text Colour</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Dark Blue Text Colour Section Ends -->
+
+        <!-- Navy Blue Text Colour Section Starts -->
+        <hr id="navyblue_text-colour"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Navy Blue Text Colour:</h2>
+          </header>
+          <p class="p-grey">[This is how "navy blue text colour" will be display.]</p>
+          <div class="width-40">
+            <p class="text-color-navyblue">Navy Blue Text Colour</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="width-40">
+                  <p class="text-color-navyblue">Blue Text Colour</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Navy Blue Text Colour Section Ends -->
+
+        <!-- Teal Text Colour Section Starts -->
+        <hr id="teal_text-colour"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Teal Text Colour:</h2>
+          </header>
+          <p class="p-grey">[This is how "teal text colour" will be display.]</p>
+          <div class="width-40">
+            <p class="text-color-teal">Teal Text Colour</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="width-40">
+                  <p class="text-color-teal">Teal Text Colour</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Teal Text Colour Section Ends -->
+
+        <!-- Dark Green Text Colour Section Starts -->
+        <hr id="darkgreen_text-colour" />
+        <section>
+          <header>
+            <h2 class="p-grey">Dark Green Text Colour:</h2>
+          </header>
+          <p class="p-grey">[This is how "dark green text colour" will be display.]</p>
+          <div class="width-40">
+            <p class="text-color-darkgreen">Dark Green Text Colour</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="width-40">
+                  <p class="text-color-darkgreen">Dark Green Text Colour</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Teal Text Colour Section Ends -->
+
+      </section>
+      <!-- Text colour section ends-->
+
+      <hr class="template_hr"/>
+
+      <!-- Background Color Section Starts -->
+      <section id="background-colour">
+        <header>
+          <h1>Background Colours</h1>
+        </header>
+        <p class="p-grey">[This section captures each of the background style elements available in the RE5 Student ePub design template. Background colours can be applied to a specific element, component, and/or to the entire page.]</p>
+
+        <!-- bg darkyellow starts -->
+        <hr id="bg_darkyellow"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Dark Yellow Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “dark yellow background” style will display. This can also be applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_darkyellow">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a dark yellow background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_darkyellow">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a dark yellow background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg darkyellow ends -->
+
+        <!-- bg lightyellow starts -->
+        <hr id="bg_lightyellow"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Light Yellow Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “light yellow background” style will display. This can also be applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_lightyellow">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a light yellow background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_lightyellow">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a dark purple background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg lightyellow ends -->
+
+        <!-- bg darkorange starts -->
+        <hr id="bg_darkorange" />
+        <section>
+          <header>
+            <h2 class="p-grey">Dark Orange Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “dark orange background” style will display. This can
+            also be applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_darkorange">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a dark orange background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_darkorange">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a dark orange background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg darkorange ends -->
+
+        <!-- bg lightorange starts -->
+        <hr id="bg_lightorange"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Light Orange Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “light orange background” style will display. This can also be applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_lightorange">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a light orange background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_lightorange">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a light orange background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg lightorange ends -->
+
+        <!-- bg purple starts -->
+        <hr id="bg_purple"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Purple Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “purple background” style will display. This can also be applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_purple">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a purple background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_purple">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a purple background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg purple ends -->
+
+        <!-- bg royalblue starts -->
+        <hr id="bg_royalblue" />
+        <section>
+          <header>
+            <h2 class="p-grey">Royal Blue Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “royal blue background” style will display. This can also be
+            applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_royalblue">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a royal blue background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_royalblue">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a royal blue background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg royal blue ends -->
+
+        <!-- bg light blue starts -->
+        <hr id="bg_lightblue" />
+        <section>
+          <header>
+            <h2 class="p-grey">Light Blue Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “light blue background” style will display. This can also
+            be
+            applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_lightblue">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a light blue background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_lightblue">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a light blue background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg light blue ends -->
+
+        <!-- bg dark blue starts -->
+        <hr id="bg_darkblue" />
+        <section>
+          <header>
+            <h2 class="p-grey">Dark Blue Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “dark blue background” style will display. This can also
+            be
+            applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_darkblue">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a dark blue background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_darkblue">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a dark blue background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg dark blue ends -->
+
+        <!-- bg turquoise starts -->
+        <hr id="bg_turquoise" />
+        <section>
+          <header>
+            <h2 class="p-grey">Turquoise Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “turquoise background” style will display. This can also
+            be
+            applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_turquoise">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a turquoise background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_turquoise">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a turquoise background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg turquoise ends -->
+
+        <!-- bg palegreen starts -->
+        <hr id="bg_palegreen" />
+        <section>
+          <header>
+            <h2 class="p-grey">Pale Green Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “palegreen background” style will display. This can also
+            be
+            applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_palegreen">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a palegreen background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_palegreen">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a palegreen background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg palegreen ends -->
+
+        <!-- bg seagreen starts -->
+        <hr id="bg_seagreen" />
+        <section>
+          <header>
+            <h2 class="p-grey">Sea Green Background:</h2>
+          </header>
+          <p class="p-grey">[This is how a blockquote applied with the “seagreen background” style will display. This can also
+            be
+            applied to other elements besides a blockquote.]</p>
+          <blockquote class="bg_seagreen">
+            <p>
+              <strong>Note:</strong>
+              This is the text color by default on a seagreen background to pass accessibility.</p>
+          </blockquote>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <blockquote class="bg_seagreen">
+                  <p>
+                    <strong>Note:</strong>
+                    This is the text color by default on a seagreen background to pass accessibility.</p>
+                </blockquote>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- bg seagreen ends -->
+        
+      </section>
+      <!-- Background Color Section Ends -->
+
+    </section>
+    <!-- Readspeaker section closed-->
+  </body>
+
+</html>

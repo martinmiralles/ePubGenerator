@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Religion Samples for Preview Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re6_student.css"/>
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+      }
+
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: red;
+      }
+
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+
+      .links2 {
+        display: none;
+        width: 100%;
+        font-size: 1.15rem;
+        margin: 1.15rem 0;
+        border: 1px solid black;
+      }
+
+      .p-darkred,
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+
+      .part>header>.title {
+        margin: 0 0 30px 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .links { display: none; }
+        .links2 {display: block; }
+      }
+
+      @media only screen and (max-width: 450px) {
+        #myBtn {
+          bottom: 70px;
+          right: 10px;
+        }
+
+        .main_title {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        console.log(codeblock);
+        var len = codeblock.length;
+        console.log(typeof(len));
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          console.log(temphtml.join(""));
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.appendChild(text);
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Samples for Preview</h1>
+        </header>
+        <p class="p-grey">[A combination sample is comprised of different standard components combined together, or with different element(s) and/or layout(s). This section provides some common combination samples that will occur in the RE5 ePub for your
+          preview and is not meant to be referenced in your markup]</p>
+        <hr/>
+
+        <ol class="links">
+
+          <li>
+            <p>
+              <strong>
+                <a href="#headers">Header Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#header_01">
+                    <strong>Unit Header</strong>
+                    + Print Page Ref. + Coloured Title + Text with Background Colour</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#header_02">
+                    <strong>Chapter Header</strong>
+                    + Print Page Ref. + Background Colour</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#sidebars">Sidebar Combintations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#sidebar_01">
+                    <strong>Sidebar</strong>
+                    + Subtitle + Blockquote + Poem</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_02">
+                    <strong>Sidebar</strong>
+                    + Text + Informalfigure + Caption + Float-Right</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_03">
+                    <strong>Sidebar</strong>
+                    + Text + Blockquote + Divider + Note</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_04">
+                    <strong>Sidebar</strong>
+                    + 2-Column Ordered List + 3-Column Informalfigure</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_05">
+                    <strong>Sidebar</strong>
+                    + 2-Column Grid + Text + Informalfigure</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#columns">Column Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#column_01">Title +
+                    <strong>2-Column Grid</strong>
+                    + Text + Informalfigure + Shadow</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#cards">Card Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#card_01">
+                    <strong>Card</strong>
+                    + Text + Informalfigure + Blockquote + Note</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_02">
+                    <strong>Card</strong>
+                    + Note + Title + Informalfigure + Float-Left</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_03">
+                    <strong>Card</strong>
+                    + Text + Informalfigure + Blockquote + Note + Seperator</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_04">
+                    <strong>Card</strong>
+                    + Blockquote with Caption wrapping Note + Figuregroup with Caption + Note</a>
+                </p>
+              </li>
+              <li>
+                <p><a href="#card_05"><strong>Card</strong> + Text + Dialogue</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#others">List Combination</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#others_01">Background Colour + Title + Text Colour + Definition List</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#practices">Practice Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#practice_01">
+                    <strong>Practice</strong>
+                    + Practice List (With Numbers)</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#practice_02">
+                    <strong>Practice</strong>
+                    + Practice List (Without Numbers)</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#figuregroups">Figuregroup Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#figuregroup_01">
+                    2-Column Figure Layout with Captions for Figures and <strong>Figuregroup</strong>
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_02">
+                    2-Column Figure Layout with Captions for Nested Figures only
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_03">
+                    2-Column Figure Layout with Caption for <strong>Figuregroup</strong> only
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_04">
+                    2-Column Figure Layout without Captions for both Figures and <strong>Figuregroup</strong>
+                  </a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#headers">- Header Combinations -</option>
+          <option value="#header_01">Unit Header + Print Page Ref. + Coloured Title + Text with Background Colour</option>
+          <option value="#header_02">Chapter Header + Print Page Ref. + Background Colour</option>
+
+          <option value="#sidebars">- Sidebar Combintations -</option>
+          <option value="#sidebar_01">Sidebar + Subtitle + Blockquote + Poem</option>
+          <option value="#sidebar_02">Sidebar + Text + Informalfigure + Caption + Float-Right</option>
+          <option value="#sidebar_03">Sidebar + Text + Blockquote + Divider + Note</option>
+          <option value="#sidebar_04">Sidebar + 2-Column Ordered List + 3-Column Informalfigure</option>
+          <option value="#sidebar_05">Sidebar + 2-Column Grid + Text + Informalfigure</option>
+
+          <option value="#columns">- Column Combinations -</option>
+          <option value="#column_01">Title + 2-Column Grid + Text + Informalfigure + Shadow</option>
+
+          <option value="#cards">- Card Combinations -</option>
+          <option value="#card_01">Card + Text + Informalfigure + Blockquote + Note</option>
+          <option value="#card_02">Card + Note + Title + Informalfigure + Float-Left</option>
+          <option value="#card_03">Card + Text + Informalfigure + Blockquote + Note + Seperator</option>
+          <option value="#card_04">Card + Blockquote with Caption wrapping Note + Figuregroup with Caption + Note</option>
+          <option value="#card_05">Card + Text + Dialogue</option>
+
+          <option value="#others">- List Combination -</option>
+          <option value="#others_01">Background Colour + Title + Text Colour + Definition List</option>
+
+          <option value="#practices">- Practice Combinations -</option>
+          <option value="#practice_01">Practice + Practice List (With Numbers)</option>
+          <option value="#practice_02">Practice + Practice List (Without Numbers)</option>
+
+          <option value="#figuregroups">Figuregroup Combinations</option>
+          <option value="#figuregroup_01">2-Column Figure Layout with Captions for Figures and Figuregroup</option>
+          <option value="#figuregroup_02">2-Column Figure Layout with Captions for Nested Figures only</option>
+          <option value="#figuregroup_03">2-Column Figure Layout with Caption for Figuregroup only</option>
+          <option value="#figuregroup_04">2-Column Figure Layout without Captions for both Figures and Figuregroup</option>
+        </select>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Headers Section Starts-->
+      <section id="headers">
+        <header>
+          <h1>Header Combinations</h1>
+        </header>
+        <p class="p-grey">[This section displays some previews that consist of headers with elements and layouts that will generally occured in the RE5 ePub.]</p>
+
+        <!-- Unit Header + Page Ref Section Starts -->
+        <hr id="header_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Unit Header + Print Page Ref. + Coloured Title + Text with Background Colour:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a Green Unit Header combined with Print Page Ref. 02, Title 03 with Light Green Background Colour applied to the entire page.]</p>
+          <section id="unit01_pg04" class="part bg_lightgreen" aria-labelledby="header_unit01_pg04">
+            <span class="float-right pagebreak_02 margin-top-default lc_align-right padding-right-default" id="page80">
+              <span>printed p. 80</span>
+            </span>
+            <header id="header_unit01_pg04">
+              <h1 id="h1_header_unit01_pg04" class="title title_01 lc_align-center">
+                <span class="text_wrapper bg_darkgreen">
+                  <span class="label">Unit
+                  </span>
+                  <span class="number">1</span>
+                </span>
+                <span class="text bg_lightgreen">The Gift of Our Faith</span>
+              </h1>
+            </header>
+            <section class="padding-left-default padding-right-default">
+              <header>
+                <h2 class="title title_03 title_darkgreen">Let's Explore</h2>
+              </header>
+              <p>Faith is a gift from God. But it is up to us to decide whether we will open this gift. Will we explore and celebrate it? Will we share it with others? As well as being a gift, faith inspires our minds toward God, and it is also our response to God...</p>
+            </section>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit01_pg04" class="part bg_lightgreen" aria-labelledby="header_unit01_pg04">
+                  <span class="float-right pagebreak_02 margin-top-default lc_align-right padding-right-default" id="page80">
+                    <span>printed p. 80</span>
+                  </span>
+                  <header id="header_unit01_pg04">
+                    <h1 id="h1_header_unit01_pg04" class="title title_01 lc_align-center">
+                      <span class="text_wrapper bg_darkgreen">
+                        <span class="label">Unit
+                        </span>
+                        <span class="number">1</span>
+                      </span>
+                      <span class="text bg_lightgreen">The Gift of Our Faith</span>
+                    </h1>
+                  </header>
+                  <section id="unit01_pg04_sec02" class="padding-left-default padding-right-default">
+                    <header id="header_unit01_pg04_sec02">
+                      <h2 id="h2_header_unit01_pg04" class="title title_03 title_darkgreen">Let's Explore</h2>
+                    </header>
+                  </section>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Unit Header + Page Ref Section Ends -->
+
+        <!-- Chapter Header + Print Page Ref. Section Starts -->
+        <hr id="header_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Chapter Header + Print Page Ref. + Background Colour:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a Purple Chapter Header combined with Print Page Ref. 02.]</p>
+          <section id="unit02_chap05_pg20" class="chapter" epub:type="chapter" aria-labelledby="header_unit02_chap05_pg20">
+            <span class="float-right pagebreak_02 margin-top-default lc_align-right padding-right-default" id="page7">
+              <span>printed p. 7</span>
+            </span>
+            <header id="header_unit02_chap05_pg20">
+              <h2 id="h2_header_unit02_chap05_pg20" class="title title_02 lc_align-center">
+                <span class="text_wrapper bg_darkpurple">
+                  <span class="label">Chapter</span>
+                  <span class="number">5</span>
+                </span>
+                <span class="text bg_lightpurple">How Does the Church Help Us Prepare for the Coming of Christ?</span>
+              </h2>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit02_chap05_pg20" class="chapter" epub:type="chapter" aria-labelledby="header_unit02_chap05_pg20">
+                  <span class="float-right pagebreak_02 margin-top-default lc_align-right padding-right-default" id="page7">
+                    <span>printed p. 7</span>
+                  </span>
+                  <header id="header_unit02_chap05_pg20">
+                    <h2 id="h2_header_unit02_chap05_pg20" class="title title_02 lc_align-center">
+                      <span class="text_wrapper bg_darkpurple">
+                        <span class="label">Chapter</span>
+                        <span class="number">5</span>
+                      </span>
+                      <span class="text bg_lightpurple">How Dese the Church Help Us Prepare for the Comings of Christ?</span>
+                    </h2>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Chapter Header + Print Page Ref. Section Ends -->
+      </section>
+      <!-- Unit and Chapter Headers Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Sidebar Section Starts -->
+      <section id="sidebars">
+        <header>
+          <h1>Sidebar Combinations</h1>
+        </header>
+        <p class="p-grey">[Sidebar components can be used to treat marginalia features in the book. This section displays some previews of combination sidebar components which includes elements and layouts that will generally occured in the RE5 ePub.]</p>
+
+        <!-- Sidebar + Subtitle + blockquote + poem starts-->
+        <hr id="sidebar_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + Subtitle + Blockquote + Poem:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Sidebar 01: We Read the Bible combined with Subtitle, Paragraph, Blockquote with sourceline. The content within the blockquote is a Poem with two stanzas, where the second stanza is not italicized.]</p>
+          <aside id="re5_we_read_the_bible_pg08_01" class="sidebar sidebar_01" aria-labelledby="header_re5_we_read_the_bible_pg08_01">
+            <header id="header_re5_we_read_the_bible_pg08_01">
+              <h6 id="h6_header_re5_we_read_the_bible_pg08_01" class="title title_06 margin-top-0 margin-bottom-0">
+                <img alt="we read the bible icon" id="icon_img_we_read_the_bible_pg08_01" class="design-icon inline" src="../../images/re6_student_icons/icon_img_we_read_the_bible.png"/>
+                We Read the
+                <strong>Bible</strong>
+              </h6>
+            </header>
+            <p class="subtitle">
+              <em>Act of Love</em>
+            </p>
+            <p>Jesus’ Sermon on the Mount probably confused many people. Be meek and merciful? This teaching was so different from the way that people dealt with the world. Even today, we often seek praise over humility, or revenge over mercy.</p>
+            <div id="unit01_chap01_pg08_blockquotegroup01" class="blockquotegroup">
+              <blockquote class="epigraph">
+                <div id="unit01_chap01_pg08_poem01" class="poem">
+                  <div class="linegroup margin-top-default margin-bottom-default margin-left-default">
+                    <span class="line">
+                      <em>Lord,</em>
+                    </span>
+                    <span class="line">
+                      <em>open my eyes</em>
+                    </span>
+                    <span class="line">
+                      <em>to see those who hunger</em>
+                    </span>
+                    <span class="line">
+                      <em>so that I may share my food.</em>
+                    </span>
+                  </div>
+
+                  <div class="linegroup margin-top-default margin-bottom-default margin-left-default">
+                    <span class="line">Open my heart</span>
+                    <span class="line">to the lonely and ignored</span>
+                    <span class="line">so that I may share my time.</span>
+                  </div>
+                </div>
+              </blockquote>
+              <div class="source lc_align-right">
+                <p class="margin-bottom-0">
+                  <cite>&#x2014;Genesis 6:18&#x2013;19</cite>
+                </p>
+              </div>
+            </div>
+          </aside>
+        </section>
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <aside id="re5_we_read_the_bible_pg08_01" class="sidebar sidebar_01" aria-labelledby="header_re5_we_read_the_bible_pg08_01">
+                <header id="header_re5_we_read_the_bible_pg08_01">
+                  <h6 id="h6_header_re5_we_read_the_bible_pg08_01" class="title title_06 margin-top-0 margin-bottom-0">
+                    <img alt="we read the bible icon" id="icon_img_we_read_the_bible_pg08_01" class="design-icon inline" src="../images/icon_img_we_read_the_bible.png"/>
+                    We Read the
+                    <strong>Bible</strong>
+                  </h6>
+                </header>
+                <p class="subtitle">
+                  <em>Act of Love</em>
+                </p>
+                <p>Jesus’ Sermon on the Mount probably confused many people. Be meek and merciful? This teaching was so different from the way that people dealt with the world. Even today, we often seek praise over humility, or revenge over mercy.</p>
+                <div id="unit01_chap01_pg08_blockquotegroup01" class="blockquotegroup">
+                  <blockquote class="epigraph">
+                    <div id="unit01_chap01_pg08_poem01" class="poem">
+                      <div class="linegroup margin-top-default margin-bottom-default margin-left-default">
+                        <span class="line">
+                          <em>Lord,</em>
+                        </span>
+                        <span class="line">
+                          <em>open my eyes</em>
+                        </span>
+                        <span class="line">
+                          <em>to see those who hunger</em>
+                        </span>
+                        <span class="line">
+                          <em>so that I may share my food.</em>
+                        </span>
+                      </div>
+
+                      <div class="linegroup margin-top-default margin-bottom-default margin-left-default">
+                        <span class="line">Open my heart</span>
+                        <span class="line">to the lonely and ignored</span>
+                        <span class="line">so that I may share my time.</span>
+                      </div>
+                    </div>
+                  </blockquote>
+                  <div class="source lc_align-right">
+                    <p class="margin-bottom-0">
+                      <cite>&#x2014;Genesis 6:18&#x2013;19</cite>
+                    </p>
+                  </div>
+                </div>
+              </aside>
+            </code>
+          </div>
+        </p>
+        <!-- Sidebar + Subtitle + blockquote + poem ends -->
+
+        <!-- Sidebar + text + informalfigure + caption + float right Starts -->
+        <hr id="sidebar_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + Text + Informalfigure + Caption + Float-Right:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Sidebar 02: Let Us Pray combined with Paragraphs and an Informalfigure, where the informalfigure is floating right to the paragraph text.]</p>
+          <aside id="re5_let_us_pray_pg05_01" class="sidebar sidebar_02" aria-labelledby="header_re5_let_us_pray_pg05_01">
+            <header id="header_re5_let_us_pray_pg05_01">
+              <h6 id="h6_header_re5_let_us_pray_pg05_01" class="title title_06 margin-top-0 margin-bottom-0">
+                <img alt="let us pray icon" id="icon_img_let_us_pray_pg05_01" class="design-icon inline" src="../../images/re6_student_icons/icon_img_let_us_pray.png"/>
+                Let Us
+                <strong>Pray</strong>
+              </h6>
+            </header>
+            <figure id="unit01_chap01_pg05_informalfigure01" class="informalfigure float-right width-50 padding-left-0 margin-top-0 margin-bottom-0 margin-left-default" role="group" aria-labelledby="unit01_chap01_pg05_figcaption01">
+              <img alt="kid writing" id="unit01_chap01_pg05_image01" src="../../images/placeholder_images/c_img_unit01_chap01_pg08_32.jpg"/>
+              <figcaption id="unit01_chap01_pg05_figcaption01">
+                <div class="caption">
+                  <p>Feast of the Nativity of the Blessed Virgin Mary in Karnataka, India</p>
+                </div>
+              </figcaption>
+            </figure>
+            <p class="margin-top-0 margin-bottom-0">Jesus gave the Eucharist to His disciples at the Last Supper. Our Tradition revolves around this sacred celebration.</p>
+            <p>The Eucharist is at the heart of Catholic life. During Eucharistic liturgies, or Mass, the bread and wine are consecrated and become Christ’s Body and Blood. At Mass, we find Jesus in the priest, in the congregation, in God’s Word, and especially
+              in the Eucharist. The word Eucharist comes from the Greek Eucharistia, which means “thanksgiving.” During the Eucharist, we receive Jesus, we remember His sacrifice for us, and we give thanks.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="re5_let_us_pray_pg05_01" class="sidebar sidebar_02" aria-labelledby="header_re5_let_us_pray_pg05_01">
+                  <header id="header_re5_let_us_pray_pg05_01">
+                    <h6 id="h6_header_re5_let_us_pray_pg05_01" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img alt="let us pray icon" id="icon_img_let_us_pray_pg05_01" class="design-icon inline" src="../images/icon_img_let_us_pray.png"/>
+                      Let Us
+                      <strong>Pray</strong>
+                    </h6>
+                  </header>
+                  <figure id="unit01_chap01_pg05_informalfigure01" class="informalfigure float-right width-50 padding-left-0 padding-right-0 margin-top-0 margin-bottom-0 margin-left-default" role="group" aria-labelledby="unit01_chap01_pg05_figcaption01">
+                    <img alt="kid writing" id="unit01_chap01_pg05_image01" src="../images/c_img_unit01_chap01_pg08_32.jpg"/>
+                    <figcaption id="unit01_chap01_pg05_figcaption01">
+                      <div class="caption">
+                        <p>Feast of the Nativity of the Blessed Virgin Mary in Karnataka, India</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <p class="margin-top-0 margin-bottom-0">Jesus gave the Eucharist to His disciples at the Last Supper. Our Tradition revolves around this sacred celebration.</p>
+                  <p>The Eucharist is at the heart of Catholic life. During Eucharistic liturgies, or Mass, the bread and wine are consecrated and become Christ’s Body and Blood. At Mass, we find Jesus in the priest, in the congregation, in God’s Word, and especially
+                    in the Eucharist. The word Eucharist comes from the Greek Eucharistia, which means “thanksgiving.” During the Eucharist, we receive Jesus, we remember His sacrifice for us, and we give thanks.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar + text + informalfigure + caption + float right ends -->
+
+        <!-- Sidebar + Text + Blockquote + divider + note Section Starts -->
+        <hr id="sidebar_03"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + Text + Blockquote + Divider + Note:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Sidebar 03: In the Parish combined with Paragraph, Blockquote with sourceline, Generic Divider with width-75, and Note 01 that is center-aligned with width-66.]</p>
+          <aside id="re5_in_the_parish_pg10_02" class="sidebar sidebar_03" aria-labelledby="header_re5_in_the_parish_pg10_02">
+            <header id="header_re5_in_the_parish_pg10_02">
+              <h6 id="h6_header_re5_in_the_parish_pg10_02" class="title title_06 margin-top-0 margin-bottom-0">
+                <img alt="in the parish icon" id="icon_img_in_the_parish_pg10_02" class="design-icon inline" src="../../images/re6_student_icons/icon_img_in_the_parish.png"/>
+                In the
+                <strong>Parish</strong>
+              </h6>
+            </header>
+            <p class="margin-top-0">St. Paul was one of the first early Church leaders to write a creed. In a letter to the Corinthians, he wrote:</p>
+            <div id="unit01_chap01_pg05_blockquotegroup02" class="blockquotegroup">
+              <blockquote class="epigraph">
+                <p>"The Eucharist is the Sacrament of Love: It signifies Love, it produces Love."</p>
+              </blockquote>
+              <div class="source lc_align-right">
+                <p>
+                  <cite>&#x2014;St. Paul</cite>
+                </p>
+              </div>
+            </div>
+
+            <hr class="hr_01 width-75"/>
+
+            <div id="unit01_chap01_pg05_note01" class="note note_02_01 width-66 margin-default-auto padding-left-default padding-right-default">
+              <p class="padding-top-default padding-bottom-default">For I handed on to you…what I in turn had received: that Christ died for our sins in accordance with the scriptures, and that he was buried, and that he was raised on the third day in accordance
+                with the scriptures, and that he appeared to Cephas [Peter], then to the twelve.</p>
+            </div>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="re5_in_the_parish_pg10_02" class="sidebar sidebar_03" aria-labelledby="header_re5_in_the_parish_pg10_02">
+                  <header id="header_re5_in_the_parish_pg10_02">
+                    <h6 id="h6_header_re5_in_the_parish_pg10_02" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img alt="in the parish icon" id="icon_img_in_the_parish_pg10_02" class="design-icon inline" src="../images/icon_img_in_the_parish.png"/>
+                      In the
+                      <strong>Parish</strong>
+                    </h6>
+                  </header>
+                  <p class="margin-top-0">St. Paul was one of the first early Church leaders to write a creed. In a letter to the Corinthians, he wrote:</p>
+                  <div id="unit01_chap01_pg05_blockquotegroup02" class="blockquotegroup">
+                    <blockquote class="epigraph">
+                      <p>"The Eucharist is the Sacrament of Love: It signifies Love, it produces Love."</p>
+                    </blockquote>
+                    <div class="source lc_align-right">
+                      <p>
+                        <cite>&#x2014;St. Paul</cite>
+                      </p>
+                    </div>
+                  </div>
+
+                  <hr class="hr_01 width-75"/>
+
+                  <div id="unit01_chap01_pg05_note01" class="note note_02_01 width-66 margin-default-auto padding-left-default padding-right-default">
+                    <p class="padding-top-default padding-bottom-default">For I handed on to you…what I in turn had received: that Christ died for our sins in accordance with the scriptures, and that he was buried, and that he was raised on the third day in accordance
+                      with the scriptures, and that he appeared to Cephas [Peter], then to the twelve.</p>
+                  </div>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar + Text + Blockquote + divider + note Section ends -->
+
+        <!-- Sidebar + 2-column list + 3 column informalfigure Section Starts -->
+        <hr id="sidebar_04"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + 2-Column Ordered List + 3-Column Informalfigure:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Sidebar 04: Faith Facts combined with 2-Column Ordered List and 3-Column Informalfigure.]</p>
+          <aside id="re5_faith_facts_pg35_03" class="sidebar sidebar_04" aria-labelledby="header_re5_faith_facts_pg35_03">
+            <header id="header_re5_faith_facts_pg35_03">
+              <h6 id="h6_header_re5_faith_facts_pg35_03" class="title title_06 margin-top-0 margin-bottom-0">
+                <figure id="figure_faith_facts_pg35_03" class="informalfigure inline">
+                  <img alt="faith facts icon" id="icon_img_faith_facts_pg35_03" class="design-icon inline" src="../../images/re6_student_icons/icon_img_faith_facts.png"/>
+                </figure>
+                <strong>Faith</strong>
+                Facts
+              </h6>
+            </header>
+            <div>
+              <ol id="unit03_chap01_pg35_ol_column01" class="ol_column padding-left-default">
+                <li>
+                  <p class="margin-top-0 margin-bottom-0">God Created Heaven and Earth.</p>
+                </li>
+                <li>
+                  <p class="margin-top-0 margin-bottom-0">Jesus is God's Son.</p>
+                </li>
+                <li>
+                  <p class="margin-top-0 margin-bottom-0">Jesus died for our sins.</p>
+                </li>
+                <li>
+                  <p class="margin-top-0 margin-bottom-0">Jesus was raised from the dead after three days.</p>
+                </li>
+                <li>
+                  <p class="margin-top-0 margin-bottom-0">Scriptures foretold His resurrection.</p>
+                </li>
+                <li>
+                  <p class="margin-top-0 margin-bottom-0">Scriptures foretold His resurrection.</p>
+                </li>
+              </ol>
+            </div>
+
+            <figure id="unit03_chap01_pg35_figuregroup01" class="figuregroup" role="group" aria-labelledby="unit03_chap01_pg35_figuregroupcaption01">
+              <figure id="unit03_chap01_pg35_informalfigure01" class="informalfigure">
+                <img id="unit03_chap01_pg35_image01" src="../../images/placeholder_images/c_img_unit01_chap03_pg12_80.jpg" alt="Girl Praying 01"/>
+              </figure>
+
+              <figure id="unit03_chap01_pg35_informalfigure02" class="informalfigure">
+                <img id="unit03_chap01_pg35_image02" src="../../images/placeholder_images/c_img_unit01_chap03_pg12_81.jpg" alt="Girl Praying 02"/>
+              </figure>
+
+              <figure id="unit03_chap01_pg35_informalfigure03" class="informalfigure">
+                <img id="unit03_chap01_pg35_image03" src="../../images/placeholder_images/c_img_unit01_chap03_pg12_82.jpg" alt="Girl Praying 03"/>
+              </figure>
+
+              <figcaption id="unit03_chap01_pg35_figuregroupcaption01" class="sr-only">
+                <div class="caption">
+                  <p>Group of 3 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice that there is a div tag wrapping the ol tag. This is needed because the numbers by default will push outside the left boundary alignment. Need a div to force it within it.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="re5_faith_facts_pg35_03" class="sidebar sidebar_04" aria-labelledby="header_re5_faith_facts_pg35_03">
+                  <header id="header_re5_faith_facts_pg35_03">
+                    <h6 id="h6_header_re5_faith_facts_pg35_03" class="title title_06 margin-top-0 margin-bottom-0">
+                      <figure id="figure_faith_facts_pg35_03" class="informalfigure inline">
+                        <img alt="faith facts icon" id="icon_img_faith_facts_pg35_03" class="design-icon inline" src="../images/icon_img_faith_facts.png"/>
+                      </figure>
+                      <strong>Faith</strong>
+                      Facts
+                    </h6>
+                  </header>
+                  <div>
+                    <ol id="unit03_chap01_pg35_ol_column01" class="ol_column padding-left-default">
+                      <li>
+                        <p class="margin-top-0 margin-bottom-0">God Created Heaven and Earth.</p>
+                      </li>
+                      <li>
+                        <p class="margin-top-0 margin-bottom-0">Jesus is God's Son.</p>
+                      </li>
+                      <li>
+                        <p class="margin-top-0 margin-bottom-0">Jesus died for our sins.</p>
+                      </li>
+                      <li>
+                        <p class="margin-top-0 margin-bottom-0">Jesus was raised from the dead after three days.</p>
+                      </li>
+                      <li>
+                        <p class="margin-top-0 margin-bottom-0">Scriptures foretold His resurrection.</p>
+                      </li>
+                      <li>
+                        <p class="margin-top-0 margin-bottom-0">Scriptures foretold His resurrection.</p>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <figure id="unit03_chap01_pg35_figuregroup01" class="figuregroup" role="group" aria-labelledby="unit03_chap01_pg35_figuregroupcaption01">
+                    <figure id="unit03_chap01_pg35_informalfigure01" class="informalfigure">
+                      <img id="unit03_chap01_pg35_image01" src="../images/c_img_unit01_chap03_pg12_80.jpg" alt="Girl Praying 01"/>
+                    </figure>
+
+                    <figure id="unit03_chap01_pg35_informalfigure02" class="informalfigure">
+                      <img id="unit03_chap01_pg35_image02" src="../images/c_img_unit01_chap03_pg12_81.jpg" alt="Girl Praying 02"/>
+                    </figure>
+
+                    <figure id="unit03_chap01_pg35_informalfigure03" class="informalfigure">
+                      <img id="unit03_chap01_pg35_image03" src="../images/c_img_unit01_chap03_pg12_82.jpg" alt="Girl Praying 03"/>
+                    </figure>
+
+                    <figcaption id="unit03_chap01_pg35_figuregroupcaption01" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 3 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar + 2-column list + 3 column informalfigure Section ends -->
+
+        <!-- Sidebar + 2-column grid + text + informalfigure section Starts -->
+        <hr id="sidebar_05"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + 2-Column Grid + Text + Informalfigure:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Sidebar 06: Words to Inspire combined with 2-Column Grid with Paragraph in the first column and informalfigure in the second column.]</p>
+          <aside id="re5_words_to_inspire_pg35_09" class="sidebar sidebar_06" aria-labelledby="header_re5_words_to_inspire_pg35_09">
+            <header id="header_re5_words_to_inspire_pg35_09">
+              <h6 id="h6_header_re5_words_to_inspire_pg35_09" class="title title_06 margin-top-0 margin-bottom-0">
+                <img alt="words to inspire icon" id="icon_img_words_to_inspire_pg35_09" class="design-icon inline" src="../../images/re6_student_icons/icon_img_words_to_inspire.png"/>
+                Words to
+                <strong>Inspire</strong>
+              </h6>
+            </header>
+            <div id="unit03_chap01_pg35_grid-container01" class="grid-container">
+              <div class="grid-row margin-top-0">
+                <div class="grid-col">
+                  <p class="margin-top-0">On All Saints’ Day (November 1), we are inspired by the lives of the saints as we answer the call to live lives of holiness. On All Souls’ Day (November 2), we pray for those who have died and have not yet reached Heaven.</p>
+                </div>
+                <div class="grid-col">
+                  <figure id="unit03_chap01_pg35_informalfigure04" class="informalfigure width-100 margin-top-0">
+                    <img alt="celebration" id="unit03_chap01_pg35_image04" src="../../images/placeholder_images/c_img_unit01_chap02_pg10_52.jpg"/>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="re5_words_to_inspire_pg35_09" class="sidebar sidebar_06" aria-labelledby="header_re5_words_to_inspire_pg35_09">
+                  <header id="header_re5_words_to_inspire_pg35_09">
+                    <h6 id="h6_header_re5_words_to_inspire_pg35_09" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img alt="words to inspire icon" id="icon_img_words_to_inspire_pg35_09" class="design-icon inline" src="../images/icon_img_words_to_inspire.png"/>
+                      Words to
+                      <strong>Inspire</strong>
+                    </h6>
+                  </header>
+                  <div id="unit03_chap01_pg35_grid-container01" class="grid-container">
+                    <div class="grid-row margin-top-0">
+                      <div class="grid-col">
+                        <p class="margin-top-0">On All Saints’ Day (November 1), we are inspired by the lives of the saints as we answer the call to live lives of holiness. On All Souls’ Day (November 2), we pray for those who have died and have not yet reached Heaven.</p>
+                      </div>
+                      <div class="grid-col">
+                        <figure id="unit03_chap01_pg35_informalfigure04" class="informalfigure width-100 margin-top-0">
+                          <img alt="celebration" id="unit03_chap01_pg35_image04" src="../images/c_img_unit01_chap02_pg10_52.jpg"/>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar + 2-column grid + text + informalfigure section Ends -->
+
+      </section>
+      <!-- Sidebar Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Columns Section Starts -->
+      <section id="columns">
+        <header>
+          <h1>Column Combinations</h1>
+        </header>
+        <p class="p-grey">[This section displays an example responsive column layouts available in the RE5 Student ePub design template.]</p>
+
+        <!-- Title + 2 column grid + text + Informalfigure + shadow section starts -->
+        <hr id="column_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Title + 2-Column Grid + Text + Informalfigure + Shadow:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a section with a Yellow Shadow style that contains Title 05, Paragraph, and Informalfigure with Float-Right.]</p>
+          <section class="note shadow_orange padding-left-default padding-right-default" id="unit04_chap12_pg43_note02">
+            <header id="header_unit04_chap12_pg43">
+              <h5 id="h5_header_unit04_chap12_pg43" class="title title_05">Sanctifying Grace</h5>
+            </header>
+            <div id="unit04_chap12_pg43_grid-container01" class="grid-container">
+              <div class="grid-row margin-top-0 margin-bottom-0">
+                <div class="grid-col width-75">
+                  <p>We receive sanctifying grace through Baptism. It is like true north on our spiritual compass. It points us toward God and tells us that His kingdom is our destination. It helps us hear and follow His call throughout our lives.</p>
+                </div>
+                <div class="grid-col width-25">
+                  <figure id="unit04_chap12_pg43_informalfigure01" class="informalfigure margin-top-0 margin-bottom-0 width-75 margin-right-0">
+                    <img id="unit04_chap12_pg43_image01" alt="compass" src="../../images/placeholder_images/c_img_unit04_chap12_pg43_308.jpg"/>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice the note class has no additional note_01 classes ...etc with it. By default it is white Coloured background and this section is using a note class to have the border-radius effect on it.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section class="note shadow_orange padding-left-default padding-right-default" id="unit04_chap12_pg43_note02">
+                  <header id="header_unit04_chap12_pg43">
+                    <h5 id="h5_header_unit04_chap12_pg43" class="title title_05">Sanctifying Grace</h5>
+                  </header>
+                  <div id="unit04_chap12_pg43_grid-container01" class="grid-container">
+                    <div class="grid-row margin-top-0 margin-bottom-0">
+                      <div class="grid-col width-75">
+                        <p>We receive sanctifying grace through Baptism. It is like true north on our spiritual compass. It points us toward God and tells us that His kingdom is our destination. It helps us hear and follow His call throughout our lives.</p>
+                      </div>
+                      <div class="grid-col width-25">
+                        <figure id="unit04_chap12_pg43_informalfigure01" class="informalfigure margin-top-0 margin-bottom-0 width-75 margin-right-0">
+                          <img id="unit04_chap12_pg43_image01" alt="compass" src="../images/c_img_unit04_chap12_pg43_308.jpg"/>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title + 2 column grid + text + Informalfigure + shadow section ends -->
+
+      </section>
+      <!-- Columns Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Cards Section Starts -->
+      <section id="cards">
+        <header>
+          <h1>Card Combinations</h1>
+        </header>
+        <p class="p-grey">[Card components are generally used to style specific sections to set it apart from the main narrative text. This section displays some previews of cards that has a combination of components, elements and layouts that will generally
+          occured in the RE5 ePub.]</p>
+
+        <!-- Card + Text + Informalfigure + Blockquote + Note Section starts -->
+        <hr id="card_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Text + Informalfigure + Blockquote + Note:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Card 01: Focus on Scripture combined with Paragraph, Informalfigure, Blockquote with sourceline, and Note 01 (where the content of the blockquote is arranged in a 2-column layout with paragraph in the
+            first column and notes in the second column).]</p>
+
+          <section class="card card_01" id="unit01_chap03_pg13_sec02" aria-labelledby="header_unit01_chap03_pg13">
+            <header id="header_unit01_chap03_pg13">
+              <h4 id="h4_header_unit01_chap03_pg13" class="title title_04"><img class="design-icon inline" id="icon_img_focus_on_scripture_pg13_02" data-profile-deliveryformat="digital" alt="" src="../../images/re6_student_icons/icon_img_focus_on_scripture.png">
+                Focus on
+                <strong>Scripture</strong>
+              </h4>
+            </header>
+
+            <p class="padding-top-default">Jesus’ Sermon on the Mount probably confused many people. Be meek and merciful? This teaching was so different from the way that people dealt with the world. Even today, we often seek praise over humility, or revenge
+              over mercy. But Jesus teaches that truly being blessed and full of joy comes from putting God first. Following the Beatitudes means taking on the attitudes of Jesus and living them every day. The power of the Holy Spirit at work in us increases our
+              understanding of Jesus’ teachings and gives us the courage to live like Him.</p>
+
+            <figure class="informalfigure width-33" id="c_img_unit01_chap03_pg13_f76">
+              <img id="c_img_unit01_chap03_pg13_84" alt="Jesus talking" src="../../images/placeholder_images/c_img_unit01_chap03_pg13_84.jpg">
+            </figure>
+
+            <div id="unit01_chap03_pg13_blockquotegroup04" class="blockqoutegroup">
+              <blockquote>
+                <div id="unit01_chap03_pg13_grid-container01" class="grid-container">
+
+                  <div class="grid-row">
+                    <div class="grid-col width-66">
+                      <p>
+                        <em>Blessed are...</em>
+                      </p>
+                    </div>
+                    <div class="grid-col width-33"></div>
+                  </div>
+
+                  <div class="grid-row">
+                    <div class="grid-col width-66">
+                      <p>
+                        <em>...the poor in spirit, for theirs is the kingdom of heaven.</em>
+                      </p>
+                    </div>
+                    <div class="grid-col width-33">
+                      <div class="note note_01 margin-left-default padding-left-default padding-right-default">
+                        <p class="margin-top-0 margin-bottom-0">God promises.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-row">
+                    <div class="grid-col width-66">
+                      <p>
+                        <em>...those who hunger and thirst for righteousness, for they will be filled.</em>
+                      </p>
+                    </div>
+                    <div class="grid-col width-33">
+                      <div class="note note_01 margin-left-default padding-left-default padding-right-default">
+                        <p class="margin-top-0 margin-bottom-0">God provides, when we seek what is good.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </blockquote>
+
+              <div id="unit01_chap03_pg13_grid-container02" class="grid-container">
+                <div class="grid-row">
+                  <div class="grid-col width-66">
+                    <div class="source float-right">
+                      <p>
+                        <cite>&#x2014;Matthew 5:3&#x2014;12</cite>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="grid-col width-33"></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice that there is a grid-container inside the blockquote itself in order to split the quote and the note. There is also another grid-container for the source of the blockquote in order for the source to aligned properly on
+            the right side of the first column width.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section class="card card_01" id="unit01_chap03_pg13_sec02" aria-labelledby="header_unit01_chap03_pg13">
+                  <header id="header_unit01_chap03_pg13">
+                    <h4 id="h4_header_unit01_chap03_pg13" class="title title_04"><img class="design-icon inline" id="icon_img_focus_on_scripture_pg13_02" data-profile-deliveryformat="digital" alt="" src="../images/icon_img_focus_on_scripture.png">
+                      Focus on
+                      <strong>Scripture</strong>
+                    </h4>
+                  </header>
+
+                  <p class="padding-top-default">Jesus’ Sermon on the Mount probably confused many people. Be meek and merciful? This teaching was so different from the way that people dealt with the world. Even today, we often seek praise over humility, or revenge
+                    over mercy. But Jesus teaches that truly being blessed and full of joy comes from putting God first. Following the Beatitudes means taking on the attitudes of Jesus and living them every day. The power of the Holy Spirit at work in us increases our
+                    understanding of Jesus’ teachings and gives us the courage to live like Him.</p>
+
+                  <figure class="informalfigure width-33" id="c_img_unit01_chap03_pg13_f76">
+                    <img id="c_img_unit01_chap03_pg13_84" alt="Jesus talking" src="../images/c_img_unit01_chap03_pg13_84.jpg">
+                  </figure>
+
+                  <div id="unit01_chap03_pg13_blockquotegroup04" class="blockqoutegroup">
+                    <blockquote>
+                      <div id="unit01_chap03_pg13_grid-container01" class="grid-container">
+
+                        <div class="grid-row">
+                          <div class="grid-col width-66">
+                            <p>
+                              <em>Blessed are...</em>
+                            </p>
+                          </div>
+                          <div class="grid-col width-33"></div>
+                        </div>
+
+                        <div class="grid-row">
+                          <div class="grid-col width-66">
+                            <p>
+                              <em>...the poor in spirit, for theirs is the kingdom of heaven.</em>
+                            </p>
+                          </div>
+                          <div class="grid-col width-33">
+                            <div class="note note_01 margin-left-default padding-left-default padding-right-default">
+                              <p class="margin-top-0 margin-bottom-0">God promises.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="grid-row">
+                          <div class="grid-col width-66">
+                            <p>
+                              <em>...those who hunger and thirst for righteousness, for they will be filled.</em>
+                            </p>
+                          </div>
+                          <div class="grid-col width-33">
+                            <div class="note note_01 margin-left-default padding-left-default padding-right-default">
+                              <p class="margin-top-0 margin-bottom-0">God provides, when we seek what is good.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </blockquote>
+
+                    <div id="unit01_chap03_pg13_grid-container02" class="grid-container">
+                      <div class="grid-row">
+                        <div class="grid-col width-66">
+                          <div class="source float-right">
+                            <p>
+                              <cite>&#x2014;Matthew 5:3&#x2014;12</cite>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="grid-col width-33"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Text + Informalfigure + Blockquote + Note Section Ends -->
+
+        <!-- Card + Note + Title + Informalfigure + Float-Left SEction starts -->
+        <hr id="card_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Note + Title + Informalfigure + Float-Left:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Card 02 combined with Note 04 aligned to the center, Title 05, Paragraph, and Informal Figure with Float-Left.]
+          </p>
+
+          <section class="card card_02 lc_align-center" id="unit01_chap01_pg06_sec04" aria-labelledby="header_unit01_chap01_pg06_01">
+            <header id="header_unit01_chap01_pg06_01">
+              <h4 id="h4_header_unit01_chap01_pg06_01" class="title title_04">
+                <strong>The Archangels</strong>
+              </h4>
+            </header>
+
+            <div class="note note_04">
+              <p class="margin-top-0 margin-bottom-0">Feast Day: September 29</p>
+            </div>
+
+            <section id="unit01_chap01_pg06_sec05" aria-labelledby="header_unit01_chap01_pg06_02">
+              <header id="header_unit01_chap01_pg06_02">
+                <h5 id="h5_header_unit01_chap01_pg06_02" class="title title_05">
+                  <strong>St. Michael</strong>
+                </h5>
+              </header>
+
+              <figure class="informalfigure float-left width-33 margin-right-default margin-top-0" id="c_img_unit01_chap01_pg06_f08">
+                <img id="c_img_unit01_chap01_pg06_08" alt="angel" src="../../images/placeholder_images/c_img_unit01_chap01_pg06_08.jpg">
+              </figure>
+
+              <p class="lc_align-left">Because he fought against Satan and continues to defend and protect us from evil, St. Michael the archangel is usually pictured as an armoured warrior. His name appears four times in Scripture. He is first mentioned in Daniel
+                12:1: “At that time Michael, the great prince, the protector of your people, shall arise.…” The Book of Revelation describes a war in which St. Michael defeats Satan.</p>
+
+            </section>
+
+          </section>
+
+          <p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice that title_04 and title_05 class inside a card_02 will make the titles red, overwriting the default title_04 and title_05.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section class="card card_02 lc_align-center" id="unit01_chap01_pg06_sec04" aria-labelledby="header_unit01_chap01_pg06_01">
+                  <header id="header_unit01_chap01_pg06_01">
+                    <h4 id="h4_header_unit01_chap01_pg06_01" class="title title_04">
+                      <strong>The Archangels</strong>
+                    </h4>
+                  </header>
+
+                  <div class="note note_04">
+                    <p class="margin-top-0 margin-bottom-0">Feast Day: September 29</p>
+                  </div>
+
+                  <section id="unit01_chap01_pg06_sec05" aria-labelledby="header_unit01_chap01_pg06_02">
+                    <header id="header_unit01_chap01_pg06_02">
+                      <h5 id="h5_header_unit01_chap01_pg06_02" class="title title_05">
+                        <strong>St. Michael</strong>
+                      </h5>
+                    </header>
+
+                    <figure class="informalfigure float-left width-33 margin-right-default margin-top-0" id="c_img_unit01_chap01_pg06_f08">
+                      <img id="c_img_unit01_chap01_pg06_08" alt="angel" src="../images/c_img_unit01_chap01_pg06_08.jpg">
+                    </figure>
+
+                    <p class="lc_align-left">Because he fought against Satan and continues to defend and protect us from evil, St. Michael the archangel is usually pictured as an armoured warrior. His name appears four times in Scripture. He is first mentioned in Daniel
+                      12:1: “At that time Michael, the great prince, the protector of your people, shall arise.…” The Book of Revelation describes a war in which St. Michael defeats Satan.</p>
+
+                  </section>
+
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Note + Title + Informalfigure + Float-Left SEction ends -->
+
+        <!-- Card + Text + Informalfigure + Blockquote + Note + Seperator section starts -->
+        <hr id="card_03"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Text + Informalfigure + Blockquote + Note + Seperator:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Card 04 - Orange: How We Celebrate combined with Paragraph, Informal Figure with Width-33 aligned to the center, Blockquotes, Note 01, and Purple Dividers.]</p>
+
+          <section id="unit01_chap02_pg10_sec04" class="card card_04 card_orange" aria-labelledby="header_unit01_chap02_pg10">
+            <header id="header_unit01_chap02_pg10">
+              <h4 id="h4_header_unit01_chap02_pg10" class="title title_04">
+                <img id="unit01_chap02_pg10_design-icon01" class="design-icon inline" alt="our catholic faith icon" src="../../images/re6_student_icons/icon_img_our_catholic_faith.png"/>
+                How We Celebrate
+              </h4>
+            </header>
+
+            <p class="padding-top-default">Sacred Tradition teaches us that Mary, the mother of Jesus, was conceived without the stain of original sin. The Church celebrates this event—the Immaculate Conception—on December 8. The Feast of the Nativity of the
+              Blessed Virgin Mary is celebrated nine months later, on September 8.</p>
+
+            <figure id="unit_01_chap02_pg_10_informalfigure01" class="informalfigure width-33 margin-default-auto">
+              <img id="unit_01_chap02_pg_10_image01" alt="group picture" src="../../images/placeholder_images/c_img_unit01_chap03_pg13_90.jpg"/>
+            </figure>
+
+            <div id="unit_01_chap02_pg_10_blockquotegroup01" class="blockquotegroup">
+              <blockquote class="epigraph">
+                <p>God is not a human being, that he should lie, or a mortal, that he should change his mind...</p>
+              </blockquote>
+              <div class="source lc_align-right">
+                <p>
+                  <cite>&#x2014;Numbers 23:19</cite>
+                </p>
+              </div>
+            </div>
+
+            <div id="unit_01_chap02_pg_10_note01" class="note note_01 padding-left-default padding-right-default width-50 margin-default-auto">
+              <p class="margin-top-0 margin-bottom-0">God is perfect. He does not lie or deceive.</p>
+            </div>
+
+            <hr class="hr_02"/>
+
+            <div id="unit_01_chap02_pg_10_blockquotegroup01" class="blockquotegroup">
+              <blockquote class="epigraph">
+                <p>For your steadfast love is as high as the heavens; your faithfulness extends to the clouds.</p>
+              </blockquote>
+              <div class="source lc_align-right">
+                <p>
+                  <cite>&#x2014;Psalm 57:10</cite>
+                </p>
+              </div>
+            </div>
+
+            <div id="unit_01_chap02_pg_10_note01" class="note note_01 padding-left-default padding-right-default width-50 margin-default-auto">
+              <p class="margin-top-0 margin-bottom-0">God's love and faithfulness are limitless.</p>
+            </div>
+
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit01_chap02_pg10_sec04" class="card card_04 card_orange" aria-labelledby="header_unit01_chap02_pg10">
+                  <header id="header_unit01_chap02_pg10">
+                    <h4 id="h4_header_unit01_chap02_pg10" class="title title_04">
+                      <img id="unit01_chap02_pg10_design-icon01" class="design-icon inline" alt="our catholic faith icon" src="../images/icon_img_our_catholic_faith.png"/>
+                      How We Celebrate
+                    </h4>
+                  </header>
+
+                  <p class="padding-top-default">Sacred Tradition teaches us that Mary, the mother of Jesus, was conceived without the stain of original sin. The Church celebrates this event—the Immaculate Conception—on December 8. The Feast of the Nativity of the
+                    Blessed Virgin Mary is celebrated nine months later, on September 8.</p>
+
+                  <figure id="unit_01_chap02_pg_10_informalfigure01" class="informalfigure width-33 margin-default-auto">
+                    <img id="unit_01_chap02_pg_10_image01" alt="group picture" src="../images/c_img_unit01_chap03_pg13_90.jpg"/>
+                  </figure>
+
+                  <div id="unit_01_chap02_pg_10_blockquotegroup01" class="blockquotegroup">
+                    <blockquote class="epigraph">
+                      <p>God is not a human being, that he should lie, or a mortal, that he should change his mind...</p>
+                    </blockquote>
+                    <div class="source lc_align-right">
+                      <p>
+                        <cite>&#x2014;Numbers 23:19</cite>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="unit_01_chap02_pg_10_note01" class="note note_01 padding-left-default padding-right-default width-50 margin-default-auto">
+                    <p class="margin-top-0 margin-bottom-0">God is perfect. He does not lie or deceive.</p>
+                  </div>
+
+                  <hr class="hr_02"/>
+
+                  <div id="unit_01_chap02_pg_10_blockquotegroup01" class="blockquotegroup">
+                    <blockquote class="epigraph">
+                      <p>For your steadfast love is as high as the heavens; your faithfulness extends to the clouds.</p>
+                    </blockquote>
+                    <div class="source lc_align-right">
+                      <p>
+                        <cite>&#x2014;Psalm 57:10</cite>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div id="unit_01_chap02_pg_10_note01" class="note note_01 padding-left-default padding-right-default width-50 margin-default-auto">
+                    <p class="margin-top-0 margin-bottom-0">God's love and faithfulness are limitless.</p>
+                  </div>
+
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Text + Informalfigure + Blockquote + Note + Seperator section ends -->
+
+        <!-- Card + Blockquote with Caption wrapping Note + Figuregroup with Caption + Note Section Starts -->
+        <hr id="card_04"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Blockquote with Caption wrapping Note + Figuregroup with Caption + Note:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Card 06 combined with Blockquotegroup 02 that is wrapping within it a Note 02-01, a Figuregroup with 4 images that has their own individual captions, another Note 02-01 and finally a Blockquotegroup 02 caption.]</p>
+
+          <section id="unit_01_chap02_pg_24_card01" class="card card_06">
+            <header id="header_unit01_chap02_pg24">
+              <h4 id="h4_header_unit01_chap02_pg24" class="title title_04 lc_align-center">Saul's Conversion</h4>
+            </header>
+
+            <div id="unit_01_chap02_pg_24_blockquotegroup01" class="blockquotegroup_02">
+              <blockquote class="epigraph">
+                <div id="unit_01_chap02_pg_24_note01" class="note note_02_01 width-75 margin-default-auto padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">The story of Saul's conversion shows the power of reveltation and faith to transform and guide us.</p>
+                </div>
+
+                <figure id="unit_01_chap02_pg_24_figuregroup01" class="figuregroup" role="group" aria-labelledby="unit_01_chap02_pg24_figuregroupcaption01">
+                  <figure id="unit_01_chap02_pg_24_figure01" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption01">
+                    <img id="unit_01_chap02_pg_24_image01" alt="man1" src="../../images/placeholder_images/c_img_unit01_chap04_pg17_111a.jpg"/>
+                    <figcaption id="unit_01_chap02_pg_24_figurecaption01">
+                      <div class="caption">
+                        <p>Saul believed his job was to arrest and punish the followers of Jesus. But God had a different plan.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <figure id="unit_01_chap02_pg_24_figure02" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption02">
+                    <img id="unit_01_chap02_pg_24_image02" alt="man2" src="../../images/placeholder_images/c_img_unit01_chap04_pg17_111b.jpg"/>
+                    <figcaption id="unit_01_chap02_pg_24_figurecaption02">
+                      <div class="caption">
+                        <p>Jesus appeared and revealed his truth. Saul's eyes were open, but he was blinded by this encounter with Jesus.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <figure id="unit_01_chap02_pg_24_figure03" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption03">
+                    <img id="unit_01_chap02_pg_24_image03" alt="man3" src="../../images/placeholder_images/c_img_unit01_chap04_pg17_111c.jpg"/>
+                    <figcaption id="unit_01_chap02_pg_24_figurecaption03">
+                      <div class="caption">
+                        <p>Saul travelled to the city of Damascus, where he fasted and prayed for 3 days. THen God sent Jesus' disciple Ananias to Saul.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <figure id="unit_01_chap02_pg_24_figure04" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption04">
+                    <img id="unit_01_chap02_pg_24_image04" alt="man4" src="../../images/placeholder_images/c_img_unit01_chap04_pg17_111d.jpg"/>
+                    <figcaption id="unit_01_chap02_pg_24_figurecaption04">
+                      <div class="caption">
+                        <p>Saul believed his job was to arrest and punish the followers of Jesus. But God had a different plan.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <figcaption id="unit_01_chap02_pg24_figuregroupcaption01" class="sr-only">
+                    <div class="caption">
+                      <p>Group of 4 images.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <div id="unit_01_chap02_pg_24_note02" class="note note_02_01 width-85 margin-default-auto padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">After his conversion, Saul went by the name of Paul. By the power of the Holy Spirit, he became the first missionary to preach the Good News to Gentiles (non-Jewish people) in Jerusalem, Asia Minor, Greece, and
+                    Rome. St. Paul wrote many letters to early Church members. These letters are part of the New Testament.</p>
+                </div>
+              </blockquote>
+
+              <div class="source note note_02_01 float-right padding-left-default padding-right-default padding-top-0 padding-bottom-0">
+                <p class="margin-top-0 margin-bottom-0">
+                  <cite>&#x2014;Based on Acts 9:1&#x2014;20</cite>
+                </p>
+              </div>
+              <div class="clear-both margin-bottom-default"></div>
+            </div>
+
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice there is an empty div at the bottom that is using the class "clear-both" because there was a float-right previously.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit_01_chap02_pg_24_card01" class="card card_06">
+                  <header id="header_unit01_chap02_pg24">
+                    <h4 id="h4_header_unit01_chap02_pg24" class="title title_04 lc_align-center">Saul's Conversion</h4>
+                  </header>
+
+                  <div id="unit_01_chap02_pg_24_blockquotegroup01" class="blockquotegroup_02">
+                    <blockquote class="epigraph">
+                      <div id="unit_01_chap02_pg_24_note01" class="note note_02_01 width-75 margin-default-auto padding-left-default padding-right-default">
+                        <p class="margin-top-0 margin-bottom-0">The story of Saul's conversion shows the power of reveltation and faith to transform and guide us.</p>
+                      </div>
+
+                      <figure id="unit_01_chap02_pg_24_figuregroup01" class="figuregroup" role="group" aria-labelledby="unit_01_chap02_pg24_figuregroupcaption01">
+                        <figure id="unit_01_chap02_pg_24_figure01" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption01">
+                          <img id="unit_01_chap02_pg_24_image01" alt="man1" src="../images/c_img_unit01_chap04_pg17_111a.jpg"/>
+                          <figcaption id="unit_01_chap02_pg_24_figurecaption01">
+                            <div class="caption">
+                              <p>Saul believed his job was to arrest and punish the followers of Jesus. But God had a different plan.
+                              </p>
+                            </div>
+                          </figcaption>
+                        </figure>
+                        <figure id="unit_01_chap02_pg_24_figure02" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption02">
+                          <img id="unit_01_chap02_pg_24_image02" alt="man2" src="../images/c_img_unit01_chap04_pg17_111b.jpg"/>
+                          <figcaption id="unit_01_chap02_pg_24_figurecaption02">
+                            <div class="caption">
+                              <p>Jesus appeared and revealed his truth. Saul's eyes were open, but he was blinded by this encounter with Jesus.</p>
+                            </div>
+                          </figcaption>
+                        </figure>
+                        <figure id="unit_01_chap02_pg_24_figure03" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption03">
+                          <img id="unit_01_chap02_pg_24_image03" alt="man3" src="../images/c_img_unit01_chap04_pg17_111c.jpg"/>
+                          <figcaption id="unit_01_chap02_pg_24_figurecaption03">
+                            <div class="caption">
+                              <p>Saul travelled to the city of Damascus, where he fasted and prayed for 3 days. THen God sent Jesus' disciple Ananias to Saul.</p>
+                            </div>
+                          </figcaption>
+                        </figure>
+                        <figure id="unit_01_chap02_pg_24_figure04" class="informalfigure" role="group" aria-labelledby="unit_01_chap02_pg_24_figurecaption04">
+                          <img id="unit_01_chap02_pg_24_image04" alt="man4" src="../images/c_img_unit01_chap04_pg17_111d.jpg"/>
+                          <figcaption id="unit_01_chap02_pg_24_figurecaption04">
+                            <div class="caption">
+                              <p>Saul believed his job was to arrest and punish the followers of Jesus. But God had a different plan.
+                              </p>
+                            </div>
+                          </figcaption>
+                        </figure>
+                        <figcaption id="unit_01_chap02_pg24_figuregroupcaption01" class="sr-only">
+                          <div class="caption">
+                            <p>Group of 4 images.</p>
+                          </div>
+                        </figcaption>
+                      </figure>
+
+                      <div id="unit_01_chap02_pg_24_note02" class="note note_02_01 width-85 margin-default-auto padding-left-default padding-right-default">
+                        <p class="margin-top-0 margin-bottom-0">After his conversion, Saul went by the name of Paul. By the power of the Holy Spirit, he became the first missionary to preach the Good News to Gentiles (non-Jewish people) in Jerusalem, Asia Minor, Greece, and
+                          Rome. St. Paul wrote many letters to early Church members. These letters are part of the New Testament.</p>
+                      </div>
+                    </blockquote>
+
+                    <div class="source note note_02_01 float-right padding-left-default padding-right-default padding-top-0 padding-bottom-0">
+                      <p class="margin-top-0 margin-bottom-0">
+                        <cite>&#x2014;Based on Acts 9:1&#x2014;20</cite>
+                      </p>
+                    </div>
+                    <div class="clear-both margin-bottom-default"></div>
+                  </div>
+
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Blockquote with Caption wrapping Note + Figuregroup with Caption + Note Section Ends -->
+
+        <!-- Card + Text + Dialogue Section Starts -->
+        <hr id="card_05" />
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Text + Dialogue:</h2>
+          </header>
+          <p class="p-grey">[Below is a card 04 - Blue: What We Believe with regular paragraph text and dialogue text.]</p>
+        
+          <section class="card card_04 card_blue">
+            <header>
+              <h4 class="title title_04"><img class="design-icon inline" alt="" src="../../images/re6_student_icons/icon_img_what_we_believe.png" />
+              What We Believe</h4>
+            </header>
+            <p class="padding-top-default">Begin with the Sign of the Cross. Use the following or a similar script to conduct the enthronement liturgy:</p>
+        
+            <div class="dialogue">
+              <div class="speech">
+                <div class="persona width-15">
+                  <p><strong>Teacher:</strong></p>
+                </div>
+                <div class="line width-85">
+                  <p><em>Our Bible contains the Word of God. We ask God to help us come to know Him better as we read His Word from
+                    the Bible.</em></p>
+                </div>
+              </div>
+            </div>
+            <p>(Pause and play the hymn “Gather Your People.” Invite students to join in singing if they wish. Lead them in a procession to the Prayer
+              Table, and have them form a circle or semicircle around it. Continue with the liturgy.)</p>
+        
+            <div class="dialogue">
+              <div class="speech">
+                <div class="persona width-15">
+                  <p><strong>Teacher:</strong></p>
+                </div>
+                <div class="line width-85">
+                  <p><em>I will read some prayers. As I finish each prayer, I will raise my hand and you will respond with,
+                    “Strengthen our faith, O Lord.”</em></p>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_04 card_blue" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04"><img id="unit02_chap03_pg15_design-icon01" class="design-icon inline" alt="" src="../../images/re6_student_icons/icon_img_what_we_believe.png" />
+                    What We Believe</h4>
+                  </header>
+                  <p class="padding-top-default">Begin with the Sign of the Cross. Use the following or a similar script to conduct the enthronement liturgy:</p>
+                  
+                  <div class="dialogue">
+                    <div class="speech">
+                      <div class="persona width-15">
+                        <p><strong>Teacher:</strong></p>
+                      </div>
+                      <div class="line width-85">
+                        <p><em>Our Bible contains the Word of God. We ask God to help us come to know Him better as we read His Word from
+                            the Bible.</em></p>
+                      </div>
+                    </div>
+                  </div>
+                  <p>(Pause and play the hymn “Gather Your People.” Invite students to join in singing if they wish. Lead them in a
+                    procession to the Prayer
+                    Table, and have them form a circle or semicircle around it. Continue with the liturgy.)</p>
+                  
+                  <div class="dialogue">
+                    <div class="speech">
+                      <div class="persona width-15">
+                        <p><strong>Teacher:</strong></p>
+                      </div>
+                      <div class="line width-85">
+                        <p><em>I will read some prayers. As I finish each prayer, I will raise my hand and you will respond with,
+                            “Strengthen our faith, O Lord.”</em></p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Text + Dialogue + Design Icon Text Inline Section Ends -->
+      </section>
+      <!-- Cards Section Ends-->
+
+      <hr class="template_hr"/>
+
+      <!-- Others Section Starts -->
+      <section id="others">
+        <header>
+          <h1>List Combination</h1>
+        </header>
+        <p class="p-grey">[A section that has list elements, layouts and styles that are used in conjunction with each other.]</p>
+
+        <!-- Section + Background Colour + Title + Definition List section starts -->
+        <hr id="others_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Background Colour + Title + Text Colour + Definition List:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Title 05 combined with Definition List with Light Purple Background applied to the section, and where the definition term has a Dark Purple Background with White Text Colour.]</p>
+
+          <section id="unit05_chap15_pg52_sec03" class="bg_lightpurple padding-left-default padding-right-default padding-top-default padding-bottom-default">
+            <header id="header_unit05_chap15_pg52_sec03">
+              <h1 id="h1_header_unit05_chap15_pg52_sec03" class="title title_05">Catholic Social Justice Principles</h1>
+            </header>
+            <dl id="unit05_chap15_pg52_definitionlist01">
+              <dt class="bg_darkpurple inline padding-left-default padding-right-default text-color-white">
+                Worship
+              </dt>
+              <dd>
+                <p>the feeling or expression of reverence and adoration for God.</p>
+              </dd>
+              <dt class="bg_darkpurple inline padding-left-default padding-right-default text-color-white">
+                Prayer
+              </dt>
+              <dd>
+                <p>a solemn request for help or expression of thanks addressed to God or an object of worship.</p>
+              </dd>
+            </dl>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit05_chap15_pg52_sec03" class="bg_lightpurple padding-left-default padding-right-default padding-top-default padding-bottom-default">
+                  <header id="header_unit05_chap15_pg52_sec03">
+                    <h1 id="h1_header_unit05_chap15_pg52_sec03" class="title title_05">Catholic Social Justice Principles</h1>
+                  </header>
+                  <dl id="unit05_chap15_pg52_definitionlist01">
+                    <dt class="bg_darkpurple inline padding-left-default padding-right-default text-color-white">
+                      Worship
+                    </dt>
+                    <dd>
+                      <p>the feeling or expression of reverence and adoration for God.</p>
+                    </dd>
+                    <dt class="bg_darkpurple inline padding-left-default padding-right-default text-color-white">
+                      Prayer
+                    </dt>
+                    <dd>
+                      <p>a solemn request for help or expression of thanks addressed to God or an object of worship.</p>
+                    </dd>
+                  </dl>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Section + Background Colour + Title + Definition List section ends -->
+      </section>
+      <!-- Others Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Practice Section Starts -->
+      <hr id="practices"/>
+      <section>
+        <header>
+          <h1>Practice Combinations</h1>
+        </header>
+        <p class="p-grey">[Practice components are generally used to style end-of-section features, such as practice questions or reflection exercises. This section displays some previews of practices that uses practicelists and practicelists with no numbering.]</p>
+
+        <!-- Practice + Practice List (With Numbers) Section starts -->
+        <hr id="practice_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice + Practice List (With Numbers):</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Practice 01: Know, Think, Infer combined with Practice List.]</p>
+
+          <section id="unit01_chap01_pg05_sec04" class="practice practice_01" aria-labelledby="header_unit01_chap01_pg05_sec04">
+            <header id="header_unit01_chap01_pg05_sec04">
+              <h4 id="h4_header_unit01_chap01_pg05_sec04" class="title title_04"><img id="icon_img_know_think_infer_pg05_01" class="design-icon inline" alt="" src="../../images/re6_student_icons/icon_img_know_think_infer.png"/>
+                <strong>Know, Think, Infer</strong>
+              </h4>
+            </header>
+            <ol id="ol_unit01_chap01_pg05_sec04" class="practicelist">
+              <li class="general-problem">
+                <div class="question">
+                  <p>What does having faith mean?</p>
+                </div>
+              </li>
+              <li class="general-problem">
+                <div class="question">
+                  <p>Why can we completely trust God, and how do we build that trust?</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit01_chap01_pg05_sec04" class="practice practice_01" aria-labelledby="header_unit01_chap01_pg05_sec04">
+                  <header id="header_unit01_chap01_pg05_sec04">
+                    <h4 id="h4_header_unit01_chap01_pg05_sec04" class="title title_04"><img id="icon_img_know_think_infer_pg05_01" class="design-icon inline" alt="" src="../images/icon_img_know_think_infer.png"/>
+                      <strong>Know, Think, Infer</strong>
+                    </h4>
+                  </header>
+                  <ol id="ol_unit01_chap01_pg05_sec04" class="practicelist">
+                    <li class="general-problem">
+                      <div class="question">
+                        <p>What does having faith mean?</p>
+                      </div>
+                    </li>
+                    <li class="general-problem">
+                      <div class="question">
+                        <p>Why can we completely trust God, and how do we build that trust?</p>
+                      </div>
+                    </li>
+                  </ol>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice + Practice List (With Numbers) Section ends -->
+
+        <!-- Practice + Practice List (Without Numbers) Section starts -->
+        <hr id="practice_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice + Practice List (Without Numbers):</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of Practice 03 - Light Purple: Growing in Faith combined with Practice List, and Ordered List without Numbers.]</p>
+
+          <section id="unit02_chap05_pg22_sec06" class="practice practice_03" aria-labelledby="header_header_unit02_chap05_pg22_sec06">
+            <header id="header_header_unit02_chap05_pg22_sec06">
+              <h2 id="h2_header_header_unit02_chap05_pg22_sec06" class="title title_02 bg_darkpurple"><img id="c_img_unit02_chap05_pg22_145" class="design-icon inline margin-right-default" alt="Chapter 5" src="../../images/re6_student_icons/icon_img_chapter05.png"/>Growing in
+                <strong>Faith</strong>
+              </h2>
+            </header>
+            <ol id="ol_unit02_chap05_pg22_sec06" class="practicelist bg_lightpurple ol_none">
+              <li class="general-problem">
+                <div class="question">
+                  <p>
+                    <strong>Focus:</strong>
+                    How do Tradition and rituals help us prepare for the comings of Christ during Advent?</p>
+                </div>
+              </li>
+              <li class="general-problem">
+                <div class="question">
+                  <p>
+                    <strong>Deepen Your Faith:</strong>
+                    How can Advent symbols deepen my faith? Which symbol of Advent is the most meaningful to me?</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit02_chap05_pg22_sec06" class="practice practice_03 bg_lightpurple" aria-labelledby="header_header_unit02_chap05_pg22_sec06">
+                  <header id="header_header_unit02_chap05_pg22_sec06">
+                    <h2 id="h2_header_header_unit02_chap05_pg22_sec06" class="title title_02 bg_darkpurple"><img id="c_img_unit02_chap05_pg22_145" class="design-icon inline margin-right-default" alt="Chapter 5" src="../images/icon_img_chapter05.png"/>Growing in
+                      <strong>Faith</strong>
+                    </h2>
+                  </header>
+                  <ol id="ol_unit02_chap05_pg22_sec06" class="practicelist ol_none">
+                    <li class="general-problem">
+                      <div class="question">
+                        <p>
+                          <strong>Focus:</strong>
+                          How do Tradition and rituals help us prepare for the comings of Christ during Advent?</p>
+                      </div>
+                    </li>
+                    <li class="general-problem">
+                      <div class="question">
+                        <p>
+                          <strong>Deepen Your Faith:</strong>
+                          How can Advent symbols deepen my faith? Which symbol of Advent is the most meaningful to me?</p>
+                      </div>
+                    </li>
+                  </ol>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice + Practice List (Without Numbers) Section ends -->
+      </section>
+      <!-- Practice Section Ends -->
+
+      <hr class="template_hr" />
+      
+      <!-- Figuregroup Section Starts -->
+      <hr id="figuregroups" />
+      <section>
+        <header>
+          <h1>Figuregroup Combinations</h1>
+        </header>
+        <p class="p-grey">[Figuregroup layout that have a combination of figure captions.]</p>
+      
+        <!-- 2-Column Figure Layout with Captions for Figures and Figuregroup Section starts -->
+        <hr id="figuregroup_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout with Captions for Figures and Figuregroup:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for figures and figuregroup.]</p>
+
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" id="c_img_unitXX_chapXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX" role="group" aria-labelledby="c_img_unitXX_chapXX_pgXX_fcXX">
+                <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                  src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                <figcaption id="c_img_unitXX_chapXX_pgXX_fcXX">
+                  <div class="caption">
+                    <p>I am figure caption for the first figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX" role="group" aria-labelledby="2column_figure01_02">
+                <img id="c_img_unitXX_chapXX_pgXX_XX" aria-labelledby="c_img_unitXX_chapXX_pgXX_fcXX"
+                  src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                <figcaption id="c_img_unitXX_chapXX_pgXX_fcXX">
+                  <div class="caption">
+                    <p>I am figure caption for the second figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figcaption id="2column_figure01">
+                <div class="caption">
+                  <p>I am caption for the figuregroup.</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <figure class="figuregroup" id="c_img_unit01_chap02_pg10_fg01" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fgc01">
+                    <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f01" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fc01">
+                      <img id="c_img_unit01_chap02_pg10_01" alt="image01"
+                        src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      <figcaption id="c_img_unit01_chap02_pg10_fc01">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f02" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fc02">
+                      <img id="c_img_unit01_chap02_pg19_02" alt="image02"
+                        src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      <figcaption id="c_img_unit01_chap02_pg10_fc02">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="c_img_unit01_chap02_pg10_fgc01">
+                      <div class="caption">
+                        <p>I am caption for the figuregroup.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+              </div>
+            </p>
+          </section>
+        </section>
+        <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+
+        <!-- 2-Column Figure Layout with Captions for Nested Figure only Section starts -->
+        <hr id="figuregroup_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout with Captions for Nested Figures only:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for nested figures only.]</p>
+        
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" id="c_img_unitXX_chapXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX" role="group" aria-labelledby="c_img_unitXX_chapXX_pgXX_fcXX">
+                <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                  src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                <figcaption id="c_img_unitXX_chapXX_pgXX_fcXX">
+                  <div class="caption">
+                    <p>I am figure caption for the first figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX" role="group" aria-labelledby="c_img_unitXX_chapXX_pgXX_fcXX">
+                <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                  src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                <figcaption id="c_img_unitXX_chapXX_pgXX_fcXX">
+                  <div class="caption">
+                    <p>I am figure caption for the second figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figcaption id="2column_figure01" class="sr-only">
+                <div class="caption">
+                  <p>Group of 2 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <figure class="figuregroup" id="c_img_unit01_chap02_pg10_fg01" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fgc01">
+                    <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f01" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fc01">
+                      <img id="c_img_unit01_chap02_pg10_01" alt="image01"
+                        src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      <figcaption id="c_img_unit01_chap02_pg10_fc01">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f02" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fc02">
+                      <img id="c_img_unit01_chap02_pg19_02" alt="image02"
+                        src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      <figcaption id="c_img_unit01_chap02_pg10_fc02">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="c_img_unit01_chap02_pg10_fgc01" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 2 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+              </div>
+            </p>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Nested Figure only Section ends -->
+
+          <!-- 2-Column Figure Layout with Caption for Figuregroup only Section starts -->
+          <hr id="figuregroup_03" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout with Caption for Figuregroup only:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout with caption for figuregroup only.]</p>
+          
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" id="c_img_unitXX_chapXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX">
+                  <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                </figure>
+                <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX">
+                  <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                </figure>
+                <figcaption id="2column_figure01">
+                  <div class="caption">
+                    <p>I am caption for the figuregroup.</p>
+                  </div>
+                </figcaption>
+              </figure>
+          
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="c_img_unit01_chap02_pg10_fg01" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fgc01">
+                      <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f01">
+                        <img id="c_img_unit01_chap02_pg10_01" alt="image01"
+                          src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f02">
+                        <img id="c_img_unit01_chap02_pg19_02" alt="image02"
+                          src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      </figure>
+                      <figcaption id="c_img_unit01_chap02_pg10_fgc01">
+                        <div class="caption">
+                          <p>I am caption for the figuregroup.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Figuregroup only Section Ends-->
+
+          <!-- 2-Column Figure Layout without Captions for both Figure and Figuregroup Section starts -->
+          <hr id="figuregroup_04" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout without Captions for both Figures and Figuregroup:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout without captions for both figures and figuregroup.]</p>
+          
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" id="c_img_unitXX_chapXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX">
+                  <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                </figure>
+                <figure class="informalfigure" id="c_img_unitXX_chapXX_pgXX_fXX">
+                  <img id="c_img_unitXX_chapXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                </figure>
+                <figcaption id="2column_figure01" class="sr-only">
+                  <div class="caption">
+                    <p>Group of 2 images.</p>
+                  </div>
+                </figcaption>
+              </figure>
+          
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="c_img_unit01_chap02_pg10_fg01" role="group" aria-labelledby="c_img_unit01_chap02_pg10_fgc01">
+                      <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f01">
+                        <img id="c_img_unit01_chap02_pg10_01" alt="image01"
+                          src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit01_chap02_pg10_f02">
+                        <img id="c_img_unit01_chap02_pg19_02" alt="image02"
+                          src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312a.jpg" />
+                      </figure>
+                      <figcaption id="c_img_unit01_chap02_pg10_fgc01" class="sr-only">
+                        <div class="caption">
+                          <p>Group of 2 images.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+      </section>
+      <!-- Figuregroup Section Ends -->
+    </section>
+    <!-- Readspeaker section closed-->
+  </body>
+
+</html>

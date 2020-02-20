@@ -1,0 +1,1896 @@
+<html lang="en">
+
+  <head>
+    <title>Religion Samples for Preview</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../css/re6_teacher.css" />
+
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        font-size: 115%;
+      }
+    
+      hr {
+        margin: 0;
+      }
+    
+      h1 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+      }
+    
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+    
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+    
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+    
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+    
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+    
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+      }
+    
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+    
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+    
+      #myBtn:hover {
+        background-color: red;
+      }
+    
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+
+      .links a {
+        font-weight: unset;
+      }
+    
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+        margin: 0;
+      }
+    
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+
+      .links2 {
+				display: none;
+				width: 100%;
+				font-size: 1.15rem;
+				margin: 1.15rem 0;
+				border: 1px solid black;
+			}
+    
+      .p-grey,
+      .p-darkred {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+    
+      .p-darkred {
+        color: #600000;
+      }
+
+      @media only screen and (max-width: 600px) {
+				.links { display: none; }
+				.links2 {display: block; }
+			}
+
+			@media only screen and (max-width: 450px) {
+				#myBtn {
+				bottom: 70px;
+				right: 10px;
+				}
+
+				.main_title {
+				font-size: 2.25rem;
+				line-height: 2.75rem;
+				letter-spacing: 1px;
+				}
+			}
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        console.log(codeblock);
+        var len = codeblock.length;
+        console.log(typeof(len));
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), '');
+          //html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          console.log(temphtml.join(""));
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.appendChild(text);
+        }
+      }
+
+      window.onscroll = function () { scrollFunction() };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Samples for Preview</h1>
+        </header>
+        <p class="p-grey">[A combination sample is comprised of different standard components combined together, or with different element(s)
+        and/or layout(s). This section provides some common combination samples that will occur in the RE6 teacher ePub for your preview
+        and is not meant to be referenced in your markup]</p>
+        <hr />
+
+        <ol class="links">
+        
+          <li>
+            <p><strong><a href="#sidebar">Sidebar Combination</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#sidebar_01"><strong>Sidebar</strong> + Unordered List</a></p>
+              </li>
+              <li>
+                <p><a href="#sidebar_02"><strong>Sidebar</strong> + Text + Float Right Marginalia</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#note">Note Combination</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#note_01"><strong>Note</strong> + Marginalia</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#informaltable">Informaltable Combination</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#informaltable_01"><strong>Informaltable</strong> + Overflow-X</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#card">Card Combinations</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#card_01"><strong>Card</strong> + Text + Sub Section + Title + Unordered List + Text + Accordion</a></p>
+              </li>
+              <li>
+                <p><a href="#card_02"><strong>Card</strong> + Title + No Bullets Unordered List + Blockquote + Accordions</a></p>
+              </li>
+              <li>
+                <p><a href="#card_03"><strong>Card</strong> + Text + Dialogue + Design-Icon Text Inline</a></p>
+              </li>
+              <li>
+                <p><a href="#card_04"><strong>Card</strong> + Text + Float Right Marginalia</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#marginalia">Marginalia Combination</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#marginalia_01"><strong>Marginalia</strong> + Marginalia + Marginalia + Text + Design-Icon + Float-right</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#practice">Practice Combination</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#practice_01"><strong>Practice</strong> + Main Title + Design-Icon Text Inline + Practice Div of Question + Text</a></p>
+              </li>
+              <li>
+                <p><a href="#practice_02"><strong>Practice</strong> + Main Title + Text + Ordered List</a></p>
+              </li>
+              <li>
+                <p><a href="#practice_03"><strong>Practice</strong> + Main Title + Design-Icon Text Inline + Practice Div of Question
+                    + Text + Float Right Marginalia</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#figuregroups">Figuregroup Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#figuregroup_01">
+                    2-Column Figure Layout with Captions for Figures and <strong>Figuregroup</strong>
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_02">
+                    2-Column Figure Layout with Captions for Nested Figures only
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_03">
+                    2-Column Figure Layout with Caption for <strong>Figuregroup</strong> only
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_04">
+                    2-Column Figure Layout without Captions for both Figures and <strong>Figuregroup</strong>
+                  </a>
+                </p>
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#sidebar">- Sidebar Combination -</option>
+          <option value="#sidebar_01">Sidebar + Unordered List</option>
+          <option value="#sidebar_02">Sidebar + Text + Float Right Marginalia</option>
+          <option value="#note">- Note Combination -</option>
+          <option value="#note_01">Note + Marginalia</option>
+          <option value="#informaltable">- Informaltable Combination -</option>
+          <option value="#informaltable_01">Informaltable + Overflow-X</option>
+          <option value="#card">- Card Combinations -</option>
+          <option value="#card_01">Card + Text + Sub Section + Title + Unordered List + Text + Accordion</option>
+          <option value="#card_02">Card + Title + No Bullets Unordered List + Blockquote + Accordions</option>
+          <option value="#card_03">Card + Text + Dialogue + Design-Icon Text Inline</option>
+          <option value="#card_04">Card + Text + Float Right Marginalia</option>
+          <option value="#marginalia">- Marginalia Combination -</option>
+          <option value="#marginalia_01">Marginalia + Marginalia + Marginalia + Text + Design-Icon + Float-right</option>
+          <option value="#practice">- Practice Combination -</option>
+          <option value="#practice_01">Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text</option>
+          <option value="#practice_02">Practice + Main Title + Text + Ordered List</option>
+          <option value="#practice_03">Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text + Float Right Marginalia</option>    
+          <option value="#figuregroups">- Figuregroup Combinations -</option>
+          <option value="#figuregroup_01">2-Column Figure Layout with Captions for Figures and Figuregroup</option>
+          <option value="#figuregroup_02">2-Column Figure Layout with Captions for Nested Figures only</option>
+          <option value="#figuregroup_03">2-Column Figure Layout with Caption for Figuregroup only</option>
+          <option value="#figuregroup_04">2-Column Figure Layout without Captions for both Figures and Figuregroup</option>
+        </select>
+
+      </section>
+        
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;" />
+
+      <!-- Sidebar Section Starts -->
+      <section id="sidebar">
+        <header>
+          <h1>Sidebar Combination</h1>
+        </header>
+        <p class="p-grey">[This section display a preview of combination sidebar components which includes elements and layouts that will generally occured in the RE6 Teacher ePub.]</p>
+
+        <!-- sidebar + unordered list Section Starts -->
+        <hr id="sidebar_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + Unordered List:</h2>
+          </header>
+          <p class="p-grey">[Below is a sidebar 01 with an unordered list.]</p>
+
+          <aside class="sidebar sidebar_01">
+            <header>
+              <h6 class="title title_06">
+                <span class="label faith">Faith</span>
+                Vocabulary/ Terminology
+              </h6>
+            </header>
+            <ul>
+              <li>
+                <p>enthrone</p>
+              </li>
+              <li>
+                <p>faith</p>
+              </li>
+              <li>
+                <p>pact</p>
+              </li>
+            </ul>
+          </aside>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_01">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06">
+                      <span class="label faith">Faith</span>
+                      Vocabulary/Terminology
+                    </h6>
+                  </header>
+                  <ul id="unique_ul_id">
+                    <li>
+                      <p>enthrone</p>
+                    </li>
+                    <li>
+                      <p>faith</p>
+                    </li>
+                    <li>
+                      <p>pact</p>
+                    </li>
+                  </ul>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- sidebar + unordered list Section Ends -->
+
+        <!-- sidebar + text + float right marginalia section starts -->
+        <hr id="sidebar_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar + Text + Float Right Marginalia:</h2>
+          </header>
+          <p class="p-grey">[Below is a sidebar 02 with text and a float right marginalia 02.]</p>
+        </section>
+        <aside class="sidebar sidebar_02">
+          <header>
+            <h5 class="title title_06">
+              <img class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_plus_007.png" />
+              We Read the Bible
+            </h5>
+          </header>
+          <aside class="marginalia marginalia_02 width-33 float-right margin-top-0 margin-left-default">
+            <header>
+              <h6 class="title title_06">Responding to Sensitive Topics</h6>
+            </header>
+            <p>Be aware of any negative information that may have been publicized about anyone students might research, and adjust the
+            suggestions accordingly.</p>
+          </aside>
+          <p>Explain to students that sometimes we need to have faith in the people around us. Have students research a modern-day
+          hero such as Terry Fox, Rick Hansen, Jean Vanier, Susan Aglukark, Craig Kielburger, or Viola Desmond.</p>
+          <div class="clear-both"></div>
+        </aside>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p class="p-darkred">[Notice there is an empty div with class "clear-both", so content doesn't flow outside the sidebar.]</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <aside id="unique_aside_id" class="sidebar sidebar_02">
+                <header id="header_unique_header_id">
+                  <h5 id="unique_heading_id" class="title title_06">
+                    <img id="unique_image_id" class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_plus_007.png" />
+                    We Read the Bible
+                  </h5>
+                </header>
+                <aside id="unique_aside_id" class="marginalia marginalia_02 width-33 float-right margin-top-0 margin-left-default">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06">Responding to Sensitive Topics</h6>
+                  </header>
+                  <p>Be aware of any negative information that may have been publicized about anyone students might research, and
+                    adjust the
+                    suggestions accordingly.</p>
+                </aside>
+                <p>Explain to students that sometimes we need to have faith in the people around us. Have students research a
+                  modern-day
+                  hero such as Terry Fox, Rick Hansen, Jean Vanier, Susan Aglukark, Craig Kielburger, or Viola Desmond.</p>
+                <div class="clear-both"></div>
+              </aside>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Sidebar Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Note Section Starts -->
+      <section id="note">
+        <header>
+          <h1>Note</h1>
+        </header>
+        <p class="p-grey">[This section display a preview of combination note components which includes elements and layouts
+          that will generally occured in the RE6 Teacher ePub.]</p>
+      
+        <!-- Note + Marginalia Section Starts -->
+        <hr id="note_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Note + Marginalia:</h2>
+          </header>
+          <p class="p-grey">[Below is a note 01 with standard marginalia 02.]</p>
+      
+          <div class="note note_01">
+            <aside class="marginalia marginalia_02">
+              <header>
+                <h6 class="title title_06">Teaching Tip</h6>
+              </header>
+              <p>Note that the Sign of the Cross should follow the instructions for the prayer but precede the words and ritual actions
+              of the prayer. It should also conclude the prayer, following the last words, ritual, or sharing. The Compendium of the
+              Catechism of the Catholic Church tells us that prayer as petition can be “…for pardon or also a humble and trusting
+              petition for all our needs either spiritual or material. The first thing to ask for, however, is the coming of the
+              Kingdom” (553). A prayer of intercession “…consists in asking on behalf of another” (554). Arrange for students who lead
+              any prayers during this unit to practise reading their part prior to the prayer in the classroom.</p>
+            </aside>
+          </div>
+      
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="uniqute_note_id" class="note note_01">
+                  <aside id="unique_aside_id" class="marginalia marginalia_02" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h6 id="unique_heading_id" class="title title_06">Teaching Tip</h6>
+                    </header>
+                    <p>Note that the Sign of the Cross should follow the instructions for the prayer but precede the words and ritual
+                      actions of the prayer. It should also conclude the prayer, following the last words, ritual, or sharing. The Compendium of the Catechism of the Catholic Church tells us that prayer as petition can be “…for pardon or also a humble and
+                      trusting petition for all our needs either spiritual or material. The first thing to ask for, however, is the coming of the Kingdom” (553). A prayer of intercession “…consists in asking on behalf of another” (554). Arrange for students
+                      who lead any prayers during this unit to practise reading their part prior to the prayer in the classroom.</p>
+                  </aside>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note + Marginalia Section Ends -->
+      </section>
+      <!-- Note Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Informaltable Section Starts -->
+      <section id="informaltable">
+        <header>
+          <h1>Informaltable Combination</h1>
+        </header>
+        <p class="p-grey">[This section display a preview of combination informaltable components which includes elements and layouts
+          that will generally occured in the RE6 Teacher ePub.]</p>
+
+        <!-- Informaltable + overflow-x Section starts -->
+        <hr id="informaltable_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Informaltable + Overflow-X + Alternating Row Colours:</h2>
+          </header>
+          <p class="p-grey">[Below is an informaltable 01 that needs to look like a table on any size screens with overflow-x.]</p>
+
+          <div class="overflow-x">
+            <table class="informaltable informaltable_01">
+              <thead>
+                <tr>
+                  <th colspan="2"></th>
+                  <th>
+                    <p><strong>Level 1</strong></p>
+                  </th>
+                  <th>
+                    <p><strong>Level 2</strong></p>
+                  </th>
+                  <th>
+                    <p><strong>Level 3</strong></p>
+                  </th>
+                  <th>
+                    <p><strong>Level 4</strong></p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6">
+                    <p><strong><span class="text_uppercase">Knowledge and Understanding—</span></strong>Religion content acquired in Unit 1: The Gift of Our Faith and the comprehension of its meaning and significance</p>
+                  </td>
+                </tr>
+                <tr class="bg_lightgrey">
+                  <td>
+                    <p>Demonstrates knowledge of the content presented in the unit</p>
+                  </td>
+                  <td>
+                    <p>Knowledge of content (e.g., Scripture, creedal statements, terms, moral teachings, liturgical/ sacramental
+                      practices)</p>
+                  </td>
+                  <td>
+                    <p>The student included a limited number of important facts and ideas of the unit in their kit.</p>
+                  </td>
+                  <td>
+                    <p>The student included some of the important facts and ideas of the unit in their kit.</p>
+                  </td>
+                  <td>
+                    <p>The student included many of the important facts and ideas of the unit in their kit.</p>
+                  </td>
+                  <td>
+                    <p>The student included all of the important facts and ideas of the unit in their kit.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Demonstrates understanding of the meaning and the significance of concepts developed in the unit</p>
+                  </td>
+                  <td>
+                    <p>Understanding of content (e.g., dogma, doctrine, Scripture, moral principles, social teachings, concepts,
+                      practices, procedures)</p>
+                  </td>
+                  <td>
+                    <p>The artifacts selected indicated that the student had a limited understanding of the significance of the big
+                      ideas of the unit.</p>
+                  </td>
+                  <td>
+                    <p>The artifacts selected indicated that the student had some understanding of the significance of the big ideas of
+                      the unit.</p>
+                  </td>
+                  <td>
+                    <p>The artifacts selected indicated that the student had a good understanding of the significance of the big ideas
+                      of the unit.</p>
+                  </td>
+                  <td>
+                    <p>The artifacts selected indicated that the student had a thorough understanding of the significance of the big
+                      ideas of the unit.</p>
+                  </td>
+                </tr>
+                <tr class="bg_lightgrey">
+                  <td colspan="6">
+                    <p><strong><span class="text_uppercase">Thinking—</span></strong>The use of critical and creative thinking skills and/or processes</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Plans and organizes the inquiry by asking questions, researching and gathering information from a variety of
+                      sources, and setting goals throughout the process</p>
+                  </td>
+                  <td>
+                    <p>Use of planning skills (e.g., focusing research, gathering information, organizing an inquiry, asking questions,
+                      setting goals)</p>
+                  </td>
+                  <td>
+                    <p>The student required a high level of teacher support while planning and organizing the inquiry task.</p>
+                  </td>
+                  <td>
+                    <p>The student planned and organized the inquiry task with support.</p>
+                  </td>
+                  <td>
+                    <p>The student planned and organized most of the inquiry task independently.</p>
+                  </td>
+                  <td>
+                    <p>The student planned and organized the inquiry task independently.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="overflow-x">
+                  <table id="unique_table_id" class="informaltable informaltable_01">
+                    <thead>
+                      <tr>
+                        <th colspan="2"></th>
+                        <th>
+                          <p><strong>Level 1</strong></p>
+                        </th>
+                        <th>
+                          <p><strong>Level 2</strong></p>
+                        </th>
+                        <th>
+                          <p><strong>Level 3</strong></p>
+                        </th>
+                        <th>
+                          <p><strong>Level 4</strong></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="6">
+                          <p><strong><span class="text_uppercase">Knowledge and Understanding—</span></strong>Religion content acquired
+                            in Unit 1: The Gift of Our Faith and the comprehension of its meaning and significance</p>
+                        </td>
+                      </tr>
+                      <tr class="bg_lightgrey">
+                        <td>
+                          <p>Demonstrates knowledge of the content presented in the unit</p>
+                        </td>
+                        <td>
+                          <p>Knowledge of content (e.g., Scripture, creedal statements, terms, moral teachings, liturgical/ sacramental
+                            practices)</p>
+                        </td>
+                        <td>
+                          <p>The student included a limited number of important facts and ideas of the unit in their kit.</p>
+                        </td>
+                        <td>
+                          <p>The student included some of the important facts and ideas of the unit in their kit.</p>
+                        </td>
+                        <td>
+                          <p>The student included many of the important facts and ideas of the unit in their kit.</p>
+                        </td>
+                        <td>
+                          <p>The student included all of the important facts and ideas of the unit in their kit.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>Demonstrates understanding of the meaning and the significance of concepts developed in the unit</p>
+                        </td>
+                        <td>
+                          <p>Understanding of content (e.g., dogma, doctrine, Scripture, moral principles, social teachings, concepts,
+                            practices, procedures)</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had a limited understanding of the significance of the
+                            big
+                            ideas of the unit.</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had some understanding of the significance of the big
+                            ideas of
+                            the unit.</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had a good understanding of the significance of the big
+                            ideas
+                            of the unit.</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had a thorough understanding of the significance of the
+                            big
+                            ideas of the unit.</p>
+                        </td>
+                      </tr>
+                      <tr class="bg_lightgrey">
+                        <td colspan="6">
+                          <p><strong><span class="text_uppercase">Thinking—</span></strong>The use of critical and creative thinking
+                            skills and/or processes</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>Plans and organizes the inquiry by asking questions, researching and gathering information from a variety of
+                            sources, and setting goals throughout the process</p>
+                        </td>
+                        <td>
+                          <p>Use of planning skills (e.g., focusing research, gathering information, organizing an inquiry, asking questions,
+                            setting goals)</p>
+                        </td>
+                        <td>
+                          <p>The student required a high level of teacher support while planning and organizing the inquiry task.</p>
+                        </td>
+                        <td>
+                          <p>The student planned and organized the inquiry task with support.</p>
+                        </td>
+                        <td>
+                          <p>The student planned and organized most of the inquiry task independently.</p>
+                        </td>
+                        <td>
+                          <p>The student planned and organized the inquiry task independently.</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Informaltable + overflow-x Section ends -->
+      </section>
+      <!-- Informaltable Section ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Card Section Starts -->
+      <section id="card">
+        <header>
+          <h1>Card Combination</h1>
+        </header>
+        <p class="p-grey">[This section display a preview of combination card components which includes elements and layouts that will generally occured in the RE6 Teacher ePub.]</p>
+
+        <!-- Card + text + sub section + title + unordered list + text + accordion section starts -->
+        <hr id="card_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Text + Sub Section + Title + Unordered List + Text + Accordion:</h2>
+          </header>
+          <p class="p-grey">[Below is a card 01: Weekly Lesson Planner with text that looks like title 08 and a sub section that has a heading with title 08. Inside the sub section it contains an unordered list, regular text and an accordion.]</p>
+
+          <section class="card card_01">
+            <header>
+              <h3 class="title title_04">Weekly Lesson Planner</h3>
+            </header>
+            <p class="title title_08 margin-top-0 margin-bottom-0"><strong>Unit Inquiry:</strong> How are we supported in our Catholic faith?</p>
+
+            <section class="margin-top-0">
+              <header>
+                <h4 class="title title_08 margin-top-0"><strong>Chapter 1:</strong> What helps us grow in faith?</h4>
+              </header>
+              <p><strong>Learning Goals:</strong></p>
+              <ul>
+                <li>
+                  <p>We are learning how our faith journey can be inspired by Scripture.</p>
+                </li>
+              </ul>
+              <p>The following sections are to be taught over one week of Religious Education classes. Adjust the pacing to meet
+                students’ needs, ensuring prayer is a component of each day (e.g., by including a Pause to Pray feature in each
+                class). The Enrich and Extend activity is optional.</p>
+
+              <details class="fx-accordion fx-accordion_01">
+                <summary aria-controls="unique_div_id" class="fx-accordion-toggle"> 
+                    <h5 class="title title_07">
+                      <span>Activate</span>
+                      <span class="fx-accordion-toggle-icon">&#9662;</span>
+                    </h5>
+                </summary>
+                <div id="unique_div_id" class="fx-accordion-toggleable">
+                  <section>
+                    <header>
+                      <h6 class="title title_06">Students</h6>
+                    </header>
+                    <p>...etc</p>
+                  </section>
+                </div>
+              </details>
+            </section>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_01" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h3 id="unique_heading_id" class="title title_04">Weekly Lesson Planner</h3>
+                  </header>
+                  <p class="title title_08 margin-top-0 margin-bottom-0"><strong>Unit Inquiry:</strong> How are we supported in our
+                    Catholic faith?</p>
+                
+                  <section id="unique_section_id" class="margin-top-0" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h4 id="unique_heading_id" class="title title_08 margin-top-0"><strong>Chapter 1:</strong> What helps us grow in faith?</h4>
+                    </header>
+                    <p><strong>Learning Goals:</strong></p>
+                    <ul>
+                      <li>
+                        <p>We are learning how our faith journey can be inspired by Scripture.</p>
+                      </li>
+                    </ul>
+                    <p>The following sections are to be taught over one week of Religious Education classes. Adjust the pacing to meet
+                      students’ needs, ensuring prayer is a component of each day (e.g., by including a Pause to Pray feature in each
+                      class). The Enrich and Extend activity is optional.</p>
+                
+                    <details id="unique_details_id" class="fx-accordion fx-accordion_01">
+                      <summary aria-controls="unique_div_id" id="unique_summary_id" class="fx-accordion-toggle">
+                          <h5 id="unique_heading_id" class="title title_07">
+                            <span>Activate</span>
+                            <span class="fx-accordion-toggle-icon">&#9662;</span>
+                          </h5>
+                      </summary>
+                      <div id="unique_div_id" class="fx-accordion-toggleable">
+                        <section id="unique_section_id" aria-labelledby="header_unique_header_id">
+                          <header id="header_unique_header_id">
+                            <h6 id="unique_heading_id" class="title title_06">Students</h6>
+                          </header>
+                          <p>...etc</p>
+                        </section>
+                      </div>
+                    </details>
+                  </section>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + text + sub section + title + unordered list + text + accordion section ends -->
+
+        <!-- Card + title + no bullets unordered list + blockquote + accordions sction starts -->
+        <hr id="card_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Title + No Bullets Unordered List + Blockquote + Accordions</h2>
+          </header>
+          <p class="p-grey">[Below is card 05: Tabs with a title, followed by a no bullets unordered list and a blockquote. Other tabs contain accordions.]</p>
+
+          <div class="card card_05">
+            <div role="tablist" aria-label="card_tabs" class="nav_tabs">
+              <button class="fx-toggle" role="tab" aria-selected="true" aria-controls="unique_div_tab01" id="unique_id_tab01">Chapter 1</button>
+              <button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab02" id="unique_id_tab02" tabindex="-1">Chapter 2</button>
+              <button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab03" id="unique_id_tab03" tabindex="-1">Chapter 3</button>
+            </div>
+
+            <div tabindex="0" role="tabpanel" id="unique_div_tab01" aria-labelledby="unique_id_tab01">
+              <section>
+                <header>
+                  <h3 class="title title_04">Chapter 1: What Helps Us Grow in Our Faith?</h3>
+                </header>
+                <p><strong>Key Learnings:</strong></p>
+                <ul class="ul_none">
+                  <li>
+                    <p>
+                      Faith is built on believing, knowing, and trusting God.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Faith is passed on through Sacred Scripture.
+                    </p>
+                  </li>
+                </ul>
+                <div class="blockquotegroup">
+                  <blockquote class="epigraph">
+                    <p><em>“Therefore I tell you, do not worry about your life, what you will eat or what you will drink, or about
+                        your body, what you will wear. Is not life more than food, and the body more than clothing? Look at the birds
+                        of the air; they neither
+                        sow nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not of more value than
+                        they?”</em></p>
+                  </blockquote>
+                  <div class="source lc_align-right">
+                    <p><cite>(Matthew 6:25&#x2014;26)</cite></p>
+                  </div>
+                </div>
+              </section>
+            </div>
+           
+            <div tabindex="0" role="tabpanel" id="unique_div_tab02" aria-labelledby="unique_id_tab02" hidden="">
+              <section>
+                <header>
+                  <h3 class="title title_04">Chapter 2: What Traditions Strengthen Our Faith?</h3>
+                </header>
+
+                <details class="fx-accordion fx-accordion_01">
+                  <summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+                      <h4 class="title title_07">
+                        <span>Lesson 1</span>
+                        <span class="fx-accordion-toggle-icon">&#9662;</span>
+                      </h4>     
+                  </summary>
+                  <div class="fx-accordion-toggleable">
+                    <section aria-labelledby="header_unique_header_id">
+                      <header>
+                        <h6 class="title title_06">Lesson Title</h6>
+                      </header>
+                      <p>...etc</p>
+                    </section>
+                  </div>
+                </details>
+
+                <details class="fx-accordion fx-accordion_01">
+                  <summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+                      <h4 class="title title_07">
+                        <span>Lesson 2</span>
+                        <span class="fx-accordion-toggle-icon">&#9662;</span>
+                      </h4>
+                  </summary>
+                  <div class="fx-accordion-toggleable">
+                    <section aria-labelledby="header_unique_header_id">
+                      <header>
+                        <h6 class="title title_06">Lesson Title</h6>
+                      </header>
+                      <p>...etc</p>
+                    </section>
+                  </div>
+                </details>
+
+                <details class="fx-accordion fx-accordion_01">
+                  <summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+                      <h4 class="title title_07">
+                        <span>Lesson 3</span>
+                        <span class="fx-accordion-toggle-icon">&#9662;</span>
+                      </h4>
+                  </summary>
+                  <div class="fx-accordion-toggleable">
+                    <section aria-labelledby="header_unique_header_id">
+                      <header>
+                        <h6 class="title title_06">Lesson Title</h6>
+                      </header>
+                      <p>...etc</p>
+                    </section>
+                  </div>
+                </details>
+
+                <details class="fx-accordion fx-accordion_01">
+                  <summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+                    <h4 class="title title_07">
+                      <span>Lesson 4</span>
+                      <span class="fx-accordion-toggle-icon">&#9662;</span>
+                    </h4>
+                  </summary>
+                  <div class="fx-accordion-toggleable">
+                    <section aria-labelledby="header_unique_header_id">
+                      <header>
+                        <h6 class="title title_06">Lesson Title</h6>
+                      </header>
+                      <p>...etc</p>
+                    </section>
+                  </div>
+                </details>
+              </section>
+            </div>
+
+            <div tabindex="0" role="tabpanel" id="unique_div_tab03" aria-labelledby="unique_id_tab03" hidden="">
+              <section>
+                <header>
+                  <h3 class="title title_04">Chapter 3: How Does the Holy Spirit Support Our Faith?</h3>
+                </header>
+                <p>...etc</p>
+              </section>
+            </div>      
+          </div>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_div_id" class="card card_05">
+                  <div role="tablist" aria-label="card_tabs" class="nav_tabs">
+                    <button class="fx-toggle" role="tab" aria-selected="true" aria-controls="unique_div_tab01" id="unique_id_tab01">Chapter 1</button>
+                    <button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab02" id="unique_id_tab02"
+                      tabindex="-1">Chapter 2</button>
+                    <button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab03" id="unique_id_tab03"
+                      tabindex="-1">Chapter 3</button>
+                  </div>
+                
+                  <div tabindex="0" role="tabpanel" id="unique_div_tab01" aria-labelledby="unique_id_tab01">
+                    <section>
+                      <header>
+                        <h3 class="title title_04">Chapter 1: What Helps Us Grow in Our Faith?</h3>
+                      </header>
+                      <p><strong>Key Learnings:</strong></p>
+                      <ul class="ul_none">
+                        <li>
+                          <p>
+                            Faith is built on believing, knowing, and trusting God.
+                          </p>
+                        </li>
+                        <li>
+                          <p>
+                            Faith is passed on through Sacred Scripture.
+                          </p>
+                        </li>
+                      </ul>
+                      <div class="blockquotegroup">
+                        <blockquote class="epigraph">
+                          <p><em>“Therefore I tell you, do not worry about your life, what you will eat or what you will drink, or about
+                              your body, what you will wear. Is not life more than food, and the body more than clothing? Look at the
+                              birds
+                              of the air; they neither
+                              sow nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not of more value
+                              than
+                              they?”</em></p>
+                        </blockquote>
+                        <div class="source lc_align-right">
+                          <p><cite>(Matthew 6:25&#x2014;26)</cite></p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                
+                  <div tabindex="0" role="tabpanel" id="unique_div_tab02" aria-labelledby="unique_id_tab02" hidden="">
+                    <section id="unique_section_id">
+                      <header id="header_unique_header_id">
+                        <h3 id="unique_heading_id" class="title title_04">Chapter 2: What Traditions Strengthen Our Faith?</h3>
+                      </header>
+                
+                      <details id="unique_details_id" class="fx-accordion fx-accordion_01">
+                        <summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+                          <h4 id="unique_heading_id" class="title title_07">
+                            <span>Lesson 1</span>
+                            <span class="fx-accordion-toggle-icon">&#9662;</span>
+                          </h4>
+                        </summary>
+                        <div id="unique_div_id" class="fx-accordion-toggleable">
+                          <section id="unique_section_id" aria-labelledby="header_unique_header_id">
+                            <header id="header_unique_id">
+                              <h5 id="unique_heading_id" class="title title_06">Lesson Title</h5>
+                            </header>
+                            <p>...etc</p>
+                          </section>
+                        </div>
+                      </details>
+                
+                      <details id="unique_details_id" class="fx-accordion fx-accordion_01">
+                        <summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+                          <h4 id="unique_heading_id" class="title title_07">
+                            <span>Lesson 2</span>
+                            <span class="fx-accordion-toggle-icon">&#9662;</span>
+                          </h4>
+                        </summary>
+                        <div id="unique_div_id" class="fx-accordion-toggleable">
+                          <section id="unique_section_id" aria-labelledby="header_unique_header_id">
+                            <header id="header_unique_header_id">
+                              <h5 id="unique_heading_id" class="title title_06">Lesson Title</h5>
+                            </header>
+                            <p>...etc</p>
+                          </section>
+                        </div>
+                      </details>
+                
+                      <details id="unique_details_id" class="fx-accordion fx-accordion_01">
+                        <summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+                          <h4 id="unique_heading_id" class="title title_07">
+                            <span>Lesson 3</span>
+                            <span class="fx-accordion-toggle-icon">&#9662;</span>
+                          </h4>
+                        </summary>
+                        <div id="unique_div_id" class="fx-accordion-toggleable">
+                          <section id="unique_section_id" aria-labelledby="header_unique_header_id">
+                            <header id="header_unique_header_id">
+                              <h5 id="unique_heading_id" class="title title_06">Lesson Title</h5>
+                            </header>
+                            <p>...etc</p>
+                          </section>
+                        </div>
+                      </details>
+                
+                      <details id="unique_details_id" class="fx-accordion fx-accordion_01">
+                        <summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+                          <h4 id="unique_heading_id" class="title title_07">
+                            <span>Lesson 4</span>
+                            <span class="fx-accordion-toggle-icon">&#9662;</span>
+                          </h4>
+                        </summary>
+                        <div id="unique_div_id" class="fx-accordion-toggleable">
+                          <section id="unique_section_id" aria-labelledby="header_unique_header_id">
+                            <header id="header_unique_header_id">
+                              <h5 id="unique_heading_id" class="title title_06">Lesson Title</h5>
+                            </header>
+                            <p>...etc</p>
+                          </section>
+                        </div>
+                      </details>
+                    </section>
+                  </div>
+                
+                  <div tabindex="0" role="tabpanel" id="unique_div_tab03" aria-labelledby="unique_id_tab03" hidden="">
+                    <section>
+                      <header>
+                        <h3 class="title title_04">Chapter 3: How Does the Holy Spirit Support Our Faith?</h3>
+                      </header>
+                      <p>...etc</p>
+                    </section>
+                  </div>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + title + no bullets unordered list + blockquote + accordions sction ends -->
+      
+        <!-- Card + Text + Dialogue + Design Icon Text Inline Section Starts -->
+        <hr id="card_03" />
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Text + Dialogue + Design-Icon Text Inline:</h2>
+          </header>
+          <p class="p-grey">[Below is a card 03: Pause to Pray with regular paragraph text, dialogue text and design icon text inline.]</p>
+      
+          <section class="card card_03">
+            <header>
+              <h4 class="title title_04">Pause to Pray</h4>
+            </header>
+            <p>Begin with the Sign of the Cross. Use the following or a similar script to conduct the enthronement liturgy:</p>
+            
+            <div class="dialogue">
+              <div class="speech">
+                  <div class="persona width-10"><p>Teacher:</p></div>
+                  <div class="line width-90"> <p>Our Bible contains the Word of God. We ask God to help us come to know Him better as we read His Word from the Bible.</p></div>
+              </div>
+            </div>
+            <p>(Pause and play the hymn “Gather Your People.” <img alt="music icon" class="design-icon inline design-icon_text-inline"
+                src="../../images/re6_teacher_icons/icon_img_music_005.png"> Invite students to join in singing if they wish. Lead them in a procession to the Prayer
+              Table, and have them form a circle or semicircle around it. Continue with the liturgy.)</p>
+
+            <div class="dialogue">
+              <div class="speech">
+                <div class="persona width-10"><p>Teacher:</p></div>
+                <div class="line width-90"><p>I will read some prayers. As I finish each prayer, I will raise my hand and you will respond with,
+                  “Strengthen our faith, O Lord.”</p></div>
+                </div>
+            </div>
+          </section>
+      
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_03" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">Pause to Pray</h4>
+                  </header>
+                  <p>Begin with the Sign of the Cross. Use the following or a similar script to conduct the enthronement liturgy:</p>
+                
+                  <div class="dialogue">
+                    <div class="speech">
+                      <div class="persona width-10"><p>Teacher:</p></div>
+                      <div class="line width-90"><p>Our Bible contains the Word of God. We ask God to help us come to know Him better as
+                        we read His Word from the Bible.</p></div>
+                      </div>
+                  </div>
+                  <p>(Pause and play the hymn “Gather Your People.” <img alt="music icon"
+                      class="design-icon inline design-icon_text-inline" src="../images/icon_img_music_005.png"> Invite students to join in singing if they wish. Lead them in a procession to the Prayer Table, and have them form a circle or semicircle around it. Continue with the liturgy.)</p>
+                
+                  <div class="dialogue">
+                    <div class="speech">
+                      <div class="persona width-10"><p>Teacher:</p></div>
+                      <div class="line width-90"><p>I will read some prayers. As I finish each prayer, I will raise my hand and you will
+                        respond with, “Strengthen our faith, O Lord.”</p></div>
+                      </div>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Text + Dialogue + Design Icon Text Inline Section Ends -->
+
+        <!-- Card + Text + Float Right Marginalia Section Starts -->
+        <hr id="card_04" />
+        <section>
+          <header>
+            <h2 class="p-grey">Card + Text + Float Right Marginalia:</h2>
+          </header>
+          <p class="p-grey">[Below is a card 03: Pause to Pray with regular paragraph text and a float right marginalia 02.]</p>
+        
+          <section class="card card_03">
+            <header>
+              <h4 class="title title_04">Pause to Pray</h4>
+            </header>
+            <section class="marginalia marginalia_02 float-right width-33 margin-left-default">
+              <header>
+                <h6 class="title title_06">
+                  <img id="unique_image_id" class="design-icon inline design-icon_text-inline"
+                    src="../../images/re6_teacher_icons/icon_image_id_colour_006.png" /> Differentiated Instruction
+                </h6>
+              </header>
+              <p>Be aware of any negative information that may have been publicized about anyone students might research, and adjust the
+              suggestions accordingly.</p>
+            </section>
+            <p>Therefore I tell you, do not worry about your life, what you will eat or what you will drink, or about your body, what
+            you will wear. Is not life more than food, and the body more than clothing? Look at the birds of the air; they neither
+            sow nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not of more value than they?</p>
+            <div class="clear-both"></div>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice there is an empty div with class "clear-both", so content doesn't flow outside the card.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_03" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">Pause to Pray</h4>
+                  </header>
+                  <section class="marginalia marginalia_02 float-right width-33 margin-left-default" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h6 id="unique_heading_id" class="title title_06">
+                        <img id="unique_image_id" class="design-icon inline design-icon_text-inline" alt="icon image"
+                          src="../../images/re6_teacher_icons/icon_image_id_colour_006.png" /> Differentiated Instruction
+                      </h6>
+                    </header>
+                    <p>Be aware of any negative information that may have been publicized about anyone students might research, and adjust
+                      the suggestions accordingly.</p>
+                  </section>
+                  <p>Therefore I tell you, do not worry about your life, what you will eat or what you will drink, or about your body,
+                    what you will wear. Is not life more than food, and the body more than clothing? Look at the birds of the air; they neither
+                    sow nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not of more value than they?</p>
+                  <div class="clear-both"></div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card + Text + Float Right Marginalia Section Ends -->
+
+      </section>
+      <!-- Card Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Marginalia Section Starts -->
+      <section id="marginalia">
+        <header>
+          <h1>Marginalia Combination</h1>
+        </header>
+        <p class="p-grey">[This section display a preview of combination marginalia components which includes elements and layouts that will generally occured in the RE6 Teacher ePub.]</p>
+
+        <!-- Marginalia + Marginalia + Marginalia + Text + Design-icon + Float-right Section Starts -->
+        <hr id="marginalia_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Marginalia + Marginalia + Marginalia + Text + Design-icon + Float-right:</h2>
+          </header>
+          <p class="p-grey">[Below is two marginalia 03 stacking on top of each other and a marginalia 02. Inside the marginalia 02 is some regular text and a design-icon. Note that the design-icon is outside the marginalia thus it is not aligned with the text inside the marginalia.]</p>
+
+          <section>
+            <header>
+              <h3 class="title title_04"><em>Enrich and Extend</em></h3>
+            </header>
+
+            <div class="margin-left-default float-right width-33">
+              <aside class="marginalia marginalia_03 margin-top-0">
+                <header>
+                  <h6 class="title title_06">Inquiry Opportunity</h6>
+                </header>
+              </aside>
+              <aside class="marginalia marginalia_03">
+                <header>
+                  <h6 class="title title_06">Language Connection</h6>
+                </header>
+              </aside>
+              <aside class="marginalia marginalia_02">
+                <header>
+                  <h6 class="title title_06">Responding to Sensitive Topics</h6>
+                </header>
+                <p>Be aware of any negative information that may have been publicized about anyone students might research, and adjust
+                  the suggestions accordingly.</p>
+              </aside>
+              <figure class="informalfigure">
+                <img alt="alt text" class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_handclick_004.png">
+              </figure>
+            </div>
+
+            <p>Explain to students that sometimes we need to have faith in the people around us. Have students research a modern-day
+            hero such as Terry Fox, Rick Hansen, Jean Vanier, Susan Aglukark, Craig Kielburger, or Viola Desmond. Have students use
+            pre-approved online and print resources to uncover aspects of the person’s life. Have students identify the actions
+            taken by this person that demonstrate faith: to believe, to know, and to trust. Encourage students to identify how the
+            person used a challenge to do some good in the world. What message does this person’s faith have for people who are
+            suffering through some immense challenges? What do the actions of these people teach about the importance of the
+            building blocks of faith: believe, know, trust? Have students prepare a brief profile of their chosen person in a format
+            of their choice: poster, news article, poem, photo essay, etc. Display students’ completed profiles in the classroom.</p>
+          </section>
+
+          <p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice that there is a div tag wrapper wrapping all the components. This allows the helper float-right class to <strong>ONLY</strong> apply to that div rather than every other component.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="margin-left-default float-right width-33">
+                  <aside id="unique_aside_id" class="marginalia marginalia_03 margin-top-0" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h6 id="unique_heading_id" class="title title_06">Inquiry Opportunity</h6>
+                    </header>
+                  </aside>
+                  <aside id="unique_aside_id" class="marginalia marginalia_03" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h6 id="unique_heading_id" class="title title_06">Language Connection</h6>
+                    </header>
+                  </aside>
+                  <aside id="unique_aside_id" class="marginalia marginalia_02" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h6 id="unique_heading_id" class="title title_06">Responding to Sensitive Topics</h6>
+                    </header>
+                    <p>Be aware of any negative information that may have been publicized about anyone students might research, and
+                      adjust
+                      the suggestions accordingly.</p>
+                  </aside>
+                  <figure id="unique_figure_id" class="informalfigure">
+                    <img id="unique_image_id" alt="alt text" class="design-icon inline" src="../images/icon_img_handclick_004.png">
+                  </figure>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Marginalia + Marginalia + Marginalia + Text + Design-icon + Float-right Section Ends -->
+      </section>
+      <!-- Marginalia Section Ends -->
+      
+      <hr class="template_hr" />
+
+      <!-- Practice Combination Section Starts -->
+      <section id="practice">
+        <header>
+          <h1>Practice Combination</h1>
+        </header>
+        <p class="p-grey">[This section display a preview of combination practice components which includes elements and layouts that will
+        generally occured in the RE6 Teacher ePub.]</p>
+
+        <!-- Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text Section starts-->
+        <hr id="practice_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text:</h2>
+          </header>
+          <p class="p-grey">[Below is practice 01 with the main title and design-icon text inline next to it. The practice div of question has an optional text within it (Orange colour) and below are regular text.]</p>
+
+          <section class="practice practice_01">
+            <header>
+              <h2 class="title title_04">Reflect and Connect <img alt="alt text" class="design-icon inline design-icon_text-inline"
+                  src="../../images/re6_teacher_icons/icon_img_inquiry_task_003.png"></h2>
+            </header>
+            <section class="practicediv">
+              <header>
+                <h3 class="title title_05">To have students reflect on their learning in Lesson 1, ask:</h3>
+              </header>
+              <ol class="practicelist ol_none">
+                <li class="general-problem margin-top-0">
+                  <div class="question">
+                    <p class="margin-top-0">
+                      <strong>Why is it important for me to believe in God, to know God, and to trust Him?</strong>
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+            <div class="instructions">
+              <p>Have students explain how each of these ways brings them closer to God in faith. Direct students to record their
+                responses in their journals, providing support for their answers using ideas from the Student Book.
+              </p>
+            </div>
+          </section>
+
+          <p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section class="practice practice_01" id="unique_section_id" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h2 id="unique_heading_id" class="title title_04">Reflect and Connect <img id="unique_image_id" alt="alt text"
+                        class="design-icon inline design-icon_text-inline" src="../images/icon_img_inquiry_task_003.png">
+                    </h2>
+                  </header>
+                  <section id="unique_section_id" class="practicediv" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h3 id="unique_heading_id" class="title title_05">To have students reflect on their learning in Lesson 1, ask:</h3>
+                    </header>
+                    <ol class="practicelist ol_none">
+                      <li class="general-problem margin-top-0">
+                        <div class="question">
+                          <p class="margin-top-0">
+                            <strong>Why is it important for me to believe in God, to know God, and to trust Him?</strong>
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
+                  </section>
+                  <div class="instructions">
+                    <p>Have students explain how each of these ways brings them closer to God in faith. Direct students to record their
+                      responses in their journals, providing support for their answers using ideas from the Student Book.
+                    </p>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text Section ends -->
+
+        <!-- Practice + Main Title + Text + Ordered List Section starts -->
+        <hr id="practice_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">Practice + Main Title + Ordered List:</h2>
+          </header>
+          <p class="p-grey">[Below is practice 01 with main title, text followed by an ordered list.]</p>
+
+          <section class="practice practice_01">
+            <header>
+              <h3 class="title title_04">Know, Think, Infer (page 6)</h3>
+            </header>
+            <div class="practicediv">
+              <div class="instructions">
+                <p>Read the questions together. Have students discuss each question with a partner before answering the questions
+                  in their journals.</p>
+              </div>
+              <ol>
+                <li class="general-problem">
+                  <div class="question">
+                    <p>What does having faith mean? (Having faith means believing that God exists, knowing that He loves us
+                      unconditionally and wants us to be happy, and trusting that He has a plan for us to be happy.)</p>
+                  </div>
+                </li>
+                <li class="general-problem">
+                  <div class="question">
+                    <p>Why can we completely trust God, and how do we build that trust? (God created us; He loves and cares for
+                      us; He has given us the gift of faith, and with that faith we can trust He will always be there to guide us.
+                      We build trust by developing and
+                      strengthening the relationship through time spent with Him. Through our experiences, we come to know how God
+                      will help give us the strength we need to face any situation.)</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice the ol tag does not have a "practicelist" class so there is no dotted line here.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practice practice_01" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h3 id="unique_heading_id" class="title title_04">Know, Think, Infer (page 6)</h3>
+                  </header>
+                  <div class="practicediv">
+                    <div class="instructions">
+                      <p>Read the questions together. Have students discuss each question with a partner before answering the questions
+                        in their journals.</p>
+                    </div>
+                    <ol>
+                      <li class="general-problem">
+                        <div class="question">
+                          <p>What does having faith mean? (Having faith means believing that God exists, knowing that He loves us
+                            unconditionally and wants us to be happy, and trusting that He has a plan for us to be happy.)</p>
+                        </div>
+                      </li>
+                      <li class="general-problem">
+                        <div class="question">
+                          <p>Why can we completely trust God, and how do we build that trust? (God created us; He loves and cares for
+                            us; He has given us the gift of faith, and with that faith we can trust He will always be there to guide us.
+                            We build trust by developing and
+                            strengthening the relationship through time spent with Him. Through our experiences, we come to know how God
+                            will help give us the strength we need to face any situation.)</p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice + Width-66 + Main Title + Text + Ordered List Section Ends -->
+
+        <!-- Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text Section + Float Right Marginalia starts-->
+        <hr id="practice_03" />
+        <section>
+          <header>
+            <h2 class="p-grey">Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text + Float Right Marginalia:</h2>
+          </header>
+          <p class="p-grey">[Below is practice 01 with the main title and design-icon text inline next to it. The practice div
+            of question has an optional text within it (Orange colour) and below are regular text. There is also a float right marginalia 02 included as well inside the practice.]</p>
+        
+          <section class="practice practice_01">
+            <header>
+              <h2 class="title title_04">Reflect and Connect <img alt="alt text"
+                  class="design-icon inline design-icon_text-inline"
+                  src="../../images/re6_teacher_icons/icon_img_inquiry_task_003.png"></h2>
+            </header>
+            <aside class="marginalia marginalia_02 margin-bottom-0 margin-left-default float-right width-33 margin-top-0">
+              <header>
+                <h3 class="title title_06">Assessment Opportunity</h3>
+              </header>
+              <p><span class="no-widow">Use LM</span> 1-1: I Can to conference with students on their learning and to determine to
+                what degree they have consolidated key ideas <span class="no-widow">and understandings.</span></p>
+            </aside>
+            <section class="practicediv">
+              <header>
+                <h3 class="title title_05">To have students reflect on their learning in Lesson 1, ask:</h3>
+              </header>
+              <ol class="practicelist ol_none">
+                <li class="general-problem margin-top-0">
+                  <div class="question">
+                    <p class="margin-top-0">
+                      <strong>Why is it important for me to believe in God, to know God, and to trust Him?</strong>
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+            <div class="instructions">
+              <p>Have students explain how each of these ways brings them closer to God in faith. Direct students to record
+                their
+                responses in their journals, providing support for their answers using ideas from the Student Book.
+              </p>
+            </div>
+            <div class="clear-both"></div>
+          </section>
+        
+          <p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section class="practice practice_01" id="unique_section_id" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h2 id="unique_heading_id" class="title title_04">Reflect and Connect <img id="unique_image_id" alt="alt text"
+                        class="design-icon inline design-icon_text-inline" src="../images/icon_img_inquiry_task_003.png">
+                    </h2>
+                  </header>
+                  <aside id="unique_aside_id" class="marginalia marginalia_02 margin-bottom-0 margin-left-default float-right width-33 margin-top-0">
+                    <header id="header_unique_header_id">
+                      <h3 id="unique_heading_id" class="title title_06">Assessment Opportunity</h3>
+                    </header>
+                    <p><span class="no-widow">Use LM</span> 1-1: I Can to conference with students on their learning and to determine to
+                      what degree they have consolidated key ideas <span class="no-widow">and understandings.</span></p>
+                  </aside>
+                  <section id="unique_section_id" class="practicediv" aria-labelledby="header_unique_header_id">
+                    <header id="header_unique_header_id">
+                      <h3 id="unique_heading_id" class="title title_05">To have students reflect on their learning in Lesson 1, ask:</h3>
+                    </header>
+                    <ol class="practicelist ol_none">
+                      <li class="general-problem margin-top-0">
+                        <div class="question">
+                          <p class="margin-top-0">
+                            <strong>Why is it important for me to believe in God, to know God, and to trust Him?</strong>
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
+                  </section>
+                  <div class="instructions">
+                    <p>Have students explain how each of these ways brings them closer to God in faith. Direct students to record their
+                      responses in their journals, providing support for their answers using ideas from the Student Book.
+                    </p>
+                  </div>
+                  <div class="clear-both"></div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice + Main Title + Design-Icon Text Inline + Practice Div of Question + Text + Float Right Marginalia Section ends -->
+      </section>
+      <!-- Practice Combination Section Ends -->
+
+      <hr class="template_hr" />
+      
+      <!-- Figuregroup Section Starts -->
+      <hr id="figuregroups" />
+      <section>
+        <header>
+          <h1>Figuregroup Combinations</h1>
+        </header>
+        <p class="p-grey">[Figuregroup layout that have a combination of figure captions.]</p>
+      
+        <!-- 2-Column Figure Layout with Captions for Figures and Figuregroup Section starts -->
+        <hr id="figuregroup_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout with Captions for Figures and Figuregroup:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for figures and figuregroup.]
+          </p>
+      
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure" role="group"
+                aria-labelledby="2column_figurecaption01">
+                <img alt=""
+                  src="../../images/placeholder_images/RE5_ack.jpg" />
+                <figcaption id="2column_figurecaption01">
+                  <div class="caption">
+                    <p>I am figure caption for the first figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="informalfigure" role="group"
+                aria-labelledby="2column_figurecaption02">
+                <img
+                  src="../../images/placeholder_images/RE5_ack.jpg" />
+                <figcaption id="2column_figurecaption02">
+                  <div class="caption">
+                    <p>I am figure caption for the second figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figcaption id="2column_figure01">
+                <div class="caption">
+                  <p>I am caption for the figuregroup.</p>
+                </div>
+              </figcaption>
+            </figure>
+      
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image01"
+                        src="../../images/placeholder_images/RE5_ack.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image02"
+                        src="../../images/placeholder_images/RE5_ack.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="unique_figuregroupcaption_id">
+                      <div class="caption">
+                        <p>I am caption for the figuregroup.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+              </div>
+            </p>
+          </section>
+        </section>
+        <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+      
+        <!-- 2-Column Figure Layout with Captions for Nested Figure only Section starts -->
+        <hr id="figuregroup_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout with Captions for Nested Figures only:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for nested figures only.]</p>
+      
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure" role="group"
+                aria-labelledby="2column_figurecaption01">
+                <img alt=""
+                  src="../../images/placeholder_images/RE5_ack.jpg" />
+                <figcaption id="2column_figurecaption01">
+                  <div class="caption">
+                    <p>I am figure caption for the first figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="informalfigure" role="group"
+                aria-labelledby="2column_figurecaption02">
+                <img alt=""
+                  src="../../images/placeholder_images/RE5_ack.jpg" />
+                <figcaption id="2column_figurecaption02">
+                  <div class="caption">
+                    <p>I am figure caption for the second figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figcaption id="2column_figure01" class="sr-only">
+                <div class="caption">
+                  <p>Group of 2 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+      
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image01"
+                        src="../../images/placeholder_images/RE5_ack.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image02"
+                        src="../../images/placeholder_images/RE5_ack.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="unique_figuregroupcaption_id" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 2 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+              </div>
+            </p>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Nested Figure only Section ends -->
+      
+          <!-- 2-Column Figure Layout with Caption for Figuregroup only Section starts -->
+          <hr id="figuregroup_03" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout with Caption for Figuregroup only:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout with caption for figuregroup only.]</p>
+      
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure">
+                  <img alt=""
+                    src="../../images/placeholder_images/RE5_ack.jpg" />
+                </figure>
+                <figure class="informalfigure">
+                  <img alt=""
+                    src="../../images/placeholder_images/RE5_ack.jpg" />
+                </figure>
+                <figcaption id="2column_figure01">
+                  <div class="caption">
+                    <p>I am caption for the figuregroup.</p>
+                  </div>
+                </figcaption>
+              </figure>
+      
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image01"
+                          src="../../images/placeholder_images/RE5_ack.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image02"
+                          src="../../images/placeholder_images/RE5_ack.jpg" />
+                      </figure>
+                      <figcaption id="unique_figuregroupcaption_id">
+                        <div class="caption">
+                          <p>I am caption for the figuregroup.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Caption for Figuregroup only Section Ends-->
+      
+          <!-- 2-Column Figure Layout without Captions for both Figure and Figuregroup Section starts -->
+          <hr id="figuregroup_04" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout without Captions for both Figures and Figuregroup:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout without captions for both figures and
+              figuregroup.]</p>
+      
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure">
+                  <img alt=""
+                    src="../../images/placeholder_images/RE5_ack.jpg" />
+                </figure>
+                <figure class="informalfigure">
+                  <img alt=""
+                    src="../../images/placeholder_images/RE5_ack.jpg" />
+                </figure>
+                <figcaption id="2column_figure01" class="sr-only">
+                  <div class="caption">
+                    <p>Group of 2 images.</p>
+                  </div>
+                </figcaption>
+              </figure>
+      
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image01"
+                          src="../../images/placeholder_images/RE5_ack.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image02"
+                          src="../../images/placeholder_images/RE5_ack.jpg" />
+                      </figure>
+                      <figcaption id="unique_figuregroupcaption_id" class="sr-only">
+                        <div class="caption">
+                          <p>Group of 2 images.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+        </section>
+        <!-- Figuregroup Section Ends -->
+
+    </section> <!-- Readspeaker section closed-->
+    <script src="../../js/re6_teacher/tabs.js"></script>
+  </body>
+
+</html>

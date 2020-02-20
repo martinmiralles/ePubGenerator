@@ -1,0 +1,1960 @@
+<html lang="en">
+
+  <head>
+    <title>Religion Standard Component Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re5_student.css"/>
+
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+      }
+
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: red;
+      }
+
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+
+      .p-darkred,
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        var len = codeblock.length;
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.appendChild(text);
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Standard Components</h1>
+        </header>
+        <p class="p-grey">[A component is comprised of an element that is combined with other elements, styles, and/or layouts. This section displays a list of standard components that were created for those common book items and features in the RE5 student
+          book. Refer to this section as you mark up each book item in your printer PDF, and then refer to Layouts or Styles if you need to specify the arrangement or style of that component.]</p>
+        <hr/>
+        <ol class="links">
+
+          <li>
+            <p>
+              <strong>
+                <a href="#headers">Headers</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#green_unit_header">Green Unit Header</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#purple_unit_header">Purple Unit Header</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#green_chapter_header">Green Chapter Header</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#purple_chapter_header">Purple Chapter Header</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#sidebars">Sidebars</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#sidebar_01">Sidebar 01: We Read the Bible</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_02">Sidebar 02: Let Us Pray</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_03">Sidebar 03: In the Parish</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_04">Sidebar 04: Faith Facts</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_05">Sidebar 05: At Home</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_06">Sidebar 06: Words to Inspire</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#sidebar_07">Sidebar 07: Living Our Faith</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#notes">Notes</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#note_01">Note 01</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_02">Note 02</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_02_01">Note 02-01</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_02_02">Note 02-02</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_03_green">Note 03 - Green</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_03_purple">Note 03 - Purple</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_04">Note 04</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_05">Note 05</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#note_06">Note 06</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#informaltable">Informal Table</a>
+              </strong>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#practices">Practices</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#practice_01">Practice 01: Know, Think, Infer</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#practice_01_01">Practice 01-01: Know, Think, Infer (No Background)</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#practice_02">Practice 02: My Faith Journey</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#practice_03_light_green">Practice 03 - Light Green: Growing in Faith</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#practice_03_light_purple">Practice 03 - Light Purple: Growing in Faith</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#cards">Cards</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#card_01">Card 01: Focus on Scripture</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_02">Card 02</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_03">Card 03</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_04_orange">Card 04 - Orange: How We Celebrate</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_04_purple">Card 04 - Purple: Why We Pray</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_04_green">Card 04 - Green: How We Live</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_04_blue">Card 04 - Blue: What We Believe</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_05">Card 05: Faith in Action</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#card_06">Card 06</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#printpage_pagebreak">Print Page References</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#pagebreak_01">Print Page Ref. 01</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#pagebreak_02">Print Page Ref. 02</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#long_description">Long Description</a>
+              </strong>
+            </p>
+          </li>
+
+        </ol>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Headers Section Starts-->
+      <section id="headers">
+        <header>
+          <h1>Headers</h1>
+        </header>
+        <p class="p-grey">[This section displays how each of the different header components (i.e., unit headers, chapter headers) are styled and will display.]</p>
+
+        <!-- Green Unit Header Section Starts -->
+        <hr id="green_unit_header"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Green Unit Header</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment if you want your unit header to be green. This is how your unit number and unit title will display using the "green unit header" component. Note that the background colours and text style (font, colour,
+            and size) and are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="part bg_lightgreen" aria-labelledby="header_unique_section_id">
+            <header id="header_unique_section_id">
+              <h1 id="unique_heading_id" class="title title_01 lc_align-center">
+                <span class="text_wrapper bg_darkgreen">
+                  <span class="label">Unit
+                  </span>
+                  <span class="number">1</span>
+                </span>
+                <span class="text bg_lightgreen">The Gift of Our Faith</span>
+              </h1>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="part bg_lightgreen" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h1 id="unique_heading_id" class="title title_01 lc_align-center">
+                      <span class="text_wrapper bg_darkgreen">
+                        <span class="label">Unit
+                        </span>
+                        <span class="number">1</span>
+                      </span>
+                      <span class="text bg_lightgreen">The Gift of Our Faith</span>
+                    </h1>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Green Unit Header Section Ends -->
+
+        <!-- Purple Unit Header Section Starts -->
+        <hr id="purple_unit_header"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Purple Unit Header</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment if you want your unit header to be purple. This is how your unit number and unit title will display using the "purple unit header" component. Note that the background colours and text style (font, colour,
+            and size) and are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="part bg_lightpurple" aria-labelledby="header_unique_section_id">
+            <header id="header_unique_section_id">
+              <h1 id="unique_heading_id" class="title title_01 lc_align-center">
+                <span class="text_wrapper bg_darkpurple">
+                  <span class="label">Unit
+                  </span>
+                  <span class="number">1</span>
+                </span>
+                <span class="text bg_lightpurple">The Gift of Our Faith</span>
+              </h1>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="part bg_lightpurple" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h1 id="unique_heading_id" class="title title_01 lc_align-center">
+                      <span class="text_wrapper bg_darkpurple">
+                        <span class="label">Unit
+                        </span>
+                        <span class="number">1</span>
+                      </span>
+                      <span class="text bg_lightpurple">The Gift of Our Faith</span>
+                    </h1>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Purple Unit Header Section Ends -->
+
+        <!-- Green Chapter Header Section Starts -->
+        <hr id="green_chapter_header"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Green Chapter Header</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment if you want your chapter header to be green. This is how your chapter number and chapter title will display using the "green chapter header" component. Note that the background colours, border style, and
+            text style (font, colour, and size) and are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="chapter" aria-labelledby="header_unique_section_id">
+            <header id="header_unique_section_id">
+              <h1 id="unique_heading_id" class="title title_02 lc_align-center">
+                <span class="text_wrapper bg_darkgreen">
+                  <span class="label">Chapter</span>
+                  <span class="number">1</span>
+                </span>
+                <span class="text bg_lightgreen">What Helps Us Grow in Faith?</span>
+              </h1>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="chapter" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h1 id="unique_heading_id" class="title title_02 lc_align-center">
+                      <span class="text_wrapper bg_darkgreen">
+                        <span class="label">Chapter</span>
+                        <span class="number">1</span>
+                      </span>
+                      <span class="text bg_lightgreen">What Helps Us Grow in Faith?</span>
+                    </h1>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Green Chapter Header Section Ends -->
+
+        <!-- Purple Chapter Header Section Starts -->
+        <hr id="purple_chapter_header"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Purple Chapter Header</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment if you want your chapter header to be purple. This is how your chapter number and chapter title will display using the "purple chapter header" component. Note that the background colours, border style, and
+            text style (font, colour, and size) and are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="chapter" aria-labelledby="header_unique_section_id">
+            <header id="header_unique_section_id">
+              <h1 id="unique_heading_id" class="title title_02 lc_align-center">
+                <span class="text_wrapper bg_darkpurple">
+                  <span class="label">Chapter</span>
+                  <span class="number">1</span>
+                </span>
+                <span class="text bg_lightpurple">What Helps Us Grow in Faith?</span>
+              </h1>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="chapter" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h1 id="unique_heading_id" class="title title_02 lc_align-center">
+                      <span class="text_wrapper bg_darkpurple">
+                        <span class="label">Chapter</span>
+                        <span class="number">1</span>
+                      </span>
+                      <span class="text bg_lightpurple">What Helps Us Grow in Faith?</span>
+                    </h1>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Green Chapter Header Section Ends -->
+      </section>
+      <!-- Headers Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Sidebar Section Starts -->
+      <section id="sidebars">
+        <header>
+          <h1>Sidebars</h1>
+        </header>
+        <p class="p-grey">[Sidebar components can be used to treat marginalia features in the book. This section displays how each of the different sidebar components are styled and will display.]</p>
+
+        <!-- Sidebar 01 Section Starts -->
+        <hr id="sidebar_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 01: We Read the Bible</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "We Read the Bible" feature. Note that the dividers, icon, and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_01" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                <img id="unique_image_id" class="design-icon inline" src="../../images/re5_student_icons/icon_img_we_read_the_bible.png"/>
+                We Read the
+                <strong>Bible</strong>
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 01, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_01" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_we_read_the_bible.png"/>
+                      We Read the
+                      <strong>Bible</strong>
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 01, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 01 Section Ends -->
+
+        <!-- Sidebar 02 Section Starts -->
+        <hr id="sidebar_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 02: Let Us Pray</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "Let Us Pray" feature. Note that the dividers, icon, and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_02" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+               <img id="unique_image_id" class="design-icon inline" src="../../images/re5_student_icons/icon_img_let_us_pray.png"/>
+                Let Us
+                <strong>Pray</strong>
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 02, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_02" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_let_us_pray.png"/>
+                      Let Us
+                      <strong>Pray</strong>
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 02, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 02 Section Ends -->
+
+        <!-- Sidebar 03 Section Starts -->
+        <hr id="sidebar_03"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 03: In the Parish</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "In the Parish" feature. Note that the dividers, icon, and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_03" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                <img id="unique_image_id" class="design-icon inline" src="../../images/re5_student_icons/icon_img_in_the_parish.png"/>
+                In the
+                <strong>Parish</strong>
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 03, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_03" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_in_the_parish.png"/>
+                      In the
+                      <strong>Parish</strong>
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 03, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 03 Section Ends -->
+
+        <!-- Sidebar 04 Section Starts -->
+        <hr id="sidebar_04"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 04: Faith Facts</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "Faith Facts" feature. Note that the dividers, icon, and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_04" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                <img id="unique_image_id" class="design-icon inline" src="../../images/re5_student_icons/icon_img_faith_facts.png"/>
+                <strong>Faith</strong>
+                Facts
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 04, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_04" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_faith_facts.png"/>
+                      <strong>Faith</strong>
+                      Facts
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 04, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 04 Section Ends -->
+
+        <!-- Sidebar 05 Section Starts -->
+        <hr id="sidebar_05"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 05: At Home</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "At Home" feature. Note that the dividers, icon, and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_05" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                <img id="unique_image_id" class="design-icon inline" src="../../images/re5_student_icons/icon_img_at_home.png"/>
+                At
+                <strong>Home</strong>
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 05, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_05" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_at_home.png"/>
+                      At
+                      <strong>Home</strong>
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 05, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 05 Section Ends -->
+
+        <!-- Sidebar 06 Section Starts -->
+        <hr id="sidebar_06"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 06: Words to Inspire</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "Words to Inspire" feature. Note that the dividers, icon, and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_06" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                <img id="unique_image_id" class="design-icon inline" src="../../images/re5_student_icons/icon_img_words_to_inspire.png"/>
+                Words to
+                <strong>Inspire</strong>
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 06, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_06" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_06 margin-top-0 margin-bottom-0">
+                      <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_words_to_inspire.png"/>
+                      Words to
+                      <strong>Inspire</strong>
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 06, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 06 Section Ends -->
+
+        <!-- Sidebar 07 Section Starts -->
+        <hr id="sidebar_07"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Sidebar 07: Living Our Faith</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "Living Our Faith" feature. Note that the green border frame and title are templated and cannot be changed.]</p>
+          <aside id="unique_aside_id" class="sidebar sidebar_07" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h6 id="unique_heading_id" class="title title_04 margin-top-0 margin-bottom-0">
+                <strong>Living</strong>
+                Our Faith
+              </h6>
+            </header>
+            <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 07, which can be any element, layout, and/or component you specify in your markup.</p>
+          </aside>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <aside id="unique_aside_id" class="sidebar sidebar_07" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h6 id="unique_heading_id" class="title title_04 margin-top-0 margin-bottom-0">
+                      <strong>Living</strong>
+                      Our Faith
+                    </h6>
+                  </header>
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for sidebar 07, which can be any element, layout, and/or component you specify in your markup.</p>
+                </aside>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Sidebar 07 Section Ends -->
+      </section>
+      <!-- Sidebar Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Note Section Starts -->
+      <section id="notes">
+        <header>
+          <h1>Notes</h1>
+        </header>
+        <p class="p-grey">[This section displays how each of the different note components are styled and will display. Please note that "Notes" can only be applied to book content that does not have a title or a heading level content.]</p>
+
+        <!-- Note 01 Section Starts -->
+        <hr id="note_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 01</h2>
+          </header>
+          <p class="p-grey">[Use the "note 01" design treatment if you want your note to display in an orange box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width and
+            alignments can be customized based on the available layouts.]</p>
+          <div class="note note_01 width-75 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_01 width-75 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 01 Section Ends -->
+
+        <!-- Note 02 Section Starts -->
+        <hr id="note_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 02</h2>
+          </header>
+          <p class="p-grey">[Use the "note 02" design treatment if you want your note to display in a blue box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width and
+            alignments can be customized based on the available layouts.]</p>
+          <div class="note note_02 width-75 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 02, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_02 width-75 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 02, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 02 Section Ends -->
+
+        <!-- Note 02_01 Section Starts -->
+        <hr id="note_02_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 02-01</h2>
+          </header>
+          <p class="p-grey">[Use the "note 02-01" design treatment if you want your note to display in a pale yellow box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width
+            and alignments can be customized based on the available layouts.]</p>
+          <div class="note note_02_01 width-75 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 02-01, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_02_01 width-75 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 02-01, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 02_01 Section Ends -->
+
+        <!-- Note 02_02 Section Starts -->
+        <hr id="note_02_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 02-02</h2>
+          </header>
+          <p class="p-grey">[Use the "note 02-02" design treatment if you want your note to display in a pale purple box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width
+            and alignments can be customized based on the available layouts.]</p>
+          <div class="note note_02_02 width-75 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 02-02, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_02_02 width-75 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 02-02, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 02_02 Section Ends -->
+
+        <!-- Note 03 - Green Section Starts -->
+        <hr id="note_03_green"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 03 - Green</h2>
+          </header>
+          <p class="p-grey">[Use the "note 03 - green" design treatment if you want your note to display in a green box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width
+            and alignments can be customized based on the available layouts.]</p>
+          <div class="note note_03_green width-66 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 03 - green, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_03_green width-66 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 03 - green, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 03 - Green Section Ends -->
+
+        <!-- Note 03 - Purple Section Starts -->
+        <hr id="note_03_purple"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 03 - Purple</h2>
+          </header>
+          <p class="p-grey">[Use the "note 03 - purple" design treatment if you want your note to display in a purple box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the
+            width and alignments can be customized based on the available layouts.]</p>
+          <div class="note note_03_purple width-66 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 03 - purple, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_03_purple width-66 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 03 - purple, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 03 - Purple Section Ends -->
+
+        <!-- Note 04 Section Starts -->
+        <hr id="note_04"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 04</h2>
+          </header>
+          <p class="p-grey">[Use the "note 04" design treatment for small notes that will display in a blue box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width and
+            alignments can be customized based on the available layouts.]</p>
+          <div class="note note_04 margin-0-auto width-25">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 04, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_04 margin-0-auto width-25">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 04, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 04 Section Ends -->
+
+        <!-- Note 05 Section Starts -->
+        <hr id="note_05"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 05</h2>
+          </header>
+          <p class="p-grey">[Use the "note 05" design treatment if you want your note to display in a blue oval shape. Note that background colour, shape, and text style (font, colour, and size) are templated and cannot be changed; however, the width and
+            alignments can be customized based on the available layouts.]</p>
+          <div class="note note_05 width-40">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 05, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_05 width-40">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 05, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 05 Section Ends -->
+
+        <!-- Note 06 Section Starts -->
+        <hr id="note_06"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 06</h2>
+          </header>
+          <p class="p-grey">[Use the "note 06" design treatment if you want your note to display in a pale yellow and gray box. Note that background colours, border style, and text style (font, colour, and size) are templated and cannot be changed; however,
+            the width and alignments can be customized based on the available layouts.]</p>
+          <div class="note note_06 width-50 margin-default-auto">
+            <p class="margin-top-0 margin-bottom-0 padding-left-default padding-right-default">This is your body text for note 06, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_06 width-50 margin-default-auto">
+                  <p class="margin-top-0 margin-bottom-0 padding-left-default padding-right-default">This is your body text for note 06, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 06 Section Ends -->
+      </section>
+      <!-- Note Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Informal Table Section Starts -->
+      <section id="informaltable">
+        <header>
+          <h1 class="p-grey">Informal Table</h1>
+        </header>
+        <p class="p-grey">[Use the "informal table" component for your tables that have column headers. Note that border style and text style (font, colour, and size) are templated and cannot be changed; however, the column widths and the number of rows and
+          columns can be customized.]</p>
+        <table id="unique_table_id" class="informaltable margin-top-default margin-bottom-default">
+          <caption class="caption margin-top-default">
+            <p>This is a caption for the table which can go above or below the table (Optional).</p>
+          </caption>
+          <thead>
+            <tr>
+              <td></td>
+              <th class="lc_align-center" scope="col">
+                <p class="margin-top-0 margin-bottom-0">Living the Commandments to Be Obedient</p>
+              </th>
+              <th class="lc_align-center" scope="col">
+                <p class="margin-top-0 margin-bottom-0">Living the Commandments with Love</p>
+              </th>
+              <th class="lc_align-center" scope="col">
+                <p class="margin-top-0 margin-bottom-0">How the Church Helps Us</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="lc_align-left" scope="row">
+                <p class="margin-top-0 margin-bottom-0">1</p>
+              </th>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">
+                  <strong>You shall have no other gods before God.</strong>
+                </p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Put love of God above all else.</p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="lc_align-left" scope="row">
+                <p class="margin-top-0 margin-bottom-0">2</p>
+              </th>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">
+                  <strong>Do not take God’s name in vain.</strong>
+                </p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Respect God through your words, thoughts, and actions every day.</p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Church teachings help us know, love, respect, and serve God.</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="lc_align-left" scope="row">
+                <p class="margin-top-0 margin-bottom-0">3</p>
+              </th>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">
+                  <strong>Keep the Lord’s Day holy.</strong>
+                </p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Going to Mass on the Lord’s Day helps us keep it holy.</p>
+              </td>
+            </tr>
+            <tr>
+              <th class="lc_align-left" scope="row">
+                <p class="margin-top-0 margin-bottom-0">4</p>
+              </th>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">
+                  <strong>Honour your father and mother.</strong>
+                </p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">Love and respect your parents through your words and actions.</p>
+              </td>
+              <td class="lc_align-left">
+                <p class="margin-top-0 margin-bottom-0">The Church supports families through prayer and faith-filled communities.</p>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td class="lc_align-left" colspan="4">
+                <p class="margin-top-0 margin-bottom-0">
+                  <strong>Optional</strong>
+                  tfoot column span</p>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <table id="unique_table_id" class="informaltable margin-top-default margin-bottom-default">
+                <caption id="unique_caption_id" class="caption margin-top-default">
+                  <p>This is a caption for the table which can go above or below the table (Optional).</p>
+                </caption>
+                <thead>
+                  <tr>
+                    <td></td>
+                    <th class="lc_align-center" scope="col">
+                      <p class="margin-top-0 margin-bottom-0">Living the Commandments to Be Obedient</p>
+                    </th>
+                    <th class="lc_align-center" scope="col">
+                      <p class="margin-top-0 margin-bottom-0">Living the Commandments with Love</p>
+                    </th>
+                    <th class="lc_align-center" scope="col">
+                      <p class="margin-top-0 margin-bottom-0">How the Church Helps Us</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="lc_align-left" scope="row">
+                      <p class="margin-top-0 margin-bottom-0">1</p>
+                    </th>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">
+                        <strong>You shall have no other gods before God.</strong>
+                      </p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Put love of God above all else.</p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="lc_align-left" scope="row">
+                      <p class="margin-top-0 margin-bottom-0">2</p>
+                    </th>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">
+                        <strong>Do not take God’s name in vain.</strong>
+                      </p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Respect God through your words, thoughts, and actions every day.</p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Church teachings help us know, love, respect, and serve God.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="lc_align-left" scope="row">
+                      <p class="margin-top-0 margin-bottom-0">3</p>
+                    </th>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">
+                        <strong>Keep the Lord’s Day holy.</strong>
+                      </p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Going to Mass on the Lord’s Day helps us keep it holy.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="lc_align-left" scope="row">
+                      <p class="margin-top-0 margin-bottom-0">4</p>
+                    </th>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">
+                        <strong>Honour your father and mother.</strong>
+                      </p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">Love and respect your parents through your words and actions.</p>
+                    </td>
+                    <td class="lc_align-left">
+                      <p class="margin-top-0 margin-bottom-0">The Church supports families through prayer and faith-filled communities.</p>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <!-- Optional -->
+                  <tr>
+                    <td class="lc_align-left" colspan="4">
+                      <p class="margin-top-0 margin-bottom-0">
+                        <strong>Optional</strong>
+                        tfoot column span</p>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Informal Table Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Practice Section Starts -->
+      <section id="practices">
+        <header>
+          <h1>Practices</h1>
+        </header>
+        <p class="p-grey">[Practice components are generally used to style end-of-section features, such as practice questions or reflection exercises. This section displays how each of the different practice components are styled and will display.]</p>
+
+        <!-- Practice 01 Sections Starts -->
+        <hr id="practice_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice 01: Know, Think, Infer</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "Know, Think, Infer" feature. Note that the image icon, title, background colours, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="practice practice_01" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04"><img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_know_think_infer.png"/>
+                <strong>Know, Think, Infer</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practice practice_01" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04"><img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_know_think_infer.png"/>
+                      <strong>Know, Think, Infer</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice 01 Sections Ends -->
+
+        <!-- Practice 01 - 01 Sections Starts -->
+        <hr id="practice_01_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice 01-01: Know, Think, Infer (No Background)</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "Know, Think, Infer" feature. It differs slightly from the previous one in that no background color is applied to the body text. Note that the image icon, title, background colour, and text style
+            (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="practice practice_01 practice_01_01" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04"><img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_know_think_infer.png"/>
+                <strong>Know, Think, Infer</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practice practice_01 practice_01_01" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04"><img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_know_think_infer.png"/>
+                      <strong>Know, Think, Infer</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice 01 - 01 Sections Ends -->
+
+        <!-- Practice 02 Sections Starts -->
+        <hr id="practice_02"/>
+        <section >
+          <header>
+            <h2 class="p-grey">Practice 02: My Faith Journey</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for the "My Faith Journey" feature. Note that the image icon, title, background colours, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="practice practice_02" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_my_faith_journey.png"/>
+                My Faith
+                <strong>Journey</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practice practice_02" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_my_faith_journey.png"/>
+                      My Faith
+                      <strong>Journey</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice 02 Sections Ends -->
+
+        <!-- Practice 03 - Light Green Sections Starts -->
+        <hr id="practice_03_light_green"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice 03 - Light Green: Growing in Faith</h2>
+          </header>
+          <p class="p-grey">[This is the green design treatment for the "Growing in Faith" feature. Note that the image icon, title, background colours, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="practice practice_03 bg_lightgreen" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_02 bg_darkgreen">
+                <img id="unique_image_id" class="design-icon inline" alt="Chapter 1" src="../../images/re5_student_icons/icon_img_chapter01.png"/>
+                Growing in
+                <strong>Faith</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practice practice_03 bg_lightgreen" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_02 bg_darkgreen">
+                      <img id="unique_image_id" class="design-icon inline" alt="Chapter 1" src="../images/icon_img_chapter01.png"/>
+                      Growing in
+                      <strong>Faith</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice 03 - Light Green Sections Ends -->
+
+        <!-- Practice 03 - Light Purple Sections Starts -->
+        <hr id="practice_03_light_purple"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice 03 - Light Purple: Growing in Faith</h2>
+          </header>
+          <p class="p-grey">[This is the purple design treatment for the "Growing in Faith" feature. Note that the image icon, title, background colours, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="practice practice_03 bg_lightpurple" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title bg_darkpurple title_02">
+                <img id="unique_image_id" class="design-icon inline" alt="Chapter 5" src="../../images/re5_student_icons/icon_img_chapter05.png"/>
+                Growing in
+                <strong>Faith</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practice practice_03 bg_lightpurple" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title bg_darkpurple title_02">
+                      <img id="unique_image_id" class="design-icon inline" alt="Chapter 5" src="../images/icon_img_chapter05.png"/>
+                      Growing in
+                      <strong>Faith</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Practice 03 - Light Purple Sections Ends -->
+      </section>
+      <!-- Practice Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Cards Section Starts -->
+      <section id="cards">
+        <header>
+          <h1>Cards</h1>
+        </header>
+        <p class="p-grey">[Card components are generally used to style specific sections to set it apart from the main narrative text. You must indicate where the card starts and where it ends in your markup. This section displays how each of the different
+          card components are styled and will display.]</p>
+
+        <!-- Card 01 Section Starts -->
+        <hr id="card_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 01: Focus on Scripture</h2>
+          </header>
+          <p class="p-grey">[Use this card to style the "Focus on Scripture" section. Note that the image icon, title, background colour, border style, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_01" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_focus_on_scripture.png"/>
+                Focus on
+                <strong>Scripture</strong>
+              </h4>
+            </header>
+            <p class="padding-top-default">This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_01" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_focus_on_scripture.png"/>
+                      Focus on
+                      <strong>Scripture</strong>
+                    </h4>
+                  </header>
+                  <p class="padding-top-default">This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 01 Section Ends -->
+
+        <!-- Card 02 Section Starts -->
+        <hr id="card_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 02</h2>
+          </header>
+          <p class="p-grey">[Use this card to style any feature sections that requires the title to be styled as shown below.]</p>
+          <section id="unique_section_id" class="card card_02" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04 lc_align-center">
+                <strong>The Archangels</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_02" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04 lc_align-center">
+                      <strong>The Archangels</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 02 Section Ends -->
+
+        <!-- Card 03 Section Starts -->
+        <hr id="card_03"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 03</h2>
+          </header>
+          <p class="p-grey">[Use this card to style any feature sections that requires the title to be styled as shown below.]</p>
+          <section id="unique_section_id" class="card card_03" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                Walk by Faith
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_03" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      Walk by Faith
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 03 Section Ends -->
+
+        <!-- Card 04 - Orange Section Starts -->
+        <hr id="card_04_orange"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 04 - Orange: How We Celebrate</h2>
+          </header>
+          <p class="p-grey">[Use this card to style the "How We Celebrate" section. Note that the image icon and label, title, background colour, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_04 card_orange" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_our_catholic_faith.png"/>
+                How We Celebrate
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_04 card_orange" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_our_catholic_faith.png"/>
+                      How We Celebrate
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 04 - Orange Section Ends -->
+
+        <!-- Card 04 - Purple Section Starts -->
+        <hr id="card_04_purple"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 04 - Purple: Why We Pray</h2>
+          </header>
+          <p class="p-grey">[Use this card to style the "Why We Pray" section. Note that the image icon and label, title, background colour, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_04 card_purple" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_why_we_pray.png"/>
+                Why We Pray
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_04 card_purple" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_why_we_pray.png"/>
+                      Why We Pray
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 04 - Purple Section Ends -->
+
+        <!-- Card 04 - Green Section Starts -->
+        <hr id="card_04_green"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 04 - Green: How We Live</h2>
+          </header>
+          <p class="p-grey">[Use this card to style the "How We Live" section. Note that the image icon and label, title, background colour, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_04 card_green" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_how_we_live.png"/>
+                How We Live
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_04 card_green" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_how_we_live.png"/>
+                      How We Live
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 04 - Purple Section Ends -->
+
+        <!-- Card 04 - Blue Section Starts -->
+        <hr id="card_04_blue"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 04 - Blue: What We Believe</h2>
+          </header>
+          <p class="p-grey">[Use this card to style the "What We Believe" section. Note that the image icon and label, title, background colour, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_04 card_blue" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_what_we_believe.png"/>
+                What We Believe
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_04 card_blue" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_what_we_believe.png"/>
+                      What We Believe
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 04 - Blue Section Ends -->
+
+        <!-- Card 05 Section Starts -->
+        <hr id="card_05"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 05: Faith in Action</h2>
+          </header>
+          <p class="p-grey">[Use this card to style the "Faith in Action" section. Note that the image icon, title, background colour, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_05" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                <img id="unique_image_id" class="design-icon inline" alt="" src="../../images/re5_student_icons/icon_img_faith_in_action.png"/>
+                Faith in
+                <strong>Action</strong>
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_05" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id" "">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      <img id="unique_image_id" class="design-icon inline" alt="" src="../images/icon_img_faith_in_action.png"/>
+                      Faith in
+                      <strong>Action</strong>
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 05 Section Ends -->
+
+        <!-- Card 06 Section Starts -->
+        <hr id="card_06"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Card 06</h2>
+          </header>
+          <p class="p-grey">[Use this card to style any feature section that requires it to be set apart within blue dividers. Note that the divider style and text style (font, colour, and size) are templated and cannot be changed.]</p>
+          <section id="unique_section_id" class="card card_06" aria-labelledby="header_unique_header_id">
+            <header id="header_unique_header_id">
+              <h4 id="unique_heading_id" class="title title_04">
+                Card 06 Title
+              </h4>
+            </header>
+            <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="card card_06" aria-labelledby="header_unique_header_id">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_04">
+                      Card 06 Title
+                    </h4>
+                  </header>
+                  <p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Card 06 Section Ends -->
+      </section>
+      <!-- Cards Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Print Page page break Section Starts -->
+      <section id="printpage_pagebreak">
+        <header>
+          <h1>Print Page References</h1>
+        </header>
+        <p class="p-grey">[Print Page Reference components are used to style print page correlation references. In your markup, you will need to specify where each print page reference component needs to be placed. This section displays how each of the two
+          print page reference components will display.]</p>
+
+        <!-- Pagebreak01 Starts-->
+        <hr id="pagebreak_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Print Page Ref. 01</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for any print page reference on your ePub page, other than those for unit or chapter headers. It's important to note that this blue reference element should be placed above the specific element that
+            correlates to the corresponding print page.]</p>
+          <span id="pageXX" class="pagebreak_01 lc_align-right"><span>printed p. XX</span></span>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <span id="pageXX" class="pagebreak_01 lc_align-right">
+                  <span>printed p. XX</span>
+                </span>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Pagebreak01 Ends-->
+
+        <!-- Pagebreak02 Starts-->
+        <hr id="pagebreak_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Print Page Ref. 02</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment specifically for print page references that correlates to unit or chapter headers. Notice that this blue reference box will display at the top-right corner of the header component in the following example.]</p>
+          <section id="unit02_pg21" class="part bg_lightpurple" aria-labelledby="header_unit02_pg21">
+            <span id="pageXX" class="float-right pagebreak_02 margin-top-default margin-right-default">
+              <span>printed p. XX</span>
+            </span>
+            <header id="header_unit01_pg04">
+              <h3 id="h1_header_unit01_pg04" class="title title_01 lc_align-center">
+                <span class="text_wrapper bg_darkpurple">
+                  <span class="label">Unit
+                  </span>
+                  <span class="number">2</span>
+                </span>
+              </h3>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id" class="part bg_lightpurple">
+                  <span id="pageXX" class="float-right pagebreak_02 margin-top-default margin-right-default">
+                    <span>printed p. XX</span>
+                  </span>
+                  <header id="unique_header_id">
+                    <h1 id="unique_heading_id" class="title title_01 lc_align-center">
+                      <span class="text_wrapper bg_darkpurple">
+                        <span class="label">Unit
+                        </span>
+                        <span class="number">2</span>
+                      </span>
+                    </h1>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Pagebreak02 Ends-->
+      </section>
+      <!-- Print Page page break Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Long Description Section Starts -->
+      <section id="long_description">
+        <header>
+          <h1 class="p-grey">Long Description:</h1>
+        </header>
+        <p class="p-grey">[Use this design treatment for long descriptions that may accompany an image or figure. It should consist of a heading followed by the long description text that will display when the drop-down arrow is clicked.]</p>
+        <figure class="informalfigure width-50">
+          <img id="unique_image_id" src="../../images/placeholder_images/c_img_unit04_chap12_pg43_312d.jpg" alt="alt text"/>
+          <figcaption id="unique_figurecaption_id">
+            <div class="caption">
+              <p>Caption text will display below the figure like this.</p>
+              <details class="margin-top-default margin-bottom-default">
+                <summary class="margin-bottom-default">
+                  <p class="inline">
+                    <strong>Long Description</strong>
+                  </p>
+                </summary>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </details>
+            </div>
+          </figcaption>
+        </figure>
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <figure id="unique_figure_id" class="informalfigure width-50">
+                <img id="unique_image_id" src="../images/c_img_unit04_chap12_pg43_312d.jpg" alt="alt text"/>
+                <figcaption id="unique_figurecaption_id">
+                  <div class="caption">
+                    <p>Caption text will display below the figure like this.</p>
+                    <details id="unique_details_id" class="margin-top-default margin-bottom-default">
+                      <summary id="unique_summary_id" arialabel-by="unique_summary_id unique_image-id" class="margin-bottom-default">
+                        <p class="inline">
+                          <strong>Long Description</strong>
+                        </p>
+                      </summary>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </details>
+                  </div>
+                </figcaption>
+              </figure>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Long Description Section Ends -->
+
+    </section>
+    <!-- Readspeaker section closed-->
+  </body>
+
+</html>

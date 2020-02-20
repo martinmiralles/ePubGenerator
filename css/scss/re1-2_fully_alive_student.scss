@@ -1,0 +1,1064 @@
+@charset "UTF-8";
+
+//  ************************************* Pearson Custom variables for SCSS(SASS) *************************************
+$pFontSize: 2rem;
+$pLineHeight: 3rem;
+$pFontColor: #000;
+$pFontSize_600: 1.75rem;
+$pLineHeight_600: 2.65rem;
+// The regular title that is bolded black 
+$title01FontSize: 3rem;
+$title01LineHeight: 4rem;
+$title01Color: #000;
+$title01FontSize_600: 2.75rem;
+$title01LineHeight_600: 3.5rem;
+// The title that has 2 colors using a fun (kidprint) font
+$title02FontSize: 3.5rem;
+$title02LineHeight: 4.5rem;
+$title02aColor: #00626D; // default title_02 color
+$title02FontSize_600: 3.25rem;
+$title02LineHeight_600: 4.25rem;
+// The title that is the same size as the pargraph
+$title03FontSize: 2rem;
+$title03LineHeight: 3rem;
+$title03Color: #000;
+$title03FontSize_600: 1.75rem;
+$title03LineHeight_600: 2.65rem;
+// Figurecaption
+$captionFontSize: 2rem;
+$captionLineHeight: 3rem;
+// Poem 01 style that are centered
+$poem01FontSize: 2.25rem;
+$poem01LineHeight: 3rem;
+$poem01FontSize_600: 1.75rem;
+$poem01LineHeight_600: 2.65rem;
+// Poem 02 style that are left alienged
+$poem02FontSize: 1.75rem;
+$poem02LineHeight: 2.5rem;
+// Note style
+$noteFontSize: 1.75rem;
+$noteLineHeight: 2.5rem;
+// pagebreak
+$pageBreakFontSize: 1.5rem;
+$pageBreakLineHeight: 2rem;
+
+
+// Background Colors
+$darkyellowBackgroundColor: #F7D34D;
+$lightyellowBackgroundColor: #FFE380;
+$purpleBackgroundColor: #C58EBC;
+$royalblueBackgroundColor: #6E8EC4;
+$lightblueBackgroundColor: #B9DFE5;
+$lightorangeBackgroundColor: #F4BA6D;
+$darkorangeBackgroundColor: #EE965C;
+$darkblueBackgroundColor: #75ACD6;
+$turquoiseBackgroundColor: #6FC7D3;
+$palegreenBackgroundColor: #91C170;
+$seagreenBackgroundColor: #63BB88;
+// Note Background Colors
+$note01BackgroundColor: #F9DD7C;
+// Pagebreak Background Colors
+$pagebreak01BackgroundColor: #E0E0E0;
+$pagebreak01BorderColor: #000;
+$pagebreak02BackgroundColor: #181818;
+$pagebreak02BorderColor: #FFF;
+// Font Colors
+$darkblueFontColor: #0363AC;
+$navyblueFontColor: #08448C;
+$tealFontColor: #00626D;
+$darkGreenFontColor: #0A8852;
+$pagebreak02FontColor: #FFF;
+
+// ************************************* Function to replace spaces with underscore in font names *************************************
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// ************************************* Font mixin for general CSS styling *************************************
+
+@mixin generateGeneralFontCSS($fontSize, $fontLineHeight, $fontColor:null) {
+    font-size: $fontSize;
+    line-height: $fontLineHeight;
+    color: $fontColor;
+}
+
+@mixin genericMargin {
+    margin: 2rem 0;
+}
+
+// ************************************* Font mixin for @font-face *************************************
+
+//@mixin font-face($name, $pathname, $path, $svgid, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $pathname, $path, $svgid: null, $weight: null, $style: null, $exts: eot woff ttf) {
+    $src: null;
+    $svgidfinal: "";
+
+    @if $svgid !="" {
+        $svgidfinal: $svgid;
+    }
+
+    @else {
+        $svgidfinal: str-replace($name, " ", "_");
+    }
+
+    //$extmods: (eot: "?iefix",
+    //svg: "#"+ $svgidfinal);
+
+    $formats: (eot: "embedded-opentype",
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        //$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        //$src: append($src, url(quote($path + $pathname + "." + $extmod)) format(quote($format)), comma);
+        $src: append($src, url(quote($path + "/" + $pathname + "." + $ext)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+/* ------------------------------------Load the fonts into CSS-------------------------------------------- */
+
+@include font-face("HeinemannRomanSpecial", "HeinemannRomanSpecial-Rm", "../fonts/re1-2_fully_alive_student_fonts", null, 400, normal);
+@include font-face("HeinemannRomanSpecial", "HeinemannRomanSpecial-RmIt", "../fonts/re1-2_fully_alive_student_fonts", null, 400, italic);
+@include font-face("HeinemannRomanSpecial", "HeinemannRomanSpecial-Bd", "../fonts/re1-2_fully_alive_student_fonts", null, 700, normal);
+@include font-face("HeinemannRomanSpecial", "HeinemannRomanSpecial-BdIt", "../fonts/re1-2_fully_alive_student_fonts", null, 700, italic);
+@include font-face("HeinemannRomanSpecial", "HeinemannRomanSpecial-Blk", "../fonts/re1-2_fully_alive_student_fonts", null, 900, normal);
+@include font-face("HeinemannRomanSpecial", "HeinemannRomanSpecial-BlkIt", "../fonts/re1-2_fully_alive_student_fonts", null, 900, italic);
+@include font-face("Kidprint", "Kidprint-Bold", "../fonts/re1-2_fully_alive_student_fonts", null, 700, normal);
+
+// ************************************* Font includes to be used on and inside elements *************************************
+
+@mixin heinemannRomanSpecial_Roman {
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 400;
+}
+
+@mixin heinemannRomanSpecial_RomanItalic {
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin heinemannRomanSpecial_Bold {
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 700;
+}
+
+@mixin heinemannRomanSpecial_BoldItalic {
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin heinemannRomanSpecial_Black {
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 900;
+}
+
+@mixin heinemannRomanSpecial_BlackItalic {
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+@mixin kidprint_Bold {
+    font-family: "Kidprint", "Comic Sans MS", sans-serif;
+    font-weight: 900;
+}
+
+// ************************************* Normalization Styles CSS *************************************
+@mixin normalizationBaseHtmlCSS {
+    html {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        letter-spacing: 0.015rem;
+        line-height: 1.15rem;
+        -webkit-text-size-adjust: 100%;
+        font-size: 100%;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        -webkit-box-sizing: inherit;
+    }
+
+    :root {
+        -moz-tab-size: 4;
+        tab-size: 4;
+    }
+
+    body {
+        @include heinemannRomanSpecial_Roman;
+        margin: 0;
+        padding: 0;
+        font-size: 115%;
+        background-color: #FFFFFF;
+
+        &>section {
+            margin: 3rem 3rem 3rem 4rem;
+        }
+    }
+
+    strong {
+        font-weight: bold;
+        text-decoration: inherit;
+    }
+
+    em {
+        font-style: italic;
+        text-decoration: inherit;
+    }
+
+    section,
+    aside {
+        display: block;
+        margin: 2.5rem 0;
+        padding: 0;
+    }
+
+    header {
+        display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+    }
+
+    p,
+    ol,
+    ul,
+    dl {
+        @include heinemannRomanSpecial_Roman;
+        display: block;
+        margin-block-start: 2rem;
+        margin-block-end: 2rem;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin: 2rem 0;
+        color: $pFontColor;
+    }
+
+    p {
+        @include generateGeneralFontCSS($pFontSize, $pLineHeight);
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-inline-start: 40px;
+        padding-left: 40px;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-inline-start: 40px;
+        padding-left: 40px;
+    }
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    dt {
+        display: block;
+        font-weight: bold;
+    }
+
+    dd {
+        display: block;
+        margin-inline-start: 40px;
+        margin-left: 40px;
+    }
+
+    dd:after {
+        display: block;
+        content: "";
+    }
+
+    figure {
+        display: block;
+        margin-block-start: 2rem;
+        margin-block-end: 2rem;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        margin: 2rem auto;
+        padding: 0;
+    }
+
+    img {
+        border-style: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+    }
+
+    figcaption,
+    div {
+        display: block;
+    }
+
+    figcaption {
+        margin: 0.3em auto 0.5em auto;
+        text-align: left;
+        padding: 0;
+    }
+
+    blockquote {
+        display: block;
+        margin-block-start: 2rem;
+        margin-block-end: 2rem;
+        margin-inline-start: 4rem;
+        margin-inline-end: 4rem;
+        margin: 2rem 4rem;
+        padding: 0;
+    }
+
+    cite {
+        font-style: unset;
+    }
+
+    hr {
+        display: block;
+        //unicode-bidi: isolate;
+        margin-block-start: 0.575rem;
+        margin-block-end: 0.575rem;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        margin: 0.575rem auto;
+        overflow: hidden;
+        border-style: inset;
+        border-width: 1px;
+    }
+
+    caption {
+        display: text-caption;
+        text-align: -webkit-center;
+    }
+
+    table {
+        white-space: normal;
+        line-height: normal;
+        font-weight: normal;
+        font-size: medium;
+        font-style: normal;
+        color: -internal-quirk-inherit;
+        text-align: start;
+        font-variant: normal;
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: grey;
+        min-width: 768px;
+    }
+
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    tfoot {
+        display: table-footer-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+
+    th {
+        font-weight: bold;
+        text-align: -internal-center;
+        display: table-cell;
+        vertical-align: inherit;
+    }
+
+    td {
+        display: table-cell;
+        vertical-align: inherit;
+    }
+
+    summary {
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+// ************************************* Elements Style CSS*************************************
+@mixin TitleCSS_Elements {
+    .title {
+        margin: 2rem 0;
+    }
+
+    //Main starting headings that are black and bold
+    .title_01 {
+        @include heinemannRomanSpecial_Black;
+        @include generateGeneralFontCSS($title01FontSize, $title01LineHeight, $title01Color);
+    }
+
+    //Colorful heading that are 2 color greenish
+    .title_02 {
+        @include kidprint_Bold;
+        @include generateGeneralFontCSS($title02FontSize, $title02LineHeight, $title02aColor);
+    }
+
+    //heading that is bolded and same size as the regular paragraph text
+    .title_03 {
+        @include heinemannRomanSpecial_Black;
+        @include generateGeneralFontCSS($title03FontSize, $title03LineHeight, $title03Color);
+    }
+}
+
+@mixin InformalFigureStyleCSS_Elements {
+
+    //any captions for informalfigure
+    .caption p {
+        @include heinemannRomanSpecial_Roman;
+        font-size: $captionFontSize;
+        line-height: $captionLineHeight;
+        margin: 0;
+    }
+}
+
+@mixin PoemStyleCSS_Elements {
+    .poem {
+        @include genericMargin;
+
+        & .linegroup {
+            display: block;
+            margin: 0 5rem;
+        }
+
+        & .line {
+            display: block;
+        }
+    }
+
+    .poem_01 {
+        @include kidprint_Bold;
+        text-align: center;
+        @include generateGeneralFontCSS($poem01FontSize, $poem01LineHeight);
+    }
+
+    .poem_02 {
+        @include heinemannRomanSpecial_Roman;
+        @include generateGeneralFontCSS($poem02FontSize, $poem02LineHeight);
+    }
+
+    .blockquotegroup {
+        @include kidprint_Bold;
+        font-size: $pFontSize;
+        line-height: $pLineHeight;
+    }
+}
+
+// ************************************* Layouts Style CSS*************************************
+@mixin ResponsiveGridStyleCSS_Layouts {
+    .grid-container {
+        &>.grid-row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 2rem 0;
+
+            &>.grid-col:first-of-type:nth-last-of-type(2),
+            &>.grid-col:first-of-type:nth-last-of-type(2)~.grid-col {
+                width: 49%;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(3),
+            &>.grid-col:first-of-type:nth-last-of-type(3)~.grid-col {
+                width: 32%;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(4),
+            &>.grid-col:first-of-type:nth-last-of-type(4)~.grid-col {
+                width: 23.5%;
+            }
+        }
+    }
+}
+
+@mixin FigureGroupStyleCSS_Layouts {
+    .figuregroup {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &>figcaption:first-child {
+            width: 100%;
+        }
+
+        &>.informalfigure {
+            margin: 1rem 0;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(2),
+        &>.informalfigure:first-of-type:nth-last-of-type(2)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(4),
+        &>.informalfigure:first-of-type:nth-last-of-type(4)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(6),
+        &>.informalfigure:first-of-type:nth-last-of-type(6)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(7),
+        &>.informalfigure:first-of-type:nth-last-of-type(7)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(8),
+        &>.informalfigure:first-of-type:nth-last-of-type(8)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(10),
+        &>.informalfigure:first-of-type:nth-last-of-type(10)~.informalfigure {
+            width: 49%;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(7)~.informalfigure:nth-last-of-type(1) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(3),
+        &>.informalfigure:first-of-type:nth-last-of-type(3)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(5),
+        &>.informalfigure:first-of-type:nth-last-of-type(5)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(9),
+        &>.informalfigure:first-of-type:nth-last-of-type(9)~.informalfigure {
+            width: 32%;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(5)~.informalfigure:nth-last-of-type(1) {
+            //&>.informalfigure:first-of-type:nth-last-of-type(9)~.informalfigure:nth-last-of-type(1) {
+            margin-right: auto;
+            margin-left: 0.6%;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(5)~.informalfigure:nth-last-of-type(2) {
+            //&>.informalfigure:first-of-type:nth-last-of-type(9)~.informalfigure:nth-last-of-type(2) {
+            margin-left: auto;
+            margin-right: 0.6%;
+        }
+    }
+
+    .figuregroup_01 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &>figcaption:first-child {
+            width: 100%;
+        }
+
+        &>.informalfigure {
+            margin: 1rem 0;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(4),
+        &>.informalfigure:first-of-type:nth-last-of-type(4)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(7),
+        &>.informalfigure:first-of-type:nth-last-of-type(7)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(8),
+        &>.informalfigure:first-of-type:nth-last-of-type(8)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(11),
+        &>.informalfigure:first-of-type:nth-last-of-type(11)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(12),
+        &>.informalfigure:first-of-type:nth-last-of-type(12)~.informalfigure,
+        &>.informalfigure:first-of-type:nth-last-of-type(15),
+        &>.informalfigure:first-of-type:nth-last-of-type(15)~.informalfigure {
+            width: 23.5%;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(7)~.informalfigure:nth-last-of-type(1),
+        &>.informalfigure:first-of-type:nth-last-of-type(11)~.informalfigure:nth-last-of-type(1),
+        &>.informalfigure:first-of-type:nth-last-of-type(15)~.informalfigure:nth-last-of-type(1) {
+            margin-right: auto;
+            margin-left: 1.6%;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(7)~.informalfigure:nth-last-of-type(3),
+        &>.informalfigure:first-of-type:nth-last-of-type(11)~.informalfigure:nth-last-of-type(3),
+        &>.informalfigure:first-of-type:nth-last-of-type(15)~.informalfigure:nth-last-of-type(1) {
+            margin-left: auto;
+            margin-right: 1.6%;
+        }
+    }
+}
+
+// *************************************Components Styles CSS*************************************
+@mixin NoteStyleCSS_Components {
+    .note {
+        padding: 2rem 0;
+        border-radius: 20px;
+
+        & p {
+            @include generateGeneralFontCSS($noteFontSize, $noteLineHeight);
+        }
+    }
+
+    .note_01 {
+        background-color: $note01BackgroundColor;
+    }
+}
+
+// *************************************Generic CSS that belongs to anywhere*************************************
+@mixin GenericAnywhereCSS {
+
+    //pagebreak (eg: pg. number)
+    .pagebreak_01,
+    .pagebreak_02 {
+        display: block;
+
+        &>span {
+            padding: 0.5rem 0.7rem;
+            margin-top: 1rem;
+            margin-bottom: -1rem;
+            font-size: $pageBreakFontSize;
+            @include heinemannRomanSpecial_Bold;
+        }
+    }
+
+    .pagebreak_01 {
+        &>span {
+            background-color: $pagebreak01BackgroundColor;
+            border: 2px solid $pagebreak01BorderColor;
+        }
+    }
+
+    .pagebreak_02 {
+        &>span {
+            background-color: $pagebreak02BackgroundColor;
+            border: 2px solid $pagebreak02BorderColor;
+            color: $pagebreak02FontColor;
+        }
+    }
+
+    .source {
+        display: block;
+        margin-right: 9rem;
+
+        & p {
+            font-size: $captionFontSize;
+            line-height: $captionLineHeight;
+        }
+    }
+
+    .bg_darkyellow {
+        background-color: $darkyellowBackgroundColor;
+    }
+
+    .bg_lightyellow {
+        background-color: $lightyellowBackgroundColor;
+    }
+
+    .bg_lightorange {
+        background-color: $lightorangeBackgroundColor;
+    }
+
+    .bg_darkorange {
+        background-color: $darkorangeBackgroundColor;
+    }
+
+    .bg_purple {
+        background-color: $purpleBackgroundColor;
+    }
+
+    .bg_royalblue {
+        background-color: $royalblueBackgroundColor;
+    }
+
+    .bg_lightblue {
+        background-color: $lightblueBackgroundColor;
+    }
+
+    .bg_darkblue {
+        background-color: $darkblueBackgroundColor;
+    }
+
+    .bg_turquoise {
+        background-color: $turquoiseBackgroundColor;
+    }
+
+    .bg_palegreen {
+        background-color: $palegreenBackgroundColor;
+    }
+
+    .bg_seagreen {
+        background-color: $seagreenBackgroundColor;
+    }
+}
+
+// *************************************Helper Class CSS*************************************
+@mixin HelperClassCSS {
+
+    .width-100 {
+        width: 100% !important;
+    }
+
+    .width-90 {
+        width: 90% !important;
+    }
+
+    .width-85 {
+        width: 85% !important;
+    }
+
+    .width-75 {
+        width: 75% !important;
+    }
+
+    .width-66 {
+        width: 66.6% !important;
+    }
+
+    .width-50 {
+        width: 50% !important;
+    }
+
+    .width-40 {
+        width: 40% !important;
+    }
+
+    .width-33 {
+        width: 33.3% !important;
+    }
+
+    .width-25 {
+        width: 25% !important;
+    }
+
+    .width-15 {
+        width: 15% !important;
+    }
+
+    .width-10 {
+        width: 10% !important;
+    }
+
+    .no-widow {
+        display: inline-block;
+        text-decoration: inherit;
+    }
+
+    .float-right {
+        float: right;
+    }
+
+    .float-left {
+        float: left;
+    }
+
+    //This is to make sure the image is aligned to the top of the paragraph text when floating left or right
+    .informalfigure:first-of-type.float-left,
+    .informalfigure:first-of-type.float-right {
+        margin-top: 1rem;
+    }
+
+    .clear-both {
+        clear: both;
+    }
+
+    .lc_align-center {
+        text-align: center;
+    }
+
+    .lc_align-left {
+        text-align: left;
+    }
+
+    .lc_align-right {
+        text-align: right;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    .margin-0-auto {
+        margin: 0 auto;
+    }
+
+    .margin-left-0 {
+        margin-left: 0 !important;
+    }
+
+    .margin-right-0 {
+        margin-right: 0 !important;
+    }
+
+    .margin-top-0 {
+        margin-top: 0 !important;
+    }
+
+    .margin-bottom-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .margin-top-default {
+        margin-top: 2rem !important;
+    }
+
+    .margin-bottom-default {
+        margin-bottom: 2rem !important;
+    }
+
+    .margin-default-auto {
+        margin: 2rem auto !important;
+    }
+
+    .margin-left-default {
+        margin-left: 2rem !important;
+    }
+
+    .margin-right-default {
+        margin-right: 2rem !important;
+    }
+
+    .padding-top-0 {
+        padding-top: 0 !important;
+    }
+
+    .padding-bottom-0 {
+        padding-bottom: 0 !important;
+    }
+
+    .padding-left-0 {
+        padding-left: 0 !important;
+    }
+
+    .padding-right-0 {
+        padding-right: 0 !important;
+    }
+
+    .padding-top-default {
+        padding-top: 2rem !important;
+    }
+
+    .padding-bottom-default {
+        padding-bottom: 2rem !important;
+    }
+
+    .padding-left-default {
+        padding-left: 2rem !important;
+    }
+
+    .padding-right-default {
+        padding-right: 2rem !important;
+    }
+
+    .text-color-darkblue {
+        color: $darkblueFontColor !important;
+    }
+
+    .text-color-navyblue {
+        color: $navyblueFontColor !important;
+    }
+
+    .text-color-teal {
+        color: $tealFontColor !important;
+    }
+
+    .text-color-darkgreen {
+        color: $darkGreenFontColor !important;
+    }
+
+    .text-heinemann {
+        @include heinemannRomanSpecial_Roman;
+    }
+
+    .text-kidprint {
+        @include kidprint_Bold;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
+// ********************************** Responsive Tablet (<600px) Starts *************************************
+
+//  **********************************Normalization Styles CSS (<600px) ********************************** 
+@mixin normalizationBaseHtmlCSS_600 {
+    p {
+        @include generateGeneralFontCSS($pFontSize_600, $pLineHeight_600);
+    }
+
+    blockquote {
+        margin-inline-start: 2rem;
+        margin-inline-end: 2rem;
+        margin: 2rem;
+    }
+}
+
+//  **********************************Elements Styles CSS (<600px) ********************************** 
+@mixin TitleCSS_Elements_600 {
+    .title_01 {
+        @include generateGeneralFontCSS($title01FontSize_600, $title01LineHeight_600);
+    }
+
+    .title_02 {
+        @include generateGeneralFontCSS($title02FontSize_600, $title02LineHeight_600);
+    }
+
+    .title_03 {
+        @include generateGeneralFontCSS($title03FontSize_600, $title03LineHeight_600);
+    }
+}
+
+@mixin PoemStyleCSS_Elements_600 {
+    .poem {
+        &>.linegroup {
+            margin: 0 2rem;
+        }
+    }
+
+    .poem_01 {
+        @include generateGeneralFontCSS($poem01FontSize_600, $poem01LineHeight_600);
+    }
+}
+
+// ************************************* Layouts Style CSS (<600px)*************************************
+@mixin ResponsiveGridStyleCSS_Layouts_600 {
+    .grid-container {
+        &>.grid-row {
+            flex-direction: column;
+
+            &>.grid-col:first-of-type:nth-last-of-type(n),
+            &>.grid-col:first-of-type:nth-last-of-type(n)~.grid-col {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(n):first-of-type {
+                margin-top: 0;
+            }
+
+            &>.grid-col:first-of-type:nth-last-of-type(n)~.grid-col:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@mixin FigureGroupStyleCSS_Layouts_600 {
+
+    .figuregroup,
+    .figuregroup_01 {
+        flex-direction: column;
+
+        &>.informalfigure:first-of-type:nth-last-of-type(n),
+        &>.informalfigure:first-of-type:nth-last-of-type(n)~.informalfigure {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(n):first-of-type {
+            margin-top: 0;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(n)~.informalfigure:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ************************************* Helper ClassCSS (<600px)*************************************
+@mixin HelperClassCSS_600 {
+
+    .width-90,
+    .width-85,
+    .width-75,
+    .width-66,
+    .width-50,
+    .width-40,
+    .width-33,
+    .width-25,
+    .width-15,
+    .width-10 {
+        width: 100% !important
+    }
+
+    .informalfigure:first-of-type.float-left,
+    .informalfigure:first-of-type.float-right {
+        margin-top: 2rem;
+    }
+}
+
+/* ------------------------------------Normalization Styles CSS-------------------------------------------- */
+@include normalizationBaseHtmlCSS;
+/* ------------------------------------Elements Style CSS-------------------------------------------- */
+@include TitleCSS_Elements;
+@include InformalFigureStyleCSS_Elements;
+@include PoemStyleCSS_Elements;
+/* ------------------------------------Layouts Styles CSS-------------------------------------------- */
+@include ResponsiveGridStyleCSS_Layouts;
+@include FigureGroupStyleCSS_Layouts;
+/* ------------------------------------Components Styles CSS-------------------------------------------- */
+@include NoteStyleCSS_Components;
+/* ------------------------------------Generic CSS that belongs to anywhere-------------------------------------------- */
+@include GenericAnywhereCSS;
+/* ------------------------------------Helper Class CSS-------------------------------------------- */
+@include HelperClassCSS;
+
+/* ------------------------------------Responsive Tablet (<600px)--------------------------------- */
+@media only screen and (max-width: 600px) {
+    /* ------------------------------------Normalization Styles CSS (<600px)-------------------------------------------- */
+    @include normalizationBaseHtmlCSS_600;
+    /* ------------------------------------Elements Styles CSS (<600px)-------------------------------------------- */
+    @include TitleCSS_Elements_600;
+    @include PoemStyleCSS_Elements_600;
+    /* ------------------------------------Layouts Styles CSS (<600px)-------------------------------------------- */
+    @include ResponsiveGridStyleCSS_Layouts_600;
+    @include FigureGroupStyleCSS_Layouts_600;
+
+    /* ------------------------------------Helper Class CSS (<600px)-------------------------------------------- */
+    @include HelperClassCSS_600;
+}

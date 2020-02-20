@@ -1,0 +1,1273 @@
+@font-face {
+  font-family: "StoneSerITCStdMedium";
+  src: url("../fonts/StoneSerifITCW05-Medium.eot");
+  src: url("../fonts/StoneSerifITCW05-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/StoneSerifITCW05-Medium.woff2") format("woff2"), url("../fonts/StoneSerifITCW05-Medium.woff") format("woff"), url("../fonts/StoneSerifITCW05-Medium.ttf") format("truetype"), url("../fonts/StoneSerifITCW05-Medium.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "StoneSerITCStdMedium";
+  src: url("../fonts/StoneSerifITCW05-SemiBold.eot");
+  src: url("../fonts/StoneSerifITCW05-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/StoneSerifITCW05-SemiBold.woff2") format("woff2"), url("../fonts/StoneSerifITCW05-SemiBold.woff") format("woff"), url("../fonts/StoneSerifITCW05-SemiBold.ttf") format("truetype"), url("../fonts/StoneSerifITCW05-SemiBold.svg#svgFontName") format("svg");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "StoneSerITCStdMedium";
+  src: url("../fonts/StoneSerifITCW05-Bold.eot");
+  src: url("../fonts/StoneSerifITCW05-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/StoneSerifITCW05-Bold.woff2") format("woff2"), url("../fonts/StoneSerifITCW05-Bold.woff") format("woff"), url("../fonts/StoneSerifITCW05-Bold.ttf") format("truetype"), url("../fonts/StoneSerifITCW05-Bold.svg#svgFontName") format("svg");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "StoneSansITCStdMedium";
+  src: url("../fonts/StoneSansITCW05-Medium.eot");
+  src: url("../fonts/StoneSansITCW05-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/StoneSansITCW05-Medium.woff2") format("woff2"), url("../fonts/StoneSansITCW05-Medium.woff") format("woff"), url("../fonts/StoneSansITCW05-Medium.ttf") format("truetype"), url("../fonts/StoneSansITCW05-Medium.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "StoneSansITCStdMedium";
+  src: url("../fonts/StoneSansITCW05-SemiBold.eot");
+  src: url("../fonts/StoneSansITCW05-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/StoneSansITCW05-SemiBold.woff2") format("woff2"), url("../fonts/StoneSansITCW05-SemiBold.woff") format("woff"), url("../fonts/StoneSansITCW05-SemiBold.ttf") format("truetype"), url("../fonts/StoneSansITCW05-SemiBold.svg#svgFontName") format("svg");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "StoneSansITCStdMedium";
+  src: url("../fonts/StoneSansITCW05-Bold.eot");
+  src: url("../fonts/StoneSansITCW05-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/StoneSansITCW05-Bold.woff2") format("woff2"), url("../fonts/StoneSansITCW05-Bold.woff") format("woff"), url("../fonts/StoneSansITCW05-Bold.ttf") format("truetype"), url("../fonts/StoneSansITCW05-Bold.svg#svgFontName") format("svg");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "HeinemannSpecialRoman";
+  src: url("../fonts/heinemannspecial-roman-webfont.eot");
+  src: url("../fonts/heinemannspecial-roman-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/heinemannspecial-roman-webfont.woff2") format("woff2"), url("../fonts/heinemannspecial-roman-webfont.woff") format("woff"), url("../fonts/heinemannspecial-roman-webfont.ttf") format("truetype"), url("../fonts/heinemannspecial-roman-webfont.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "HeinemannSpecialRoman";
+  src: url("../fonts/heinemannspecial-bold-webfont.eot");
+  src: url("../fonts/heinemannspecial-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/heinemannspecial-bold-webfont.woff2") format("woff2"), url("../fonts/heinemannspecial-bold-webfont.woff") format("woff"), url("../fonts/heinemannspecial-bold-webfont.ttf") format("truetype"), url("../fonts/heinemannspecial-bold-webfont.svg#svgFontName") format("svg");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "HeinemannSpecialRoman";
+  src: url("../fonts/heinemannspecial-black-webfont.eot");
+  src: url("../fonts/heinemannspecial-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/heinemannspecial-black-webfont.woff2") format("woff2"), url("../fonts/heinemannspecial-black-webfont.woff") format("woff"), url("../fonts/heinemannspecial-black-webfont.ttf") format("truetype"), url("../fonts/heinemannspecial-black-webfont.svg#svgFontName") format("svg");
+  font-weight: 900;
+}
+
+/* ------------------------------------Normalization Styles CSS-------------------------------------------- */
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  letter-spacing: 0.015rem;
+  line-height: 1.15rem;
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+  padding: 0;
+  font-size: 115%;
+  background-color: #FFFFFF;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+section,
+aside {
+  display: block;
+  margin: 2.3rem 0;
+  padding: 0;
+}
+
+header {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+p,
+ol,
+ul,
+dl {
+  display: block;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 1.15rem 0;
+  color: #000;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 2.15625rem;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-inline-start: 40px;
+  padding-left: 40px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-inline-start: 40px;
+  padding-left: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+dt {
+  display: block;
+  font-weight: bold;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 40px;
+  margin-left: 40px;
+}
+
+dd:after {
+  display: block;
+  content: "";
+}
+
+figure {
+  display: block;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin: 1.15rem auto;
+  padding: 0;
+}
+
+img {
+  border-style: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+
+figcaption,
+div {
+  display: block;
+}
+
+figcaption {
+  margin: 0.3em auto 0.5em auto;
+  text-align: left;
+  padding: 0;
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  margin: 1.15rem 40px;
+  padding: 0;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.575rem;
+  margin-block-end: 0.575rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin: 0.575rem auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+caption {
+  display: text-caption;
+  text-align: -webkit-center;
+}
+
+table {
+  white-space: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-size: medium;
+  font-style: normal;
+  color: -internal-quirk-inherit;
+  text-align: start;
+  font-variant: normal;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  font-weight: bold;
+  text-align: -internal-center;
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+summary {
+  cursor: pointer;
+}
+
+/* ------------------------------------Elements Styles CSS-------------------------------------------- */
+.title {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin: 1.15rem 0;
+}
+
+.title_01 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+  color: #006C9C;
+}
+
+.title_02 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+  color: #283583;
+}
+
+.title_03 {
+  font-size: 2.1rem;
+  line-height: 2.35rem;
+  color: #CD1719;
+}
+
+.title_04 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  line-height: 1.7rem;
+  font-size: 1.45rem;
+  color: #0069B4;
+}
+
+.title_05 {
+  font-size: 1.4rem;
+  line-height: 1.65rem;
+  color: #000;
+}
+
+.title_darkgreen {
+  color: #046937;
+}
+
+.title_darkgreen > .design-icon {
+  vertical-align: sub;
+}
+
+.title_darkpurple {
+  color: #414099;
+}
+
+.title_darkpurple > .design-icon {
+  vertical-align: sub;
+}
+
+.ol_none,
+.ul_none,
+.ul_01 {
+  list-style-type: none;
+}
+
+.practicelist {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.sidebar ol {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1rem;
+}
+
+.practicelist > .general-problem > .question p {
+  font-weight: normal;
+  font-size: 1.15rem;
+}
+
+.practicelist > .general-problem > .question p strong {
+  font-weight: 900;
+}
+
+.ul_01 > li {
+  list-style: none;
+}
+
+.ul_01 > li p {
+  margin: .5rem 0;
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.ul_01 > li:before {
+  content: '\002611';
+  font-family: Times;
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -2rem;
+  top: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.caption p {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 0.9rem;
+  line-height: 1.26rem;
+  margin: 0;
+}
+
+.poem {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.15rem;
+  line-height: 1.875rem;
+  /*
+        & .linegroup {
+            margin: 1.15rem 0;
+        }*/
+}
+
+.poem .linegroup {
+  display: block;
+  margin: 0 6.9rem;
+}
+
+.poem .line {
+  display: block;
+}
+
+.blockquotegroup {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.15rem;
+  line-height: 1.875rem;
+}
+
+.shadow_orange {
+  border-color: #F3A000;
+  -webkit-box-shadow: 0px 0px 25px 5px #F3A000;
+  -moz-box-shadow: 0px 0px 25px 5px #F3A000;
+  box-shadow: 0px 0px 25px 5px #F3A000;
+  margin-bottom: 3rem;
+}
+
+.shadow_blue {
+  border-color: #6859A3;
+  -webkit-box-shadow: 0px 0px 25px 5px #6859A3;
+  -moz-box-shadow: 0px 0px 25px 5px #6859A3;
+  box-shadow: 0px 0px 25px 5px #6859A3;
+  margin-bottom: 3rem;
+}
+
+.shadow_purple {
+  border-color: #6E368C;
+  -webkit-box-shadow: 0px 0px 25px 5px #6E368C;
+  -moz-box-shadow: 0px 0px 25px 5px #6E368C;
+  box-shadow: 0px 0px 25px 5px #6E368C;
+  margin-bottom: 3rem;
+}
+
+.shadow_yellow {
+  border-color: #FFDF43;
+  -webkit-box-shadow: 0px 0px 25px 5px #FFDF43;
+  -moz-box-shadow: 0px 0px 25px 5px #FFDF43;
+  box-shadow: 0px 0px 25px 5px #FFDF43;
+  margin-bottom: 3rem;
+}
+
+/* ------------------------------------Layouts Styles CSS-------------------------------------------- */
+.grid-container > .grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1.15rem 0;
+}
+
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2),
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2) ~ .grid-col {
+  width: 49%;
+}
+
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3),
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3) ~ .grid-col {
+  width: 33%;
+}
+
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4),
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4) ~ .grid-col {
+  width: 24.5%;
+}
+
+.ol_column,
+.ul_column {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  -webkit-column-fill: balance;
+  -moz-column-fill: balance;
+  column-fill: balance;
+  list-style-position: outside;
+}
+
+.ol_column > li,
+.ul_column > li {
+  margin-right: 15px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.figuregroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.figuregroup > figcaption:first-child {
+  flex: 0 0 100%;
+}
+
+.figuregroup > .informalfigure {
+  margin: 10px 0;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(2),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(2) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(4),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(6),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(6) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(8),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure {
+  flex: 0 0 49%;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(3),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(3) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure {
+  flex: 0 0 32.5%;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure:nth-last-of-type(1),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(1) {
+  margin-right: auto;
+  margin-left: 0.6%;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure:nth-last-of-type(2),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(2) {
+  margin-left: auto;
+  margin-right: 0.6%;
+}
+
+.figuregroup_01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.figuregroup_01 > figcaption:first-child {
+  flex: 0 0 100%;
+}
+
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12) ~ .informalfigure {
+  flex: 0 0 23.5%;
+}
+
+/* ------------------------------------Components Styles CSS-------------------------------------------- */
+.part .text_wrapper,
+.chapter .text_wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.part .text_wrapper .label,
+.part .text_wrapper .number,
+.chapter .text_wrapper .label,
+.chapter .text_wrapper .number {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+
+.part .text_wrapper .label,
+.chapter .text_wrapper .label {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: bold;
+}
+
+.part .text_wrapper .number,
+.chapter .text_wrapper .number {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+}
+
+.part .text,
+.chapter .text {
+  display: block;
+  padding: 1.5rem 1rem;
+}
+
+.part .title,
+.chapter .title {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  line-height: 3.45rem;
+  font-size: 3rem;
+  margin: -10px 0 30px 0;
+  padding: 0;
+}
+
+.part .text_wrapper {
+  padding: 0.375rem 0 0 0;
+}
+
+.part .label,
+.part .number {
+  text-transform: uppercase;
+}
+
+.part .title_01 {
+  color: #006C9C;
+}
+
+.part .title_03 {
+  font-size: 2.1rem;
+  line-height: 2.35rem;
+}
+
+.chapter .title_02 {
+  color: #283583;
+}
+
+.chapter .text {
+  border-radius: 0 0 20px 20px;
+}
+
+.chapter .text.bg_lightgreen {
+  border: 2px solid #00A65D;
+}
+
+.chapter .text.bg_lightpurple {
+  border: 2px solid #414099;
+}
+
+.sidebar {
+  background-color: #FFF;
+  border-top: 6px solid;
+  border-bottom: 6px solid;
+  padding: 2rem 0;
+}
+
+.sidebar .title {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #000;
+}
+
+.sidebar .title strong {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 900;
+}
+
+.sidebar .design-icon {
+  margin-top: -0.4rem;
+  margin-right: 0.5rem;
+}
+
+.sidebar > header ~ * {
+  padding: 0 calc(70px + 0.5rem + 7px);
+}
+
+.sidebar > header ~ * .epigraph {
+  margin: 0;
+}
+
+.sidebar p {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.sidebar_01 {
+  border-color: #FCB65C;
+}
+
+.sidebar_02 {
+  border-color: #9DC5D3;
+}
+
+.sidebar_03 {
+  border-color: #96CCA8;
+}
+
+.sidebar_04 {
+  border-color: #FFEB9A;
+}
+
+.sidebar_05 {
+  border-color: #96CCA8;
+}
+
+.sidebar_06 {
+  border-color: #B6A3CE;
+}
+
+.sidebar_07 {
+  border: 6px solid #DBEBBD;
+  background-clip: border-box;
+  padding: 0;
+}
+
+.sidebar_07 .title_04 {
+  background-color: #DBEBBD;
+  padding: 0.7rem 3.2rem;
+}
+
+.sidebar_07 p {
+  padding: 1rem 3.2rem;
+}
+
+.note {
+  padding: 1.15rem 0;
+  border-radius: 20px;
+}
+
+.note p {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.note_01 {
+  background-color: #FBCB8D;
+}
+
+.note_02,
+.note_02_01,
+.note_02_02 {
+  background-color: #C5E3f4;
+}
+
+.note_02_01 {
+  background-color: #EDE2C5;
+}
+
+.note_02_02 {
+  background-color: #ECECEC;
+}
+
+.note_03_Green,
+.note_03_Purple {
+  background-color: #B7D69B;
+}
+
+.note_03_Purple {
+  background-color: #D1CDE3;
+}
+
+.note_04 {
+  padding: .75rem 1.25rem;
+  display: inline-block;
+  width: unset;
+  background-color: #A8DFF7;
+}
+
+.note_04 p {
+  font-size: 0.9rem;
+  line-height: 1.26rem;
+}
+
+.note_05 {
+  border-radius: 100%;
+  background-color: #63C3D1;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 3.5rem 2rem 3rem 2rem;
+}
+
+.note_06 {
+  background-color: #EDE2C5;
+  border-left: 6px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -24px 0 #B9B29C, 24px 0 0 #B9B29C;
+  -moz-box-shadow: -24px 0 0 #B9B29C, 24px 1 0 #B9B29C;
+  box-shadow: -24px 0 0 #B9B29C, 24px 0 0 #B9B29C;
+  border-right: 6px solid rgba(0, 0, 0, 0.3);
+  padding: 1.25rem 0 !important;
+}
+
+.informaltable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 6px solid #585858;
+}
+
+.informaltable th,
+.informaltable td {
+  padding: 1rem;
+  border: 2px solid #585858;
+}
+
+.practice {
+  padding: 0 0 1rem 0;
+  margin: 3.3rem 0 2.3rem 0;
+}
+
+.practice .title {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #000;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: .5rem 2rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.practice .title strong {
+  font-weight: 900;
+}
+
+.practice > header ~ * {
+  padding: 0 2rem;
+}
+
+.practice .practicelist {
+  padding: 0 3.5rem;
+}
+
+.practice_01,
+.practice_01_01 {
+  background-color: #CAD7E9;
+}
+
+.practice_01 .title_04,
+.practice_01_01 .title_04 {
+  background-color: #9DB6D3;
+}
+
+.practice_01 .title_04 .design-icon,
+.practice_01_01 .title_04 .design-icon {
+  margin: -2rem 0.5rem 0 0;
+}
+
+.practice_01_01 {
+  background-color: transparent;
+  padding: 0;
+}
+
+.practice_02 {
+  background-color: #D1ECFB;
+}
+
+.practice_02 .title_04 {
+  background-color: #87D0F3;
+}
+
+.practice_02 .title_04 .design-icon {
+  margin: -2rem 0.5rem 0 0;
+}
+
+.practice_03 {
+  margin: 2.3rem 0;
+  padding: 0 0 1rem 0;
+}
+
+.practice_03 .title {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #FFF;
+  display: block;
+  margin: 0 0 2.4rem 0;
+  padding: .75rem 2rem .5rem 2rem;
+  border-radius: 0;
+}
+
+.practice_03 .title .design-icon {
+  margin: 0rem 0.5rem -2rem 0;
+}
+
+.card {
+  margin: 2.3rem 0;
+}
+
+.card .title {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 2rem;
+  line-height: 2.25rem;
+  color: #FFF;
+}
+
+.card .title strong {
+  font-weight: 900;
+}
+
+.card_01 {
+  margin: 3.3rem 0 2.3rem 0;
+  border-bottom: 3px solid #CD4F08;
+  padding-bottom: 1.15rem;
+}
+
+.card_01 .title_04 {
+  background-color: #CD4F08;
+  padding: .55rem 2rem .35rem 2rem;
+}
+
+.card_01 .title_04 .design-icon {
+  margin: -2rem 0.5rem -2rem 0;
+  width: 120px;
+}
+
+.card_02 .title_04,
+.card_02 .title_05 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #CD1719;
+}
+
+.card_02 .title_05 {
+  font-size: 1.4rem;
+}
+
+.card_03 .title_04 {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  color: #0069B4;
+}
+
+.card_04 {
+  margin: 5rem 0 2.3rem 0;
+}
+
+.card_04 .title_04 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  padding: .8rem 2rem;
+}
+
+.card_04 .title_04 .design-icon {
+  margin: -4.65rem 0.25rem -2rem 0;
+  width: 130px;
+}
+
+.card_orange .title_04 {
+  background-color: #EE7203;
+}
+
+.card_purple .title_04 {
+  background-color: #B92F89;
+}
+
+.card_blue .title_04 {
+  background-color: #0090D7;
+}
+
+.card_green .title_04 {
+  background-color: #158241;
+}
+
+.card_05 {
+  margin: 3.3rem 0 2.3rem 0;
+}
+
+.card_05 .title_04 {
+  padding: 1rem 2rem .5rem 2rem;
+  background-color: #BCD1EB;
+  color: #283583;
+  margin: 1.928rem 0 2.75rem 0;
+}
+
+.card_05 .title_04 .design-icon {
+  margin: -3rem 1rem -2.5rem 0;
+  width: 150px;
+}
+
+.card_06 {
+  margin: calc(2.3rem + 6px + 12px) 0;
+  border-top: 6px solid #000;
+  border-bottom: 6px solid #000;
+  box-shadow: 0 -12px 0 #0090D7, 0 12px 0 #0090D7;
+  -webkit-box-shadow: 0 -12px 0 #0090D7, 0 12px 0 #0090D7;
+  padding-bottom: 1.15rem;
+}
+
+.card_06 .title_04 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #000;
+}
+
+/* ------------------------------------Generic CSS that belongs to anywhere-------------------------------------------- */
+.pagebreak_01,
+.pagebreak_02 {
+  display: block;
+}
+
+.pagebreak_01 > span,
+.pagebreak_02 > span {
+  padding: 0.5rem 0.7rem;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 0.9rem;
+  background-color: #00BFF0;
+  box-shadow: 4px 5px #000;
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 800;
+}
+
+.pagebreak_02 {
+  margin-left: -200px;
+}
+
+.bg_darkgreen {
+  background-color: #00A65D;
+}
+
+.bg_darkpurple {
+  background-color: #414099;
+}
+
+.bg_lightgreen {
+  background-color: #DBEBBD;
+}
+
+.bg_lightpurple {
+  background-color: #E8E7F4;
+}
+
+.bg_darkgrey {
+  background-color: #585858;
+}
+
+.bg_darkgrey p {
+  color: #FFF;
+}
+
+.bg_darkgrey > *:last-child {
+  border-right: 0;
+}
+
+.bg_darkgrey > td,
+.bg_darkgrey > th {
+  border-right: 2px solid #FFF;
+}
+
+.bg_lightgrey {
+  background-color: #F0F0F0;
+}
+
+.bg_mediumgrey {
+  background-color: #C0C0C0;
+}
+
+.design-icon {
+  vertical-align: middle;
+  width: 70px;
+  height: auto;
+  float: none;
+}
+
+.hr_01,
+.hr_02 {
+  border: none;
+  border-bottom: 2px dotted #000;
+  width: 100%;
+  display: block;
+  padding-top: 1em;
+}
+
+.hr_02 {
+  border-bottom: 2px dotted #B82F89;
+}
+
+.source {
+  display: block;
+}
+
+.source p {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 0.9rem;
+  line-height: 1.26rem;
+}
+
+.subtitle ~ p {
+  margin-left: 1.1rem;
+}
+
+/* ------------------------------------Helper Class CSS-------------------------------------------- */
+.width-100 {
+  width: 100% !important;
+}
+
+.width-90 {
+  width: 90% !important;
+}
+
+.width-85 {
+  width: 85% !important;
+}
+
+.width-75 {
+  width: 75% !important;
+}
+
+.width-66 {
+  width: 66.6% !important;
+}
+
+.width-50 {
+  width: 50% !important;
+}
+
+.width-40 {
+  width: 40% !important;
+}
+
+.width-33 {
+  width: 33.3% !important;
+}
+
+.width-25 {
+  width: 25% !important;
+}
+
+.width-15 {
+  width: 15% !important;
+}
+
+.width-10 {
+  width: 10% !important;
+}
+
+.no-widow {
+  display: inline-block;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.inline {
+  display: inline;
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+.lc_align-center {
+  text-align: center;
+}
+
+.lc_align-left {
+  text-align: left;
+}
+
+.lc_align-right {
+  text-align: right;
+}
+
+.margin-0-auto {
+  margin: 0 auto;
+}
+
+.margin-left-0 {
+  margin-left: 0 !important;
+}
+
+.margin-right-0 {
+  margin-right: 0 !important;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.margin-top-default {
+  margin-top: 1.15rem !important;
+}
+
+.margin-bottom-default {
+  margin-bottom: 1.15rem !important;
+}
+
+.margin-default-auto {
+  margin: 1.15rem auto !important;
+}
+
+.margin-left-default {
+  margin-left: 1.15rem !important;
+}
+
+.margin-right-default {
+  margin-right: 1.15rem !important;
+}
+
+.padding-top-0 {
+  padding-top: 0 !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+
+.padding-left-0 {
+  padding-left: 0 !important;
+}
+
+.padding-right-0 {
+  padding-right: 0 !important;
+}
+
+.padding-top-default {
+  padding-top: 1.15rem !important;
+}
+
+.padding-bottom-default {
+  padding-bottom: 1.15rem !important;
+}
+
+.padding-left-default {
+  padding-left: 1.15rem !important;
+}
+
+.padding-right-default {
+  padding-right: 1.15rem !important;
+}
+
+.text-color-white {
+  color: #FFF !important;
+}
+
+.text-color-blue {
+  color: #006C9C !important;
+}
+
+.text-color-purple {
+  color: #283583 !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* Should be custom */
+/*
+- hr with the 3 dots
+- annoation_ol > pg16
+
+- annotation_06 > pg45
+*/

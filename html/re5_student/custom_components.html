@@ -1,0 +1,182 @@
+<html lang="en">
+
+  <head>
+    <title>Religion Custom Component Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re5_student.css"/>
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+      }
+
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      .code_snippet {
+        color: darkred;
+        font-weight: bold;
+      }
+
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: red;
+      }
+
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        var len = codeblock.length;
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          console.log(html);
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          console.log(html);
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.innerText = String(temphtml.join(""));
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Custom Components</h1>
+        </header>
+        <p class="p-grey">[Custom components documentation.]</p>
+        <hr/>
+        <ol class="links"></ol>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Section Starts -->
+      <section>
+        <header>
+          <h1></h1>
+        </header>
+
+      </section>
+      <!-- Section Ends -->
+
+      <hr class="template_hr"/>
+
+    </section>
+    <!-- Read Spearker Section Ends -->
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<html lang="en">
+  <head>
+    <title>Religion Teacher ePub Production Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background-color: white;
+      }
+
+      .main_title {
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 2px;
+        margin: 0;
+        color: #008bb5;
+      }
+
+      .p-darkred {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+
+      .download-button {
+        display: inline-block;
+        border: 3px solid black;
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px 20px;
+        text-decoration: none !important;
+        margin: 10px 0;
+        color: black;
+      }
+
+      .download-button:hover {
+        background-color: #111;
+        color: white;
+        transition: 0.3s ease-in-out;
+      }
+
+      a[aria-disabled="true"] {
+        background-color: lightgrey;
+        color: darkgrey;
+        border-color: lightgrey;
+        display: inline-block;
+        /* For IE11/ MS Edge bug */
+        pointer-events: none;
+        text-decoration: none;
+      }
+      .date_information {
+        font-size: 0.8rem;
+        color: green;
+        display: inline-block;
+        line-height: 15px;
+        vertical-align: middle;
+      }
+      .css_input,
+      .js_input,
+      .id_input,
+      .class_input {
+        padding: 5px;
+        width: 100%;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+      }
+      .lds-dual-ring {
+        display: none;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid red;
+        border-color: blue transparent green transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body epub:type="bodymatter">
+    <!-- Read Speaker Section Starts -->
+    <section id="read_speaker">
+      <form action="" class="p-3">
+        <div class="form-row">
+          <div class="col-md-12 mb-3 text-center font-weight-bold">
+            <h2>Enter Package Info</h2>
+          </div>
+        </div>
+
+        <!-- ---------- -->
+        <!-- JSON FIELD -->
+        <!-- ---------- -->
+        <div class="form-row my-3 align-center">
+          <div class="col-md-6 mb-3"><h4>Select JSON File</h4></div>
+          <div class="custom-file">
+            <input
+              type="file"
+              accept=".json"
+              class="custom-file-input"
+              id="json_input"
+            />
+            <label class="custom-file-label" for="json_input" id="testing"
+              >Choose File</label
+            >
+          </div>
+        </div>
+
+        <!-- --------- -->
+        <!-- CSS FIELD -->
+        <!-- --------- -->
+        <div class="row mt-5 align-center">
+          <div class="col-md-6">
+            <h4>CSS File Name:</h4>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="css_input" id="css_input" required />
+          </div>
+        </div>
+
+        <!-- -------- -->
+        <!-- JS FIELD -->
+        <!-- -------- -->
+        <div class="row mt-5 align-center">
+          <div class="col-md-6">
+            <h4>JavaScript File Name:</h4>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="js_input" id="js_input" />
+          </div>
+        </div>
+
+        <!-- --------------------- -->
+        <!-- Main Section ID FIELD -->
+        <!-- --------------------- -->
+        <div class="row mt-5 align-center">
+          <div class="col-md-6">
+            <h4>Main Section ID:</h4>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="id_input" id="id_input" />
+          </div>
+        </div>
+
+        <!-- ------------------------ -->
+        <!-- Main Section CLASS FIELD -->
+        <!-- ------------------------ -->
+        <div class="row mt-5 align-center">
+          <div class="col-md-6">
+            <h4>Main Section Class:</h4>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="class_input" id="class_input" />
+          </div>
+        </div>
+
+        <a
+          href="#"
+          id="button"
+          class="download-button p-darkred mt-5"
+          data-json="../json/re6_teacher/content_json.json"
+          data-fonts="../fonts/re6_teacher_fonts/"
+          >Generate
+        </a>
+        <!-- LOADER TEST -->
+        <div class="lds-dual-ring" id="lds-dual-ring"></div>
+      </form>
+    </section>
+    <!-- Read Speaker Section Ends -->
+
+    <script type="application/javascript">
+      $(document).on("change", ".custom-file-input", function(event) {
+        $(this)
+          .next(".custom-file-label")
+          .html(event.target.files[0].name);
+      });
+    </script>
+
+    <script></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="../bundle.js"></script>
+  </body>
+</html>

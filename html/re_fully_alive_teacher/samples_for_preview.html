@@ -1,0 +1,1633 @@
+<html lang="en">
+
+<head>
+  <title>Religion Samples for Preview</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../css/re_fully_alive_teacher.css" />
+
+  <style>
+    body {
+      max-width: 1024px;
+      margin: auto;
+      padding: 50px;
+      font-size: 115%;
+    }
+
+    hr {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+
+    .code_format {
+      display: block;
+      background-color: #e2f2f2;
+      border: solid #020202;
+      padding: 10px 20px;
+    }
+
+    code {
+      display: block;
+      font-family: monospace;
+      margin-top: -20px;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .code_format * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .template_hr {
+      display: block;
+      height: 10px;
+      border: 0;
+      border-top: 10px solid red;
+      margin: 1rem 0;
+      padding: 0;
+    }
+
+    .code_snippet {
+      color: #600000;
+      font-weight: bold;
+    }
+
+    .main_title {
+      text-align: center;
+      font-size: 3rem;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 3.25rem;
+      letter-spacing: 5px;
+      margin: 0;
+      font-variant: small-caps;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: red;
+    }
+
+    .links {
+      column-count: 3;
+      column-gap: 40px;
+    }
+
+    .links a {
+      font-weight: unset;
+    }
+
+    .links li {
+      font-size: 0.85rem;
+      line-height: 1.45rem;
+      margin: 0;
+    }
+
+    .links p {
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.45rem;
+    }
+
+    .links ol {
+      list-style-type: upper-alpha;
+    }
+
+    .links2 {
+      display: none;
+      width: 100%;
+      font-size: 1.15rem;
+      margin: 1.15rem 0;
+      border: 1px solid black;
+    }
+
+    .p-darkred,
+    .p-grey {
+      color: #707070;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.65rem;
+    }
+
+    .p-darkred {
+      color: #600000;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .links {
+        display: none;
+      }
+
+      .links2 {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      #myBtn {
+        bottom: 70px;
+        right: 10px;
+      }
+
+      .main_title {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        letter-spacing: 1px;
+      }
+    }
+  </style>
+
+  <script>
+    window.onload = function init() {
+      var codeblock = document.querySelectorAll(".code_format > code");
+      console.log(codeblock);
+      var len = codeblock.length;
+      console.log(typeof (len));
+      for (var i = 0; i < len; i++) {
+        var dom = codeblock[i];
+        var html = dom.innerHTML;
+        var pattern = html.match(/\s*\n[\t\s]*/);
+        var pattern01 = html.match(/\s+\n*$/);
+        var pattern02 = html.match(/^\n*(\<)/);
+        html = html.replace(new RegExp(pattern, "g"), '\n');
+        html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+        html = html.replace(/—/gm, "&#x2014;");
+        html = html.replace(/–/gm, "&#x2013;");
+        var temphtml = html.match(/^[^\n]+\n/gm);
+
+        //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<'); console.log(temphtml.join(""));
+        var text = document.createTextNode(String(temphtml.join("")));
+        dom.innerHTML = "";
+        dom.appendChild(text);
+      }
+    }
+
+    window.onscroll = function () {
+      scrollFunction()
+    };
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</head>
+
+<body epub:type="bodymatter">
+  <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+  <section id="read_speaker">
+    <section>
+      <header>
+        <h1 class="main_title">Samples for Preview</h1>
+      </header>
+      <p class="p-grey">[A combination sample is comprised of different standard components combined together, or with
+        different element(s)
+        and/or layout(s). This section provides some common combination samples that will occur in the RE6 teacher ePub
+        for your preview
+        and is not meant to be referenced in your markup]</p>
+      <hr />
+
+      <ol class="links">
+
+        <li>
+          <p><strong><a href="#header">Header Combination</a></strong></p>
+          <ol>
+            <li>
+              <p><a href="#header_01"><strong>Appendix Header</strong> + Text + Accordion</a></p>
+            </li>
+            <li>
+              <p><a href="#header_02"><strong>Theme Header</strong> + Text + Title + Unordered List</a></p>
+            </li>
+            <li>
+              <p><a href="#header_03"><strong>Topic Header</strong> + Text + Ordered list with 2 Columns</a></p>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <p><strong><a href="#note">Note Combination</a></strong></p>
+          <ol>
+            <li>
+              <p><a href="#note_01">Title + <strong>Note</strong> + Text + Blockquotegroup</a></p>
+            </li>
+            <li>
+              <p><a href="#note_02">Title + Informalfigure + Poem + Text + Divider + <strong>Note</strong></a></p>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <p><strong><a href="#informaltable">Informaltable Combination</a></strong></p>
+          <ol>
+            <li>
+              <p><a href="#informaltable_01"><strong>Informaltable</strong> + Overflow-X</a></p>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <p><strong><a href="#footnote">Footnote Combinations</a></strong></p>
+          <ol>
+            <li>
+              <p><a href="#footnote_01">Step List + Text with <strong>Footnote Reference</strong> + Divider +
+                  <strong>Footnote</strong> </a></p>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <p>
+            <strong>
+              <a href="#figuregroups">Figuregroup Combinations</a>
+            </strong>
+          </p>
+          <ol>
+            <li>
+              <p>
+                <a href="#figuregroup_01">
+                  2-Column Figure Layout with Captions for Figures and <strong>Figuregroup</strong>
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#figuregroup_02">
+                  2-Column Figure Layout with Captions for Nested Figures only
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#figuregroup_03">
+                  2-Column Figure Layout with Caption for <strong>Figuregroup</strong> only
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#figuregroup_04">
+                  2-Column Figure Layout without Captions for both Figures and <strong>Figuregroup</strong>
+                </a>
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+
+      <select class="links2" onchange="location = this.value;">
+        <option>** Pick from dropdown **</option>
+        <option value="#header">- Header Combination -</option>
+        <option value="#header_01">Appendix Header + Text + Accordion</option>
+        <option value="#header_02">Theme Header + Text + Title + Unordered List</option>
+        <option value="#header_03">Topic Header + Text + Ordered list with 2 Columns</option>
+
+        <option value="#note">- Note Combination -</option>
+        <option value="#note_01">Title + Note + Text + Blockquotegroup</option>
+        <option value="#note_02">Title + Informalfigure + Poem + Text + Divider + Note</option>
+
+        <option value="#informaltable">- Informaltable Combination -</option>
+        <option value="#informaltable_01">Informaltable + Overflow-X</option>
+
+        <option value="#footnote">- Footnote Combinations -</option>
+        <option value="#footnote_01">Step List + Text with Footnote Reference + Divider + Footnote</option>
+
+        <option value="#figuregroups">- Figuregroup Combinations -</option>
+        <option value="#figuregroup_01">2-Column Figure Layout with Captions for Figures and Figuregroup</option>
+        <option value="#figuregroup_02">2-Column Figure Layout with Captions for Nested Figures only</option>
+        <option value="#figuregroup_03">2-Column Figure Layout with Caption for Figuregroup only</option>
+        <option value="#figuregroup_04">2-Column Figure Layout without Captions for both Figures and Figuregroup
+        </option>
+      </select>
+
+    </section>
+
+    <hr class="template_hr" style="border-top: 40px double MediumVioletRed;" />
+
+    <!-- Header Section Starts -->
+    <section id="header">
+      <header>
+        <h1>Header Combination</h1>
+      </header>
+      <p class="p-grey">[This section display a preview of combination header components which includes elements and
+        layouts that will generally occured in the RE Fully Alive Teacher ePub.]</p>
+
+      <!-- Appendix Header + Text + Accordion Section Starts -->
+      <hr id="header_01" />
+      <section>
+        <header>
+          <h2 class="p-grey">Appendix Header + Text + Accordion:</h2>
+        </header>
+        <p class="p-grey">[Below is an appendix header with regular paragraph text and an accordion 01. Inside accordion
+          01, it consists of multiple title 06s, ordered list without numbers, text and a generic divider.]</p>
+
+        <section class="appendix">
+          <header>
+            <h3 class="title title_01">
+              <span class="label">Appendix</span>
+              <span class="number">D</span>
+              <span class="text width-66">Catholic Teaching on Family, Marriage, <span class="no-widow">and
+                  Sexuality.</span></span>
+            </h3>
+          </header>
+
+          <p>Fully Alive offers opportunities to address expectations in other curricular areas. The following chart
+            shows where
+            these correlations can be found in <span class="no-widow">Grade 8.</span></p>
+          <p>We want to speak of the family, of the ideal family; that is, the fam-ily in the fullest sense of the term;
+            but as
+            confronted by the actual condi-tions that characterize life in today’s world. As we said in <em>Marriage and
+              the Family
+              (CCCB, 1980):</em> “From the beginning, the family is defined as the place where all humanity is knit
+            together and assured a
+            future. It is a part of the natural order willed <span class="no-widow">by God.”</span></p>
+
+          <details class="fx-accordion fx-accordion_01">
+            <summary class="fx-accordion-toggle">
+              <h4 class="title title_07">
+                <span>Religious Education</span>
+                <span class="fx-accordion-toggle-icon">&#9662;</span>
+              </h4>
+            </summary>
+            <div class="fx-accordion-toggleable">
+              <section>
+                <header>
+                  <h5 class="title title_06">Living a Moral Life</h5>
+                </header>
+                <ol class="ol_none">
+                  <li>
+                    <p><strong>Theme 1: Topic 4,</strong> <em>“The Mind: Acting Freely”</em></p>
+                  </li>
+                  <li>
+                    <p><strong>Theme 1: Topic 5,</strong> <em>“Character”</em></p>
+                  </li>
+                  <li>
+                    <p><strong>Theme 2: Topic 3,</strong> <em>“Wings”</em></p>
+                  </li>
+                </ol>
+                <p><strong>ML1.3</strong> Using examples of moral dilemmas faced by young people, demonstrate how
+                  choosing to live a Christian moral life
+                  reflects a witness to God, a respect for personal dignity and promotes the common good for others.
+                  [CCC nos. 1700–1715;
+                  <span class="no-widow">2012–2051; 1928–1948]</span></p>
+                <hr class="hr_01" />
+                <ol class="ol_none">
+                  <li>
+                    <p><strong>Theme 4: Topic 3,</strong> <em>“Commitment to the Future”</em></p>
+                  </li>
+                </ol>
+                <p><strong>ML2.1</strong> Describe how the Holy Spirit and the Church’s teaching (i.e., Magisterium)
+                  form our consciences in assisting us to
+                  address the challeng-ing moral situations that face society today.
+                  (Bestowed on us in Baptism and strengthened in the Sacrament of Confirmation, the Gifts of the Holy
+                  Spirit assist us in
+                  the formation of our con-science). <span class="no-widow">[CCC nos. 1776–1802]</span></p>
+              </section>
+              <section>
+                <header>
+                  <h5 class="title title_06">Living in Communion</h5>
+                </header>
+                <ol class="ol_none">
+                  <li>
+                    <p><strong>Theme 1: Topic 5,</strong> <em>“Character”</em></p>
+                  </li>
+                </ol>
+                <p><strong>LC2.2</strong> Define the gifts and fruits (perfections/vir-tues) of the Holy Spirit and
+                  explain how they are important in
+                  guiding our development as people who strive to live a holy life (e.g., find examples of everyday
+                  saints who exemplify
+                  the virtues).
+                  <span class="no-widow">[CCC nos. 687–747]</span></p>
+              </section>
+            </div>
+          </details>
+
+        </section>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <section id="unique_section_id" class="appendix" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h1 id="unique_heading_id" class="title title_01">
+                      <span class="label">Appendix</span>
+                      <span class="number">D</span>
+                      <span class="text width-66">Catholic Teaching on Family, Marriage, <span class="no-widow">and
+                          Sexuality.</span></span>
+                    </h1>
+                  </header>           
+                  <p>Fully Alive offers opportunities to address expectations in other curricular areas. The following chart shows where
+                    these correlations can be found in <span class="no-widow">Grade 8.</span></p>
+                  <p>We want to speak of the family, of the ideal family; that is, the fam-ily in the fullest sense of the term; but as
+                    confronted by the actual condi-tions that characterize life in today’s world. As we said in <em>Marriage and the Family (CCCB, 1980):</em> “From the beginning, the family is defined as the place where all humanity is knit together and
+                    assured a future. It is a part of the natural order willed <span class="no-widow">by God.”</span></p>
+                  <details id="unique_details_id" class="fx-accordion fx-accordion_01">
+                    <summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+                      <h2 id="unique_heading_id" class="title title_07">
+                        <span>Religious Education</span>
+                        <span class="fx-accordion-toggle-icon">&#9662;</span>
+                      </h2>
+                    </summary>
+                    <div id="unique_div_id" class="fx-accordion-toggleable">
+                      <section id="unique_section_id" aria-labelledby="header_unique_header_id">
+                        <header id="header_unique_header_id">
+                          <h3 id="unique_heading_id" class="title title_06">Living a Moral Life</h3>
+                        </header>
+                        <ol id="unique_ol_id" class="ol_none">
+                          <li>
+                            <p><strong>Theme 1: Topic 4,</strong> <em>“The Mind: Acting Freely”</em></p>
+                          </li>
+                          <li>
+                            <p><strong>Theme 1: Topic 5,</strong> <em>“Character”</em></p>
+                          </li>
+                          <li>
+                            <p><strong>Theme 2: Topic 3,</strong> <em>“Wings”</em></p>
+                          </li>
+                        </ol>
+                        <p><strong>ML1.3</strong> Using examples of moral dilemmas faced by young people, demonstrate how choosing to
+                          live a Christian moral life
+                          reflects a witness to God, a respect for personal dignity and promotes the common good for others. [CCC nos.
+                          1700–1715;
+                          <span class="no-widow">2012–2051; 1928–1948]</span></p>
+                        <hr class="hr_01" />
+                        <ol id="unique_ol_id" class="ol_none">
+                          <li>
+                            <p><strong>Theme 4: Topic 3,</strong> <em>“Commitment to the Future”</em></p>
+                          </li>
+                        </ol>
+                        <p><strong>ML2.1</strong> Describe how the Holy Spirit and the Church’s teaching (i.e., Magisterium) form our
+                          consciences in assisting us to address the challeng-ing moral situations that face society today. (Bestowed on us in Baptism and strengthened in the Sacrament of Confirmation, the Gifts of the Holy Spirit
+                          assist us in the formation of our con-science). <span class="no-widow">[CCC nos. 1776–1802]</span></p>
+                      </section>
+                      <section id="unique_section_id" aria-labelledby="header_unique_section_id">
+                        <header id="header_unique_section_id">
+                          <h3 id="unique_heading_id" class="title title_06">Living in Communion</h3>
+                        </header>
+                        <ol id="unique_ol_id" class="ol_none">
+                          <li>
+                            <p><strong>Theme 1: Topic 5,</strong> <em>“Character”</em></p>
+                          </li>
+                        </ol>
+                        <p><strong>LC2.2</strong> Define the gifts and fruits (perfections/vir-tues) of the Holy Spirit and explain how
+                          they are important in guiding our development as people who strive to live a holy life (e.g., find examples of everyday saints who
+                          exemplify the virtues). <span class="no-widow">[CCC nos. 687–747]</span></p>
+                      </section>
+                    </div>
+                  </details>     
+                </section>
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Appendix Header + Text + Accordion Section  Ends -->
+
+      <!-- Theme Header + Text + Title + Unordered List section starts -->
+      <hr id="header_02" />
+      <section>
+        <header>
+          <h2 class="p-grey">Theme Header + Text + Title + Unordered List:</h2>
+        </header>
+        <p class="p-grey">[Below is a theme header with regular text, a title 04 and an unordered list.]</p>
+
+        <section class="part">
+          <header>
+            <h3 class="title title_01">
+              <img class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_002.jpg" />
+              <span>
+                <span class="label">Theme</span>
+                <span class="number">Three</span>
+                <span class="text">Created Sexual: Male and Female</span>
+              </span>
+            </h3>
+          </header>
+          <p>To be human is to be sexual. Sexuality, expressed in our maleness and female-ness, is an essential
+            component of
+            personhood. For this reason, education in sexuality is education of the whole person. Theme Three,
+            therefore, must
+            be
+            approached within the context of the previous themes on the value of persons and of human relationships and
+            that of
+            the
+            themes that follow on commitment and social responsibility. Without this context, it is only too easy to
+            reduce
+            sexuality to the reproductive system and <span class="no-widow">its functioning.</span></p>
+
+          <section>
+            <header>
+              <h4 class="title title_04">About Theme Three</h4>
+            </header>
+            <ul>
+              <li>
+                <p>We have learned many things since we were little.</p>
+              </li>
+              <li>
+                <p>We still have many things to learn.</p>
+              </li>
+              <li>
+                <p>We all make mistakes when we are learning. Mistakes are part of learning.</p>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <section id="unique_section_id" class="part" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h1 id="unique_heading_id" class="title title_01" >
+                      <img id="unique_image_id" alt="alt text" class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_002.jpg" />
+                      <span>
+                        <span class="label">Theme</span>
+                        <span class="number">Three</span>
+                        <span class="text">Created Sexual: Male and Female</span>
+                      </span>
+                    </h1>
+                  </header>
+                  <p>To be human is to be sexual. Sexuality, expressed in our maleness and female-ness, is an essential component of
+                    personhood. For this reason, education in sexuality is education of the whole person. Theme Three, therefore, must
+                    be approached within the context of the previous themes on the value of persons and of human relationships and that of
+                    the themes that follow on commitment and social responsibility. Without this context, it is only too easy to reduce
+                    sexuality to the reproductive system and <span class="no-widow">its functioning.</span></p>
+                
+                  <section id="unique_section_id" aria-labelledby="header_unique_section_id">
+                    <header id="header_unique_section_id">
+                      <h2 id="unique_heading_id" class="title title_04">About Theme Three</h2>
+                    </header>
+                    <ul>
+                      <li>
+                        <p>We have learned many things since we were little.</p>
+                      </li>
+                      <li>
+                        <p>We still have many things to learn.</p>
+                      </li>
+                      <li>
+                        <p>We all make mistakes when we are learning. Mistakes are part of learning.</p>
+                      </li>
+                    </ul>
+                  </section>
+                </section>
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Theme Header + Text + Title + Unordered List section ends -->
+
+      <!-- Topic Header + Text + Ordered list with 2 Columns Section Starts -->
+      <hr id="header_03" />
+      <section>
+        <header>
+          <h2 class="p-grey">Topic Header + Text + Ordered list with 2 Columns:</h2>
+        </header>
+        <p class="p-grey">[Below is a topic header + regular text and an ordered list with 2 column list item.]</p>
+
+        <section class="chapter">
+          <header>
+            <h3 class="title title_02">
+              <img class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_001.jpg" />
+              <span>
+                <span class="text">Created and Loved by God</span>
+                <span class="label">Topic</span>
+                <span class="number">5</span>
+              </span>
+              <br />
+              <br />
+              <span class="subtitle">Our Feelings</span>
+            </h3>
+          </header>
+          <div class="blockquote blockquotegroup_02">
+            <blockquote class="epigraph">
+              <p><em>For everything there is a season,</em></p>
+              <p><em>and a time for every matter under heaven...</em></p>
+              <p><em>a time to weep, and a time to laugh,</em></p>
+              <p><em>a time to mourn, and a time to dance</em></p>
+            </blockquote>
+            <div class="source">
+              <p><cite><strong><em>Ecclesiastes 3:1,4</em></strong></cite></p>
+            </div>
+          </div>
+          <p>Display the Big Book page, “Feelings,” and tell the children the story of Joey’s first day at a new school.
+            You might
+            tell them that they will be meeting Joey again later in the program. As you read, encourage the children to
+            find the
+            details in the picture that illustrate various feelings.</p>
+          <hr class="hr_02" />
+          <p>When Joey walked into the classroom he felt lonely and sort of scared. His family had just moved to a new
+            home and he
+            didn’t know anyone — not even the teacher.</p>
+          <ol>
+            <li>
+              <p class="title title_04">The Judgement of Conscience</p>
+              <div class="grid-container margin-top-0 margin-bottom-0">
+                <div class="grid-row">
+                  <div class="grid-col width-5 margin-right-default">
+                    <p class="margin-top-0 margin-bottom-0">1777</p>
+                  </div>
+                  <div class="grid-col width-90">
+                    <p class="margin-top-0 margin-bottom-0">Moral conscience, present at the heart of the person,
+                      enjoins him at the appropriate moment to do good and to avoid
+                      evil. It also judges particular choices, approving those that are good and denouncing those that
+                      are evil. It bears
+                      witness to the authority of truth in reference to the supreme Good to which the human person is
+                      drawn, and it welcomes
+                      the commandments. When he listens to his conscience, the prudent man can hear God speaking.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-container margin-top-0 margin-bottom-0">
+                <div class="grid-row">
+                  <div class="grid-col width-5 margin-right-default">
+                    <p class="margin-top-0 margin-bottom-0">1778</p>
+                  </div>
+                  <div class="grid-col width-90">
+                    <p class="margin-top-0">Conscience is a judgment of reason whereby the human person recognizes the
+                      moral quality of a concrete act that he is going to perform, is in the process of performing, or
+                      has
+                      already com-pleted. In all he says and does, man is obliged to follow faithfully what he knows to
+                      be just and right. It
+                      is by the judgment of his conscience that man perceives and recognizes the prescriptions of the
+                      divine law:</p>
+                    <p class="padding-left-default">Conscience is a law of the mind; yet [Christians] would not grant
+                      that it is nothing more; I mean that it was not a
+                      dictate, nor conveyed the notion of responsibility, of duty, of a threat and a promise....
+                      [Conscience] is a messenger.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <section id="unique_section_id" class="chapter" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h2 id="unique_heading_id" class="title title_02">
+                      <img class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_001.jpg" />
+                      <span>
+                        <span class="text">Created and Loved by God</span>
+                        <span class="label">Topic</span>
+                        <span class="number">5</span>
+                      </span>
+                      <br />
+                      <br />
+                      <span class="subtitle">Our Feelings</span>
+                    </h2>
+                  </header>
+                  <div class="blockquote blockquotegroup_02">
+                    <blockquote class="epigraph">
+                      <p><em>For everything there is a season,</em></p>
+                      <p><em>and a time for every matter under heaven...</em></p>
+                      <p><em>a time to weep, and a time to laugh,</em></p>
+                      <p><em>a time to mourn, and a time to dance</em></p>
+                    </blockquote>
+                    <div class="source">
+                      <p><cite><strong><em>Ecclesiastes 3:1,4</em></strong></cite></p>
+                    </div>
+                  </div>
+                  <p>Display the Big Book page, “Feelings,” and tell the children the story of Joey’s first day at a new school. You
+                    might
+                    tell them that they will be meeting Joey again later in the program. As you read, encourage the children to find the
+                    details in the picture that illustrate various feelings.</p>
+                  <hr class="hr_02" />
+                  <p>When Joey walked into the classroom he felt lonely and sort of scared. His family had just moved to a new home and
+                    he
+                    didn’t know anyone — not even the teacher.</p>
+                  <ol>
+                    <li>
+                      <p class="title title_04">The Judgement of Conscience</p>
+                      <div class="grid-container margin-top-0 margin-bottom-0">
+                        <div class="grid-row">
+                          <div class="grid-col width-5 margin-right-default">
+                            <p class="margin-top-0 margin-bottom-0">1777</p>
+                          </div>
+                          <div class="grid-col width-90">
+                            <p class="margin-top-0 margin-bottom-0">Moral conscience, present at the heart of the person, enjoins him at
+                              the appropriate moment to do good and to avoid
+                              evil. It also judges particular choices, approving those that are good and denouncing those that are evil.
+                              It bears
+                              witness to the authority of truth in reference to the supreme Good to which the human person is drawn, and
+                              it welcomes
+                              the commandments. When he listens to his conscience, the prudent man can hear God speaking.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="grid-container margin-top-0 margin-bottom-0">
+                        <div class="grid-row">
+                          <div class="grid-col width-5 margin-right-default">
+                            <p class="margin-top-0 margin-bottom-0">1778</p>
+                          </div>
+                          <div class="grid-col width-90">
+                            <p class="margin-top-0">Conscience is a judgment of reason whereby the human person recognizes the moral
+                              quality of a concrete act that he is going to perform, is in the process of performing, or has
+                              already com-pleted. In all he says and does, man is obliged to follow faithfully what he knows to be just
+                              and right. It
+                              is by the judgment of his conscience that man perceives and recognizes the prescriptions of the divine
+                              law:</p>
+                            <p class="padding-left-default">Conscience is a law of the mind; yet [Christians] would not grant that it is
+                              nothing more; I mean that it was not a
+                              dictate, nor conveyed the notion of responsibility, of duty, of a threat and a promise.... [Conscience] is
+                              a messenger.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </section>
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Topic Header + Text + Ordered list with 2 Columns Section Ends -->
+
+    </section>
+    <!-- Header Section Ends -->
+
+    <hr class="template_hr" />
+
+    <!-- Note Section Starts -->
+    <section id="note">
+      <header>
+        <h1>Note</h1>
+      </header>
+      <p class="p-grey">[This section display a preview of combination note components which includes elements and
+        layouts
+        that will generally occured in the RE Fully Alive Teacher ePub.]</p>
+
+      <!-- Title + Note + Text + Blockquotegroup Section Starts -->
+      <hr id="note_01" />
+      <section>
+        <header>
+          <h2 class="p-grey">Title + Note + Text + Blockquotegroup:</h2>
+        </header>
+        <p class="p-grey">[Below is a title 05 with note 02 with regular text and a blockquotegroup 02.]</p>
+
+        <section>
+          <header>
+            <h3 class="title title_05">We Discover</h3>
+          </header>
+          <div class="note note_02">
+            <p>As you explore what this means with the children, draw out the sig-nificant points, and record them on a
+              chart. Use
+              their contributions (rewording and summarizing as necessary), and encourage them to expand on their ideas
+              to get at any
+              important points that did not emerge in the discussion.</p>
+            <ul>
+              <li>
+                <p>Our lives are gifts that God gives to us.</p>
+              </li>
+              <li>
+                <p>We thank God for the gift of our lives.</p>
+              </li>
+            </ul>
+          </div>
+          <p>Gather the children and display the Big Book page, “Something God Has Made.</p>
+          <div class="blockquotegroup blockquotegroup_02 width-66 margin-default-auto">
+            <blockquote class="epigraph">
+              <p>The glory of God is man and woman fully alive,</p>
+              <p>but life for them consists in seeing God revealed in his Word.</p>
+            </blockquote>
+            <div class="source lc_align-right">
+              <p class="text-andy"><cite><strong><em>St. Irenaeus</em></strong></cite></p>
+            </div>
+          </div>
+        </section>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <section id="unique_section_id" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h3 id="unique_heading_id" class="title title_05">We Discover</h3>
+                  </header>
+                  <div id="unique_note_id" class="note note_02">
+                    <p>As you explore what this means with the children, draw out the sig-nificant points, and record them on a chart.
+                      Use
+                      their contributions (rewording and summarizing as necessary), and encourage them to expand on their ideas to get
+                      at any
+                      important points that did not emerge in the discussion.</p>
+                    <ul>
+                      <li>
+                        <p>Our lives are gifts that God gives to us.</p>
+                      </li>
+                      <li>
+                        <p>We thank God for the gift of our lives.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>Gather the children and display the Big Book page, “Something God Has Made.</p>
+                  <div class="blockquotegroup blockquotegroup_02 width-66 margin-default-auto">
+                    <blockquote class="epigraph">
+                      <p>The glory of God is man and woman fully alive,</p>
+                      <p>but life for them consists in seeing God revealed in his Word.</p>
+                    </blockquote>
+                    <div class="source lc_align-right">
+                      <p class="text-andy"><cite><strong><em>St. Irenaeus</em></strong></cite></p>
+                    </div>
+                  </div>
+                </section>
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Title + Note + Text + Blockquotegroup Section Ends -->
+
+      <!-- Title + Informalfigure + Poem + Text + Divider + Note Section Starts -->
+      <hr id="note_02" />
+      <section>
+        <header>
+          <h2 class="p-grey">Title + Informalfigure + Poem + Text + Divider + Note:</h2>
+        </header>
+        <p class="p-grey">[Below is a title 03 with an informal figure image, a poem 01, regular text, 3-dotted divider
+          and a note 01.]</p>
+
+        <section>
+          <header>
+            <h3 class="title title_03">Marriage and Family: Three Communions in One</h3>
+          </header>
+          <figure class="informalfigure width-50">
+            <img src="../../images/placeholder_images/fa_tr_img.jpg" alt="alt text" />
+          </figure>
+          <div class="poem poem_01 lc_align-center">
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                <em>Lord,</em>
+              </span>
+              <span class="line">
+                <em>open my eyes</em>
+              </span>
+              <span class="line">
+                <em>to see those who hunger</em>
+              </span>
+              <span class="line">
+                <em>so that I may share my food.</em>
+              </span>
+            </div>
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">Open my heart</span>
+              <span class="line">to the lonely and ignored</span>
+              <span class="line">so that I may share my time.</span>
+            </div>
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                <em>Open my spirit</em>
+              </span>
+              <span class="line">
+                <em>to receive your charity</em>
+              </span>
+              <span class="line">
+                <em>so that I can share it with others.</em>
+              </span>
+              <span class="line">May I see a need,</span>
+              <span class="line">lend a hand,</span>
+              <span class="line">and touch a heart,</span>
+              <span class="line">one person at a time,</span>
+              <span class="line">knowing that each one I serve</span>
+              <span class="line">is You.</span>
+              <span class="line">Amen.</span>
+            </div>
+          </div>
+          <p><em>Fully Alive</em> sometimes evokes intensely personal responses from adults. This is not surprising,
+            since it is about
+            important and deeply personal matters.</p>
+          <hr class="hr_02" />
+          <div class="note note_01">
+            <p><strong>Note:</strong> Before we begin each theme, I will send you a letter about the theme and the
+              topics we will be discussing.</p>
+          </div>
+        </section>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <section id="unique_section_id" aria-labelledby="header_unique_section_id">
+                  <header id="header_unique_section_id">
+                    <h3 id="unique_heading_id" class="title title_03">Marriage and Family: Three Communions in One</h3>
+                  </header>
+                  <figure id="unique_figure_id" class="informalfigure width-50">
+                    <img id="unique_image_id" src="../../images/placeholder_images/fa_tr_img.jpg" alt="alt text" />
+                  </figure>
+                  <div id="unique_poem_id" class="poem poem_01 lc_align-center">
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line">
+                        <em>Lord,</em>
+                      </span>
+                      <span class="line">
+                        <em>open my eyes</em>
+                      </span>
+                      <span class="line">
+                        <em>to see those who hunger</em>
+                      </span>
+                      <span class="line">
+                        <em>so that I may share my food.</em>
+                      </span>
+                    </div>
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line">Open my heart</span>
+                      <span class="line">to the lonely and ignored</span>
+                      <span class="line">so that I may share my time.</span>
+                    </div>
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line">
+                        <em>Open my spirit</em>
+                      </span>
+                      <span class="line">
+                        <em>to receive your charity</em>
+                      </span>
+                      <span class="line">
+                        <em>so that I can share it with others.</em>
+                      </span>
+                      <span class="line">May I see a need,</span>
+                      <span class="line">lend a hand,</span>
+                      <span class="line">and touch a heart,</span>
+                      <span class="line">one person at a time,</span>
+                      <span class="line">knowing that each one I serve</span>
+                      <span class="line">is You.</span>
+                      <span class="line">Amen.</span>
+                    </div>
+                  </div>
+                  <p><em>Fully Alive</em> sometimes evokes intensely personal responses from adults. This is not surprising, since it is
+                    about
+                    important and deeply personal matters.</p>
+                  <hr class="hr_02" />
+                  <div id="unique_note_id" class="note note_01">
+                    <p><strong>Note:</strong> Before we begin each theme, I will send you a letter about the theme and the topics we
+                      will be discussing.</p>
+                  </div>
+                </section>
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Title + Informalfigure + Poem + Text + Divider + Note Section ends -->
+    </section>
+    <!-- Note Section Ends -->
+
+    <hr class="template_hr" />
+
+    <!-- Informaltable Section Starts -->
+    <section id="informaltable">
+      <header>
+        <h1>Informaltable Combination</h1>
+      </header>
+      <p class="p-grey">[This section display a preview of combination informaltable components which includes elements
+        and layouts
+        that will generally occured in the RE6 Teacher ePub.]</p>
+
+      <!-- Informaltable + overflow-x Section starts -->
+      <hr id="informaltable_01" />
+      <section>
+        <header>
+          <h2 class="p-grey">Informaltable + Overflow-X + Alternating Row Colours:</h2>
+        </header>
+        <p class="p-grey">[Below is an informaltable 01 that needs to look like a table on any size screens with
+          overflow-x.]</p>
+
+        <div class="overflow-x">
+          <table class="informaltable informaltable_01">
+            <thead>
+              <tr>
+                <th colspan="2"></th>
+                <th>
+                  <p><strong>Level 1</strong></p>
+                </th>
+                <th>
+                  <p><strong>Level 2</strong></p>
+                </th>
+                <th>
+                  <p><strong>Level 3</strong></p>
+                </th>
+                <th>
+                  <p><strong>Level 4</strong></p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="6">
+                  <p><strong><span class="text_uppercase">Knowledge and Understanding—</span></strong>Religion content
+                    acquired in Unit 1: The Gift of Our Faith and the comprehension of its meaning and significance</p>
+                </td>
+              </tr>
+              <tr class="bg_lightgrey">
+                <td>
+                  <p>Demonstrates knowledge of the content presented in the unit</p>
+                </td>
+                <td>
+                  <p>Knowledge of content (e.g., Scripture, creedal statements, terms, moral teachings, liturgical/
+                    sacramental
+                    practices)</p>
+                </td>
+                <td>
+                  <p>The student included a limited number of important facts and ideas of the unit in their kit.</p>
+                </td>
+                <td>
+                  <p>The student included some of the important facts and ideas of the unit in their kit.</p>
+                </td>
+                <td>
+                  <p>The student included many of the important facts and ideas of the unit in their kit.</p>
+                </td>
+                <td>
+                  <p>The student included all of the important facts and ideas of the unit in their kit.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Demonstrates understanding of the meaning and the significance of concepts developed in the unit
+                  </p>
+                </td>
+                <td>
+                  <p>Understanding of content (e.g., dogma, doctrine, Scripture, moral principles, social teachings,
+                    concepts,
+                    practices, procedures)</p>
+                </td>
+                <td>
+                  <p>The artifacts selected indicated that the student had a limited understanding of the significance
+                    of the big
+                    ideas of the unit.</p>
+                </td>
+                <td>
+                  <p>The artifacts selected indicated that the student had some understanding of the significance of the
+                    big ideas of
+                    the unit.</p>
+                </td>
+                <td>
+                  <p>The artifacts selected indicated that the student had a good understanding of the significance of
+                    the big ideas
+                    of the unit.</p>
+                </td>
+                <td>
+                  <p>The artifacts selected indicated that the student had a thorough understanding of the significance
+                    of the big
+                    ideas of the unit.</p>
+                </td>
+              </tr>
+              <tr class="bg_lightgrey">
+                <td colspan="6">
+                  <p><strong><span class="text_uppercase">Thinking—</span></strong>The use of critical and creative
+                    thinking skills and/or processes</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Plans and organizes the inquiry by asking questions, researching and gathering information from a
+                    variety of
+                    sources, and setting goals throughout the process</p>
+                </td>
+                <td>
+                  <p>Use of planning skills (e.g., focusing research, gathering information, organizing an inquiry,
+                    asking questions,
+                    setting goals)</p>
+                </td>
+                <td>
+                  <p>The student required a high level of teacher support while planning and organizing the inquiry
+                    task.</p>
+                </td>
+                <td>
+                  <p>The student planned and organized the inquiry task with support.</p>
+                </td>
+                <td>
+                  <p>The student planned and organized most of the inquiry task independently.</p>
+                </td>
+                <td>
+                  <p>The student planned and organized the inquiry task independently.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <div class="overflow-x">
+                  <table id="unique_table_id" class="informaltable informaltable_01">
+                    <thead>
+                      <tr>
+                        <th colspan="2"></th>
+                        <th>
+                          <p><strong>Level 1</strong></p>
+                        </th>
+                        <th>
+                          <p><strong>Level 2</strong></p>
+                        </th>
+                        <th>
+                          <p><strong>Level 3</strong></p>
+                        </th>
+                        <th>
+                          <p><strong>Level 4</strong></p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="6">
+                          <p><strong><span class="text_uppercase">Knowledge and Understanding—</span></strong>Religion content acquired
+                            in Unit 1: The Gift of Our Faith and the comprehension of its meaning and significance</p>
+                        </td>
+                      </tr>
+                      <tr class="bg_lightgrey">
+                        <td>
+                          <p>Demonstrates knowledge of the content presented in the unit</p>
+                        </td>
+                        <td>
+                          <p>Knowledge of content (e.g., Scripture, creedal statements, terms, moral teachings, liturgical/ sacramental
+                            practices)</p>
+                        </td>
+                        <td>
+                          <p>The student included a limited number of important facts and ideas of the unit in their kit.</p>
+                        </td>
+                        <td>
+                          <p>The student included some of the important facts and ideas of the unit in their kit.</p>
+                        </td>
+                        <td>
+                          <p>The student included many of the important facts and ideas of the unit in their kit.</p>
+                        </td>
+                        <td>
+                          <p>The student included all of the important facts and ideas of the unit in their kit.</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>Demonstrates understanding of the meaning and the significance of concepts developed in the unit</p>
+                        </td>
+                        <td>
+                          <p>Understanding of content (e.g., dogma, doctrine, Scripture, moral principles, social teachings, concepts,
+                            practices, procedures)</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had a limited understanding of the significance of the
+                            big
+                            ideas of the unit.</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had some understanding of the significance of the big
+                            ideas of
+                            the unit.</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had a good understanding of the significance of the big
+                            ideas
+                            of the unit.</p>
+                        </td>
+                        <td>
+                          <p>The artifacts selected indicated that the student had a thorough understanding of the significance of the
+                            big
+                            ideas of the unit.</p>
+                        </td>
+                      </tr>
+                      <tr class="bg_lightgrey">
+                        <td colspan="6">
+                          <p><strong><span class="text_uppercase">Thinking—</span></strong>The use of critical and creative thinking
+                            skills and/or processes</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>Plans and organizes the inquiry by asking questions, researching and gathering information from a variety of
+                            sources, and setting goals throughout the process</p>
+                        </td>
+                        <td>
+                          <p>Use of planning skills (e.g., focusing research, gathering information, organizing an inquiry, asking questions,
+                            setting goals)</p>
+                        </td>
+                        <td>
+                          <p>The student required a high level of teacher support while planning and organizing the inquiry task.</p>
+                        </td>
+                        <td>
+                          <p>The student planned and organized the inquiry task with support.</p>
+                        </td>
+                        <td>
+                          <p>The student planned and organized most of the inquiry task independently.</p>
+                        </td>
+                        <td>
+                          <p>The student planned and organized the inquiry task independently.</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Informaltable + overflow-x Section ends -->
+    </section>
+    <!-- Informaltable Section ends -->
+
+    <hr class="template_hr" />
+
+    <!-- Footnote Section Starts -->
+    <section id="footnote">
+      <header>
+        <h1>Footnote Combination</h1>
+      </header>
+      <p class="p-grey">[This section display a preview of combination footnote components which includes elements and
+        layouts that will generally occured in the RE Fully Alive Teacher ePub.]</p>
+
+      <!-- Step List + Text with Footnote Reference + Divider + Footnote section starts -->
+      <hr id="footnote_01" />
+      <section>
+        <header>
+          <h2 class="p-grey">Step List + Text with Footnote Reference + Divider + Footnote:</h2>
+        </header>
+        <p class="p-grey">[Below is a step list with regular text that has footnote references included and a divider to
+          separate the actual footnote 01.]</p>
+
+        <article>
+          <section>
+            <ol class="steplist">
+              <li class="step">
+                <p><strong>Stage 1</strong> <em>(Boys: 9–12, average 10: Girls: 7–11, average 9)</em></p>
+                <ul>
+                  <li>
+                    <p>No physical development is evident, but internal changes have begun. There are rising levels of
+                      hormones in the blood
+                      stream; the testicles are maturing and the ovaries are enlarging.</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="step">
+                <p><strong>Stage 2</strong> <em>(Boys: 10–14, average 12; Girls: 8–13, average 11)</em></p>
+                <ul>
+                  <li>
+                    <p>We want to speak of the family, of the ideal family; that is, the fam-ily in the fullest sense of the
+                      term</p>
+                  </li>
+                  <li>
+                    <p>As we said in Marriage and the Family <em>(CCCB, 1980)</em></p>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p>The family is rooted in the love that husband and wife have for each other; the model for that loving union
+              is the loving union of Christ with <span class="no-widow">his Church.<a class="xref" href="#footnote_ref_01"><sup id="sup_footnote_ref_01" class="noteref noteref_footnote number">1</sup></span></a></p>
+            <hr class="hr_01" />
+          </section>
+          <footer>
+            <ol class="footnote footnote_01">
+              <li id="footnote_ref_01">
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                  of Lorem Ipsum. <a class="xref xref_footnote" href="#sup_footnote_ref_01" aria-label="go to footnote reference 1">&#8617;</a></p>
+              </li>
+            </ol>
+          </footer>
+        </article>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+                <!--<Body>-->
+                <article id="main">
+                  <section id="unique_section_id">
+                    ...etc
+                    <ol class="steplist">
+                    <li class="step">
+                      <p><strong>Stage 1</strong> <em>(Boys: 9–12, average 10: Girls: 7–11, average 9)</em></p>
+                      <ul>
+                        <li>
+                          <p>No physical development is evident, but internal changes have begun. There are rising levels of hormones in
+                            the blood stream; the testicles are maturing and the ovaries are enlarging.</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="step">
+                      <p><strong>Stage 2</strong> <em>(Boys: 10–14, average 12; Girls: 8–13, average 11)</em></p>
+                      <ul>
+                        <li>
+                          <p>We want to speak of the family, of the ideal family; that is, the fam-ily in the fullest sense of the term
+                          </p>
+                        </li>
+                        <li>
+                          <p>As we said in Marriage and the Family <em>(CCCB, 1980)</em></p>
+                        </li>
+                      </ul>
+                    </li>
+                    </ol>
+                    <p>The family is rooted in the love that husband and wife have for each other; the model for that loving union is the
+                    loving union of Christ with <span class="no-widow">his Church.<a class="xref" href="#unique_footnote_ref_01_id"><sup id="unique_footnoteref_id" class="noteref noteref_footnote number">1</sup></span></a></p>
+                    <hr class="hr_01" />
+                  </section>
+                  <footer id="unique_footer_id">
+                    <ol id="unique_ol_id" class="footnote footer_01">
+                      <li id="unique_footnote_ref_01_id">
+                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                          unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                          passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                          Ipsum. <a class="xref xref_footnote" href="#unique_footnoteref_id" aria-label="go to footnote reference 1">&#8617;</a></p>
+                      </li>
+                    </ol>
+                  </footer>
+                </article>
+                <!--</body>-->
+              </code>
+          </div>
+        </p>
+      </section>
+      <!-- Step List + Text with Footnote Reference + Divider + Footnote section ends -->
+
+    </section>
+    <!-- Footnote Section Ends -->
+
+    <hr class="template_hr" />
+
+    <!-- Figuregroup Section Starts -->
+    <hr id="figuregroups" />
+    <section>
+      <header>
+        <h1>Figuregroup Combinations</h1>
+      </header>
+      <p class="p-grey">[Figuregroup layout that have a combination of figure captions.]</p>
+
+      <!-- 2-Column Figure Layout with Captions for Figures and Figuregroup Section starts -->
+      <hr id="figuregroup_01" />
+      <section>
+        <header>
+          <h2 class="p-grey">2-Column Figure Layout with Captions for Figures and Figuregroup:</h2>
+        </header>
+        <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for figures and
+          figuregroup.]
+        </p>
+
+        <section>
+          <header>
+            <h3></h3>
+          </header>
+          <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+            <figure class="informalfigure" role="group" aria-labelledby="2column_figurecaption01">
+              <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              <figcaption id="2column_figurecaption01">
+                <div class="caption">
+                  <p>I am figure caption for the first figure.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="informalfigure" role="group" aria-labelledby="2column_figurecaption02">
+              <img src="../../images/placeholder_images/fa_tr_img.jpg" />
+              <figcaption id="2column_figurecaption02">
+                <div class="caption">
+                  <p>I am figure caption for the second figure.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figcaption id="2column_figure01">
+              <div class="caption">
+                <p>I am caption for the figuregroup.</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                  <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image01"
+                        src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image02"
+                        src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="unique_figuregroupcaption_id">
+                      <div class="caption">
+                        <p>I am caption for the figuregroup.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+            </div>
+          </p>
+        </section>
+      </section>
+      <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+
+      <!-- 2-Column Figure Layout with Captions for Nested Figure only Section starts -->
+      <hr id="figuregroup_02" />
+      <section>
+        <header>
+          <h2 class="p-grey">2-Column Figure Layout with Captions for Nested Figures only:</h2>
+        </header>
+        <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for nested figures only.]
+        </p>
+
+        <section>
+          <header>
+            <h3></h3>
+          </header>
+          <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+            <figure class="informalfigure" role="group" aria-labelledby="2column_figurecaption01">
+              <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              <figcaption id="2column_figurecaption01">
+                <div class="caption">
+                  <p>I am figure caption for the first figure.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="informalfigure" role="group" aria-labelledby="2column_figurecaption02">
+              <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              <figcaption id="2column_figurecaption02">
+                <div class="caption">
+                  <p>I am figure caption for the second figure.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figcaption id="2column_figure01" class="sr-only">
+              <div class="caption">
+                <p>Group of 2 images.</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                  <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image01"
+                        src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="unique_figure_id" role="group" aria-labelledby="unique_figurecaption_id">
+                      <img id="unique_image_id" alt="image02"
+                        src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      <figcaption id="unique_figurecaption_id">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="unique_figuregroupcaption_id" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 2 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+            </div>
+          </p>
+        </section>
+        <!-- 2-Column Figure Layout with Captions for Nested Figure only Section ends -->
+
+        <!-- 2-Column Figure Layout with Caption for Figuregroup only Section starts -->
+        <hr id="figuregroup_03" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout with Caption for Figuregroup only:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout with caption for figuregroup only.]</p>
+
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure">
+                <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              </figure>
+              <figure class="informalfigure">
+                <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              </figure>
+              <figcaption id="2column_figure01">
+                <div class="caption">
+                  <p>I am caption for the figuregroup.</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                    <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image01"
+                          src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image02"
+                          src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      </figure>
+                      <figcaption id="unique_figuregroupcaption_id">
+                        <div class="caption">
+                          <p>I am caption for the figuregroup.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+              </div>
+            </p>
+          </section>
+        </section>
+        <!-- 2-Column Figure Layout with Caption for Figuregroup only Section Ends-->
+
+        <!-- 2-Column Figure Layout without Captions for both Figure and Figuregroup Section starts -->
+        <hr id="figuregroup_04" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout without Captions for both Figures and Figuregroup:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout without captions for both figures and
+            figuregroup.]</p>
+
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure">
+                <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              </figure>
+              <figure class="informalfigure">
+                <img alt="" src="../../images/placeholder_images/fa_tr_img.jpg" />
+              </figure>
+              <figcaption id="2column_figure01" class="sr-only">
+                <div class="caption">
+                  <p>Group of 2 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                    <figure class="figuregroup" id="unique_figuregroup_id" role="group" aria-labelledby="unique_figuregroupcaption_id">
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image01"
+                          src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="unique_figure_id">
+                        <img id="unique_image_id" alt="image02"
+                          src="../../images/placeholder_images/fa_tr_img.jpg" />
+                      </figure>
+                      <figcaption id="unique_figuregroupcaption_id" class="sr-only">
+                        <div class="caption">
+                          <p>Group of 2 images.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+              </div>
+            </p>
+          </section>
+        </section>
+        <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+      </section>
+      <!-- Figuregroup Section Ends -->
+
+    </section> <!-- Readspeaker section closed-->
+    <script src="../../js/re6_teacher/tabs.js"></script>
+</body>
+
+</html>

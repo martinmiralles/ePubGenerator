@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Religion ePub Design Template</title>
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css"
+      rel="stylesheet"
+    />
+    <!--<link rel="stylesheet" href="PATH">-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        overflow-y: hidden;
+        font-family: "Open Sans", sans-serif;
+        background: #e2e1e0;
+      }
+      /* The side navigation menu */
+      .sidenav {
+        height: 94.5vh;
+        /* 94.5% view-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 99;
+        /* Stay on top */
+        top: 0;
+        /* Stay at the top */
+        left: 0;
+        background-color: #111;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding: 30px 0;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+      }
+      /* The navigation menu links */
+      .sidenav a {
+        /* padding: 18px 8px 8px 20px; */
+        text-decoration: underline;
+        font-size: 16px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+      }
+      .sidenav > ul > li > span > a {
+        display: inline;
+        width: 80%;
+      }
+      /* Indent for sidebar navigation menu lnks */
+      .sidenav .link-indent {
+        padding: 4px 4px 4px 0;
+      }
+      /* When you mouse over the navigation links, change their color */
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+      .inline {
+        display: inline !important;
+      }
+
+      .no-icon {
+        text-decoration: none !important;
+      }
+      /* Position and style the close button (top right corner) */
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .sidenav .closebtn {
+        text-decoration: none;
+      }
+      /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+      #main {
+        transition: margin-left 0.5s;
+        padding: 0 30px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #main > h1 {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+        }
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+
+      /* collapsible sidenav*/
+      /* Remove default bullets */
+      #myUL,
+      ul {
+        list-style-type: none;
+      }
+      /* Remove margins and padding from the parent ul */
+      #myUL {
+        margin: 0;
+        padding: 0;
+      }
+      /* Style the caret/arrow */
+      .caret {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        /* Prevent text selection */
+      }
+      /* Create the caret/arrow with a unicode, and style it */
+      .caret::before {
+        content: "+";
+        color: white;
+        display: inline-block;
+        font-weight: 900;
+        font-size: 1rem;
+        width: 20px;
+      }
+      /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+      .caret-down::before {
+        content: "\2013";
+        color: white;
+        display: inline-block;
+        font-weight: 900;
+        font-size: 1rem;
+      }
+      /* Hide the nested list */
+      .nested {
+        display: none;
+        padding-left: 20px;
+      }
+      .nested li {
+        margin-top: 7px;
+        margin-bottom: 7px;
+      }
+      /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+      .active {
+        display: block;
+      }
+      .margin-left-default {
+        margin-left: 1.3rem;
+      }
+      ul > li {
+        margin: 15px 10px;
+      }
+      iframe {
+        border: 0;
+        width: 100%;
+        height: 87vh;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      .ti-new-window:before {
+        content: "\E732";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <ul id="myUL">
+        <li>
+          <a
+            href="#splash"
+            data-page="html/splash.html"
+            class="margin-left-default"
+          >
+            <strong>Home</strong>
+          </a>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>Editorial Guidelines</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#editorial_homes"
+                data-page="https://docs.google.com/document/d/1j_cT77yi8LMdonpyFVqOZWoNwwfksqJPQPPwja2Lu8k/preview"
+                class="link-indent"
+                >Student ePub Guidelines</a
+              >
+            </li>
+            <li>
+              <a
+                href="#editorial_homet"
+                data-page="https://docs.google.com/document/d/1R2WZ9EQCTsNOFWTZLLN-f7G-zq0IpN3ERTXK_3pu_1Y/preview"
+                class="link-indent"
+                >Teacher ePub Guidelines</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>Vendor Resources</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#vendor_homes"
+                data-page="https://docs.google.com/document/d/1FvOTp4U2j018m9HmeVcI4lQ4kKqjc0uRCI6SS3AUwCo/preview"
+                class="link-indent"
+                >Student ePub Guidelines</a
+              >
+            </li>
+            <li>
+              <a
+                href="#vendor_homes"
+                data-page="https://docs.google.com/document/d/1GetzbTlRun2RpA67B9_Gh3iYvPDN57Bha_2qYQEefdo/preview"
+                class="link-indent"
+                >Teacher ePub Guidelines</a
+              >
+            </li>
+            <li>
+              <a
+                href="#vendor_homes"
+                data-page="html/download.html"
+                class="link-indent"
+                >Starter Packages</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>Schedules</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="https://app.smartsheet.com/sheets/66wM3PX4WhgF59qqpQ2mr6Q9HC37jJJhvmjpcvW1"
+                class="link-indent"
+                target="_blank"
+                >Teacher ePubs
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://app.smartsheet.com/sheets/6HhQ2JGpp6Qw8GfhQhp7Mq5rjXhWXrwXRGqw3fc1"
+                class="link-indent"
+                target="_blank"
+                >Grade 6 Student ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://app.smartsheet.com/sheets/wxmcW24CP9c7qj98w7QV8mQ6Xqxfj9PMrfVgC931"
+                class="link-indent"
+                target="_blank"
+                >FA SE ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://app.smartsheet.com/sheets/vprqX5FCfG4VwRX4f6qQjh42vxFc3jGp72Q87Xx1"
+                class="link-indent"
+                target="_blank"
+                >FA TR ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- ************** -->
+        <!-- TEST TAB BEGINS-->
+        <!-- ************** -->
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>Media Developer Tool</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#vendor_homes"
+                data-page="html/package_tool.html"
+                class="link-indent"
+                >ePub Package Generator</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!-- ************* -->
+        <!-- TEST TAB ENDS -->
+        <!-- ************* -->
+
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>Production Folders</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1NxfMTrhzB9cCJAWB68dbA98blYhQC4FM?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 1 FA Student ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1ERcc7gAJUspsKXK9nR-iJdHli8ULMjqg?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 2 FA Student ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1SZ_N1i0OwaERvn-XxJgodb5zRpzC4XUB?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 1 FA Teacher ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1OT4FVVmMfny3YdLpR_y4_3Eazjuwdr3L?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 2 FA Teacher ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1pVM-5bhnT3vLbmFwSayHKv6RHbS0rGuk?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 7 FA Teacher ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1mP199qPxCbjCOOz1z0On1VKGrFU9E98O?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 4 Student ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/189EnO8A4BY3YoiwLadobp92QMIoi23CU?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 6 Student ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1EZwV3m-WAad37ih-2zNmKaQ-d_u_c45a?usp=sharing"
+                class="link-indent"
+                target="_blank"
+                >Grade 6 Teacher ePub
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>ePub Content Logs</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/15t9oIwuX1RdVOZF7u2AauR7RP3-eO9FYcweUEbx2brY/preview"
+                class="link-indent inline"
+                >RE1 FA Student Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/15t9oIwuX1RdVOZF7u2AauR7RP3-eO9FYcweUEbx2brY/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1tMLaC-7w9i0bNOuyZRxltez023ywc1r1YPrDOHC964g/preview"
+                class="link-indent inline"
+                >RE2 FA Student Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1tMLaC-7w9i0bNOuyZRxltez023ywc1r1YPrDOHC964g/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1JKgznMKy6tCZ7yJORQtOUmrA9lBAYl-e8B-10LlGibo/preview"
+                class="link-indent inline"
+                >RE1 FA Teacher Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1JKgznMKy6tCZ7yJORQtOUmrA9lBAYl-e8B-10LlGibo/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1uPdIA5Ix356qoWDc4nMbTfgB47VGr82Q2Otd273TPK0/preview"
+                class="link-indent inline"
+                >RE2 FA Teacher Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1uPdIA5Ix356qoWDc4nMbTfgB47VGr82Q2Otd273TPK0/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1-PJZxtM4Kqxk5hBIfP6qP9cDa0uQlfFifumixf5duyQ/preview"
+                class="link-indent inline"
+                >RE7 FA Teacher Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1-PJZxtM4Kqxk5hBIfP6qP9cDa0uQlfFifumixf5duyQ/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1-NEC8uzhdPdUBCecObyRvwJQ7tvRwACpVWfVFnZ_EfQ/preview"
+                class="link-indent inline"
+                >RE4 Student Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1-NEC8uzhdPdUBCecObyRvwJQ7tvRwACpVWfVFnZ_EfQ/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1nm_8YykXY9yRG7dXaGFLakwMdnm77YXPjelCA9BwYBo/preview"
+                class="link-indent inline"
+                >RE5 Student Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1nm_8YykXY9yRG7dXaGFLakwMdnm77YXPjelCA9BwYBo/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1QITlYq8fn17kNXBLplk8kDqjdyOclAnDdSN09lHn8bY/preview"
+                class="link-indent inline"
+                >RE5 Teacher Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1QITlYq8fn17kNXBLplk8kDqjdyOclAnDdSN09lHn8bY/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1vMPY9kkXRUjsdguUHEv_FBKK8NvyHdE2H_aTAbRO5NQ/preview"
+                class="link-indent inline"
+                >RE6 Student Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1vMPY9kkXRUjsdguUHEv_FBKK8NvyHdE2H_aTAbRO5NQ/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#epub_content_log"
+                data-page="https://docs.google.com/spreadsheets/d/1sy3cu6QRO-NJ7y5kNEYQdGvfDPi-6qAEQqynIZzBr1g/preview"
+                class="link-indent inline"
+                >RE6 Teacher Log</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1sy3cu6QRO-NJ7y5kNEYQdGvfDPi-6qAEQqynIZzBr1g/"
+                class="link-indent inline no-icon"
+                target="_blank"
+              >
+                <span class="ti-new-window" title="open new window"></span
+              ></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>RE1-2 Fully Alive Student Gold Book</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#elements"
+                data-page="html/re1-2_fully_alive_student/generic_elements.html"
+                class="link-indent"
+                >Elements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#syles"
+                data-page="html/re1-2_fully_alive_student/styles.html"
+                class="link-indent"
+                >Styles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#layouts"
+                data-page="html/re1-2_fully_alive_student/layouts.html"
+                class="link-indent"
+                >Layouts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#components"
+                data-page="html/re1-2_fully_alive_student/standard_components.html"
+                class="link-indent"
+                >Standard Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#samples_for_preview"
+                data-page="html/re1-2_fully_alive_student/samples_for_preview.html"
+                class="link-indent"
+                >Samples for Preview</a
+              >
+            </li>
+            <li>
+              <a
+                href="#custom_components_examples"
+                data-page="html/re1-2_fully_alive_student/custom_components.html"
+                class="link-indent"
+                >Custom Components</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>RE Fully Alive Teacher Gold Book</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#elements"
+                data-page="html/re_fully_alive_teacher/generic_elements.html"
+                class="link-indent"
+                >Elements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#syles"
+                data-page="html/re_fully_alive_teacher/styles.html"
+                class="link-indent"
+                >Styles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#layouts"
+                data-page="html/re_fully_alive_teacher/layouts.html"
+                class="link-indent"
+                >Layouts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#components"
+                data-page="html/re_fully_alive_teacher/standard_components.html"
+                class="link-indent"
+                >Standard Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#samples_for_preview"
+                data-page="html/re_fully_alive_teacher/samples_for_preview.html"
+                class="link-indent"
+                >Samples for Preview</a
+              >
+            </li>
+            <li>
+              <a
+                href="#custom_components_examples"
+                data-page="html/re_fully_alive_teacher/custom_components.html"
+                class="link-indent"
+                >Custom Components</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>RE4 Student Gold Book</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#elements"
+                data-page="html/re4_student/generic_elements.html"
+                class="link-indent"
+                >Elements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#syles"
+                data-page="html/re4_student/styles.html"
+                class="link-indent"
+                >Styles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#layouts"
+                data-page="html/re4_student/layouts.html"
+                class="link-indent"
+                >Layouts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#components"
+                data-page="html/re4_student/standard_components.html"
+                class="link-indent"
+                >Standard Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#samples_for_preview"
+                data-page="html/re4_student/samples_for_preview.html"
+                class="link-indent"
+                >Samples for Preview</a
+              >
+            </li>
+            <li>
+              <a
+                href="#custom_components_examples"
+                data-page="html/re4_student/custom_components.html"
+                class="link-indent"
+                >Custom Components</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>RE5 Student Gold Book</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#elements"
+                data-page="html/re5_student/generic_elements.html"
+                class="link-indent"
+                >Elements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#syles"
+                data-page="html/re5_student/styles.html"
+                class="link-indent"
+                >Styles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#layouts"
+                data-page="html/re5_student/layouts.html"
+                class="link-indent"
+                >Layouts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#components"
+                data-page="html/re5_student/standard_components.html"
+                class="link-indent"
+                >Standard Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#samples_for_preview"
+                data-page="html/re5_student/samples_for_preview.html"
+                class="link-indent"
+                >Samples for Preview</a
+              >
+            </li>
+            <li>
+              <a
+                href="#custom_components_examples"
+                data-page="html/re5_student/custom_components.html"
+                class="link-indent"
+                >Custom Components</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>RE6 Student Gold Book</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#elements"
+                data-page="html/re6_student/generic_elements.html"
+                class="link-indent"
+                >Elements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#syles"
+                data-page="html/re6_student/styles.html"
+                class="link-indent"
+                >Styles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#layouts"
+                data-page="html/re6_student/layouts.html"
+                class="link-indent"
+                >Layouts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#components"
+                data-page="html/re6_student/standard_components.html"
+                class="link-indent"
+                >Standard Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#samples_for_preview"
+                data-page="html/re6_student/samples_for_preview.html"
+                class="link-indent"
+                >Samples for Preview</a
+              >
+            </li>
+            <li>
+              <a
+                href="#custom_components_examples"
+                data-page="html/re6_student/custom_components.html"
+                class="link-indent"
+                >Custom Components</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="caret">
+            <a data-page="" style="text-decoration: none;">
+              <strong>Teacher Gold Book</strong>
+            </a>
+          </span>
+          <ul class="nested">
+            <li>
+              <a
+                href="#elements"
+                data-page="html/re6_teacher/generic_elements.html"
+                class="link-indent"
+                >Elements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#syles"
+                data-page="html/re6_teacher/styles.html"
+                class="link-indent"
+                >Styles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#layouts"
+                data-page="html/re6_teacher/layouts.html"
+                class="link-indent"
+                >Layouts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#components"
+                data-page="html/re6_teacher/standard_components.html"
+                class="link-indent"
+                >Standard Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#samples_for_preview"
+                data-page="html/re6_teacher/samples_for_preview.html"
+                class="link-indent"
+                >Samples for Preview</a
+              >
+            </li>
+            <li>
+              <a
+                href="#custom_components_examples"
+                data-page="html/re6_teacher/custom_components.html"
+                class="link-indent"
+                >Custom Components</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span
+            class="ti-timer"
+            title="History Log"
+            style="color:white;display:inline;"
+          ></span>
+          <a
+            href="#change-history"
+            data-page="https://docs.google.com/a/pearson.com/spreadsheets/d/e/2PACX-1vTznHQELtfNwxyeVOq7Pt0qloZe_c-pFbkHqOysPH8Kfnhy3l1YRi6k46YZlneF50oJ_xno-IJkNvYY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
+            class="margin-left-default"
+            style="text-decoration:none;margin-left:0;display:inline;"
+          >
+            <strong>Change History Log</strong>
+          </a>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1UJg4RLiZgQrRsHB_RUUGZsqjcbNiJKDnQn0fbhMoEBM/edit?usp=sharing"
+            class="link-indent inline no-icon"
+            target="_blank"
+          >
+            <span class="ti-new-window" title="open new window"></span
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <!-- Use any element to open the sidenav -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()"
+      >&#9776;</span
+    >
+    <div id="main">
+      <h1
+        style="text-align: center; width: 80%; margin: -44px auto 15px auto;color:#003057;"
+      >
+        Religion ePub Gold Books Production Hub
+      </h1>
+      <iframe id="mainFrame" src="html/splash.html"></iframe>
+    </div>
+    <script>
+      /* Set the width of the side navigation to 260px and the left margin of the page content to 250px and add a black background color to body */
+      function openNav() {
+        var sideNavWidth = "260px";
+        var w =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        //console.log(w);
+        if (w < 601 && w > 451) {
+          sideNavWidth = "100%";
+        } else if (w < 451 && w > 401) {
+          sideNavWidth = "90.5%";
+        } else if (w < 401) {
+          sideNavWidth = "83%";
+        }
+
+        document.getElementById("mySidenav").style.width = sideNavWidth;
+        //document.getElementById("mySidenav").style.width = "260px";
+        document.getElementById("main").style.marginLeft = "245px";
+      }
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+      var codeblock = document.querySelectorAll("#mySidenav a");
+      for (var i = 0; i < codeblock.length; i++) {
+        codeblock[i].addEventListener("click", openLinkIframe);
+      }
+      function openLinkIframe() {
+        var path = this.getAttribute("data-page");
+        var frame = document.getElementById("mainFrame");
+        if (path) {
+          frame.setAttribute("src", path);
+        }
+      }
+      // collapsible sidenav
+      var toggler = document.getElementsByClassName("caret");
+      var i;
+      for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+          this.parentElement
+            .querySelector(".nested")
+            .classList.toggle("active");
+          this.classList.toggle("caret-down");
+        });
+      }
+      //console.log(codeblock);
+    </script>
+  </body>
+</html>

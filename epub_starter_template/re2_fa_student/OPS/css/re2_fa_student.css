@@ -1,0 +1,655 @@
+/* ------------------------------------Load the fonts into CSS-------------------------------------------- */
+@font-face {
+  font-family: "HeinemannRomanSpecial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Rm.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Rm.woff") format("woff"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Rm.ttf") format("truetype"); }
+@font-face {
+  font-family: "HeinemannRomanSpecial";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-RmIt.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-RmIt.woff") format("woff"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-RmIt.ttf") format("truetype"); }
+@font-face {
+  font-family: "HeinemannRomanSpecial";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Bd.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Bd.woff") format("woff"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Bd.ttf") format("truetype"); }
+@font-face {
+  font-family: "HeinemannRomanSpecial";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-BdIt.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-BdIt.woff") format("woff"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-BdIt.ttf") format("truetype"); }
+@font-face {
+  font-family: "HeinemannRomanSpecial";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Blk.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Blk.woff") format("woff"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-Blk.ttf") format("truetype"); }
+@font-face {
+  font-family: "HeinemannRomanSpecial";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-BlkIt.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-BlkIt.woff") format("woff"), url("../fonts/re2_fa_student_fonts/HeinemannRomanSpecial-BlkIt.ttf") format("truetype"); }
+@font-face {
+  font-family: "Kidprint";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/re2_fa_student_fonts/Kidprint-Bold.eot") format("embedded-opentype"), url("../fonts/re2_fa_student_fonts/Kidprint-Bold.woff") format("woff"), url("../fonts/re2_fa_student_fonts/Kidprint-Bold.ttf") format("truetype"); }
+/* ------------------------------------Normalization Styles CSS-------------------------------------------- */
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  letter-spacing: 0.015rem;
+  line-height: 1.15rem;
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit; }
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4; }
+
+body {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 115%;
+  background-color: #FFFFFF; }
+  body > section {
+    margin: 3rem 3rem 3rem 4rem; }
+
+strong {
+  font-weight: bold;
+  text-decoration: inherit; }
+
+em {
+  font-style: italic;
+  text-decoration: inherit; }
+
+section,
+aside {
+  display: block;
+  margin: 2.5rem 0;
+  padding: 0; }
+
+header {
+  display: block; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block; }
+
+p,
+ol,
+ul,
+dl {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  display: block;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 2rem 0;
+  color: #000; }
+
+p {
+  font-size: 2rem;
+  line-height: 3rem; }
+
+ol {
+  list-style-type: decimal;
+  padding-inline-start: 40px;
+  padding-left: 40px; }
+
+ul {
+  list-style-type: disc;
+  padding-inline-start: 40px;
+  padding-left: 40px; }
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent; }
+
+dt {
+  display: block;
+  font-weight: bold; }
+
+dd {
+  display: block;
+  margin-inline-start: 40px;
+  margin-left: 40px; }
+
+dd:after {
+  display: block;
+  content: ""; }
+
+figure {
+  display: block;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin: 2rem auto;
+  padding: 0; }
+
+img {
+  border-style: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  display: block; }
+
+figcaption,
+div {
+  display: block; }
+
+figcaption {
+  margin: 0.3em auto 0.5em auto;
+  text-align: left;
+  padding: 0; }
+
+blockquote {
+  display: block;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+  margin-inline-start: 4rem;
+  margin-inline-end: 4rem;
+  margin: 2rem 4rem;
+  padding: 0; }
+
+cite {
+  font-style: unset; }
+
+hr {
+  display: block;
+  margin-block-start: 0.575rem;
+  margin-block-end: 0.575rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin: 0.575rem auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px; }
+
+caption {
+  display: text-caption;
+  text-align: -webkit-center; }
+
+table {
+  white-space: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-size: medium;
+  font-style: normal;
+  color: -internal-quirk-inherit;
+  text-align: start;
+  font-variant: normal;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+  min-width: 768px; }
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+th {
+  font-weight: bold;
+  text-align: -internal-center;
+  display: table-cell;
+  vertical-align: inherit; }
+
+td {
+  display: table-cell;
+  vertical-align: inherit; }
+
+summary {
+  cursor: pointer;
+  outline: none; }
+
+/* ------------------------------------Elements Style CSS-------------------------------------------- */
+.title {
+  margin: 2rem 0; }
+
+.title_01 {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #000; }
+
+.title_02 {
+  font-family: "Kidprint", "Comic Sans MS", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  color: #00626D; }
+
+.title_03 {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #000; }
+
+.caption p {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0; }
+
+.poem {
+  margin: 2rem 0; }
+  .poem .linegroup {
+    display: block;
+    margin: 0 5rem; }
+  .poem .line {
+    display: block; }
+
+.poem_01 {
+  font-family: "Kidprint", "Comic Sans MS", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 3rem; }
+
+.poem_02 {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.5rem; }
+
+.blockquotegroup {
+  font-family: "Kidprint", "Comic Sans MS", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 3rem; }
+
+/* ------------------------------------Layouts Styles CSS-------------------------------------------- */
+.grid-container > .grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0; }
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2), .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2) ~ .grid-col {
+    width: 49%; }
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3), .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3) ~ .grid-col {
+    width: 32%; }
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4), .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4) ~ .grid-col {
+    width: 23.5%; }
+
+.figuregroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .figuregroup > figcaption:first-child {
+    width: 100%; }
+  .figuregroup > .informalfigure {
+    margin: 1rem 0; }
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(2), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(2) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(4), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(6), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(6) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(7), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(8), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(10), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(10) ~ .informalfigure {
+    width: 49%; }
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(1) {
+    margin-left: auto;
+    margin-right: auto; }
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(3), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(3) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(5), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure, .figuregroup > .informalfigure:first-of-type:nth-last-of-type(9), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(9) ~ .informalfigure {
+    width: 32%; }
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure:nth-last-of-type(1) {
+    margin-right: auto;
+    margin-left: 0.6%; }
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure:nth-last-of-type(2) {
+    margin-left: auto;
+    margin-right: 0.6%; }
+
+.figuregroup_01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .figuregroup_01 > figcaption:first-child {
+    width: 100%; }
+  .figuregroup_01 > .informalfigure {
+    margin: 1rem 0; }
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure, .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure, .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure, .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure, .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12) ~ .informalfigure, .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure {
+    width: 23.5%; }
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(1), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure:nth-last-of-type(1), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure:nth-last-of-type(1) {
+    margin-right: auto;
+    margin-left: 1.6%; }
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(3), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure:nth-last-of-type(3), .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure:nth-last-of-type(1) {
+    margin-left: auto;
+    margin-right: 1.6%; }
+
+/* ------------------------------------Components Styles CSS-------------------------------------------- */
+.note {
+  padding: 2rem 0;
+  border-radius: 20px; }
+  .note p {
+    font-size: 1.75rem;
+    line-height: 2.5rem; }
+
+.note_01 {
+  background-color: #F9DD7C; }
+
+/* ------------------------------------Generic CSS that belongs to anywhere-------------------------------------------- */
+.pagebreak_01,
+.pagebreak_02 {
+  display: block; }
+  .pagebreak_01 > span,
+  .pagebreak_02 > span {
+    padding: 0.5rem 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    font-size: 1.5rem;
+    font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+    font-weight: 700; }
+
+.pagebreak_01 > span {
+  background-color: #E0E0E0;
+  border: 2px solid #000; }
+
+.pagebreak_02 > span {
+  background-color: #181818;
+  border: 2px solid #FFF;
+  color: #FFF; }
+
+.source {
+  display: block;
+  margin-right: 9rem; }
+  .source p {
+    font-size: 2rem;
+    line-height: 3rem; }
+
+.bg_darkyellow {
+  background-color: #F7D34D; }
+
+.bg_lightyellow {
+  background-color: #FFE380; }
+
+.bg_lightorange {
+  background-color: #F4BA6D; }
+
+.bg_darkorange {
+  background-color: #EE965C; }
+
+.bg_purple {
+  background-color: #C58EBC; }
+
+.bg_royalblue {
+  background-color: #6E8EC4; }
+
+.bg_lightblue {
+  background-color: #B9DFE5; }
+
+.bg_darkblue {
+  background-color: #75ACD6; }
+
+.bg_turquoise {
+  background-color: #6FC7D3; }
+
+.bg_palegreen {
+  background-color: #91C170; }
+
+.bg_seagreen {
+  background-color: #63BB88; }
+
+/* ------------------------------------Helper Class CSS-------------------------------------------- */
+.width-100 {
+  width: 100% !important; }
+
+.width-90 {
+  width: 90% !important; }
+
+.width-85 {
+  width: 85% !important; }
+
+.width-75 {
+  width: 75% !important; }
+
+.width-66 {
+  width: 66.6% !important; }
+
+.width-50 {
+  width: 50% !important; }
+
+.width-40 {
+  width: 40% !important; }
+
+.width-33 {
+  width: 33.3% !important; }
+
+.width-25 {
+  width: 25% !important; }
+
+.width-15 {
+  width: 15% !important; }
+
+.width-10 {
+  width: 10% !important; }
+
+.no-widow {
+  display: inline-block;
+  text-decoration: inherit; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+.informalfigure:first-of-type.float-left,
+.informalfigure:first-of-type.float-right {
+  margin-top: 1rem; }
+
+.clear-both {
+  clear: both; }
+
+.lc_align-center {
+  text-align: center; }
+
+.lc_align-left {
+  text-align: left; }
+
+.lc_align-right {
+  text-align: right; }
+
+.inline {
+  display: inline; }
+
+.margin-0-auto {
+  margin: 0 auto; }
+
+.margin-left-0 {
+  margin-left: 0 !important; }
+
+.margin-right-0 {
+  margin-right: 0 !important; }
+
+.margin-top-0 {
+  margin-top: 0 !important; }
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important; }
+
+.margin-top-default {
+  margin-top: 2rem !important; }
+
+.margin-bottom-default {
+  margin-bottom: 2rem !important; }
+
+.margin-default-auto {
+  margin: 2rem auto !important; }
+
+.margin-left-default {
+  margin-left: 2rem !important; }
+
+.margin-right-default {
+  margin-right: 2rem !important; }
+
+.padding-top-0 {
+  padding-top: 0 !important; }
+
+.padding-bottom-0 {
+  padding-bottom: 0 !important; }
+
+.padding-left-0 {
+  padding-left: 0 !important; }
+
+.padding-right-0 {
+  padding-right: 0 !important; }
+
+.padding-top-default {
+  padding-top: 2rem !important; }
+
+.padding-bottom-default {
+  padding-bottom: 2rem !important; }
+
+.padding-left-default {
+  padding-left: 2rem !important; }
+
+.padding-right-default {
+  padding-right: 2rem !important; }
+
+.text-color-darkblue {
+  color: #0363AC !important; }
+
+.text-color-navyblue {
+  color: #08448C !important; }
+
+.text-color-teal {
+  color: #00626D !important; }
+
+.text-color-darkgreen {
+  color: #0A8852 !important; }
+
+.text-heinemann {
+  font-family: "HeinemannRomanSpecial", "Trebuchet MS", sans-serif;
+  font-weight: 400; }
+
+.text-kidprint {
+  font-family: "Kidprint", "Comic Sans MS", sans-serif;
+  font-weight: 900; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
+
+/* ------------------------------------Responsive Tablet (<600px)--------------------------------- */
+@media only screen and (max-width: 600px) {
+  /* ------------------------------------Normalization Styles CSS (<600px)-------------------------------------------- */
+  p {
+    font-size: 1.75rem;
+    line-height: 2.65rem; }
+
+  blockquote {
+    margin-inline-start: 2rem;
+    margin-inline-end: 2rem;
+    margin: 2rem; }
+
+  /* ------------------------------------Elements Styles CSS (<600px)-------------------------------------------- */
+  .title_01 {
+    font-size: 2.75rem;
+    line-height: 3.5rem; }
+
+  .title_02 {
+    font-size: 3.25rem;
+    line-height: 4.25rem; }
+
+  .title_03 {
+    font-size: 1.75rem;
+    line-height: 2.65rem; }
+
+  .poem > .linegroup {
+    margin: 0 2rem; }
+
+  .poem_01 {
+    font-size: 1.75rem;
+    line-height: 2.65rem; }
+
+  /* ------------------------------------Layouts Styles CSS (<600px)-------------------------------------------- */
+  .grid-container > .grid-row {
+    flex-direction: column; }
+    .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(n), .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(n) ~ .grid-col {
+      width: 100%;
+      margin: 1rem 0; }
+    .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(n):first-of-type {
+      margin-top: 0; }
+    .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(n) ~ .grid-col:last-of-type {
+      margin-bottom: 0; }
+
+  .figuregroup,
+  .figuregroup_01 {
+    flex-direction: column; }
+    .figuregroup > .informalfigure:first-of-type:nth-last-of-type(n), .figuregroup > .informalfigure:first-of-type:nth-last-of-type(n) ~ .informalfigure,
+    .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(n),
+    .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(n) ~ .informalfigure {
+      width: 100%;
+      margin: 1rem 0; }
+    .figuregroup > .informalfigure:first-of-type:nth-last-of-type(n):first-of-type,
+    .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(n):first-of-type {
+      margin-top: 0; }
+    .figuregroup > .informalfigure:first-of-type:nth-last-of-type(n) ~ .informalfigure:last-of-type,
+    .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(n) ~ .informalfigure:last-of-type {
+      margin-bottom: 0; }
+
+  /* ------------------------------------Helper Class CSS (<600px)-------------------------------------------- */
+  .width-90,
+  .width-85,
+  .width-75,
+  .width-66,
+  .width-50,
+  .width-40,
+  .width-33,
+  .width-25,
+  .width-15,
+  .width-10 {
+    width: 100% !important; }
+
+  .informalfigure:first-of-type.float-left,
+  .informalfigure:first-of-type.float-right {
+    margin-top: 2rem; } }

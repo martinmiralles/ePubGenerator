@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" version="3.0" xml:lang="en" unique-identifier="ISBN-978-0-13-458983-1">
+<metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:title>{book title goes here}</dc:title>
+<dc:language>en-CA</dc:language>
+<dc:identifier id="ISBN-978-0-13-458983-1">{book isbn goes here}</dc:identifier>
+<dc:creator id="creator">The Catholic Bishops of Ontario, Alberta, Saskatchewan, and Northwest Territories</dc:creator>
+<meta property="dcterms:creator">The Catholic Bishops of Ontario, Alberta, Saskatchewan, and Northwest Territories</meta>
+<dc:publisher>Pearson Canada</dc:publisher>
+<dc:date>{created date goes here}</dc:date>
+<meta property="dcterms:modified">{last modified date goes here}</meta>
+<dc:rights>Copyright &#x00A9; {copyright year}</dc:rights>
+<meta property="rendition:layout">reflowable</meta>
+<meta property="rendition:orientation">auto</meta>
+<meta property="rendition:spread">auto</meta>
+<meta property="ibooks:specified-fonts">true</meta>
+<meta name="cover" content="cover-image"/>
+</metadata>
+
+<manifest>
+<!-- Table of Contents -->
+<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+<item id="toc" href="xhtml/toc.xhtml" properties="nav" media-type="application/xhtml+xml"/>
+
+<!-- Cascading Style Sheets -->
+<item id="unique_id" href="relative_path_with_css_file_name_with_extension" media-type="text/css"/>
+
+<!-- Javascript (Optional, required if any js files are included)-->
+<item id="unique_id" href="relative_path_with_js_file_name_with_extension" media-type="text/javascript" />
+
+<!-- Fonts -->
+<item id="unique_id" href="relative_path_with_font_file_name_with_extension" media-type="application/vnd.ms-opentype"/>
+
+
+<!-- XHTML pages -->
+<item id="unique_id" href="relative_apth_with_content_file_name_with_extension" media-type="application/xhtml+xml"/>
+
+
+<!-- Images -->
+<!-- For image in jpeg format -->
+<item id="unique_id" href="raltive_path_with_image_file_name_with_extension" media-type="image/jpeg"/>
+<!-- For image in png format -->
+<item id="unique_id" href="raltive_path_with_image_file_name_with_extension" media-type="image/png"/>
+	
+<!-- Widgets External Resources -->
+
+<!-- Remote Resources -->
+</manifest>
+
+
+<spine toc="ncx">
+<itemref idref="xhtml id from above" linear="yes or no"/>
+</spine>
+</package>

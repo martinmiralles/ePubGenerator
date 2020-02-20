@@ -1,0 +1,1778 @@
+@font-face {
+  font-family: "StoneSerITCStdMedium";
+  src: url("../fonts/re4_student_fonts/StoneSerifITCW05-Medium.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/StoneSerifITCW05-Medium.woff2") format("woff2"), url("../fonts/re4_student_fonts/StoneSerifITCW05-Medium.woff") format("woff"), url("../fonts/re4_student_fonts/StoneSerifITCW05-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "StoneSerITCStdMedium";
+  src: url("../fonts/re4_student_fonts/StoneSerifITCW05-SemiBold.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/StoneSerifITCW05-SemiBold.woff2") format("woff2"), url("../fonts/re4_student_fonts/StoneSerifITCW05-SemiBold.woff") format("woff"), url("../fonts/re4_student_fonts/StoneSerifITCW05-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "StoneSerITCStdMedium";
+  src: url("../fonts/re4_student_fonts/StoneSerifITCW05-Bold.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/StoneSerifITCW05-Bold.woff2") format("woff2"), url("../fonts/re4_student_fonts/StoneSerifITCW05-Bold.woff") format("woff"), url("../fonts/re4_student_fonts/StoneSerifITCW05-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "StoneSansITCStdMedium";
+  src: url("../fonts/re4_student_fonts/StoneSansITCW05-Medium.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/StoneSansITCW05-Medium.woff2") format("woff2"), url("../fonts/re4_student_fonts/StoneSansITCW05-Medium.woff") format("woff"), url("../fonts/re4_student_fonts/StoneSansITCW05-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "StoneSansITCStdMedium";
+  src: url("../fonts/re4_student_fonts/StoneSansITCW05-SemiBold.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/StoneSansITCW05-SemiBold.woff2") format("woff2"), url("../fonts/re4_student_fonts/StoneSansITCW05-SemiBold.woff") format("woff"), url("../fonts/re4_student_fonts/StoneSansITCW05-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "StoneSansITCStdMedium";
+  src: url("../fonts/re4_student_fonts/StoneSansITCW05-Bold.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/StoneSansITCW05-Bold.woff2") format("woff2"), url("../fonts/re4_student_fonts/StoneSansITCW05-Bold.woff") format("woff"), url("../fonts/re4_student_fonts/StoneSansITCW05-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "HeinemannSpecialRoman";
+  src: url("../fonts/re4_student_fonts/heinemannspecial-roman-webfont.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/heinemannspecial-roman-webfont.woff2") format("woff2"), url("../fonts/re4_student_fonts/heinemannspecial-roman-webfont.woff") format("woff"), url("../fonts/re4_student_fonts/heinemannspecial-roman-webfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HeinemannSpecialRoman";
+  src: url("../fonts/re4_student_fonts/heinemannspecial-bold-webfont.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/heinemannspecial-bold-webfont.woff2") format("woff2"), url("../fonts/re4_student_fonts/heinemannspecial-bold-webfont.woff") format("woff"), url("../fonts/re4_student_fonts/heinemannspecial-bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "HeinemannSpecialRoman";
+  src: url("../fonts/re4_student_fonts/heinemannspecial-black-webfont.eot") format("embedded-opentype"), url("../fonts/re4_student_fonts/heinemannspecial-black-webfont.woff2") format("woff2"), url("../fonts/re4_student_fonts/heinemannspecial-black-webfont.woff") format("woff"), url("../fonts/re4_student_fonts/heinemannspecial-black-webfont.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/* ------------------------------------Normalization Styles CSS-------------------------------------------- */
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  letter-spacing: 0.015rem;
+  line-height: 1.15rem;
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+  padding: 0;
+  font-size: 115%;
+  background-color: #FFFFFF;
+}
+
+strong {
+  font-weight: bold;
+  text-decoration: inherit;
+}
+
+em {
+  font-style: italic;
+  text-decoration: inherit;
+}
+
+section,
+aside {
+  display: block;
+  margin: 2.3rem 0;
+  padding: 0;
+}
+
+header {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+p,
+ol,
+ul,
+dl {
+  display: block;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 1.15rem 0;
+  color: #000;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 2.15625rem;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-inline-start: 40px;
+  padding-left: 40px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-inline-start: 40px;
+  padding-left: 40px;
+}
+
+ul > li > ul {
+  list-style-type: none;
+}
+
+ul > li > ul > li:before {
+  content: "-";
+  font-family: Times;
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -2rem;
+  top: 0.8rem;
+  font-size: 1.5rem;
+}
+
+ul > li > ul > li > p {
+  margin: .5rem 0;
+}
+
+ul > li > ul > li > ul {
+  list-style-type: square;
+}
+
+ul > li > ul > li > ul > li:before {
+  display: none;
+}
+
+ul > li > ul > li > ul > li > p {
+  margin: 1.15rem 0;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+dt {
+  display: block;
+  font-weight: bold;
+}
+
+dd {
+  display: block;
+  margin-inline-start: 40px;
+  margin-left: 40px;
+}
+
+dd:after {
+  display: block;
+  content: "";
+}
+
+figure {
+  display: block;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin: 1.15rem auto;
+  padding: 0;
+}
+
+img {
+  border-style: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+
+figcaption,
+div {
+  display: block;
+}
+
+figcaption {
+  margin: 0.3em auto 0.5em auto;
+  text-align: left;
+  padding: 0;
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  margin: 1.15rem 40px;
+  padding: 0;
+}
+
+cite {
+  font-style: unset;
+}
+
+hr {
+  display: block;
+  margin-block-start: 0.575rem;
+  margin-block-end: 0.575rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin: 0.575rem auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+caption {
+  display: text-caption;
+  text-align: -webkit-center;
+}
+
+table {
+  white-space: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-size: medium;
+  font-style: normal;
+  color: -internal-quirk-inherit;
+  text-align: start;
+  font-variant: normal;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+  min-width: 768px;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  font-weight: bold;
+  text-align: -internal-center;
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+summary {
+  cursor: pointer;
+  outline: none;
+}
+
+/* ------------------------------------Elements Styles CSS-------------------------------------------- */
+.title {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-block-start: 1.15rem;
+  margin-block-end: 1.15rem;
+  margin: 1.15rem 0;
+}
+
+.title_01 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+  color: #006C9C;
+}
+
+.title_02 {
+  font-size: 3rem;
+  line-height: 3.25rem;
+  color: #283583;
+}
+
+.title_03 {
+  font-size: 2.1rem;
+  line-height: 2.35rem;
+  color: #CD1719;
+}
+
+.title_04 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  line-height: 1.7rem;
+  font-size: 1.45rem;
+  color: #0069B4;
+}
+
+.title_05 {
+  font-size: 1.4rem;
+  line-height: 1.65rem;
+  color: #000;
+}
+
+.title_darkgreen {
+  color: #046937;
+}
+
+.title_darkgreen > .design-icon {
+  vertical-align: sub;
+}
+
+.title_darkpurple {
+  color: #414099;
+}
+
+.title_darkpurple > .design-icon {
+  vertical-align: sub;
+}
+
+.ol_none,
+.ul_none,
+.ul_01 {
+  list-style-type: none;
+}
+
+.practicelist {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.sidebar ol {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1rem;
+}
+
+.practicelist > .general-problem > .question p,
+.practicelist p {
+  font-weight: normal;
+  font-size: 1.15rem;
+}
+
+.practicelist > .general-problem > .question p strong,
+.practicelist p strong {
+  font-weight: 900;
+}
+
+.ul_01 > li {
+  list-style: none;
+}
+
+.ul_01 > li p {
+  margin: .5rem 0;
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.ul_01 > li:before {
+  content: '\002611';
+  font-family: Times;
+  display: block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -2rem;
+  top: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.caption p {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 0.9rem;
+  line-height: 1.26rem;
+  margin: 0;
+}
+
+.poem {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.15rem;
+  line-height: 1.875rem;
+  /*
+        & .linegroup {
+            margin: 1.15rem 0;
+        }*/
+}
+
+.poem .linegroup {
+  display: block;
+  margin: 0 6.9rem;
+}
+
+.poem .line {
+  display: block;
+}
+
+.blockquotegroup_01 {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.15rem;
+  line-height: 1.875rem;
+}
+
+.blockquotegroup_02 {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.15rem;
+  line-height: 2.15625rem;
+}
+
+.shadow_orange {
+  border-color: #F3A000;
+  -webkit-box-shadow: 0px 0px 25px 5px #F3A000;
+  -moz-box-shadow: 0px 0px 25px 5px #F3A000;
+  box-shadow: 0px 0px 25px 5px #F3A000;
+  margin-bottom: 3rem;
+}
+
+.shadow_blue {
+  border-color: #6859A3;
+  -webkit-box-shadow: 0px 0px 25px 5px #6859A3;
+  -moz-box-shadow: 0px 0px 25px 5px #6859A3;
+  box-shadow: 0px 0px 25px 5px #6859A3;
+  margin-bottom: 3rem;
+}
+
+.shadow_purple {
+  border-color: #6E368C;
+  -webkit-box-shadow: 0px 0px 25px 5px #6E368C;
+  -moz-box-shadow: 0px 0px 25px 5px #6E368C;
+  box-shadow: 0px 0px 25px 5px #6E368C;
+  margin-bottom: 3rem;
+}
+
+.shadow_yellow {
+  border-color: #FFDF43;
+  -webkit-box-shadow: 0px 0px 25px 5px #FFDF43;
+  -moz-box-shadow: 0px 0px 25px 5px #FFDF43;
+  box-shadow: 0px 0px 25px 5px #FFDF43;
+  margin-bottom: 3rem;
+}
+
+.dialogue {
+  margin: 1.15rem 0;
+}
+
+.dialogue .speech {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 1.15rem 0;
+}
+
+.dialogue .speech > .persona > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.dialogue .speech > .persona > p:first-of-type {
+  margin-top: 0;
+}
+
+.dialogue .speech > .line > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.dialogue .speech > .line > p:first-of-type {
+  margin-top: 0;
+}
+
+/* ------------------------------------Layouts Styles CSS-------------------------------------------- */
+.grid-container > .grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1.15rem 0;
+}
+
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2),
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2) ~ .grid-col {
+  width: 49%;
+}
+
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3),
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3) ~ .grid-col {
+  width: 33%;
+}
+
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4),
+.grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4) ~ .grid-col {
+  width: 24.5%;
+}
+
+.ol_column,
+.ul_column {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  -webkit-column-fill: balance;
+  -moz-column-fill: balance;
+  column-fill: balance;
+  list-style-position: outside;
+}
+
+.ol_column > li,
+.ul_column > li {
+  margin-right: 15px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.figuregroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.figuregroup > figcaption:first-child {
+  width: 100%;
+}
+
+.figuregroup > .informalfigure {
+  margin: 10px 0;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(2),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(2) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(4),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(6),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(6) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(8),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(10),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(10) ~ .informalfigure {
+  width: 49%;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(1) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(3),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(3) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure,
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(9),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(9) ~ .informalfigure {
+  width: 32.5%;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure:nth-last-of-type(1),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(9) ~ .informalfigure:nth-last-of-type(1) {
+  margin-right: auto;
+  margin-left: 0.6%;
+}
+
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure:nth-last-of-type(2),
+.figuregroup > .informalfigure:first-of-type:nth-last-of-type(9) ~ .informalfigure:nth-last-of-type(2) {
+  margin-left: auto;
+  margin-right: 0.6%;
+}
+
+.figuregroup_01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.figuregroup_01 > figcaption:first-child {
+  width: 100%;
+}
+
+.figuregroup_01 > .informalfigure {
+  margin: 10px 0;
+}
+
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12) ~ .informalfigure,
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure {
+  width: 23.5%;
+}
+
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(1),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure:nth-last-of-type(1),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure:nth-last-of-type(1) {
+  margin-right: auto;
+  margin-left: 1.6%;
+}
+
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure:nth-last-of-type(3),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure:nth-last-of-type(3),
+.figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure:nth-last-of-type(1) {
+  margin-left: auto;
+  margin-right: 1.6%;
+}
+
+/* ------------------------------------Components Styles CSS-------------------------------------------- */
+.part .text_wrapper,
+.chapter .text_wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.part .text_wrapper .label,
+.part .text_wrapper .number,
+.chapter .text_wrapper .label,
+.chapter .text_wrapper .number {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+
+.part .text_wrapper .label,
+.chapter .text_wrapper .label {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: bold;
+}
+
+.part .text_wrapper .number,
+.chapter .text_wrapper .number {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+}
+
+.part .text,
+.chapter .text {
+  display: block;
+  padding: 1.5rem 1rem;
+}
+
+.part > header > .title,
+.chapter > header > .title {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  line-height: 3.45rem;
+  font-size: 3rem;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+.part {
+  /*
+        & .title_03 {
+            font-size: $title03FontSize;
+            line-height: $title03LineHeight;
+        }*/
+}
+
+.part .text_wrapper {
+  padding: 0.375rem 0 0 0;
+}
+
+.part .label,
+.part .number {
+  text-transform: uppercase;
+}
+
+.part > header > .title {
+  margin: 0 -16px 30px -16px;
+}
+
+.part .title_01 {
+  color: #006C9C;
+}
+
+.chapter .title_02 {
+  color: #283583;
+}
+
+.chapter .text {
+  border-radius: 0 0 20px 20px;
+}
+
+.chapter .text.bg_lightgreen {
+  border: 2px solid #00A65D;
+}
+
+.chapter .text.bg_lightpurple {
+  border: 2px solid #414099;
+}
+
+.informaltable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 6px solid #585858;
+}
+
+.informaltable th,
+.informaltable td {
+  padding: 1rem;
+  border: 2px solid #585858;
+}
+
+.card {
+  margin: 2.3rem 0;
+}
+
+.card > header > .title {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+
+.card > header > .title strong {
+  font-weight: 900;
+}
+
+.card_01 {
+  margin: 3.3rem 0 2.3rem 0;
+  border-bottom: 3px solid #CD4F08;
+  padding-bottom: 1.15rem;
+}
+
+.card_01 > header > .title_04 {
+  background-color: #CD4F08;
+  padding: .55rem 2rem .35rem 2rem;
+  color: #FFF;
+}
+
+.card_01 > header > .title_04 .design-icon {
+  margin: -2rem 0.5rem -2rem 0;
+  width: 120px;
+}
+
+.card_02 .title_04,
+.card_02 .title_05 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #CD1719;
+}
+
+.card_02 .title_05 {
+  font-size: 1.4rem;
+}
+
+.card_03 .title_04 {
+  font-family: "StoneSerITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  color: #0069B4;
+}
+
+.card_04 {
+  margin: 5rem 0 2.3rem 0;
+}
+
+.card_04 > header > .title_04 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 600;
+  padding: .8rem 2rem;
+  color: #FFF;
+}
+
+.card_04 > header > .title_04 .design-icon {
+  margin: -4.65rem 0.25rem -2rem 0;
+  width: 130px;
+}
+
+.card_orange .title_04 {
+  background-color: #EE7203;
+}
+
+.card_purple .title_04 {
+  background-color: #B92F89;
+}
+
+.card_blue .title_04 {
+  background-color: #0090D7;
+}
+
+.card_green .title_04 {
+  background-color: #158241;
+}
+
+.card_05 {
+  margin: 3.3rem 0 2.3rem 0;
+}
+
+.card_05 .title_04 {
+  padding: 1rem 2rem .5rem 2rem;
+  background-color: #BCD1EB;
+  color: #283583;
+  margin: 1.928rem 0 2.75rem 0;
+}
+
+.card_05 .title_04 .design-icon {
+  margin: -3rem 1rem -2.5rem 0;
+  width: 150px;
+}
+
+.card_06 {
+  margin: calc(2.3rem + 6px + 12px) 0;
+  border-top: 6px solid #000;
+  border-bottom: 6px solid #000;
+  box-shadow: 0 -12px 0 0 #0090D7, 0 12px 0 0 #0090D7;
+  -webkit-box-shadow: 0 -12px 0 0 #0090D7, 0 12px 0 0 #0090D7;
+  padding-bottom: 1.15rem;
+}
+
+.card_06 .title_04 {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #000;
+}
+
+.note {
+  padding: 1.15rem 0;
+  border-radius: 20px;
+}
+
+.note p {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.note_01 {
+  background-color: #FBCB8D;
+}
+
+.note_02,
+.note_02_01,
+.note_02_02 {
+  background-color: #C5E3f4;
+}
+
+.note_02_01 {
+  background-color: #EDE2C5;
+}
+
+.note_02_02 {
+  background-color: #ECECEC;
+}
+
+.note_03_green {
+  background-color: #B7D69B;
+}
+
+.note_03_purple {
+  background-color: #D1CDE3;
+}
+
+.note_04 {
+  padding: .75rem 1.25rem;
+  display: inline-block;
+  width: unset;
+  background-color: #A8DFF7;
+}
+
+.note_04 p {
+  font-size: 0.9rem;
+  line-height: 1.26rem;
+}
+
+.note_05 {
+  border-radius: 100%;
+  background-color: #63C3D1;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 3.5rem 2rem 3rem 2rem;
+}
+
+.note_06 {
+  background-color: #EDE2C5;
+  border-left: 6px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -24px 0 #B9B29C, 24px 0 0 #B9B29C;
+  -moz-box-shadow: -24px 0 0 #B9B29C, 24px 1 0 #B9B29C;
+  box-shadow: -24px 0 0 #B9B29C, 24px 0 0 #B9B29C;
+  border-right: 6px solid rgba(0, 0, 0, 0.3);
+  padding: 1.25rem 0 !important;
+}
+
+.practice {
+  padding: 0 0 1rem 0;
+  margin: 3.3rem 0 2.3rem 0;
+}
+
+.practice .title {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #000;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: .5rem 2rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.practice .title strong {
+  font-weight: 900;
+}
+
+.practice > header ~ * {
+  padding: 0 2rem;
+}
+
+.practice .practicelist {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.practice_01 {
+  background-color: #CAD7E9;
+}
+
+.practice_01 .title_04 {
+  background-color: #9DB6D3;
+}
+
+.practice_01 .title_04 .design-icon {
+  margin: -2rem 0.5rem 0 0;
+}
+
+.practice_01 .practicelist {
+  padding: 0 2rem 0 3rem;
+}
+
+.practice_01_01 {
+  background-color: transparent;
+  padding: 0;
+}
+
+.practice_02 {
+  background-color: #D1ECFB;
+}
+
+.practice_02 .title_04 {
+  background-color: #87D0F3;
+}
+
+.practice_02 .title_04 .design-icon {
+  margin: -2rem 0.5rem 0 0;
+}
+
+.practice_02 .practicelist {
+  padding: 0 2rem 0 3rem;
+}
+
+.practice_03 {
+  margin: 2.3rem 0;
+  padding: 0 0 1rem 0;
+}
+
+.practice_03 .title {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #FFF;
+  display: block;
+  padding: .75rem 2rem .5rem 2rem;
+  margin: 0;
+  border-radius: 0;
+}
+
+.practice_03 .title .design-icon {
+  margin: 0rem 0.5rem -2rem 0;
+}
+
+.practice_03 .practicelist {
+  padding: 1.75rem 2rem .5rem 2rem;
+}
+
+.sidebar {
+  background-color: #FFF;
+  border-top: 6px solid;
+  border-bottom: 6px solid;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.sidebar .title {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #000;
+}
+
+.sidebar .title strong {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 900;
+}
+
+.sidebar .design-icon {
+  margin-top: -0.4rem;
+  margin-right: 0.5rem;
+}
+
+.sidebar > header ~ * {
+  padding: 0 calc(70px + 0.5rem + 7px);
+}
+
+.sidebar > header ~ * .epigraph {
+  margin: 0;
+}
+
+.sidebar p {
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.sidebar_01 {
+  border-color: #FCB65C;
+}
+
+.sidebar_02 {
+  border-color: #9DC5D3;
+}
+
+.sidebar_03 {
+  border-color: #96CCA8;
+}
+
+.sidebar_04 {
+  border-color: #FFEB9A;
+}
+
+.sidebar_05 {
+  border-color: #96CCA8;
+}
+
+.sidebar_06 {
+  border-color: #B6A3CE;
+}
+
+.sidebar_07 {
+  border: 6px solid #DBEBBD;
+  background-clip: border-box;
+  padding: 0;
+}
+
+.sidebar_07 .title_04 {
+  background-color: #DBEBBD;
+  padding: 0.7rem 3.2rem;
+}
+
+.sidebar_07 p {
+  padding: 1rem 3.2rem;
+}
+
+/* ------------------------------------Generic CSS that belongs to anywhere-------------------------------------------- */
+.pagebreak_01,
+.pagebreak_02 {
+  display: block;
+}
+
+.pagebreak_01 > span,
+.pagebreak_02 > span {
+  padding: 0.5rem 0.7rem;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 0.9rem;
+  background-color: #00BFF0;
+  box-shadow: 4px 5px #000;
+  font-family: "HeinemannSpecialRoman", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 800;
+}
+
+.pagebreak_02 {
+  margin-left: -200px;
+}
+
+.bg_darkgreen {
+  background-color: #00A65D;
+}
+
+.bg_darkpurple {
+  background-color: #414099;
+}
+
+.bg_lightgreen {
+  background-color: #DBEBBD;
+}
+
+.bg_lightpurple {
+  background-color: #E8E7F4;
+}
+
+.bg_darkgrey {
+  background-color: #585858;
+}
+
+.bg_darkgrey p {
+  color: #FFF;
+}
+
+.bg_darkgrey > *:last-child {
+  border-right: 0;
+}
+
+.bg_darkgrey > td,
+.bg_darkgrey > th {
+  border-right: 2px solid #FFF;
+}
+
+.bg_lightgrey {
+  background-color: #F0F0F0;
+}
+
+.bg_mediumgrey {
+  background-color: #C0C0C0;
+}
+
+.design-icon {
+  vertical-align: middle;
+  width: 70px;
+  height: auto;
+  float: none;
+}
+
+.hr_01,
+.hr_02 {
+  border: none;
+  border-bottom: 2px dotted #000;
+  width: 100%;
+  display: block;
+  padding-top: 1em;
+}
+
+.hr_02 {
+  border-bottom: 2px dotted #B82F89;
+}
+
+.source {
+  display: block;
+}
+
+.source p {
+  font-family: "StoneSansITCStdMedium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 0.9rem;
+  line-height: 1.26rem;
+}
+
+.subtitle ~ p {
+  margin-left: 1.1rem;
+}
+
+#main-content {
+  margin: 0 10%;
+}
+
+#main-content > section {
+  padding: 0 16px;
+}
+
+#main-content > section:first-of-type {
+  margin-top: 0;
+}
+
+#main-content > section:last-of-type {
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+/* ------------------------------------Helper Class CSS-------------------------------------------- */
+.width-100 {
+  width: 100% !important;
+}
+
+.width-90 {
+  width: 90% !important;
+}
+
+.width-85 {
+  width: 85% !important;
+}
+
+.width-75 {
+  width: 75% !important;
+}
+
+.width-66 {
+  width: 66.6% !important;
+}
+
+.width-50 {
+  width: 50% !important;
+}
+
+.width-40 {
+  width: 40% !important;
+}
+
+.width-33 {
+  width: 33.3% !important;
+}
+
+.width-25 {
+  width: 25% !important;
+}
+
+.width-15 {
+  width: 15% !important;
+}
+
+.width-10 {
+  width: 10% !important;
+}
+
+.no-widow {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.inline {
+  display: inline;
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+.lc_align-center {
+  text-align: center;
+}
+
+.lc_align-left {
+  text-align: left;
+}
+
+.lc_align-right {
+  text-align: right;
+}
+
+.margin-0-auto {
+  margin: 0 auto;
+}
+
+.margin-left-0 {
+  margin-left: 0 !important;
+}
+
+.margin-right-0 {
+  margin-right: 0 !important;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.margin-top-default {
+  margin-top: 1.15rem !important;
+}
+
+.margin-bottom-default {
+  margin-bottom: 1.15rem !important;
+}
+
+.margin-default-auto {
+  margin: 1.15rem auto !important;
+}
+
+.margin-left-default {
+  margin-left: 1.15rem !important;
+}
+
+.margin-right-default {
+  margin-right: 1.15rem !important;
+}
+
+.padding-top-0 {
+  padding-top: 0 !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+
+.padding-left-0 {
+  padding-left: 0 !important;
+}
+
+.padding-right-0 {
+  padding-right: 0 !important;
+}
+
+.padding-top-default {
+  padding-top: 1.15rem !important;
+}
+
+.padding-bottom-default {
+  padding-bottom: 1.15rem !important;
+}
+
+.padding-left-default {
+  padding-left: 1.15rem !important;
+}
+
+.padding-right-default {
+  padding-right: 1.15rem !important;
+}
+
+.text-color-white {
+  color: #FFF !important;
+}
+
+.text-color-blue {
+  color: #006C9C !important;
+}
+
+.text-color-purple {
+  color: #283583 !important;
+}
+
+.text_smallcaps {
+  font-variant: small-caps !important;
+  font-size: 0.9rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* ------------------------------------Responsive Tablet (<768px)--------------------------------- */
+@media only screen and (max-width: 768px) {
+  /* ------------------------------------Elements Styles CSS (<768px)-------------------------------------------- */
+  .title_01 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .title_02 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .title_03 {
+    font-size: 1.575rem;
+  }
+  .title_04 {
+    font-size: 1.25rem;
+  }
+  .title_05 {
+    font-size: 1.2rem;
+  }
+  /* ----------------------------------------Components Styles CSS (<768px)----------------------------------------------- */
+  .part .text_wrapper .label,
+  .part .text_wrapper .number,
+  .chapter .text_wrapper .label,
+  .chapter .text_wrapper .number {
+    font-size: 1.35rem;
+  }
+  .part > header > .title,
+  .chapter > header > .title {
+    line-height: 2.5rem;
+    font-size: 2.25rem;
+  }
+  .card > header > .title {
+    font-size: 1.7rem;
+  }
+  .card_01 > header > .title_04 .design-icon {
+    width: 105px;
+  }
+  .card_02 .title_05 {
+    font-size: 1.25rem;
+  }
+  .card_04 > header > .title_04 .design-icon,
+  .card_05 > header > .title_04 .design-icon {
+    width: 115px;
+  }
+}
+
+/* ------------------------------------Responsive Big Phones (<600px)--------------------------------- */
+@media only screen and (max-width: 600px) {
+  /* ------------------------------------Normalization Styles CSS (<600px)-------------------------------------------- */
+  p,
+  ol,
+  ul,
+  dt {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+  blockquote {
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    margin: 1.15rem 20px;
+  }
+  /* ------------------------------------Elements Styles CSS (<600px)-------------------------------------------- */
+  .title_01 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .title_02 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .title_03 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  .title_04 {
+    font-size: 1.15rem;
+  }
+  .title_05 {
+    font-size: 1rem;
+  }
+  .practicelist > .general-problem > .question p,
+  .practicelist p {
+    font-size: 1rem;
+  }
+  .ul_01 > li:before {
+    top: 0.4rem;
+    font-size: 1.25rem;
+  }
+  .poem {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+  .poem .linegroup {
+    margin: 0 2.5rem;
+  }
+  .blockquotegroup_01 {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+  .blockquotegroup_02 {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+  .shadow_orange {
+    -webkit-box-shadow: 0px 0px 15px 3px #F3A000;
+    -moz-box-shadow: 0px 0px 15px 3px #F3A000;
+    box-shadow: 0px 0px 15px 3px #F3A000;
+  }
+  .shadow_blue {
+    -webkit-box-shadow: 0px 0px 15px 3px #6859A3;
+    -moz-box-shadow: 0px 0px 15px 3px #6859A3;
+    box-shadow: 0px 0px 15px 3px #6859A3;
+  }
+  .shadow_purple {
+    -webkit-box-shadow: 0px 0px 15px 3px #6E368C;
+    -moz-box-shadow: 0px 0px 15px 3px #6E368C;
+    box-shadow: 0px 0px 15px 3px #6E368C;
+  }
+  .shadow_yellow {
+    -webkit-box-shadow: 0px 0px 15px 3px #FFDF43;
+    -moz-box-shadow: 0px 0px 15px 3px #FFDF43;
+    box-shadow: 0px 0px 15px 3px #FFDF43;
+  }
+  .dialogue .speech {
+    flex-direction: column;
+  }
+  .dialogue .speech > .persona {
+    margin-bottom: 1.15rem;
+  }
+  /* ---------------------------------------- Layouts Styles CSS (<600px)----------------------------------------------- */
+  .grid-container > .grid-row {
+    flex-direction: column;
+  }
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2),
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2) ~ .grid-col,
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3),
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3) ~ .grid-col,
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4),
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4) ~ .grid-col {
+    width: 100%;
+    margin: .575rem 0;
+  }
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2):first-of-type,
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3):first-of-type,
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4):first-of-type {
+    margin-top: 0;
+  }
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(2) ~ .grid-col:last-of-type,
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(3) ~ .grid-col:last-of-type,
+  .grid-container > .grid-row > .grid-col:first-of-type:nth-last-of-type(4) ~ .grid-col:last-of-type {
+    margin-bottom: 0;
+  }
+  .ol_column,
+  .ul_column {
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+  .figuregroup {
+    flex-direction: column;
+  }
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(2),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(2) ~ .informalfigure,
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(3),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(3) ~ .informalfigure,
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(4),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure,
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(5),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(5) ~ .informalfigure,
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(6),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(6) ~ .informalfigure,
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(7),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure,
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(8),
+  .figuregroup > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure {
+    width: 100%;
+  }
+  .figuregroup_01 {
+    flex-direction: column;
+  }
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(4) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(6),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(6) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(7) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(8) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(10),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(10) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(11) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(12) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(14),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(14) ~ .informalfigure,
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15),
+  .figuregroup_01 > .informalfigure:first-of-type:nth-last-of-type(15) ~ .informalfigure {
+    width: 100%;
+  }
+  /* ---------------------------------------- Components Styles CSS----------------------------------------------- */
+  .part .text_wrapper .label,
+  .part .text_wrapper .number,
+  .chapter .text_wrapper .label,
+  .chapter .text_wrapper .number {
+    font-size: 1.15rem;
+  }
+  .part .text,
+  .chapter .text {
+    padding: 1rem;
+  }
+  .part > header > .title,
+  .chapter > header > .title {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+  .card > header > .title {
+    font-size: 1.375rem;
+    line-height: 1.7rem;
+  }
+  .card_01 > header > .title_04,
+  .card_04 > header > .title_04,
+  .card_05 > header > .title_04 {
+    text-align: center;
+  }
+  .card_01 > header > .title_04 .design-icon,
+  .card_04 > header > .title_04 .design-icon,
+  .card_05 > header > .title_04 .design-icon {
+    display: block;
+    margin: -2rem auto .5rem auto;
+    width: 90px;
+  }
+  .card_04 > header > .title_04 .design-icon {
+    margin: -3.25rem auto .5rem auto;
+  }
+  .note_06 {
+    -webkit-box-shadow: -8px 0 #B9B29C, 8px 0 0 #B9B29C;
+    -moz-box-shadow: -8px 0 0 #B9B29C, 8px 1 0 #B9B29C;
+    box-shadow: -8px 0 0 #B9B29C, 8px 0 0 #B9B29C;
+  }
+  .practice {
+    padding: 0;
+  }
+  .practice .title {
+    font-size: 1rem;
+    line-height: 2.05rem;
+    padding: .5rem 1rem;
+  }
+  .practice .title .design-icon {
+    float: left;
+    max-height: 60px;
+    max-width: 60px;
+    margin: -1.4rem 0.75rem -0.35rem 0;
+  }
+  .practice_01 .practicelist,
+  .practice_02 .practicelist {
+    padding: .5rem 2rem .5rem 4rem;
+  }
+  .practice_03 .title {
+    line-height: 1.65rem;
+  }
+  .practice_03 .title .design-icon {
+    margin: .3rem 0.75rem -1.3rem 0;
+  }
+  .practice_03 .practicelist {
+    padding: 1.5rem 2rem .5rem 2.5rem;
+  }
+  .sidebar {
+    padding: 1.25rem 0;
+  }
+  .sidebar .title {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+  .sidebar > header ~ * {
+    padding: 1.15rem 0 0 0;
+  }
+  .sidebar_07 {
+    padding: 0;
+  }
+  .sidebar_07 .title_04 {
+    padding: 0.7rem 2rem;
+  }
+  .sidebar_07 p {
+    padding: 1rem 2rem;
+  }
+  /* ------------------------------------Generic CSS that belongs to anywhere (<600px)---------------------- */
+  .pagebreak_01 > span,
+  .pagebreak_02 > span {
+    padding: 0.2rem 0.35rem;
+    box-shadow: 3px 4px #000;
+    line-height: 0;
+    font-weight: bold;
+  }
+  .design-icon {
+    width: 60px;
+  }
+  /* ------------------------------------Helper Class CSS (<600px)-------------------------------------------- */
+  .width-90,
+  .width-85,
+  .width-75,
+  .width-66,
+  .width-50,
+  .width-40,
+  .width-33,
+  .width-25,
+  .width-15,
+  .width-10 {
+    width: 100% !important;
+  }
+}
+
+/* ------------------------------------Responsive Big Phones (<450px)--------------------------------- */
+@media only screen and (max-width: 450px) {
+  /* ------------------------------------Normalization Styles CSS (<450px)-------------------------------------------- */
+  ol,
+  ul,
+  dl {
+    margin-block-start: 1.1rem;
+    margin-block-end: 1.1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 1rem 0;
+  }
+  ol,
+  ul {
+    padding-inline-start: 21px;
+    padding-left: 21px;
+  }
+  dd {
+    margin-inline-start: 21px;
+    margin-left: 21px;
+  }
+  /* ------------------------------------Elements Styles CSS (<450px)-------------------------------------------- */
+  .ul_01 > li:before {
+    left: -1.35rem;
+  }
+  .poem .linegroup {
+    margin: 0 1.9rem;
+  }
+  /* ---------------------------------------- Components Styles CSS (<450px)----------------------------------------------- */
+  .note_06 {
+    -webkit-box-shadow: -6px 0 #B9B29C, 6px 0 0 #B9B29C;
+    -moz-box-shadow: -6px 0 0 #B9B29C, 6px 1 0 #B9B29C;
+    box-shadow: -6px 0 0 #B9B29C, 6px 0 0 #B9B29C;
+  }
+  .sidebar_07 .title_04 {
+    padding: 0.7rem 1.5rem;
+  }
+  .sidebar_07 p {
+    padding: 1rem 1.5rem;
+  }
+  /* ------------------------------------Generic CSS that belongs to anywhere (<450px)---------------------- */
+  .pagebreak_02 {
+    float: none;
+    display: block;
+    margin-left: 150px;
+    margin-bottom: 1.15rem;
+    padding-top: 1.15rem;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Should be custom */
+/*
+- hr with the 3 dots
+- annoation_ol > pg16
+
+- annotation_06 > pg45
+*/

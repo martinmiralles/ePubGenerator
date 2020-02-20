@@ -1,0 +1,43 @@
+{
+  "name": "re_goldbooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify app.js -o bundle.js",
+    "watch": "watchify app.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "axios": "^0.19.2",
+    "brfs": "^2.0.2",
+    "browserify-fs": "^1.0.0",
+    "copy-dir": "^1.2.0",
+    "cross-fetch": "^3.0.4",
+    "downloads-folder": "^1.0.2",
+    "express": "^4.17.1",
+    "fetch-absolute": "^1.0.0",
+    "file-saver": "^2.0.2",
+    "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "fs-web": "^1.0.1",
+    "fs.realpath": "^1.0.0",
+    "jsdom": "^16.1.0",
+    "jszip": "^3.2.2",
+    "level-filesystem": "^1.2.0",
+    "ncp": "^2.0.0",
+    "node-fetch": "^2.6.0",
+    "nota-bene": "^2.4.0",
+    "pretty": "^2.0.0",
+    "uniq": "^1.0.1",
+    "web-fs": "^2.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "watchify": "^3.11.1"
+  }
+}

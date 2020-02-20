@@ -1,0 +1,2468 @@
+<html lang="en">
+
+	<head>
+		<title>Religion Standard Component Styles</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="../../css/re6_teacher.css"/>
+
+		<style>
+			body {
+				max-width: 1024px;
+				margin: auto;
+				padding: 50px;
+				font-size: 115%;
+			}
+
+			hr {
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 1.75rem;
+				line-height: 2rem;
+			}
+
+			.code_format {
+				display: block;
+				background-color: #e2f2f2;
+				border: solid #020202;
+				padding: 10px 20px;
+			}
+
+			code {
+				display: block;
+				font-family: monospace;
+				margin-top: -20px;
+				white-space: pre;
+				overflow-x: auto;
+			}
+
+			.code_format * {
+				padding: 0;
+				margin: 0;
+			}
+
+			.grid-col {
+				background-color: #e2f2f2;
+				border: 1px dotted #020202;
+				text-align: center;
+			}
+
+			.template_hr {
+				display: block;
+				height: 10px;
+				border: 0;
+				border-top: 10px solid red;
+				margin: 1rem 0;
+				padding: 0;
+			}
+
+			.code_snippet {
+				color: #600000;
+				font-weight: bold;
+			}
+
+			.main_title {
+				text-align: center;
+				font-size: 3rem;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 3.25rem;
+				letter-spacing: 5px;
+				margin: 0;
+				font-variant: small-caps;
+			}
+
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 99;
+				font-size: 1rem;
+				border: none;
+				outline: none;
+				background-color: black;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+			}
+
+			#myBtn:hover {
+				background-color: red;
+			}
+
+			.links {
+				column-count: 3;
+				column-gap: 40px;
+			}
+
+			.links a {
+				font-weight: unset;
+			}
+
+			.links li {
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+				margin: 0;
+			}
+
+			.links p {
+				margin: 0;
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+			}
+
+			.links ol {
+				list-style-type: upper-alpha;
+			}
+
+			.links2 {
+				display: none;
+				width: 100%;
+				font-size: 1.15rem;
+				margin: 1.15rem 0;
+				border: 1px solid black;
+			}
+
+			.p-darkred,
+			.p-grey {
+				color: #707070;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.15rem;
+				line-height: 1.65rem;
+			}
+
+			.p-darkred {
+				color: #600000;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.links { display: none; }
+				.links2 {display: block; }
+			}
+
+			@media only screen and (max-width: 450px) {
+				#myBtn {
+				bottom: 70px;
+				right: 10px;
+				}
+
+				.main_title {
+				font-size: 2.25rem;
+				line-height: 2.75rem;
+				letter-spacing: 1px;
+				}
+			}
+		</style>
+
+		<script>
+			window.onload = function init() {
+				var codeblock = document.querySelectorAll(".code_format > code");
+				console.log(codeblock);
+				var len = codeblock.length;
+				console.log(typeof(len));
+				for (var i = 0; i < len; i++) {
+					var dom = codeblock[i];
+					var html = dom.innerHTML;
+					var pattern = html.match(/\s*\n[\t\s]*/);
+					var pattern01 = html.match(/\s+\n*$/);
+					var pattern02 = html.match(/^\n*(\<)/);
+					html = html.replace(new RegExp(pattern, "g"), '\n');
+					html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+					html = html.replace(/—/gm, "&#x2014;");
+					html = html.replace(/–/gm, "&#x2013;");
+					var temphtml = html.match(/^[^\n]+\n/gm);
+
+					//html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<'); console.log(temphtml.join(""));
+					var text = document.createTextNode(String(temphtml.join("")));
+					dom.innerHTML = "";
+					dom.appendChild(text);
+				}
+			}
+
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("myBtn").style.display = "block";
+				} else {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</head>
+
+	<body epub:type="bodymatter">
+		<button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+		<section id="read_speaker">
+			<section>
+				<header>
+					<h1 class="main_title">Standard Components</h1>
+				</header>
+				<p class="p-grey">[A component is comprised of an element that is combined with other elements, styles, and/or layouts. This section displays a list of standard components that were created for those common book items and features in the RE6 teacher
+					book. Refer to this section as you mark up each book item in your printer PDF, and then refer to Layouts or Styles if you need to specify the arrangement or style of that component.]</p>
+				<hr/>
+
+				<ol class="links">
+
+					<li>
+						<p>
+							<strong>
+								<a href="#chapter">Chapter</a>
+							</strong>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#sidebars">Sidebars</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#sidebar_01">Sidebar 01</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#sidebar_02">Sidebar 02</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#notes">Note</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#note_01">Note 01</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#informaltable">Informal Table</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#informaltable_01">Informaltable 01</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#informaltable_02">Informaltable 02</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#informaltable_03">Informaltable 03</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#informaltable_data-table">Informaltable Data-Table</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#practices">Practices</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#practice_01">Practice 01</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#practice_02">Practice 02</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#cards">Cards</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#card_01">Card 01: Weekly Lesson Planner</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#card_02">Card 02: Cross-Curricular Connections</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#card_03">Card 03: Pause to Pray</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#card_04_male">Card 04 - Male: Saints</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#card_04_female">Card 04 - Female: Saints</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#card_05">Card 05:
+										<strong>Tabs</strong>
+									</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#annotations">Annotations</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#annotation_01">Annotation 01: At Home with Family</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#annotation_02">Annotation 02: In the Parish</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#marginalias">Marginalias</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#marginalia_01">Marginalia 01</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#marginalia_02">Marginalia 02</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#marginalia_02_di">Marginalia 02: Differentiated Instruction</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#marginalia_03">Marginalia 03</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#accordions">Accordion</a>
+							</strong>
+						</p>
+					</li>
+
+				</ol>
+
+				<select class="links2" onchange="location = this.value;">
+					<option>** Pick from dropdown **</option>
+					<option value="#chapter">- Chapter -</option>
+					<option value="#sidebars">Sidebars</option>
+					<option value="#sidebar_01">Sidebar 01</option>
+					<option value="#sidebar_02">Sidebar 02</option>
+					<option value="#notes">- Note -</option>
+					<option value="#note_01">Note 01</option>
+					<option value="#informaltable">- Informal Table -</option>
+					<option value="#informaltable_01">Informaltable 01</option>
+					<option value="#informaltable_02">Informaltable 02</option>
+					<option value="#informaltable_03">Informaltable 03</option>
+					<option value="#informaltable_data-table">Informaltable Data-Table</option>
+					<option value="#practices">- Practices -</option>
+					<option value="#practice_01">Practice 01</option>
+					<option value="#practice_02">Practice 02</option>
+					<option value="#cards">- Cards -</option>
+					<option value="#card_01">Card 01: Weekly Lesson Planner</option>
+					<option value="#card_02">Card 02: Cross-Curricular Connections</option>
+					<option value="#card_03">Card 03: Pause to Pray</option>
+					<option value="#card_04_male">Card 04 - Male: Saints</option>
+					<option value="#card_04_female">Card 04 - Female: Saints</option>
+					<option value="#card_05">Card 05: Tabs</option>
+					<option value="#annotations">- Annotations -</option>
+					<option value="#annotation_01">Annotation 01: At Home with Family</option>
+					<option value="#annotation_02">Annotation 02: In the Parish</option>
+					<option value="#marginalias">- Marginalias -</option>
+					<option value="#marginalia_01">Marginalia 01</option>
+					<option value="#marginalia_02">Marginalia 02</option>
+					<option value="#marginalia_02_di">Marginalia 02: Differentiated Instruction</option>
+					<option value="#marginalia_03">Marginalia 03</option>
+					<option value="#accordions">- Accordion -</option>
+				</select>
+			</section>
+
+			<hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+			<!-- Chapter Section Starts -->
+			<section id="chapter">
+				<header>
+					<h1 class="p-grey">Chapter:</h1>
+				</header>
+				<p class="p-grey">[Below is how a standard "chapter" wrapper section will display.]</p>
+
+				<section class="chapter">
+					<header>
+						<h2 class="title title_01">This is a chapter section</h2>
+					</header>
+					<p>...etc</p>
+				</section>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p class="p-darkred">[This is the base section. The title heading can be any level and any class depending on editorial markup. In this example, we are just showing it as h1 with class "title_01".]</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<section class="chapter">
+								<header>
+									<h1 class="title title_01">This is a chapter section</h1>
+								</header>
+								...etc
+							</section>
+						</code>
+					</div>
+				</p>
+			</section>
+			<!-- Chapter Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Sidebar Section Starts -->
+			<section id="sidebars">
+				<header>
+					<h1>Sidebars</h1>
+				</header>
+				<p class="p-grey">[This section displays how each of the different sidebar components are styled and will display.]</p>
+
+				<!-- Sidebar 01 Section Starts -->
+				<hr id="sidebar_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Sidebar 01:</h2>
+					</header>
+					<p class="p-grey">[Use this design treatment for "sidebar 01". Note that the first word of the title is templated to that style and cannot be changed.]</p>
+
+					<aside class="sidebar sidebar_01">
+						<header>
+							<h3 class="title title_06">
+								<span class="label faith">Faith</span>
+								Vocabulary/ Terminology</h3>
+						</header>
+						<p>This is your body text for sidebar 01, which can be any element, layout, and/or component you specify in your markup.</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="sidebar sidebar_01" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">
+											<span class="label faith">Faith</span>
+											Vocabulary/Terminology
+										</h6>
+									</header>
+									<p>This is your body text for sidebar 01, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Sidebar 01 Section Ends -->
+
+				<!-- Sidebar 02 Section starts -->
+				<hr id="sidebar_02"/>
+				<section>
+					<h2 class="p-grey">Sidebar 02:</h2>
+					<p class="p-grey">[Use this design treatment for "sidebar 02".]</p>
+
+					<aside class="sidebar sidebar_02">
+						<header>
+							<h6 class="title title_06">
+								<img class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_plus_007.png"/>
+								We Read the Bible
+							</h6>
+						</header>
+						<p>This is your body text for sidebar 02, which can be any element, layout, and/or component you specify in your markup.</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="sidebar sidebar_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">
+											<img id="unique_image_id" class="design-icon inline" src="../images/icon_img_plus_007.png"/>
+											We Read the Bible
+										</h6>
+									</header>
+									<p>This is your body text for sidebar 02, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Sidebar 02 Section ends -->
+			</section>
+			<!-- Sidebar Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Note Section Starts -->
+			<section id="notes">
+				<header>
+					<h1>Notes</h1>
+				</header>
+				<p class="p-grey">[This section displays how each of the different note components are styled and will display. Please note that "Notes" can only be applied to book content that does not have a title or a heading level content.]</p>
+
+				<!-- Note 01 Section Starts -->
+				<hr id="note_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Note 01:</h2>
+					</header>
+					<p class="p-grey">[Following is the style for "note 01".]</p>
+
+					<div class="note note_01">
+						<p>This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01">
+									<p>This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Note 01 Section Ends -->
+			</section>
+			<!-- Note Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Informal Table Section Starts -->
+			<section id="informaltable">
+				<header>
+					<h1>Informal Table</h1>
+				</header>
+				<p class="p-grey">[Use the "informal table" component for your tables that have column headers. Note that border style and text style (font, colour, and size) are templated and cannot be changed; however, the column widths and the number of rows and
+					columns can be customized.]</p>
+
+				<table class="informaltable margin-top-default margin-bottom-default">
+					<caption class="caption">
+						<p>This is a caption for the table which can go above or below the table (Optional).</p>
+					</caption>
+					<thead>
+						<tr>
+							<td></td>
+							<th class="lc_align-center" scope="col">
+								<p>Living the Commandments to Be Obedient</p>
+							</th>
+							<th class="lc_align-center" scope="col">
+								<p>Living the Commandments with Love</p>
+							</th>
+							<th class="lc_align-center" scope="col">
+								<p>How the Church Helps Us</p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="lc_align-left" scope="row">
+								<p>1</p>
+							</th>
+							<td class="lc_align-left">
+								<p>
+									<strong>You shall have no other gods before God.</strong>
+								</p>
+							</td>
+							<td class="lc_align-left">
+								<p>Put love of God above all else.</p>
+							</td>
+							<td class="lc_align-left">
+								<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<th class="lc_align-left" scope="row">
+								<p>2</p>
+							</th>
+							<td class="lc_align-left">
+								<p>
+									<strong>Do not take God’s name in vain.</strong>
+								</p>
+							</td>
+							<td class="lc_align-left">
+								<p>Respect God through your words, thoughts, and actions every day.</p>
+							</td>
+							<td class="lc_align-left">
+								<p>Church teachings help us know, love, respect, and serve God.</p>
+							</td>
+						</tr>
+						<tr>
+							<th class="lc_align-left" scope="row">
+								<p>3</p>
+							</th>
+							<td class="lc_align-left">
+								<p>
+									<strong>Keep the Lord’s Day holy.</strong>
+								</p>
+							</td>
+							<td class="lc_align-left">
+								<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+							</td>
+							<td class="lc_align-left">
+								<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="lc_align-left" colspan="4">
+								<p>
+									<strong>Optional</strong>
+									tfoot column span</p>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<table id="unique_table_id" class="informaltable margin-top-default margin-bottom-default">
+								<caption id="unique_caption_id" class="caption">
+									<p>This is a caption for the table which can go above or below the table (Optional).</p>
+								</caption>
+								<thead>
+									<tr>
+										<td></td>
+										<th class="lc_align-center" scope="col">
+											<p>Living the Commandments to Be Obedient</p>
+										</th>
+										<th class="lc_align-center" scope="col">
+											<p>Living the Commandments with Love</p>
+										</th>
+										<th class="lc_align-center" scope="col">
+											<p>How the Church Helps Us</p>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="lc_align-left" scope="row">
+											<p>1</p>
+										</th>
+										<td class="lc_align-left">
+											<p>
+												<strong>You shall have no other gods before God.</strong>
+											</p>
+										</td>
+										<td class="lc_align-left">
+											<p>Put love of God above all else.</p>
+										</td>
+										<td class="lc_align-left">
+											<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="lc_align-left" scope="row">
+											<p>2</p>
+										</th>
+										<td class="lc_align-left">
+											<p>
+												<strong>Do not take God’s name in vain.</strong>
+											</p>
+										</td>
+										<td class="lc_align-left">
+											<p>Respect God through your words, thoughts, and actions every day.</p>
+										</td>
+										<td class="lc_align-left">
+											<p>Church teachings help us know, love, respect, and serve God.</p>
+										</td>
+									</tr>
+									<tr>
+										<th class="lc_align-left" scope="row">
+											<p>3</p>
+										</th>
+										<td class="lc_align-left">
+											<p>
+												<strong>Keep the Lord’s Day holy.</strong>
+											</p>
+										</td>
+										<td class="lc_align-left">
+											<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+										</td>
+										<td class="lc_align-left">
+											<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td class="lc_align-left" colspan="4">
+											<p>
+												<strong>Optional</strong>
+												tfoot column span</p>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</code>
+					</div>
+				</p>
+
+				<!-- INformaltable 01 SEction Starts -->
+				<hr style="margin-top: 1.5rem;" id="informaltable_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Informaltable 01:</h2>
+					</header>
+					<p class="p-grey">[Use the "informaltable 01" design treatment if you want your table heading to display in light cyan. Note that every other row in the table has a light grey background colour.]</p>
+
+					<table class="informaltable informaltable_01 margin-top-default margin-bottom-default">
+						<caption class="caption">
+							<p>This is a caption for the table which can go above or below the table (Optional).</p>
+						</caption>
+						<thead>
+							<tr>
+								<td></td>
+								<th class="lc_align-center" scope="col">
+									<p>Living the Commandments to Be Obedient</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Living the Commandments with Love</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>How the Church Helps Us</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>1</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>You shall have no other gods before God.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Put love of God above all else.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+								</td>
+							</tr>
+							<tr class="bg_lightgrey">
+								<th class="lc_align-left" scope="row">
+									<p>2</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Do not take God’s name in vain.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Respect God through your words, thoughts, and actions every day.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Church teachings help us know, love, respect, and serve God.</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>3</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Keep the Lord’s Day holy.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr class="bg_lightgrey">
+								<td class="lc_align-left" colspan="4">
+									<p>
+										<strong>Optional</strong>
+										tfoot column span</p>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Notice every other row needs to add class "bg_lightgrey" in the table.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<table id="unique_table_id" class="informaltable informaltable_01 margin-top-default margin-bottom-default">
+									<caption id="unique_caption_id" class="caption">
+										<p>This is a caption for the table which can go above or below the table (Optional).</p>
+									</caption>
+									<thead>
+										<tr>
+											<td></td>
+											<th class="lc_align-center" scope="col">
+												<p>Living the Commandments to Be Obedient</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Living the Commandments with Love</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>How the Church Helps Us</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>1</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>You shall have no other gods before God.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Put love of God above all else.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+											</td>
+										</tr>
+										<tr class="bg_lightgrey">
+											<th class="lc_align-left" scope="row">
+												<p>2</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Do not take God’s name in vain.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Respect God through your words, thoughts, and actions every day.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Church teachings help us know, love, respect, and serve God.</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>3</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Keep the Lord’s Day holy.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr class="bg_lightgrey">
+											<td class="lc_align-left" colspan="4">
+												<p>
+													<strong>Optional</strong>
+													tfoot column span</p>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- INformaltable 01 SEction Ends -->
+
+				<!-- INformaltable 02 SEction Starts -->
+				<hr id="informaltable_02"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Informaltable 02:</h2>
+					</header>
+					<p class="p-grey">[Use the "informaltable 02" design treatment if you want your table heading to display in greyish blue. Note that every other row in the table has a light grey background colour.]</p>
+
+					<table class="informaltable informaltable_02 margin-top-default margin-bottom-default">
+						<caption class="caption">
+							<p>This is a caption for the table which can go above or below the table (Optional).</p>
+						</caption>
+						<thead>
+							<tr>
+								<td></td>
+								<th class="lc_align-center" scope="col">
+									<p>Living the Commandments to Be Obedient</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Living the Commandments with Love</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>How the Church Helps Us</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>1</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>You shall have no other gods before God.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Put love of God above all else.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+								</td>
+							</tr>
+							<tr class="bg_lightgrey">
+								<th class="lc_align-left" scope="row">
+									<p>2</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Do not take God’s name in vain.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Respect God through your words, thoughts, and actions every day.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Church teachings help us know, love, respect, and serve God.</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>3</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Keep the Lord’s Day holy.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr class="bg_lightgrey">
+								<td class="lc_align-left" colspan="4">
+									<p>
+										<strong>Optional</strong>
+										tfoot column span</p>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Notice every other row needs to add class "bg_lightgrey" in the table.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<table id="unique_table_id" class="informaltable informaltable_02 margin-top-default margin-bottom-default">
+									<caption id="unique_caption_id" class="caption">
+										<p>This is a caption for the table which can go above or below the table (Optional).</p>
+									</caption>
+									<thead>
+										<tr>
+											<td></td>
+											<th class="lc_align-center" scope="col">
+												<p>Living the Commandments to Be Obedient</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Living the Commandments with Love</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>How the Church Helps Us</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>1</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>You shall have no other gods before God.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Put love of God above all else.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+											</td>
+										</tr>
+										<tr class="bg_lightgrey">
+											<th class="lc_align-left" scope="row">
+												<p>2</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Do not take God’s name in vain.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Respect God through your words, thoughts, and actions every day.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Church teachings help us know, love, respect, and serve God.</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>3</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Keep the Lord’s Day holy.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr class="bg_lightgrey">
+											<td class="lc_align-left" colspan="4">
+												<p>
+													<strong>Optional</strong>
+													tfoot column span</p>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- INformaltable 02 SEction Starts -->
+
+				<!-- INformaltable 03 SEction Starts -->
+				<hr id="informaltable_03"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Informaltable 03:</h2>
+					</header>
+					<p class="p-grey">[Use the "informaltable 03" design treatment if you want your table heading to display in dark grey. Note that every other row in the table has a light grey background colour.]</p>
+
+					<table class="informaltable informaltable_03 margin-top-default margin-bottom-default">
+						<caption class="caption">
+							<p>This is a caption for the table which can go above or below the table (Optional).</p>
+						</caption>
+						<thead>
+							<tr>
+								<td></td>
+								<th class="lc_align-center" scope="col">
+									<p>Living the Commandments to Be Obedient</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Living the Commandments with Love</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>How the Church Helps Us</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>1</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>You shall have no other gods before God.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Put love of God above all else.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+								</td>
+							</tr>
+							<tr class="bg_lightgrey">
+								<th class="lc_align-left" scope="row">
+									<p>2</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Do not take God’s name in vain.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Respect God through your words, thoughts, and actions every day.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Church teachings help us know, love, respect, and serve God.</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>3</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Keep the Lord’s Day holy.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr class="bg_lightgrey">
+								<td class="lc_align-left" colspan="4">
+									<p>
+										<strong>Optional</strong>
+										tfoot column span</p>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Notice every other row needs to add class "bg_lightgrey" in the table.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<table id="unique_table_id" class="informaltable informaltable_03 margin-top-default margin-bottom-default">
+									<caption id="unique_caption_id" class="caption">
+										<p>This is a caption for the table which can go above or below the table (Optional).</p>
+									</caption>
+									<thead>
+										<tr>
+											<th></th>
+											<th class="lc_align-center" scope="col">
+												<p>Living the Commandments to Be Obedient</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Living the Commandments with Love</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>How the Church Helps Us</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>1</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>You shall have no other gods before God.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Put love of God above all else.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+											</td>
+										</tr>
+										<tr class="bg_lightgrey">
+											<th class="lc_align-left" scope="row">
+												<p>2</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Do not take God’s name in vain.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Respect God through your words, thoughts, and actions every day.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Church teachings help us know, love, respect, and serve God.</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>3</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Keep the Lord’s Day holy.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr class="bg_lightgrey">
+											<td class="lc_align-left" colspan="4">
+												<p>
+													<strong>Optional</strong>
+													tfoot column span</p>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- INformaltable 03 SEction Starts -->
+
+				<!-- INformaltable data-table SEction Starts -->
+				<hr id="informaltable_data-table"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Informaltable Data-Table:</h2>
+					</header>
+					<p class="p-grey">[Use the "informaltable data table" design treatment if you want your tables for just purely singluar data only and to look responsive. Data tables have no captions or table footers. By default informaltable data-table are centered
+						aligned and require a horizontal scroll when it is smaller.
+						<em>(Increase/Shrink your browser window size to see it in action)</em>]</p>
+
+					<div class="overflow-x">
+						<table class="informaltable informaltable_01 informaltable_data-table margin-top-default margin-bottom-default">
+							<thead>
+								<tr>
+									<th scope="col">
+										<p>Order</p>
+									</th>
+									<th scope="col">
+										<p>Year</p>
+									</th>
+									<th scope="col">
+										<p>Month</p>
+									</th>
+									<th scope="col">
+										<p>Day</p>
+									</th>
+									<th scope="col">
+										<p>Day of the Week</p>
+									</th>
+									<th scope="col">
+										<p>Hour</p>
+									</th>
+									<th scope="col">
+										<p>Minute</p>
+									</th>
+									<th scope="col">
+										<p>Second</p>
+									</th>
+									<th scope="col">
+										<p>True or False</p>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">
+										<p>1</p>
+									</th>
+									<td>
+										<p>
+											<strong>2012</strong>
+										</p>
+									</td>
+									<td>
+										<p>December</p>
+									</td>
+									<td>
+										<p>18th</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Monday</p>
+									</td>
+									<td>
+										<p>20</p>
+									</td>
+									<td>
+										<p>32</p>
+									</td>
+									<td>
+										<p>48</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>2</p>
+									</td>
+									<td>
+										<p>
+											<strong>2015</strong>
+										</p>
+									</td>
+									<td>
+										<p>March</p>
+									</td>
+									<td>
+										<p>23rd</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Tuesday</p>
+									</td>
+									<td>
+										<p>23</p>
+									</td>
+									<td>
+										<p>33</p>
+									</td>
+									<td>
+										<p>48</p>
+									</td>
+									<td data-label="True or False">
+										<p>True</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>3</p>
+									</td>
+									<td>
+										<p>
+											<strong>2011</strong>
+										</p>
+									</td>
+									<td>
+										<p>April</p>
+									</td>
+									<td>
+										<p>1st</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Wednesday</p>
+									</td>
+									<td>
+										<p>10</p>
+									</td>
+									<td>
+										<p>42</p>
+									</td>
+									<td>
+										<p>58</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>4</p>
+									</td>
+									<td>
+										<p>
+											<strong>2018</strong>
+										</p>
+									</td>
+									<td>
+										<p>May</p>
+									</td>
+									<td>
+										<p>2nd</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Monday</p>
+									</td>
+									<td>
+										<p>20</p>
+									</td>
+									<td>
+										<p>32</p>
+									</td>
+									<td>
+										<p>48</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>5</p>
+									</td>
+									<td>
+										<p>
+											<strong>2019</strong>
+										</p>
+									</td>
+									<td>
+										<p>September</p>
+									</td>
+									<td>
+										<p>30th</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Saturday</p>
+									</td>
+									<td>
+										<p>11</p>
+									</td>
+									<td>
+										<p>35</p>
+									</td>
+									<td>
+										<p>49</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[The div class "overflow-x" is required to wrap all data tables.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div class="overflow-x">
+									<table id="unique_table_id" class="informaltable informaltable_01 informaltable_data-table margin-top-default margin-bottom-default">
+										<thead>
+											<tr>
+												<th scope="col">
+													<p>Order</p>
+												</th>
+												<th scope="col">
+													<p>Year</p>
+												</th>
+												<th scope="col">
+													<p>Month</p>
+												</th>
+												<th scope="col">
+													<p>Day</p>
+												</th>
+												<th scope="col">
+													<p>Day of the Week</p>
+												</th>
+												<th scope="col">
+													<p>Hour</p>
+												</th>
+												<th scope="col">
+													<p>Minute</p>
+												</th>
+												<th scope="col">
+													<p>Second</p>
+												</th>
+												<th scope="col">
+													<p>True or False</p>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td scope="row">
+													<p>1</p>
+												</th>
+												<td>
+													<p>
+														<strong>2012</strong>
+													</p>
+												</td>
+												<td>
+													<p>December</p>
+												</td>
+												<td>
+													<p>18th</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Monday</p>
+												</td>
+												<td>
+													<p>20</p>
+												</td>
+												<td>
+													<p>32</p>
+												</td>
+												<td>
+													<p>48</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>2</p>
+												</td>
+												<td>
+													<p>
+														<strong>2015</strong>
+													</p>
+												</td>
+												<td>
+													<p>March</p>
+												</td>
+												<td>
+													<p>23rd</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Tuesday</p>
+												</td>
+												<td>
+													<p>23</p>
+												</td>
+												<td>
+													<p>33</p>
+												</td>
+												<td>
+													<p>48</p>
+												</td>
+												<td data-label="True or False">
+													<p>True</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>3</p>
+												</td>
+												<td>
+													<p>
+														<strong>2011</strong>
+													</p>
+												</td>
+												<td>
+													<p>April</p>
+												</td>
+												<td>
+													<p>1st</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Wednesday</p>
+												</td>
+												<td>
+													<p>10</p>
+												</td>
+												<td>
+													<p>42</p>
+												</td>
+												<td>
+													<p>58</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>4</p>
+												</td>
+												<td>
+													<p>
+														<strong>2018</strong>
+													</p>
+												</td>
+												<td>
+													<p>May</p>
+												</td>
+												<td>
+													<p>2nd</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Monday</p>
+												</td>
+												<td>
+													<p>20</p>
+												</td>
+												<td>
+													<p>32</p>
+												</td>
+												<td>
+													<p>48</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>5</p>
+												</td>
+												<td>
+													<p>
+														<strong>2019</strong>
+													</p>
+												</td>
+												<td>
+													<p>September</p>
+												</td>
+												<td>
+													<p>30th</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Saturday</p>
+												</td>
+												<td>
+													<p>11</p>
+												</td>
+												<td>
+													<p>35</p>
+												</td>
+												<td>
+													<p>49</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- INformaltable data-table SEction Starts -->
+			</section>
+			<!-- Informal Table Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Practice Section Starts -->
+			<section id="practices">
+				<header>
+					<h1>Practices</h1>
+				</header>
+				<p class="p-grey">[Practice components are generally used to style end-of-section features, such as practice questions or reflection exercises. This section displays how each of the different practice components are styled and will display.]
+				</p>
+
+				<!-- Practice 01 Sections Starts -->
+				<hr id="practice_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Practice 01:</h2>
+					</header>
+					<p class="p-grey">[Use "practice 01" to style any feature section practices that require to be styled as shown below.]</p>
+
+					<section class="practice practice_01" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_04">Reflect and Connect</h4>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="practice practice_01" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_04">Reflect and Connect</h4>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Practice 01 Sections Ends -->
+
+				<!-- Practice 02 Sections Starts -->
+				<hr id="practice_02"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Practice 02:</h2>
+					</header>
+					<p class="p-grey">[Use "practice 02" to style any feature section practices that require to be styled as shown below. Note the difference between this and practice div of question element is that practice 02 is by itself only while practice div of
+						question can be placed inside practice 01.]
+					</p>
+
+					<section class="practice practice_02" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_05">Focus Question</h4>
+						</header>
+						<div class="practicelist">
+							<p class="margin-top-0">This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+						</div>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[A class "practicelist" needs to follow after the header tag for any elements to be part of the dotted line. This class "practicelist" generally will be part of an ol tag. In this example only, it is is using a div tag.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="practice practice_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_05">Focus Question</h4>
+									</header>
+									<div class="practicelist">
+										<p class="margin-top-0">This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+									</div>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Practice 02 Sections Ends -->
+			</section>
+			<!-- Practice Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Cards Section Starts -->
+			<section id="cards">
+				<header>
+					<h1>Cards</h1>
+				</header>
+				<p class="p-grey">[Card components are generally used to style specific sections to set it apart from the main narrative text. You must indicate where the card starts and where it ends in your markup. This section displays how each of the different
+					card components are styled and will display.]</p>
+
+				<!-- Card 01 Section Starts -->
+				<hr id="card_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Card 01: Weekly Lesson Planner</h2>
+					</header>
+					<p class="p-grey">[Use this card to style the "Card 01: Weekly Lesson Planner" section. Note that the image icon, title, background colour, border style, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+
+					<section class="card card_01" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_04">Weekly Lesson Planner</h4>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="card card_01" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_04">Weekly Lesson Planner</h4>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Card 01 Section Ends -->
+
+				<!-- Card 02 Section Starts -->
+				<hr id="card_02"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Card 02: Cross-Curricular Connections</h2>
+					</header>
+					<p class="p-grey">[Use this card to style the "Card 02: Cross-Curricular Connections" section. Note that the image icon, title, background colour, border style, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+
+					<section class="card card_02" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_04">Cross-Curricular Connections</h4>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="card card_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_04">Cross-Curricular Connections</h4>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Card 02 Section Ends -->
+
+				<!-- Card 03 Section Starts -->
+				<hr id="card_03"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Card 03: Pause to Pray</h2>
+					</header>
+					<p class="p-grey">[Use this card to style the "Card 03: Pause to Pray" section. Note that the image icon, title, background colour, border style, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+
+					<section class="card card_03" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_04">Pause to Pray</h4>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="card card_03" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_04">Pause to Pray</h4>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Card 03 Section Ends -->
+
+				<!-- Card 04 Male Starts -->
+				<hr id="card_04_male"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Card 04 - Male: Saints</h2>
+					</header>
+					<p class="p-grey">[Use this card to style the "Card 04 - Male: Saints" section. Note that the image icon, title, background colour, border style, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+
+					<section class="card card_04" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_04">
+								<img alt="alt image" class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_francis_001.png">
+								Saints
+							</h4>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="card card_04" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_04">
+											<img id="unique_image_id" alt="alt image" class="design-icon inline" src="../images/icon_img_francis_001.png">
+											Saints
+										</h4>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Card 04 Male Section Ends -->
+
+				<!-- Card 04 Female Starts -->
+				<hr id="card_04_female"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Card 04 - Female: Saints</h2>
+					</header>
+					<p class="p-grey">[Use this card to style the "Card 04 - Female: Saints" section. Note that the image icon, title, background colour, border style, and text style (font, colour, and size) are templated and cannot be changed.]</p>
+
+					<section class="card card_04" aria-labelledby="header_unique_header_id">
+						<header>
+							<h4 class="title title_04">
+								<img alt="alt image" class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_francis_002.png">
+								Saints
+							</h4>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="card card_04" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h4 id="unique_heading_id" class="title title_04">
+											<img id="unique_image_id" alt="alt image" class="design-icon inline" src="../images/icon_img_francis_002.png">
+											Saints
+										</h4>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Card 04 Female Section Ends -->
+
+				<!-- Card 05 Section Starts -->
+				<hr id="card_05"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Card 05: Tabs</h2>
+					</header>
+					<p class="p-grey">[Use this card to style the "Card 05: Tabs" section. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed. Another note is that this card has no main title and can have a maximum of
+						<strong>5 tabs</strong>.]</p>
+
+					<div class="card card_05">
+						<div role="tablist" aria-label="card_tabs" class="nav_tabs">
+							<button class="fx-toggle" role="tab" aria-selected="true" aria-controls="unique_div_tab1" id="unique_id_tab1">
+								Tab 1
+							</button>
+							<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab2" id="unique_id_tab2" tabindex="-1">
+								Tab 2
+							</button>
+							<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab3" id="unique_id_tab3" tabindex="-1">
+								Tab 3
+							</button>
+							<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab4" id="unique_id_tab4" tabindex="-1">
+								Tab 4
+							</button>
+							<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab5" id="unique_id_tab5" tabindex="-1">
+								Tab 5
+							</button>
+						</div>
+
+						<div tabindex="0" role="tabpanel" id="unique_div_tab1" aria-labelledby="unique_id_tab1">
+							<p>
+								This is your body text of tab 1, which can be any element, layout, and/or component you specify in your markup.
+							</p>
+						</div>
+
+						<div tabindex="0" role="tabpanel" id="unique_div_tab2" aria-labelledby="unique_id_tab2" hidden="">
+							<p>
+								This is your body text of tab 2, which can be any element, layout, and/or component you specify in your markup.
+							</p>
+						</div>
+
+						<div tabindex="0" role="tabpanel" id="unique_div_tab3" aria-labelledby="unique_id_tab3" hidden="">
+							<p>
+								This is your body text of tab 3, which can be any element, layout, and/or component you specify in your markup.
+							</p>
+						</div>
+
+						<div tabindex="0" role="tabpanel" id="unique_div_tab4" aria-labelledby="unique_id_tab4" hidden="">
+							<p>
+								This is your body text of tab 4, which can be any element, layout, and/or component you specify in your markup.
+							</p>
+						</div>
+
+						<div tabindex="0" role="tabpanel" id="unique_div_tab5" aria-labelledby="unique_id_tab5" hidden="">
+							<p>
+								This is your body text of tab 5, which can be any element, layout, and/or component you specify in your markup.
+							</p>
+						</div>
+
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that this card is coded in a div tag rather than a section tag because there is no main title. All the aria labels must be included and match to their following ids.]</p>
+					<p class="p-darkred">[Make sure to include the tab.js file with a script tag just before the body tag ends.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_div_id" class="card card_05">
+									<div role="tablist" aria-label="card_tabs" class="nav_tabs">
+										<button class="fx-toggle" role="tab" aria-selected="true" aria-controls="unique_div_tab1" id="unique_id_tab1">
+											Tab 1
+										</button>
+										<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab2" id="unique_id_tab2" tabindex="-1">
+											Tab 2
+										</button>
+										<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab3" id="unique_id_tab3" tabindex="-1">
+											Tab 3
+										</button>
+										<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab4" id="unique_id_tab4" tabindex="-1">
+											Tab 4
+										</button>
+										<button class="fx-toggle" role="tab" aria-selected="false" aria-controls="unique_div_tab5" id="unique_id_tab5" tabindex="-1">
+											Tab 5
+										</button>
+									</div>
+
+									<div tabindex="0" role="tabpanel" id="unique_div_tab1" aria-labelledby="unique_id_tab1">
+										<p>
+											This is your body text of tab 1, which can be any element, layout, and/or component you specify in your markup.
+										</p>
+									</div>
+
+									<div tabindex="0" role="tabpanel" id="unique_div_tab2" aria-labelledby="unique_id_tab2" hidden="">
+										<p>
+											This is your body text of tab 2, which can be any element, layout, and/or component you specify in your markup.
+										</p>
+									</div>
+
+									<div tabindex="0" role="tabpanel" id="unique_div_tab3" aria-labelledby="unique_id_tab3" hidden="">
+										<p>
+											This is your body text of tab 3, which can be any element, layout, and/or component you specify in your markup.
+										</p>
+									</div>
+
+									<div tabindex="0" role="tabpanel" id="unique_div_tab4" aria-labelledby="unique_id_tab4" hidden="">
+										<p>
+											This is your body text of tab 4, which can be any element, layout, and/or component you specify in your markup.
+										</p>
+									</div>
+
+									<div tabindex="0" role="tabpanel" id="unique_div_tab5" aria-labelledby="unique_id_tab5" hidden="">
+										<p>
+											This is your body text of tab 5, which can be any element, layout, and/or component you specify in your markup.
+										</p>
+									</div>
+
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Card 05 Section Ends -->
+			</section>
+			<!-- Cards Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Annotations Section Starts -->
+			<section id="annotations">
+				<header>
+					<h1>Annotations</h1>
+				</header>
+				<p class="p-grey">[This section displays how each of the different annotation components are styled and will display.]</p>
+
+				<!-- Annotation 01 Section Starts -->
+				<hr id="annotation_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Annotation 01: At Home with Family</h2>
+					</header>
+					<p class="p-grey">[Use this design treatment for the "Annotation 01: At Home with Family" feature to style any feature aside annotations that require to be styled as shown below.]</p>
+
+					<aside class="annotation annotation_01">
+						<header>
+							<h6 class="title title_05">At Home with Family</h6>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that annotations are coded as aside tags rather than section tags.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="annotation annotation_01" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_05">At Home with Family</h6>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Annotation 01 Section Ends -->
+
+				<!-- Annotation 02 Section Starts -->
+				<hr id="annotation_02"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Annotation 02: In The Parish</h2>
+					</header>
+					<p class="p-grey">[Use this design treatment for the "Annotation 02: In the Parish" feature to style any feature aside annotations that require to be styled as shown below.]</p>
+
+					<aside class="annotation annotation_02">
+						<header>
+							<h6 class="title title_05">In the Parish</h6>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that annotations are coded as aside tags rather than section tags.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="annotation annotation_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_05">In the Parish</h6>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Annotation 02 Section Ends -->
+			</section>
+			<!-- Annotations Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Marginalias Section Starts -->
+			<section id="marginalias">
+				<header>
+					<h1>Marginalias</h1>
+				</header>
+				<p class="p-grey">[This section displays how each of the different marginalia components are styled and will display.]
+				</p>
+
+				<!-- Marginalia 01 Section Starts -->
+				<hr id="marginalia_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Marginalia 01:</h2>
+					</header>
+					<p class="p-grey">[Following is the style for "marginalia 01".]</p>
+
+					<aside class="marginalia marginalia_01">
+						<header>
+							<h6 class="title title_06">
+								<span class="label">Lesson</span>
+								<span class="number">1</span>
+								Learning Goals
+							</h6>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that marginalias are coded as aside tags rather than section tags. The class "label" and "number" are required if there is actually a label and number in the title.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="marginalia marginalia_01" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">
+											<span class="label">Lesson</span>
+											<span class="number">1</span>
+											Learning Goals
+										</h6>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Marginalia 01 Section Ends -->
+
+				<!-- Marginalia 02 Section Starts -->
+				<hr id="marginalia_02"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Marginalia 02:</h2>
+					</header>
+					<p class="p-grey">[Following is the standard style for "marginalia 02".]</p>
+
+					<aside class="marginalia marginalia_02">
+						<header>
+							<h6 class="title title_06">Responding to Sensitive Topics</h6>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that marginalias are coded as aside tags rather than section tags.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="marginalia marginalia_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">Responding to Sensitive Topics</h6>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+
+					<!-- marginalia 02 2 lines starts -->
+					<hr/>
+
+					<p class="p-grey">[Following is the style for "marginalia 02" that has the title in 2 lines.]</p>
+
+					<aside class="marginalia marginalia_02">
+						<header>
+							<h6 class="title title_06">Responding to
+								<br/>Sensitive Topics</h6>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that there is a br tag between the title to seperate it into 2 lines.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="marginalia marginalia_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">Responding to
+											<br/>Sensitive Topics</h6>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+					<!-- marginalia 02 2 lines ends -->
+				</section>
+				<!-- Marginalia 02 Section Ends -->
+
+				<!-- marginalia 02 DI section starts -->
+				<hr id="marginalia_02_di"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Marginalia 02: Differentiated Instruction</h2>
+					</header>
+					<p class="p-grey">[Following is the style for "marginalia 02" that has an icon next to the title.]</p>
+
+					<aside class="marginalia marginalia_02">
+						<header>
+							<h6 class="title title_06"><img class="design-icon inline design-icon_text-inline" alt="" src="../../images/re6_teacher_icons/icon_image_id_colour_006.png">Differentiated Instruction</h6>
+						</header>
+						<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+						</p>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="marginalia marginalia_02" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">
+											<img id="unique_image_id" class="design-icon inline design-icon_text-inline" alt="alt text" src="../images/icon_image_id_colour_006.png">
+											Differentiated Instruction
+										</h6>
+									</header>
+									<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- marginalia 02 DI section ends -->
+
+				<!-- Marginalia 03 Section Starts -->
+				<hr id="marginalia_03"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Marginalia 03:</h2>
+					</header>
+					<p class="p-grey">[Following is the style for "marginalia 03". Note that "marginalia 03" is the
+						<strong>title design only</strong>
+						and has no additional paragraph text. Generally this is used when multiple "marginalia 03" are stacked on top of each other.]</p>
+
+					<aside class="marginalia marginalia_03" style="margin-bottom: 1.5rem;">
+						<header>
+							<h6 class="title title_06">Inquiry Opportunity</h6>
+						</header>
+					</aside>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that marginalias are coded as aside tags rather than section tags.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<aside id="unique_aside_id" class="marginalia marginalia_03" aria-labelledby="header_unique_header_id">
+									<header id="header_unique_header_id">
+										<h6 id="unique_heading_id" class="title title_06">Inquiry Opportunity</h6>
+									</header>
+								</aside>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Marginalia 03 Section Ends -->
+			</section>
+			<!-- Marginalias Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Accordions Section Starts -->
+			<section id="accordions">
+				<header>
+					<h1 class="p-grey">Accordion:</h1>
+				</header>
+				<p class="p-grey">[This section displays how an accordion component is styled and will display. Note that accordion is generally used to transfer large table data to a singular column inside the accordion component. An icon can also be added to the
+					accordion if it is required.]
+				</p>
+
+				<details class="fx-accordion fx-accordion_01">
+					<summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+						<h2 class="title title_07">
+							<span>Unit Overall Religious
+								<span class="no-widow">Education Expectations</span></span>
+							<span class="fx-accordion-toggle-icon">&#9662;</span>
+						</h2>
+					</summary>
+					<div id="unique_div_id" class="fx-accordion-toggleable">
+						<section>
+							<header>
+								<h3 class="title title_01">Title Inside Accordion</h3>
+							</header>
+							<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+						</section>
+					</div>
+				</details>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p class="p-darkred">[The triangular icon on the right needs to be in unicode format
+					<strong>&amp#9662;</strong>.]</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<details id="unique_details_id" class="fx-accordion fx-accordion_01">
+								<summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+									<h2 id="unique_heading_id" class="title title_07">
+										<span>Unit Overall Religious
+											<span class="no-widow">Education Expectations</span></span>
+										<span class="fx-accordion-toggle-icon">&#9662;</span>
+									</h2>
+								</summary>
+								<div id="unique_div_id" class="fx-accordion-toggleable">
+									<section id="unique_section_id" aria-labelledby="header_unique_header_id">
+										<header id="header_unique_header_id">
+											<h3 id="unique_heading_id" class="title title_01">Title Inside Accordion</h3>
+										</header>
+										<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+									</section>
+								</div>
+							</details>
+						</code>
+					</div>
+				</p>
+
+				<hr/>
+
+				<p class="p-grey">[This is an accordion that has an icon.]</p>
+				<details class="fx-accordion fx-accordion_02">
+					<summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+						<h2 class="title title_07">
+							<img class="fx-design-icon" src="../../images/re6_teacher_icons/icon_img_music_005.png"/>
+							<span>Activate</span>
+							<span class="fx-accordion-toggle-icon">&#9662;</span>
+						</h2>
+					</summary>
+					<div id="unique_div_id" class="fx-accordion-toggleable">
+						<section>
+							<header>
+								<h3 class="title title_01">Title Inside Accordion</h3>
+							</header>
+							<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+							</p>
+						</section>
+					</div>
+				</details>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p class="p-darkred">[If there is an icon within the accordion, use class fx-accordion_02 and the icon image uses class fx-design-icon.]</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<details id="unique_details_id" class="fx-accordion fx-accordion_02">
+								<summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+									<h2 id="unique_heading_id" class="title title_07">
+										<img id="unique_image_id" alt="icon image" class="fx-design-icon" src="../../images/re6_teacher_icons/icon_img_music_005.png"/>
+										<span>Activate</span>
+										<span class="fx-accordion-toggle-icon">&#9662;</span>
+									</h2>
+								</summary>
+								<div id="unique_div_id" class="fx-accordion-toggleable">
+									<section id="unique_section_id" aria-labelledby="header_unique_header_id">
+										<header id="header_unique_header_id">
+											<h3 id="unique_heading_id" class="title title_01">Title Inside Accordion</h3>
+										</header>
+										<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+									</section>
+								</div>
+							</details>
+						</code>
+					</div>
+				</p>
+			</section>
+			<!-- Accordions Section Ends -->
+
+		</section>
+		<!-- Readspeaker section closed-->
+		<script src="../../js/re6_teacher/tabs.js"></script>
+	</body>
+
+</html>

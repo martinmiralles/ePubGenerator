@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Religion Standard Component Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re1-2_fully_alive_student.css" />
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background: white;
+      }
+    
+      h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+    
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+    
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+    
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+    
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+    
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+    
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+        font-size: 1.15rem;
+        margin: 1.5rem 0;
+      }
+    
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+    
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+    
+      #myBtn:hover {
+        background-color: red;
+      }
+    
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+    
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+    
+      .links2 {
+        display: none;
+        width: 100%;
+        font-size: 1.15rem;
+        margin: 1.15rem 0;
+        border: 1px solid black;
+      }
+    
+      .p-darkred,
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+        margin: 1.5rem 0;
+      }
+    
+      .p-darkred {
+        color: #600000;
+      }
+    
+      @media only screen and (max-width: 600px) {
+        .links {
+          display: none;
+        }
+    
+        .links2 {
+          display: block;
+        }
+      }
+    
+      @media only screen and (max-width: 450px) {
+        #myBtn {
+          bottom: 70px;
+          right: 10px;
+        }
+    
+        .main_title {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        console.log(codeblock);
+        var len = codeblock.length;
+        console.log(typeof(len));
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          console.log(temphtml.join(""));
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.appendChild(text);
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Standard Components</h1>
+        </header>
+        <p class="p-grey">[A component is comprised of an element that is combined with other elements, styles, and/or layouts. This section displays a list of standard components that were created for those common book items and features in the RE5 student
+          book. Refer to this section as you mark up each book item in your printer PDF, and then refer to Layouts or Styles if you need to specify the arrangement or style of that component.]</p>
+        <hr/>
+        <ol class="links">
+
+          <li>
+            <p>
+              <strong>
+                <a href="#notes">Notes</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#note_01">Note 01</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#printpage_pagebreak">Print Page References</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#pagebreak_01">Print Page Ref. 01</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#pagebreak_02">Print Page Ref. 02</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#long_description">Long Description</a>
+              </strong>
+            </p>
+          </li>
+
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#notes">- Notes -</option>
+          <option value="#note_01">Note 01</option>
+
+          <option value="#printpage_pagebreak">- Print Page References -</option>
+          <option value="#pagebreak_01">Print Page Ref. 01</option>
+          <option value="#pagebreak_02">Print Page Ref. 02</option>
+
+          <option value="#long_description">- Long Description -</option>
+        </select>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Note Section Starts -->
+      <section id="notes">
+        <header>
+          <h1>Notes</h1>
+        </header>
+        <p class="p-grey">[This section displays how each of the different note components are styled and will display. Please note that "Notes" can only be applied to book content that does not have a title or a heading level content.]</p>
+
+        <!-- Note 01 Section Starts -->
+        <hr id="note_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Note 01</h2>
+          </header>
+          <p class="p-grey">[Use the "note 01" design treatment if you want your note to display in a yellow box. Note that background colour, border style, and text style (font, colour, and size) are templated and cannot be changed; however, the width and
+            alignments can be customized based on the available layouts.]</p>
+          <div class="note note_01 width-75 padding-left-default padding-right-default">
+            <p class="margin-top-0 margin-bottom-0">This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_note_id" class="note note_01 width-75 padding-left-default padding-right-default">
+                  <p class="margin-top-0 margin-bottom-0">This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Note 01 Section Ends -->
+      </section>
+      <!-- Note Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Print Page page break Section Starts -->
+      <section id="printpage_pagebreak">
+        <header>
+          <h1>Print Page References</h1>
+        </header>
+        <p class="p-grey">[Print Page Reference components are used to style print page correlation references. In your markup, you will need to specify where each print page reference component needs to be placed. This section displays how each of the two
+          print page reference components will display.]</p>
+
+        <!-- Pagebreak01 Starts-->
+        <hr id="pagebreak_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Print Page Ref. 01</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment for any print page reference on your ePub page, other than those for headers. It's important to note that this grey reference element should be placed above the specific element that
+            correlates to the corresponding print page.]</p>
+          <span id="pageXX" class="pagebreak_01 lc_align-right"><span>printed p. XX</span></span>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <span id="pageXX" class="pagebreak_01 lc_align-right">
+                  <span>printed p. XX</span>
+                </span>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Pagebreak01 Ends-->
+
+        <!-- Pagebreak02 Starts-->
+        <hr id="pagebreak_02"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Print Page Ref. 02</h2>
+          </header>
+          <p class="p-grey">[Use this design treatment specifically for print page references that correlates before headers. Notice that this black reference box will display at the top-right corner of the header component in the following example.]</p>
+          <section id="unit02_pg21" class="part bg_lightblue" aria-labelledby="header_unit02_pg21">
+            <span id="pageXX" class="float-right pagebreak_02 margin-top-default margin-right-default margin-bottom-default">
+              <span>printed p. XX</span>
+            </span>
+            <header id="header_unit01_pg04" class="clear-both">
+              <h3 id="h1_header_unit01_pg04" class="title title_01 lc_align-center">Joey's Dream</h3>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id" class="part bg_lightpurple">
+                  <span id="pageXX" class="float-right pagebreak_02 margin-top-default margin-right-default">
+                    <span>printed p. XX</span>
+                  </span>
+                  <header id="unique_header_id" class="clear-both">
+                    <h1 id="unique_heading_id" class="title title_01 lc_align-center">
+                      <span class="text_wrapper bg_darkpurple">
+                        <span class="label">Unit
+                        </span>
+                        <span class="number">2</span>
+                      </span>
+                    </h1>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Pagebreak02 Ends-->
+      </section>
+      <!-- Print Page page break Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Long Description Section Starts -->
+      <section id="long_description">
+        <header>
+          <h1 class="p-grey">Long Description:</h1>
+        </header>
+        <p class="p-grey">[Use this design treatment for long descriptions that may accompany an image or figure. It should consist of a heading followed by the long description text that will display when the drop-down arrow is clicked.]</p>
+        <figure class="informalfigure width-50">
+          <img id="unique_image_id" src="../../images/placeholder_images/fa_img2.jpg" alt="alt text"/>
+          <figcaption id="unique_figurecaption_id">
+            <div class="caption">
+              <p>Caption text will display below the figure like this.</p>
+              <details class="margin-top-default margin-bottom-default">
+                <summary class="margin-bottom-default">
+                  <p class="inline">
+                    <strong>Long Description</strong>
+                  </p>
+                </summary>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </details>
+            </div>
+          </figcaption>
+        </figure>
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <figure id="unique_figure_id" class="informalfigure width-50">
+                <img id="unique_image_id" src="../images/fa_img2.jpg" alt="alt text"/>
+                <figcaption id="unique_figurecaption_id">
+                  <div class="caption">
+                    <p>Caption text will display below the figure like this.</p>
+                    <details id="unique_details_id" class="margin-top-default margin-bottom-default">
+                      <summary id="unique_summary_id" class="margin-bottom-default">
+                        <p class="inline">
+                          <strong>Long Description</strong>
+                        </p>
+                      </summary>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </details>
+                  </div>
+                </figcaption>
+              </figure>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Long Description Section Ends -->
+
+    </section>
+    <!-- Readspeaker section closed-->
+  </body>
+
+</html>

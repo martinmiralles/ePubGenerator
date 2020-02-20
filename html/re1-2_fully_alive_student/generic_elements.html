@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Religion Generic Element Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re1-2_fully_alive_student.css"/>
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background: white;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+        font-size: 1.15rem;
+        margin: 1.5rem 0;
+      }
+
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: red;
+      }
+
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+
+      .links2 {
+        display: none;
+        width: 100%;
+        font-size: 1.15rem;
+        margin: 1.15rem 0;
+        border: 1px solid black;
+      }
+
+      .p-darkred,
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+        margin: 1.5rem 0;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .links { display: none; }
+        .links2 {display: block; }
+      }
+
+      @media only screen and (max-width: 450px) {
+        #myBtn {
+          bottom: 70px;
+          right: 10px;
+        }
+
+        .main_title {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        var len = codeblock.length;
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          console.log(html);
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          console.log(html);
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.innerText = String(temphtml.join(""));
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Elements</h1>
+        </header>
+        <p class="p-grey">[An element refers to a base building block of your digital page.]</p>
+        <hr/>
+
+        <ol class="links">
+
+          <li>
+            <p>
+              <strong>
+                <a href="#paragraphs">Paragraph</a>
+              </strong>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#titles">Title</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#title01">Title 01</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#title02">Title 02</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#title03">Title 03</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#figures">Informal Figure</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#informalfigure">Informal Figure</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#poem">Poem</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#poem01">Poem 01</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#poem02">Poem 02</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#blockquotes">Blockquotes</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#blockquotegroup">Blockquotegroup</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#paragraphs">- Paragraphs -</option>
+          <option value="#titles">- Title -</option>
+          <option value="#title01">Title 01</option>
+          <option value="#title02">Title 02</option>
+          <option value="#title03">Title 03</option>
+
+          <option value="#figures">- Informal Figure -</option>
+          <option value="#informalfigure">Informal Figure</option>
+
+          <option value="#poem">- Poem -</option>
+          <option value="#poem01">Poem 01</option>
+          <option value="#poem02">Poem 02</option>
+
+          <option value="#blockquotes">- Blockquotes -</option>
+          <option value="#blockquotegroup">Blockquotegroup</option>
+        </select>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Paragraph Section Starts -->
+      <section id="paragraphs">
+        <header>
+          <h1 class="p-grey">Paragraphs</h1>
+        </header>
+        <p class="p-grey">[The following displays the standard look for paragraph text.]</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Paragraph Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Title Section Starts -->
+      <section id="titles">
+        <header>
+          <h1>Titles</h1>
+        </header>
+        <p class="p-grey">[This section displays each of the title style elements available in the RE1 Fully Alive Student ePub design template. All these title styles, except for "subtitle" can be applied to any header level content.]</p>
+
+        <!-- Title 01 section starts -->
+        <hr id="title01"/>
+        <p class="p-grey">
+          <strong>Title 01:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 01" followed by paragraph text.]</p>
+        <section>
+          <header>
+            <h1 class="title title_01">Title 01 Style</h1>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 01 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h1 id="unique_heading_id" class="title title_01">Title 01</h1>
+                  </header>
+                  <p>...........</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 01 sections ends -->
+
+        <!-- Title 02 section starts -->
+        <hr id="title02"/>
+        <p class="p-grey">
+          <strong>Title 02:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 02" followed by paragraph text.]</p>
+        <section>
+          <header>
+            <h2 class="title title_02">Title 02 Style</h2>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 02 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h2 id="unique_heading_id" class="title title_02">Title 02></h2>
+                  </header>
+                  <p>...........</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 02 section ends -->
+
+        <!-- Title 03 section starts -->
+        <hr id="title03"/>
+        <p class="p-grey">
+          <strong>Title 03:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 03" followed by paragraph text.]</p>
+        <section >
+          <header>
+            <h3 class="title title_03">Title 03 Style</h3>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 03 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h3 id="unique_heading_id" class="title title_03">Title 03</h3>
+                  </header>
+                  <p>...........</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 03 section ends -->
+
+      </section>
+      <!-- Title Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Informal Figures Section Starts -->
+      <section id="figures">
+        <header>
+          <h1>Informal Figure</h1>
+        </header>
+        <p class="p-grey">[This section displays each of the informal figure style elements available in the RE1 Fully Alive Student ePub design template.]</p>
+
+        <!-- Informalfigure Section Starts -->
+        <hr id="informalfigure"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Informal Figure:</h2>
+          </header>
+          <p class="p-grey">[This is how an "informal figure" will display by default. Caption is optional. Informal figure by default is center aligned.]</p>
+          <figure class="informalfigure width-100" role="group" aria-labelledby="informalfigure_caption">
+            <img src="../../images/placeholder_images/fa_img.jpg" alt="alt text"/>
+            <figcaption>
+              <div class="caption" id="informalfigure_caption">
+                <p>Caption text will display below the figure like this.</p>
+              </div>
+            </figcaption>
+          </figure>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Informal figure requires a "width-100" class by default, if no width is specified in the markup.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <figure id="unique_figure_id" class="informalfigure width-100" role="group" aria-labelledby="unique_figurecaption_id">
+                  <img id="unique_image_id" src="../images/fa_img.jpg" alt="alt text"/>
+                  <figcaption id="unique_figurecaption_id">
+                    <div class="caption">
+                      <p>Caption text will display below the figure like this.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Informalfigure Section Ends -->
+      </section>
+      <!-- Informal Figure Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Poem Section Starts -->
+      <section id="poem">
+        <header>
+          <h1 class="p-grey">Poem:</h1>
+        </header>
+        <p class="p-grey">[Use the "poem" element whenever you require a passage of text (i.e., prayer, hymn, poem) to have specific line breaks. By default the content within the poem element will <strong>NOT</strong> be italicized. Make sure to indicate which lines on the markup need to be italicized.]</p>
+
+        <!-- Poem 01 section starts -->
+        <hr id="poem01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Poem 01:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for "Poem 01" that is center aligned. Colour of text in this example is navy blue, it can be any colour from the styles section.]</p>
+          <div class="poem poem_01 text-color-navyblue">
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                One, two
+              </span>
+              <span class="line">
+                See what i do!
+              </span>
+            </div>
+          
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                Three, four
+              </span>
+              <span class="line">
+                Now I do more!
+              </span>
+            </div>
+          
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                Five, six
+              </span>
+              <span class="line">
+                Lots of new tricks!
+              </span>
+            </div>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="poem poem_01 text-color-navyblue">
+                  <div class="linegroup margin-top-default margin-bottom-default">
+                    <span class="line">
+                      <em>One, two</em>
+                    </span>
+                    <span class="line">
+                      See what i do!
+                    </span>
+                  </div>
+                  <div class="linegroup margin-top-default margin-bottom-default">
+                    <span class="line">
+                      <em>Three, four</em>
+                    </span>
+                    <span class="line">
+                      Now I do more!
+                    </span>
+                  </div>
+                  <div class="linegroup margin-top-default margin-bottom-default">
+                    <span class="line">
+                      <em>Five, six</em>
+                    </span>
+                    <span class="line">
+                      Lots of new tricks!
+                    </span>
+                  </div>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Poem 01 section ends -->
+
+        <!-- Poem 02 section starts -->
+        <hr id="poem02" />
+        <section>
+          <header>
+            <h2 class="p-grey">Poem 02:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for "Poem 02" that is left aligned. Colour of text in this example is dark green, it can be any colour from the styles section.]</p>
+          <div class="poem poem_02 text-color-darkgreen">
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                I wish I were a rocket ship,
+              </span>
+              <span class="line">
+                I’d blast off to the sky.
+              </span>
+            </div>
+        
+            <div class="linegroup margin-top-default margin-bottom-default">
+              <span class="line">
+                And then I’d figure out just how
+              </span>
+              <span class="line">
+                God made the world so high.
+              </span>
+            </div>    
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div class="poem poem_02 text-color-darkgreen">
+                  <div class="linegroup margin-top-default margin-bottom-default">
+                    <span class="line">
+                      I wish I were a rocket ship,
+                    </span>
+                    <span class="line">
+                      I’d blast off to the sky.
+                    </span>
+                  </div>
+                
+                  <div class="linegroup margin-top-default margin-bottom-default">
+                    <span class="line">
+                      And then I’d figure out just how
+                    </span>
+                    <span class="line">
+                      God made the world so high.
+                    </span>
+                  </div>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Poem 02 section ends -->
+      </section>
+      <!-- Poem Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Blockquote Section Starts -->
+      <section id="blockquotes">
+        <header>
+          <h1>Blockquote</h1>
+        </header>
+        <p class="p-grey">[This section displays each of the blockquote style element available in the RE1 Fully Alive
+          Student ePub design template.]</p></p>
+
+        <!-- Blockquotegroup section starts -->
+        <hr id="blockquotegroup" />
+        <section>
+          <header>
+            <h2 class="p-grey">Blockquotegroup:</h2>
+          </header>
+          <p class="p-grey">[This is how a “blockquotegroup” with a sourceline will display. Blockquote indicates the quotation of a large section of text from another source. Specify on your markup if you will like the text within blockquote to be bolded.]</p>
+
+          <div class="blockquotegroup">
+            <blockquote class="epigraph">
+              <p>I have called you by name — you are mine.</p>
+            </blockquote>
+            <div class="source lc_align-right">
+              <p>
+                <cite>Isaiah 43:1</cite>
+              </p>
+            </div>
+          </div>
+          <div class="blockquotegroup">
+            <blockquote class="epigraph">
+              <p>I have called you by name — <strong>you are mine.</strong></p>
+            </blockquote>
+            <div class="source lc_align-right">
+              <p>
+                <cite>Isaiah 43:1</cite>
+              </p>
+            </div>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_blockquote_id" class="blockquotegroup">
+                  <blockquote class="epigraph">
+                    <p>I have called you by name — you are mine.</p>
+                  </blockquote>
+                  <div class="source lc_align-right">
+                    <p>
+                      <cite>Isaiah 43:1</cite>
+                    </p>
+                  </div>
+                </div>
+              </code>
+            </div>
+          </p>
+          <hr style="margin-top: 2.25rem;"/>
+          <p class="p-grey">[This is how a “blockquote” without a sourceline will display. Blockquote indicates the quotation of a large section of text from another source. Specify on your markup if you will like the text within blockquote to be bolded.]</p>
+          <div class="blockquotegroup">
+            <blockquote>
+              <p>
+                I have called you by name — you are mine.
+              </p>
+            </blockquote>
+          </div>
+          <div class="blockquotegroup">
+            <blockquote>
+              <p>
+                <strong>I have called you by name — you are mine.</strong>
+              </p>
+            </blockquote>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_blockquote_id" class="blockquotegroup">
+                  <blockquote>
+                    <p>
+                      <strong>I have called you by name — you are mine.</strong>
+                    </p>
+                  </blockquote>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Blockquotegroup section Ends -->
+      </section>
+      <!-- Blockqoute Section Ends -->
+
+    </section>
+    <!-- Readspeaker section closed-->
+  </body>
+
+</html>

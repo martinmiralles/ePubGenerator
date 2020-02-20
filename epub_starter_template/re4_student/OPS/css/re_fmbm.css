@@ -1,0 +1,287 @@
+/* ----Copyright-page/Acknowledgements-page/TOC styling---- */
+.cover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .cover > img {
+    border-style: none;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    display: block; }
+
+.copyright-page {
+  margin: 3.5% 10% 0 10% !important; }
+  .copyright-page p {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-size: 0.9em; }
+    .copyright-page p > strong {
+      font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+      font-weight: bold; }
+  .copyright-page .webresource {
+    font-size: 1em; }
+  .copyright-page .design-icon {
+    width: auto; }
+
+.acknowledgments {
+  margin: 3.5% 10% 0 10% !important; }
+  .acknowledgments p {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-size: 0.9em; }
+    .acknowledgments p > strong {
+      font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+      font-weight: bold; }
+  .acknowledgments section {
+    padding: 0 !important; }
+    .acknowledgments section ul {
+      list-style-type: none;
+      padding: 0; }
+    .acknowledgments section > ul > li {
+      display: inline-block;
+      vertical-align: top; }
+    .acknowledgments section > ul > li:nth-child(1) {
+      margin-bottom: 1.75em;
+      margin-right: 5em; }
+      .acknowledgments section > ul > li:nth-child(1) > ul > li:nth-child(1) {
+        margin-bottom: 1.75em; }
+    .acknowledgments section > ul > li:nth-child(2) > ul > li:nth-child(6) {
+      margin-bottom: 1.75em; }
+  .acknowledgments .title_01 {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #046937;
+    margin: 1em 0 0.5em 0;
+    padding: 0 !important;
+    text-align: left;
+    line-height: 1.4em; }
+
+.toc a, .toc .title {
+  font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+  font-weight: normal; }
+.toc p {
+  font-size: 0.95em; }
+.toc .title > .number {
+  font-family: "StoneSansITCStdMedium", Arial, sans-serif; }
+.toc .title_01 {
+  font-family: "StoneSerITCStdMedium", Times, serif;
+  font-weight: 600;
+  padding: 0;
+  margin: -10px -16px 30px -16px;
+  text-align: center; }
+
+#landmarks .title_01 {
+  text-align: center; }
+
+#fm_pg03 .title_01 {
+  margin: 0;
+  text-align: left; }
+  #fm_pg03 .title_01 .label {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.75em;
+    color: #046937;
+    padding: 0;
+    line-height: 1.4em;
+    text-transform: none;
+    text-align: left; }
+#fm_pg03 .title > .number {
+  font-weight: 600; }
+#fm_pg03 .tocproductbodymatter .tocentrylist {
+  list-style-type: none;
+  padding-left: 0; }
+  #fm_pg03 .tocproductbodymatter .tocentrylist .tocentrylist > li a {
+    color: #000000; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist p {
+  line-height: 2.75em; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart p {
+  padding: 0 0.5em;
+  margin: 0; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart > p > .xref {
+  color: #FFFFFF;
+  border-bottom: 1px #FFFFFF dotted; }
+  #fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart > p > .xref > .title, #fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart > p > .xref > .title > .number {
+    font-weight: bold; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) > p {
+  background-color: #00A65D; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) > .tocentrylist > li:not(:nth-child(1)) > p {
+  background-color: #DBEBBD;
+  display: inline-block; }
+  #fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) > .tocentrylist > li:not(:nth-child(1)) > p .xref > .title {
+    font-weight: bold; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) > .tocentrylist > .tocpractice > p > .xref > .title > .label,
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) .tocchapter:not(:last-of-type) .toclevel1:last-child > p > .xref,
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) .tocchapter:last-of-type .toclevel1:nth-last-of-type(2) > p > .xref {
+  color: #046937; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(odd) .tocchapter:last-of-type .toclevel1:nth-last-of-type(2) > p > .xref > .title {
+  font-weight: 600; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(even) > p {
+  background-color: #414099; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(even) > .tocentrylist > li:not(:nth-child(1)) > p {
+  background-color: #E8E7F4;
+  display: inline-block; }
+  #fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(even) > .tocentrylist > li:not(:nth-child(1)) > p .xref > .title {
+    font-weight: bold; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(even) > .tocentrylist > .tocpractice > p > .xref > .title > .label,
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(even) .tocchapter:not(:last-of-type) .toclevel1:last-child > p > .xref,
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart:nth-child(even) .tocchapter:last-of-type .toclevel1:nth-last-of-type(2) > p > .xref {
+  color: #6859A3; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart > .tocentrylist > .tocchapter:last-child .toclevel1:last-child > p > .xref > .title, #fm_pg03 .tocproductbodymatter > .tocentrylist > .tocpart > .tocentrylist > .tocchapter:last-child .toclevel1:last-child > p > .xref > .title > .number {
+  font-family: "HeinemannSpecialBlack", Arial, serif; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist .tocchapter {
+  margin: 1.25em 0; }
+  #fm_pg03 .tocproductbodymatter > .tocentrylist .tocchapter .tocchapterbodymatter .tocentrylist {
+    padding: 0 1.5em; }
+  #fm_pg03 .tocproductbodymatter > .tocentrylist .tocchapter .tocchapterbodymatter .toclevel1 * {
+    line-height: 2em; }
+    #fm_pg03 .tocproductbodymatter > .tocentrylist .tocchapter .tocchapterbodymatter .toclevel1 * .title_catholic_faith_magenta {
+      color: #9F3189; }
+  #fm_pg03 .tocproductbodymatter > .tocentrylist .tocchapter .toclevel1:last-child > p > .xref > .title {
+    font-weight: bold; }
+#fm_pg03 .tocproductbodymatter > .tocentrylist .tocentrylist > .tocpractice > p > .xref, #fm_pg03 .tocproductbodymatter > .tocentrylist .tocentrylist > .tocpractice > p > .xref > .title {
+  font-family: "HeinemannSpecialBlack", Arial, serif; }
+#fm_pg03 .tocproductbackmatter > .tocentrylist {
+  list-style-type: none;
+  padding-left: 0; }
+  #fm_pg03 .tocproductbackmatter > .tocentrylist p > .xref, #fm_pg03 .tocproductbackmatter > .tocentrylist p > .xref > .title {
+    font-family: "HeinemannSpecialBlack", Arial, serif;
+    color: #000000; }
+
+.glossary {
+  margin: 2.5% 10% 0 10% !important; }
+  .glossary .title_01 {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.25em;
+    margin: 0;
+    color: #046937;
+    padding: 0;
+    line-height: 1.4em;
+    text-transform: none;
+    text-align: left; }
+  .glossary p {
+    font-size: 0.9em;
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: normal; }
+  .glossary .glossdiv {
+    list-style-type: none;
+    padding: 0; }
+    .glossary .glossdiv > li:nth-child(1) {
+      margin-top: 2em; }
+    .glossary .glossdiv > li {
+      line-height: 0.1em;
+      margin-bottom: 2em; }
+      .glossary .glossdiv > li > p {
+        font-family: "HeinemannSpecialBlack", Arial, sans-serif;
+        font-weight: normal;
+        display: inline; }
+        .glossary .glossdiv > li > p > strong {
+          font-size: 1.45em;
+          color: #046937; }
+    .glossary .glossdiv .glossterm > dfn {
+      font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+      font-style: normal;
+      font-size: 0.9em; }
+    .glossary .glossdiv dl > .glossdef {
+      margin: 0;
+      padding: 0 0 0 1.5em; }
+      .glossary .glossdiv dl > .glossdef > p {
+        font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+        font-size: 0.8em; }
+
+.subject-index {
+  margin: 2.5% 10% 0 10% !important; }
+  .subject-index .title_01 {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.25em;
+    margin: 0;
+    color: #046937;
+    padding: 0;
+    line-height: 1.4em;
+    text-transform: none;
+    text-align: left; }
+  .subject-index > .index-group:nth-of-type(1) {
+    margin-top: 1em; }
+  .subject-index > .index-group .title_01 {
+    font-family: "HeinemannSpecialBlack", Arial, sans-serif;
+    font-size: 1.45em !important; }
+  .subject-index > .index-group .index-entry-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0; }
+    .subject-index > .index-group .index-entry-list > .index-entry p {
+      font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+      font-weight: normal;
+      padding: 0;
+      font-size: 0.9em;
+      line-height: 2em;
+      margin: 0.5em 0; }
+    .subject-index > .index-group .index-entry-list > .index-entry > .index-entry-point {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 1.5em; }
+    .subject-index > .index-group .index-entry-list > .index-entry .termref {
+      font-size: 1em;
+      margin-left: 0; }
+    .subject-index > .index-group .index-entry-list > .index-entry .index-locator {
+      font-size: 1em;
+      margin-left: 0.3em; }
+    .subject-index > .index-group .index-entry-list > .index-entry .index-locator-range > .index-locator:nth-child(2) {
+      margin-left: 0; }
+
+.creditset {
+  margin: 2.5% 10% 0 10% !important; }
+  .creditset .title_01 {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.25em;
+    color: #046937;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+    text-transform: none;
+    text-align: left; }
+  .creditset .creditsetdiv .title_01 {
+    font-size: 1.3em !important; }
+  .creditset .creditsetdiv .title_02 {
+    font-family: "HeinemannSpecialBlack", Arial, sans-serif;
+    color: #046937;
+    font-size: 0.9em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: inline; }
+  .creditset .creditsetdiv .url {
+    font-size: 1em; }
+  .creditset .creditsetdiv header {
+    display: inline; }
+  .creditset .creditsetdiv p {
+    font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.9em;
+    display: inline;
+    padding: 0; }
+  .creditset .creditsetdiv:nth-of-type(1) {
+    margin-top: 1em; }
+    .creditset .creditsetdiv:nth-of-type(1) .title_02 {
+      font-family: "HeinemannSpecialBlack", Arial, sans-serif;
+      color: #046937;
+      font-size: 0.9em;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      display: inline; }
+    .creditset .creditsetdiv:nth-of-type(1) p {
+      font-family: "HeinemannSpecialRoman", Arial, sans-serif;
+      font-size: 0.9em;
+      display: inline; }
+/* ************************************* Mobile Responsive (1024px - 767px) ************************************* */
+/* ************************************* Mobile Responsive (768px - 599px) ************************************* */
+@media only screen and (max-width: 768px) {
+  .cover > img {
+    width: 100%;
+    height: auto; } }
+/* ************************************* Mobile Responsive (600px - 450px) ************************************* */

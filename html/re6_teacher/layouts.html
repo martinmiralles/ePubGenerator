@@ -1,0 +1,2520 @@
+<html lang="en">
+
+	<head>
+		<title>Religion Layout Styles</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="../../css/re6_teacher.css"/>
+		<style>
+			body {
+				max-width: 1024px;
+				margin: auto;
+				padding: 50px;
+				font-size: 115%;
+			}
+
+			hr {
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 1.75rem;
+				line-height: 2rem;
+			}
+
+			.code_format {
+				display: block;
+				background-color: #e2f2f2;
+				border: solid #020202;
+				padding: 10px 20px;
+			}
+
+			code {
+				display: block;
+				font-family: monospace;
+				margin-top: -20px;
+				white-space: pre;
+				overflow-x: auto;
+			}
+
+			.code_format * {
+				padding: 0;
+				margin: 0;
+			}
+
+			.grid-col {
+				background-color: #e2f2f2;
+				border: 1px dotted #020202;
+				text-align: center;
+			}
+
+			.template_hr {
+				display: block;
+				height: 10px;
+				border: 0;
+				border-top: 10px solid red;
+				margin: 1rem 0;
+				padding: 0;
+			}
+
+			.code_snippet {
+				color: #600000;
+				font-weight: bold;
+			}
+
+			.main_title {
+				text-align: center;
+				font-size: 3rem;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 3.25rem;
+				letter-spacing: 5px;
+				margin: 0;
+				font-variant: small-caps;
+			}
+
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 99;
+				font-size: 1rem;
+				border: none;
+				outline: none;
+				background-color: black;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+			}
+
+			#myBtn:hover {
+				background-color: red;
+			}
+
+			.links {
+				column-count: 3;
+				column-gap: 40px;
+			}
+
+			.links a {
+				font-weight: unset;
+			}
+
+			.links li {
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+				margin: 0;
+			}
+
+			.links p {
+				margin: 0;
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+			}
+
+			.links ol {
+				list-style-type: upper-alpha;
+			}
+
+			.links2 {
+				display: none;
+				width: 100%;
+				font-size: 1.15rem;
+				margin: 1.15rem 0;
+				border: 1px solid black;
+			}
+
+			.p-darkred,
+			.p-grey {
+				color: #707070;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.15rem;
+				line-height: 1.65rem;
+			}
+
+			.p-darkred {
+				color: #600000;
+			}
+
+			#overflow-x-style {
+				width: 500px;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.links { display: none; }
+				.links2 {display: block; }
+				#overflow-x-style {width: 100%; }
+				#c01_600, #c02_600 {width: calc(100% - 2.25rem) !important;}
+				#c03_600, #c04_600 {clear:both; width: 100% !important;}
+			}
+
+			@media only screen and (max-width: 450px) {
+				#myBtn {
+				bottom: 70px;
+				right: 10px;
+				}
+
+				.main_title {
+				font-size: 2.25rem;
+				line-height: 2.75rem;
+				letter-spacing: 1px;
+				}
+			}
+		</style>
+
+		<script>
+			window.onload = function init() {
+				var codeblock = document.querySelectorAll(".code_format > code");
+				console.log(codeblock);
+				var len = codeblock.length;
+				console.log(typeof(len));
+				for (var i = 0; i < len; i++) {
+					var dom = codeblock[i];
+					var html = dom.innerHTML;
+					var pattern = html.match(/\s*\n[\t\s]*/);
+					var pattern01 = html.match(/\s+\n*$/);
+					var pattern02 = html.match(/^\n*(\<)/);
+					html = html.replace(new RegExp(pattern, "g"), '\n');
+					html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+					html = html.replace(/—/gm, "&#x2014;");
+					html = html.replace(/–/gm, "&#x2013;");
+					var temphtml = html.match(/^[^\n]+\n/gm);
+
+					//html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+					console.log(temphtml.join(""));
+					var text = document.createTextNode(String(temphtml.join("")));
+					dom.innerHTML = "";
+					dom.innerText = String(temphtml.join(""));
+				}
+			}
+
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("myBtn").style.display = "block";
+				} else {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</head>
+
+	<body epub:type="bodymatter">
+		<button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+		<section id="read_speaker">
+			<section>
+				<header>
+					<h1 class="main_title">Layouts</h1>
+				</header>
+				<p class="p-grey">[A layout is the arrangement of your element on the digital page.]</p>
+				<hr/>
+				<ol class="links">
+
+					<li>
+						<p>
+							<strong>
+								<a href="#columns">Columns</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#2columnsgrid">2-Column Grid</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#2columns_ul_list">2-Column Unordered List</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#2_columns_figure_layout">2-Column Figure Layout</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#widths">Widths</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#width-100">Width-100</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-90">Width-90</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-85">Width-85</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-75">Width-75</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-66">Width-66</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-57">Width-57</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-50">Width-50</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-40">Width-40</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-33">Width-33</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-30">Width-30</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-25">Width-25</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-15">Width-15</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-10">Width-10</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#width-5">Width-5</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#alignments">Alignments</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#lc_align-left">Text Left-Aligned</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#lc_align-right">Text Right-Aligned</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#lc_align-center">Text Center-Aligned</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#figure_float_left">Float-Left</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#figure_float_right">Float-Right</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#clearboth">Float-Clear Both</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#inline">Inline</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#table_caption-top">Table Caption-Top</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#table_caption-bottom">Table Caption-Bottom</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#overflow-x">Overflow-X</a>
+							</strong>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#no-widow">No Widow</a>
+							</strong>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#margins">Margins (Editorial Ignore)</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#margin-0-auto">Margin 0 Auto</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-left-0">Margin Left 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-right-0">Margin Right 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-top-0">Margin Top 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-bottom-0">Margin Bottom 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-default-auto">Margin Default Auto</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-left-default">Margin Left Default</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-right-default">Margin Right Default</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-top-default">Margin Top Default</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#margin-bottom-default">Margin Bottom Default</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#paddings">Paddings (Editorial Ignore)</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#padding-left-0">Padding Left 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-right-0">Padding Right 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-top-0">Padding Top 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-bottom-0">Padding Bottom 0</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-left-default">Padding Left Default</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-right-default">Padding Right Default</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-top-default">Padding Top Default</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#padding-bottom-default">Padding Bottom Default</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#sr-only">SR-Only (Editorial Ignore)</a>
+							</strong>
+						</p>
+					</li>
+
+				</ol>
+
+				<select class="links2" onchange="location = this.value;">
+					<option>** Pick from dropdown **</option>
+					<option value="#columns">- Columns -</option>
+					<option value="#2columnsgrid">2-Column Grid</option>
+					<option value="#2columns_ul_list">2-Column Unordered List</option>
+					<option value="#2_columns_figure_layout">2-Column Figure Layout</option>
+					<option value="#widths">- Widths -</option>
+					<option value="#width-100">Width-100</option>
+					<option value="#width-90">Width-90</option>
+					<option value="#width-85">Width-85</option>
+					<option value="#width-75">Width-75</option>
+					<option value="#width-66">Width-66</option>
+					<option value="#width-57">Width-57</option>
+					<option value="#width-50">Width-50</option>
+					<option value="#width-40">Width-40</option>
+					<option value="#width-33">Width-33</option>
+					<option value="#width-30">Width-30</option>
+					<option value="#width-25">Width-25</option>
+					<option value="#width-15">Width-15</option>
+					<option value="#width-10">Width-10</option>
+					<option value="#width-5">Width-5</option>
+					<option value="#alignments">- Alignments -</option>
+					<option value="#lc_align-left">Text Left-Aligned</option>
+					<option value="#lc_align-right">Text Right-Aligned</option>
+					<option value="#lc_align-center">Text Center-Aligned</option>
+					<option value="#figure_float_left">Float-Left</option>
+					<option value="#figure_float_right">Float-Right</option>
+					<option value="#clearboth">Float-Clear Both</option>
+					<option value="#inline">Inline</option>
+					<option value="#table_caption-top">Table Caption-Top</option>
+					<option value="#table_caption-bottom">Table Caption-Bottom</option>
+					<option value="#overflow-x">- Overflow-X -</option>
+					<option value="#no-widow">- No Widow -</option>
+					<option value="#margins">- Margins (Editorial Ignore) -</option>
+					<option value="#margin-0-auto">Margin 0 Auto</option>
+					<option value="#margin-left-0">Margin Left 0</option>
+					<option value="#margin-right-0">Margin Right 0</option>
+					<option value="#margin-top-0">Margin Top 0</option>
+					<option value="#margin-bottom-0">Margin Bottom 0</option>
+					<option value="#margin-default-auto">Margin Default Auto</option>
+					<option value="#margin-left-default">Margin Left Default</option>
+					<option value="#margin-right-default">Margin Right Default</option>
+					<option value="#margin-top-default">Margin Top Default</option>
+					<option value="#margin-bottom-default">Margin Bottom Default</option>
+					<option value="#paddings">- Paddings (Editorial Ignore) -</option>
+					<option value="#padding-left-0">Padding Left 0</option>
+					<option value="#padding-right-0">Padding Right 0</option>
+					<option value="#padding-top-0">Padding Top 0</option>
+					<option value="#padding-bottom-0">Padding Bottom 0</option>
+					<option value="#padding-left-default">Padding Left Default</option>
+					<option value="#padding-right-default">Padding Right Default</option>
+					<option value="#padding-top-default">Padding Top Default</option>
+					<option value="#padding-bottom-default">Padding Bottom Default</option>
+					<option value="#sr-only">- SR-Only (Editorial Ignore) -</option>
+				</select>
+			</section>
+
+			<hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+			<!-- Columns Section Starts -->
+			<section id="columns">
+				<header>
+					<h1>Columns</h1>
+				</header>
+				<p class="p-grey">[This section displays different responsive column layouts available in the RE6 Teacher ePub design template.]</p>
+
+				<!-- 2 column section starts -->
+				<hr id="2columnsgrid"/>
+				<section>
+					<header>
+						<h2 class="p-grey">2-Column Grid:</h2>
+					</header>
+					<p class="p-grey">[Below is how a "2-column grid" will display.]</p>
+
+					<div class="grid-container">
+						<div class="grid-row">
+							<div class="grid-col">
+								<p>Column 01</p>
+							</div>
+							<div class="grid-col">
+								<p>Column 02</p>
+							</div>
+						</div>
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_id" class="grid-container">
+									<div class="grid-row">
+										<div class="grid-col">
+											<p>Column 01</p>
+										</div>
+										<div class="grid-col">
+											<p>Column 02</p>
+										</div>
+									</div>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- 2 column ends -->
+
+				<!-- 2 column unordered list section starts -->
+				<hr id="2columns_ul_list" />
+				<section>
+					<header>
+						<h2 class="p-grey">2-Column Unordered List:</h2>
+					</header>
+					<p class="p-grey">[Below is how a "2-column unordered list" will display.]</p>
+				
+					<ul class="ul_column">
+						<li class="padding-bottom-default">
+							<p class="margin-top-0 margin-bottom-0">Unordered List Item one.</p>
+						</li>
+						<li class="padding-bottom-default">
+							<p class="margin-top-0 margin-bottom-0">Unordered List Item two.</p>
+						</li>
+						<li class="padding-bottom-default">
+							<p class="margin-top-0 margin-bottom-0">Unordered List Item three.</p>
+						</li>
+						<li class="padding-bottom-default">
+							<p class="margin-top-0 margin-bottom-0">Unordered List Item four.</p>
+						</li>
+						<li class="padding-bottom-default">
+							<p class="margin-top-0 margin-bottom-0">Unordered List Item five.</p>
+						</li>
+						<li class="padding-bottom-default">
+							<p class="margin-top-0 margin-bottom-0">Unordered List Item six.</p>
+						</li>
+					</ul>
+				
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<ul class="ul_column">
+									<li class="padding-bottom-default">
+										<p class="margin-top-0 margin-bottom-0">Unordered List Item one.</p>
+									</li>
+									<li class="padding-bottom-default">
+										<p class="margin-top-0 margin-bottom-0">Unordered List Item two.</p>
+									</li>
+									<li class="padding-bottom-default">
+										<p class="margin-top-0 margin-bottom-0">Unordered List Item three.</p>
+									</li>
+									<li class="padding-bottom-default">
+										<p class="margin-top-0 margin-bottom-0">Unordered List Item four.</p>
+									</li>
+									<li class="padding-bottom-default">
+										<p class="margin-top-0 margin-bottom-0">Unordered List Item five.</p>
+									</li>
+									<li class="padding-bottom-default">
+										<p class="margin-top-0 margin-bottom-0">Unordered List Item six.</p>
+									</li>
+								</ul>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- 2 column unordered list ends -->
+
+				<!--2 column Figure Layout starts here -->
+				<hr id="2_columns_figure_layout"/>
+				<section>
+					<header>
+						<h2 class="p-grey">2-Column Figure Layout:</h2>
+					</header>
+					<p class="p-grey">[This is how a figure group in a 2-column layout will display.]</p>
+
+					<figure class="figuregroup" role="group" aria-labelledby="2column_figure01">
+						<figure class="informalfigure" role="group" aria-labelledby="2column_figure01_01">
+							<img alt="kids at church" src="../../images/placeholder_images/RE5_ack.jpg"/>
+							<figcaption id="2column_figure01_01">
+								<div class="caption">
+									<p>I am figure caption for the first figure.</p>
+								</div>
+							</figcaption>
+						</figure>
+						<figure class="informalfigure" role="group" aria-labelledby="2column_figure01_02">
+							<img alt="kids at church" src="../../images/placeholder_images/RE5_ack.jpg"/>
+							<figcaption id="2column_figure01_02">
+								<div class="caption">
+									<p>I am figure caption for the second figure.</p>
+								</div>
+							</figcaption>
+						</figure>
+						<figcaption id="2column_figure01" class="sr-only">
+							<div class="caption">
+								<p>Group of 2 images.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figuregroup_id" class="figuregroup" role="group" aria-labelledby="unique_figurecaption_id_for_figuregroup">
+									<figure id="unique_figure_id" class="informalfigure" role="group" aria-labelledby="unique_figurecaption_id">
+										<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+										<figcaption id="unique_figurecaption_id">
+											<div class="caption">
+												<p>I am figure caption for the first figure.</p>
+											</div>
+										</figcaption>
+									</figure>
+									<figure id="unique_figure_id" class="informalfigure" role="group" aria-labelledby="unique_figurecaption_id">
+										<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+										<figcaption id="unique_figurecaption_id">
+											<div class="caption">
+												<p>I am figure caption for the second figure.</p>
+											</div>
+										</figcaption>
+									</figure>
+									<figcaption id="unique_figurecaption_id_for_figuregroup" class="sr-only">
+										<div class="caption">
+											<p>Group of 2 images.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!--2 column Figure Layout starts here -->
+			</section>
+			<!-- Columns Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Width Helper Section Starts -->
+			<section id="widths">
+				<header>
+					<h1>Width Helper Classes</h1>
+				</header>
+				<p class="p-grey">[This section displays each of the width helper classes layouts that can be applied to any element and/or component that requires a certain width.]</p>
+
+				<!-- Width 100 Starts -->
+				<hr id="width-100"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-100:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-100 class".]</p>
+
+					<figure class="informalfigure width-100" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 100%. Use helper class for width-100 "informalfigure width-100".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-100" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 100 ends-->
+
+				<!-- Width 90 Starts -->
+				<hr id="width-90"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-90:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-90 class".]</p>
+
+					<figure class="informalfigure width-90" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 90%. Use helper class for width-90 "informalfigure width-90".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-90" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 90 ends-->
+
+				<!-- Width 85 Starts -->
+				<hr id="width-85"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-85:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-85 class".]</p>
+
+					<figure class="informalfigure width-85" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 85%. Use helper class for width-85 "informalfigure width-85".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-85" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 85 ends-->
+
+				<!-- Width 75 Starts -->
+				<hr id="width-75"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-75:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-75 class".]</p>
+
+					<figure class="informalfigure width-75" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 75%. Use helper class for width-75 "informalfigure width-75".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-75" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 75 ends-->
+
+				<!-- Width 66 Starts -->
+				<hr id="width-66"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-66:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-66 class".]</p>
+
+					<figure class="informalfigure width-66" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 66%. Use helper class for width-66 "informalfigure width-66".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-66" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 66 ends-->
+
+				<!-- Width 57 Starts -->
+				<hr id="width-57"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-57:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-57 class".]</p>
+
+					<figure class="informalfigure width-57" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 57%. Use helper class for width-57 "informalfigure width-57".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-57" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 57 ends-->
+
+				<!-- Width 50 Starts -->
+				<hr id="width-50"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-50:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-50 class".]</p>
+
+					<figure class="informalfigure width-50" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figure_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 50%. Use helper class for width-50 "informalfigure width-50".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-50" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 50 ends-->
+
+				<!-- Width 40 Starts -->
+				<hr id="width-40"/>
+				<section>
+					<header>
+						<h2 class="p-grey">width-40:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-40 class".]</p>
+
+					<figure class="informalfigure width-40" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 40%. Use helper class for width-40 "informalfigure width-40".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-40" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 40 ends-->
+
+				<!-- Width 33 Starts -->
+				<hr id="width-33"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-33:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-33 class".]</p>
+
+					<figure class="informalfigure width-33" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 33%. Use helper class for width-33 "informalfigure width-33".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-33" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 33 ends-->
+
+				<!-- Width 30 Starts -->
+				<hr id="width-30"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-30:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-30 class".]</p>
+
+					<figure class="informalfigure width-30" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 30%. Use helper class for width-30 "informalfigure width-30".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-30" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 30 ends-->
+
+				<!-- Width 25 Starts -->
+				<hr id="width-25"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-25:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-25 class".]</p>
+
+					<figure class="informalfigure width-25" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 25%. Use helper class for width-25 "informalfigure width-25".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-25" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 25 ends-->
+
+				<!-- Width 15 Starts -->
+				<hr id="width-15"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-15:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-15 class".]</p>
+
+					<figure class="informalfigure width-15" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 15%. Use helper class for width-15 "informalfigure width-15".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-15" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 15 ends-->
+
+				<!-- Width 10 Starts -->
+				<hr id="width-10"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-10:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-10 class".]</p>
+
+					<figure class="informalfigure width-10" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 10%. Use helper class for width-10 "informalfigure width-10".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-10" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 10 ends-->
+
+				<!-- Width 5 Starts -->
+				<hr id="width-5"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Width-5:</h2>
+					</header>
+					<p class="p-grey">[This is how an informal figure along with its caption will display using a "width-5 class".]</p>
+
+					<figure class="informalfigure width-5" role="group" aria-labelledby="unique_figurecaption_id">
+						<img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text"/>
+						<figcaption id="unique_figurecaption_id">
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[This informalfigure has a width of 5%. Use helper class for width-5 "informalfigure width-5".]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-5" role="group" aria-labelledby="unique_figurecaption_id">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Width 5 ends-->
+
+			</section>
+			<!-- Width Helper Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Alignments Section Starts -->
+			<section id="alignments">
+				<header>
+					<h1>Alignments</h1>
+				</header>
+				<p class="p-grey">[This section displays each of the alignment layouts available in the RE6 Student ePub design template.]
+				</p>
+
+				<!-- lc_align-left section starts -->
+				<hr id="lc_align-left"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Text Left-Aligned:</h2>
+					</header>
+					<p class="p-grey">[By default text is always left-aligned. This is how "text left-aligned" will display.]
+					</p>
+
+					<p class="lc_align-left">This text is left aligned.</p>
+					<p>This text is default aligned.</p>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<p class="lc_align-left">This text is left aligned.</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- lc_align-left section ends -->
+
+				<!-- lc_align-right section starts -->
+				<hr id="lc_align-right"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Text Right Aligned:</h2>
+					</header>
+					<p class="p-grey">[To make your text align to the right, you will need to use the "text right-aligned" layout. This is how "text right-aligned" layout will display.]</p>
+
+					<p class="lc_align-right">This text is right aligned.</p>
+					<p>This text is default aligned.</p>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<p class="lc_align-right">This text is right aligned.</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- lc_align-right section ends -->
+
+				<!-- lc_align-center section starts -->
+				<hr id="lc_align-center"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Text Center Aligned:</h2>
+					</header>
+					<p class="p-grey">[To make your text centered, you will need to use the "text center-aligned" layout. This is how "text centered-aligned" layout will display.]</p>
+
+					<p class="lc_align-center">This text is centered aligned.</p>
+					<p>This text is default aligned.</p>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<p class="lc_align-center">This text is centered aligned.</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- lc_align-center section ends -->
+
+				<!-- Figure Float Left Section starts -->
+				<hr id="figure_float_left"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Float-Left:</h2>
+					</header>
+					<p class="p-grey">[Use the "float-left" layout to left align any element and/or component, except for paragraph text, and apply text wrapping around that element. Please note that this layout is only recommended for those figures using a width-50 or less.]</p>
+
+					<figure class="informalfigure width-33 float-left">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg"/>
+						<figcaption>
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+						desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+						up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+						Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+						section 1.10.32.</p>
+
+					<p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-33 float-left">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+								<p>...
+								</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Figure Float Left Section Ends -->
+
+				<!-- Figure Float Right Section starts -->
+				<hr id="figure_float_right"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Float-Right:</h2>
+					</header>
+					<p class="p-grey">[Use the "float-right" layout to right-align any element and/or component, except for paragraph text, and apply text wrapping around that element. This is how a figure using a "float right" with text wrapping layout will display.
+						Please note that this layout is only recommended for those figures using a width-50 class or less.]</p>
+
+					<figure class="informalfigure width-33 float-right">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg"/>
+						<figcaption>
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+						desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+						up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+						Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+						section 1.10.32.</p>
+
+					<p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-33 float-right">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+								<p>...
+								</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Figure Float Right Section Ends -->
+
+				<!-- Clear both SEction starts -->
+				<hr id="clearboth"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Float-Clear Both:</h2>
+					</header>
+					<p class="p-grey">[If you want to float more than one figure to the right or left and prevent the second figure from being inline, you will need to apply the "clear both" layout on the second figure. The following shows how two figures with a "float
+						right' layout are displaying one above the other since the "clear both" layout was applied to the second figure.]</p>
+
+					<figure class="informalfigure width-33 float-right margin-top-0 margin-right-0 margin-left-default clear-both">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg"/>
+						<figcaption>
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<figure class="informalfigure width-33 float-right margin-top-0 margin-right-0 margin-left-default clear-both">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg"/>
+						<figcaption>
+							<div class="caption">
+								<p>Caption text will display below the figure like this.</p>
+							</div>
+						</figcaption>
+					</figure>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					</p>
+					<p class="clear-both">
+						<strong>Float-Clear Both is applied on this paragraph.</strong>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+						has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					</p>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-33 float-right margin-top-0 margin-right-0 margin-left-default clear-both">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+								<figure id="unique_figure_id" class="informalfigure width-33 float-right margin-top-0 margin-right-0 margin-left-default clear-both">
+									<img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text"/>
+									<figcaption id="unique_figurecaption_id">
+										<div class="caption">
+											<p>Caption text will display below the figure like this.</p>
+										</div>
+									</figcaption>
+								</figure>
+								<p>...</p>
+								<p class="clear-both">Float-Clear Both is...</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Clear both SEction ends -->
+
+				<!-- Inline Section starts -->
+				<hr id="inline"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Inline:</h2>
+					</header>
+					<p class="p-grey">[Use the "inline" layout if you want an element to stay in line with the text or title. The "inline" layout is applied to both elements below so that the image icon displays in line with the inline definition list.]</p>
+
+					<dl>
+						<dt class="inline text_sans-serif">
+							<strong>Differentiated Instruction Icon:</strong>
+						</dt>
+						<dd class="inline">
+							<p class="inline">identifies strategies to assist teachers with differentiated instruction.</p>
+							<figure class="informalfigure inline">
+								<img class="design-icon inline" alt="alt text" src="../../images/re6_teacher_icons/icon_image_id_colour_006.png">
+							</figure>
+						</dd>
+					</dl>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<dl id="unique_dl_id">
+									<dt class="inline text_sans-serif">
+										<strong>Differentiated Instruction Icon:</strong>
+									</dt>
+									<dd class="inline">
+										<p class="inline">identifies strategies to assist teachers with differentiated instruction.</p>
+										<figure class="informalfigure inline">
+											<img class="design-icon inline" alt="alt text" src="../images/icon_image_id_colour_006.png">
+										</figure>
+									</dd>
+								</dl>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Inline Section ends -->
+
+				<!-- Table Caption top Section starts -->
+				<hr id="table_caption-top"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Table Caption-Top:</h2>
+					</header>
+					<p class="p-grey">[Use the "table caption top" for table caption that need to appear at the top of the table. Caption is defaulted to be on top of the table.]
+					</p>
+
+					<table class="informaltable" style="min-width: auto;">
+						<caption class="table_caption-top">
+							<p>
+								<strong>Table Caption</strong>
+							</p>
+						</caption>
+						<thead>
+							<tr>
+								<th>
+									<p>Lorem Ipsum is simply dummy text</p>
+								</th>
+								<th>
+									<p>Lorem Ipsum is simply dummy text</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								</td>
+								<td>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<table id="unique_table_id" class="informaltable">
+									<caption id="unique_caption_id" class="table_caption-top">
+										<p>
+											<strong>Table Caption</strong>
+										</p>
+									</caption>
+									<thead>
+										<tr>
+											<th>
+												<p>Lorem Ipsum is simply dummy text</p>
+											</th>
+											<th>
+												<p>Lorem Ipsum is simply dummy text</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+											</td>
+											<td>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Table Caption top Section ends -->
+
+				<!-- Table Caption Bottom Section starts -->
+				<hr id="table_caption-bottom"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Table Caption-Bottom:</h2>
+					</header>
+					<p class="p-grey">[Use the "table caption bottom" for table caption that need to appear at the bottom of the table.]
+					</p>
+
+					<table class="informaltable" style="min-width: auto;">
+						<caption class="table_caption-bottom">
+							<p>
+								<strong>Table Caption</strong>
+							</p>
+						</caption>
+						<thead>
+							<tr>
+								<th>
+									<p>Lorem Ipsum is simply dummy text</p>
+								</th>
+								<th>
+									<p>Lorem Ipsum is simply dummy text</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								</td>
+								<td>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<table id="unique_table_id" class="informaltable">
+									<caption id="unique_caption_id" class="table_caption-bottom">
+										<p>
+											<strong>Table Caption</strong>
+										</p>
+									</caption>
+									<thead>
+										<tr>
+											<th>
+												<p>Lorem Ipsum is simply dummy text</p>
+											</th>
+											<th>
+												<p>Lorem Ipsum is simply dummy text</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+											</td>
+											<td>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Table Caption Bottom Section ends -->
+
+			</section>
+			<!-- Alignment Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Overflow-x Section Starts -->
+			<section id="overflow-x">
+				<header>
+					<h1 class="p-grey">Overflow-X:</h1>
+				</header>
+				<p class="p-grey">[Use the "overflow-x" layout for a large element, such as an image, table, or map, that exceeds the width-class and needs to overflow using a scrollbar. Below is a table using the "overflow-x" layout to allow viewers to scroll
+					horizontally to view the entire table.]</p>
+
+				<div id="overflow-x-style" class="overflow-x margin-default-auto">
+					<table class="informaltable">
+						<caption>
+							<p>
+								<strong>
+									<span class="no-widow">Knowledge and</span>
+									Understanding</strong>
+								— Religion content acquire in Unit 1 (Optional if
+								<span class="no-widow">any caption)</span></p>
+						</caption>
+						<thead>
+							<tr>
+								<td></td>
+								<td></td>
+								<th class="lc_align-left" scope="col">
+									<p>
+										<strong>Level 1</strong>
+									</p>
+								</th>
+								<th class="lc_align-left" scope="col">
+									<p>
+										<strong>Level 2</strong>
+									</p>
+								</th>
+								<th class="lc_align-left" scope="col">
+									<p>
+										<strong>Level 3</strong>
+									</p>
+								</th>
+								<th class="lc_align-left" scope="col">
+									<p>
+										<strong>Level 4</strong>
+									</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="lc_align-left">
+									<p>
+										<strong>You shall have no other gods before God.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>You shall have no other gods before God.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										You shall have no other gods before God.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										You shall have no other gods before God.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										You shall have no other gods before God.
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="lc_align-left">
+									<p>
+										<strong>You shall have no other gods before God.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>You shall have no other gods before God.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										You shall have no other gods before God.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										You shall have no other gods before God.
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>
+										You shall have no other gods before God.
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<div class="overflow-x margin-default-auto">
+								<table id="unique_table_id" class="informaltable">
+									<thead>
+										<tr>
+											<th>
+												<p>...etc</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</code>
+					</div>
+				</p>
+			</section>
+			<!-- Overflow-x Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- No Widow Section Starts -->
+			<section id="no-widow">
+				<header>
+					<h1 class="p-grey">No Widow:</h1>
+				</header>
+				<p class="p-grey">[Use the "no widow" layout for any heading or text where you do not want orphan word(s) to move to the next line on a responsive screen view. Below is how a paragraph with the "no widow" layout will display. You will notice that no
+					orphan word(s) is moved to the next line, even when you shrink your viewing window.]
+				</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed
+					<strong>
+						<span class="no-widow">risus urna.</span></strong>
+				</p>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed
+								<strong>
+									<span class="no-widow">risus urna.</span>
+								</strong>
+							</p>
+						</code>
+					</div>
+				</p>
+			</section>
+			<!-- No Widow Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Margin SEction Starts -->
+			<section id="margins">
+				<header>
+					<h1>Margins</h1>
+				</header>
+				<p class="p-grey">[A margin is the space outside the border of an element. Use margins for spacing between elements. This section displays each of the default and 0 margin layouts available in the RE6 Student ePub design template.]</p>
+
+				<!-- margin-0-auto section starts -->
+				<hr id="margin-0-auto"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin 0 Auto:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin 0 auto" layout when you need to center an element. This is how a note with the "margin 0 auto" layout will display.]</p>
+
+					<div style="width: 100%; height: 40px; background-color: #F1F1F1; border-bottom: 5px dashed blueviolet;"></div>
+					<div class="note note_01 width-50 margin-0-auto">
+						<p>This is Note element centered with
+							<strong>0 margins</strong>
+							on both the top and bottom.</p>
+					</div>
+					<div style="width: 100%; height: 40px; background-color: #F1F1F1; border-top: 5px dashed blueviolet"></div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div class="note note_01 width-50 margin-0-auto">
+									<p>This is Note element centered with
+										<strong>0 margins</strong>
+										on both the top and bottom.</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-0-auto section ends -->
+
+				<!-- margin-left-0 section starts -->
+				<hr id="margin-left-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Left 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin left 0" layout for elements that don't require a left margin. This is how a note floating to the right with the "margin left 0" layout will display. Notice there is no space between the note and the left edge.]</p>
+
+					<div style="border-left: 5px dashed blueviolet;">
+						<div class="note note_01 width-75 margin-left-0">
+							<p>This Note element has
+								<strong>margin left 0</strong>
+								applied here.</p>
+						</div>
+					</div>
+					<div id="c01_600" class="note note_01 width-75" style="margin: 1.5rem 2.25rem;">
+						<p>This Note element
+							<strong>does not</strong>
+							have margin left 0 applied here.
+						</p>
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="margin-left-0 note note_01 width-75">
+									<p>This Note element has
+										<strong>margin left 0</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-left-0 section ends -->
+
+				<!-- margin-right-0 section starts -->
+				<hr id="margin-right-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Right 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin right 0" layout for elements that don't require a right margin. This is how a note floating to the left with the "margin right 0" layout will display. Notice there is no space between the note and the right edge.]</p>
+					<div style="border-right: 5px dashed blueviolet; width: 100%; height: 70px;">
+						<div class="note note_01 width-75 margin-right-0 float-right" style="margin-top: 0; margin-bottom: 0;">
+							<p>This Note element has
+								<strong>margin right 0</strong>
+								applied here.</p>
+						</div>
+					</div>
+					<div id="c02_600" class="note note_01 width-75 float-right" style="margin: 1.5rem 2.25rem;">
+						<p>This Note element
+							<strong>does not</strong>
+							have margin right 0 applied here.</p>
+					</div>
+					<p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="margin-right-0 note note_01 width-75 float-right">
+									<p>This Note element has
+										<strong>margin right 0</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-right-0 section ends -->
+
+				<!-- margin-top-0 section starts -->
+				<hr id="margin-top-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Top 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin top 0" layout for elements that don't require a top margin. This is how a note with the "margin top 0" layout will display. Notice there is no space at the top of the note while the figure has default spacing.]</p>
+					<figure class="informalfigure width-33">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg">
+					</figure>
+					<div style="border-top: 5px dashed blueviolet;">
+						<div class="note note_01 width-75 margin-top-0">
+							<p>This Note element has
+								<strong>margin top 0</strong>
+								applied here.</p>
+						</div>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-top-0">
+									<p>This Note element has
+										<strong>margin top 0</strong>
+										applied here.</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-top-0 section ends -->
+
+				<!-- margin-bottom-0 section starts -->
+				<hr id="margin-bottom-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Bottom 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin bottom 0" layout for elements that don't require a bottom margin. This is how a note with the "margin bottom 0" layout will display. Notice there is no space at the bottom of the note while the figure has default spacing.]</p>
+					<div style="border-bottom: 5px dashed blueviolet;">
+						<div class="note note_01 width-75 margin-bottom-0">
+							<p>This Note element has
+								<strong>margin bottom 0</strong>
+								applied here.
+							</p>
+						</div>
+					</div>
+					<figure class="informalfigure width-33">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg">
+					</figure>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-bottom-0">
+									<p>This Note element has
+										<strong>margin bottom 0</strong>
+										applied here.</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-bottom-0 section ends -->
+
+				<!-- margin-default-auto section starts -->
+				<hr id="margin-default-auto"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Default Auto:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin default auto" layout when you need to center an element with margins on the top and bottom. This is how a note with the "margin default auto" layout will display. ]</p>
+					<div style="width: 100%; height: 40px; background-color: #F1F1F1; border-bottom: 5px dashed blueviolet;"></div>
+					<div class="note note_01 width-50 margin-default-auto">
+						<p>This is Note element centered with
+							<strong>default margins</strong>
+							on both the top and bottom.</p>
+					</div>
+					<div style="width: 100%; height: 40px; background-color: #F1F1F1; border-top: 5px dashed blueviolet"></div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-50 margin-default-auto">
+									<p>This is Note element centered with
+										<strong>default margins</strong>
+										on both the top and bottom.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-default-auto section ends -->
+
+				<!-- margin-left-default section starts -->
+				<hr id="margin-left-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Left Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin left default" layout for elements that require a left margin. This is how a figure floating to the right with the "margin left default" layout will display. Notice there is space between the paragraph text and the figure.]</p>
+					<figure class="informalfigure width-25 float-right margin-left-default">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg"/>
+					</figure>
+					<div id="c03_600" style="width: calc(75% - 1.5rem); border-right: 5px dashed blueviolet;">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+							desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					</div>
+					<p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-25 float-right margin-left-default">
+									<img id="unique_image_id" alt="alt text" src="../images/RE5_ack.jpg"/>
+								</figure>
+								<p>...</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-left-default section ends -->
+
+				<!-- margin-right-default section starts -->
+				<hr id="margin-right-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Right Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin right default" layout for elements that require a right margin. This is how a figure floating to the left with the "margin right default" layout will display. Notice there is space between the figure and the paragraph text.]</p>
+					<figure class="informalfigure width-25 float-left margin-right-default">
+						<img alt="" src="../../images/placeholder_images/RE5_ack.jpg"/>
+					</figure>
+					<div id="c04_600" style="float: right; width: calc(75% - 1.5rem); margin-bottom: 1.15rem; border-left: 5px dashed blueviolet;">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+							desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					</div>
+					<p class="code_snippet" style="clear: both;">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<figure id="unique_figure_id" class="informalfigure width-25 float-left margin-right-default">
+									<img id="unique_image_id" alt="alt text" src="../images/RE5_ack.jpg"/>
+								</figure>
+								<p>...</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-right-default section ends -->
+
+				<!-- margin-top-default section starts -->
+				<hr id="margin-top-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Top Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin top default" layout for elements that require a top margin. This is how a note with the "margin top default" layout will display. Notice there is space between the figure and the note.]</p>
+					<div style="border-bottom: 5px dashed blueviolet;">
+						<figure class="informalfigure width-33 margin-bottom-0">
+							<img alt="" src="../../images/placeholder_images/RE5_ack.jpg">
+						</figure>
+					</div>
+					<div class="note note_01 margin-top-default width-75">
+						<p>This Note element has
+							<strong>margin top default</strong>
+							applied here.
+						</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 margin-top-default width-75">
+									<p>This Note element has
+										<strong>margin top default</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-top-default section ends -->
+
+				<!-- margin-bottom-default section starts -->
+				<hr id="margin-bottom-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Margin Bottom Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "margin bottom default" layout for elements that require a bottom margin. This is how a note with the "margin bottom default" layout will display. Notice there is space between the note and the figure.]
+					</p>
+					<div class="note note_01 margin-bottom-default width-75">
+						<p>This Note element has
+							<strong>margin bottom default</strong>
+							applied here.
+						</p>
+					</div>
+					<div style="border-top: 5px dashed blueviolet;">
+						<figure class="informalfigure width-33 margin-top-0">
+							<img alt="" src="../../images/placeholder_images/RE5_ack.jpg">
+						</figure>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 margin-bottom-default width-75">
+									<p>This Note element has
+										<strong>margin bottom default</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- margin-bottom-default section ends -->
+
+			</section>
+			<!-- Margin SEction Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Paddings Section Start -->
+			<section id="paddings">
+				<header>
+					<h1>Paddings</h1>
+				</header>
+				<p class="p-grey">[Padding is the space inside the border of an element. Use padding for spacing within an element. This section displays each of the default and 0 padding layouts available in the RE6 Student ePub design template.]</p>
+
+				<!-- padding-left-0 section starts -->
+				<hr id="padding-left-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Left 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding left 0" layout for elements that require no left padding. This is how a note with text aligned to the left and the "padding left 0" layout will display.]</p>
+					<div class="note note_01 width-75 margin-left-0 padding-left-0">
+						<p style="border-left: 5px dashed blueviolet;">This Note element has
+							<strong>padding left 0</strong>
+							applied here.</p>
+					</div>
+					<div class="note note_01 width-75" style="margin: 1.5rem 0; padding-left: 2.25rem;">
+						<p>This Note element
+							<strong>does not</strong>
+							have padding left 0 applied here.</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-left-0 padding-left-0">
+									<p>This Note element has
+										<strong>padding left 0</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-left-0 section ends -->
+
+				<!-- padding-right-0 section starts -->
+				<hr id="padding-right-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Right 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding right 0" layout for elements that require no right padding. This is how a note with text aligned to the right and the "padding right 0" layout will display.]</p>
+					<div class="note note_01 width-75 margin-left-0 padding-right-0">
+						<p class="lc_align-right" style="border-right: 5px dashed blueviolet;">This Note element has
+							<strong>padding right 0</strong>
+							applied here.</p>
+					</div>
+					<div class="note note_01 width-75" style="margin: 1.5rem 0; padding-right: 2.25rem;">
+						<p class="lc_align-right">This Note element
+							<strong>does not</strong>
+							have padding right 0 applied here.</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-left-0 padding-right-0">
+									<p class="lc_align-right">This Note element has
+										<strong>padding right 0</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-right-0 section ends -->
+
+				<!-- padding-top-0 section starts -->
+				<hr id="padding-top-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Top 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding top 0" layout for elements that require no top padding. This is how a note with the "padding top 0" layout will display.]</p>
+					<div class="note note_01 width-75 margin-left-0 padding-top-0">
+						<p style="border-top: 5px dashed blueviolet; margin-top: 0;">This Note element has
+							<strong>padding top 0</strong>
+							applied here.</p>
+					</div>
+					<div class="note note_01 width-75" style="margin: 1.5rem 0; padding-right: 2.25rem;">
+						<p>This Note element
+							<strong>does not</strong>
+							have padding top 0 applied here.</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-left-0 padding-top-0">
+									<p>This Note element has
+										<strong>padding top 0</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-top-0 section ends -->
+
+				<!-- padding-bottom-0 section starts -->
+				<hr id="padding-bottom-0"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Bottom 0:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding bottom 0" layout for elements that require no bottom padding. This is how a note with the "padding bottom 0" layout will display.]</p>
+					<div class="note note_01 width-75 margin-left-0 padding-bottom-0">
+						<p style="border-bottom: 5px dashed blueviolet; margin-bottom: 0;">This Note element has
+							<strong>padding bottom 0</strong>
+							applied here.</p>
+					</div>
+					<div class="note note_01 width-75" style="margin: 1.5rem 0; padding-right: 2.25rem;">
+						<p>This Note element
+							<strong>does not</strong>
+							have padding bottom 0 applied here.</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-left-0 padding-bottom-0">
+									<p>This Note element has
+										<strong>padding bottom 0</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-bottom-0 section ends -->
+
+				<!-- padding-left-default section starts -->
+				<hr id="padding-left-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Left Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding left default" layout for elements that require a left padding. This is how a note with the "padding left default" layout will display.]</p>
+					<div class="note note_01 width-75 margin-left-0 padding-left-default">
+						<p style="border-left: 5px dashed blueviolet;">This Note element has
+							<strong>padding left default</strong>
+							applied here.</p>
+					</div>
+					<div class="note note_01 width-75" style="margin: 1.5rem 0; padding-left: 0;">
+						<p>This Note element
+							<strong>does not</strong>
+							have padding left default applied here.</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-left-0 padding-left-default">
+									<p>This Note element has
+										<strong>padding left default</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-left-default section ends -->
+
+				<!-- padding-right-default section starts -->
+				<hr id="padding-right-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Right Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding right default" layout for elements that require a right padding. This is how a note with text aligned to the right and the "padding right default" layout will display.]</p>
+					<div class="note note_01 width-75 margin-left-0 padding-right-default">
+						<p class="lc_align-right" style="border-right: 5px dashed blueviolet;">This Note element has
+							<strong>padding right default</strong>
+							applied here.</p>
+					</div>
+					<div class="note note_01 width-75" style="margin: 1.15rem 0; padding-right: 0;">
+						<p class="lc_align-right">This Note element
+							<strong>does not</strong>
+							have padding right default applied here.</p>
+					</div>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01 width-75 margin-left-0 padding-right-default">
+									<p class="lc_align-right">This Note element has
+										<strong>padding right default</strong>
+										applied here.
+									</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-right-default section ends -->
+
+				<!-- padding-top-default section starts -->
+				<hr id="padding-top-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Top Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding top default" layout for elements that require a top padding. This is how an ordered list item with the "padding top default" layout will display. Notice the second list item has more spacing at the top than the other list items.]</p>
+					<ol>
+						<li>
+							<p style="border-bottom: 1px dashed grey; border-top: 1px dashed grey;">Ordered List Item one.</p>
+						</li>
+						<li class="padding-top-default" style="border-top: 5px dashed blueviolet;">
+							<p style="border-bottom: 1px dashed grey; margin-top: 0;">This list item has
+								<strong>padding top default</strong>
+								applied here.</p>
+						</li>
+						<li>
+							<p style="border-bottom: 1px dashed grey; border-top: 1px dashed grey;">Ordered List Item three.</p>
+						</li>
+					</ol>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<ol id="unique_ol_id">
+									<li>
+										<p>Ordered List Item one.</p>
+									</li>
+									<li class="padding-top-default">
+										<p>This list item has
+											<strong>padding top default</strong>
+											applied here.</p>
+									</li>
+									<li>
+										<p>Ordered List Item three.</p>
+									</li>
+								</ol>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-top-default section ends -->
+
+				<!-- padding-bottom-default section starts -->
+				<hr id="padding-bottom-default"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Padding Bottom Default:</h2>
+					</header>
+					<p class="p-grey">[Use the "padding bottom default" layout for elements that require a bottom padding. This is how an ordered list item with the "padding bottom default" layout will display. Notice the second list item has more spacing at the bottom
+						than the other list items.]</p>
+					<ol>
+						<li>
+							<p style="border-top: 1px dashed grey; border-bottom: 1px dashed grey;">Ordered List Item one.</p>
+						</li>
+						<li class="padding-bottom-default" style="border-bottom: 5px dashed blueviolet;">
+							<p style="border-top: 1px dashed grey; margin-bottom: 0;">This list item has
+								<strong>padding bottom default</strong>
+								applied here.</p>
+						</li>
+						<li>
+							<p style="border-top: 1px dashed grey; border-bottom: 1px dashed grey;">Ordered List Item three.</p>
+						</li>
+					</ol>
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<ol id="unique_ol_id">
+									<li>
+										<p>Ordered List Item one.</p>
+									</li>
+									<li class="padding-bottom-default">
+										<p>This list item has
+											<strong>padding bottom default</strong>
+											applied here.</p>
+									</li>
+									<li>
+										<p>Ordered List Item three.</p>
+									</li>
+								</ol>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- padding-bottom-default section ends -->
+
+			</section>
+			<!-- Paddings Section End -->
+
+			<hr class="template_hr"/>
+
+			<!-- SR Only Section Starts -->
+			<section id="sr-only">
+				<h1 class="p-grey">SR-Only:</h1>
+				<p class="p-grey">[Use the "sr-only" class for accessibility of screen readers to read text that are not readible for regular people.]</p>
+
+				<section>
+					<header class="sr-only">
+						<h2 class="title title_01">Title 01</h2>
+					</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+				</section>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p class="p-darkred">[Note that there is a "title title01" heading before the paragraph text but it is hidden by the "sr-only" class.]</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<section id="unique_section_id" aria-labelledby="unique_header_id">
+								<header id="unique_header_id" class="sr-only">
+									<h1 id="unique_heading_id" class="title title_01">Title 01</h1>
+								</header>
+								<p>...........</p>
+							</section>
+						</code>
+					</div>
+				</p>
+			</section>
+			<!-- SR Only Section Ends-->
+
+		</section>
+		<!-- Readspeaker section closed-->
+	</body>
+
+</html>

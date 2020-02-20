@@ -1,0 +1,1683 @@
+<html lang="en">
+
+  <head>
+    <title>Religion Generic Element Styles</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../css/re6_teacher.css" />
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        font-size: 115%;
+      }
+
+      hr {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+      }
+
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .grid-col {
+        background-color: #e2f2f2;
+        border: 1px dotted #020202;
+        text-align: center;
+      }
+
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+      }
+
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: red;
+      }
+
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+
+      .links a {
+        font-weight: unset;
+      }
+
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+        margin: 0;
+      }
+
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+
+      .links2 {
+        display: none;
+        width: 100%;
+        font-size: 1.15rem;
+        margin: 1.15rem 0;
+        border: 1px solid black;
+      }
+
+      .p-grey, .p-darkred {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .links { display: none; }
+        .links2 {display: block; }
+      }
+
+      @media only screen and (max-width: 450px) {
+        #myBtn {
+          bottom: 70px;
+          right: 10px;
+        }
+
+        .main_title {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        var len = codeblock.length;
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          console.log(html);
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          console.log(html);
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), '');
+          //html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.innerText = String(temphtml.join(""));
+        }
+      }
+
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Elements</h1>
+        </header>
+        <p class="p-grey">[An element refers to a base building block of your digital page.]</p>
+        <hr />
+        <ol class="links">
+
+          <li><p><strong><a href="#paragraphs">Paragraph</a></strong></p></li>
+
+          <li>
+            <p><strong><a href="#titles">Title</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#title01">Title 01</a></p>
+              </li>
+              <li>
+                <p><a href="#title02">Title 02</a></p>
+              </li>
+              <li>
+                <p><a href="#title03">Title 03</a></p>
+              </li>
+              <li>
+                <p><a href="#title04">Title 04</a></p>
+              </li>
+              <li>
+                <p><a href="#title05">Title 05</a></p>
+              </li>
+              <li>
+                <p><a href="#title06">Title 06</a></p>
+              </li>
+              <li>
+                <p><a href="#title07">Title 07</a></p>
+              </li>
+              <li>
+                <p><a href="#title08">Title 08</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#list">List</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#ordered_list">Ordered List</a></p>
+              </li>
+              <li>
+                <p><a href="#ordered_list_ol_none">Ordered List without Numbers</a></p>
+              </li>
+              <li>
+                <p><a href="#ordered_list_ol_01">Ordered List (Alphabetical)</a></p>
+              </li>
+              <li>
+                <p><a href="#practice_list">Practice List of Questions</a></p>
+              </li>
+              <li>
+                <p><a href="#practice_div_list">Practice Div List of Questions</a></p>
+              </li>
+              <li>
+                <p><a href="#unordered_list">Unordered List</a></p>
+              </li>
+              <li>
+                <p><a href="#unordered_list_ul_none">Unordered List without Bullets</a></p>
+              </li>
+              <li>
+                <p><a href="#unordered_list_ul_01">Unordered List with Dash</a></p>
+              </li>
+              <li>
+                <p><a href="#definition_list">Definition List</a></p>
+              </li>
+              <li>
+                <p><a href="#definition_list_inline">Definition List Inline</a></p>
+              </li>
+              <li>
+                <p><a href="#hybrid_list">Hybrid List</a></p>
+              </li>
+              <li>
+                <p><a href="#step_list">Step List</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#figures">Informal Figure</a></strong></p>
+            <ol>
+              <li>
+                <p><a href="#informalfigure">Informalfigure</a></p>
+              </li>
+              <li>
+                <p><a href="#design-icon">Design-Icon</a></p>
+              </li>
+              <li>
+                  <p><a href="#design-icon_text-inline">Design-Icon Text-Inline</a></p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p><strong><a href="#poem">Poem</a></strong></p>
+          </li>
+
+          <li>
+            <p><strong><a href="#blockquotes">Blockquotes</a></strong></p>
+          </li>
+
+          <li>
+            <p><strong><a href="#dialogues">Dialogue</a></strong></p>
+          </li>
+
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#paragraphs">- Paragraph -</option>
+          <option value="#titles">- Title -</option>
+          <option value="#title01">Title 01</option>
+          <option value="#title02">Title 02</option>
+          <option value="#title03">Title 03</option>
+          <option value="#title04">Title 04</option>
+          <option value="#title05">Title 05</option>
+          <option value="#title06">Title 06</option>
+          <option value="#title07">Title 07</option>
+          <option value="#title08">Title 08</option>
+          <option value="#list">- List -</option>
+          <option value="#ordered_list">Ordered List</option>
+          <option value="#ordered_list_ol_none">Ordered List without Numbers</option>
+          <option value="#ordered_list_ol_01">Ordered List (Alphabetical)</option>
+          <option value="#practice_list">Practice List of Questions</option>
+          <option value="#practice_div_list">Practice Div List of Questions</option>
+          <option value="#unordered_list">Unordered List</option>
+          <option value="#unordered_list_ul_none">Unordered List without Bullets</option>
+          <option value="#unordered_list_ul_01">Unordered List with Dash</option>
+          <option value="#definition_list">Definition List</option>
+          <option value="#definition_list_inline">Definition List Inline</option>
+          <option value="#hybrid_list">Hybrid List</option>
+          <option value="#step_list">Step List</option>
+          <option value="#figures">- Informal Figure -</option>
+          <option value="#informalfigure">Informalfigure</option>
+          <option value="#design-icon">Design-Icon</option>
+          <option value="#design-icon_text-inline">Design-Icon Text-Inline</option>
+          <option value="#poem">- Poem -</option>
+          <option value="#blockquotes">- Blockquotes -</option>
+          <option value="#dialogues">- Dialogue -</option>
+        </select>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Paragraph Section Starts -->
+      <section id="paragraphs">
+        <header>
+          <h1 class="p-grey">Paragraphs</h1>
+        </header>
+        <p class="p-grey">[The following displays the standard look for paragraph text.]</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Paragraph Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Title Section Starts -->
+      <section id="titles">
+        <header>
+          <h1>Title</h1>
+        </header>
+        <p class="p-grey">[This section displays each of the title style elements available in the RE6 Student ePub design template. All these title styles, except for "subtitle" can be applied to any header level content.]</p>
+
+        <!-- Title 01 section starts -->
+        <hr id="title01"/>
+        <p class="p-grey">
+          <strong>Title 01:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 01" followed by paragraph text.]</p>
+        <section>
+          <header>
+            <h1 class="title title_01">Title 01 Style</h1>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 01 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h1 id="unique_heading_id" class="title title_01">Title 01</h1>
+                  </header>
+                  <p>...........</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 01 sections ends -->
+
+        <!-- Title 02 section starts -->
+        <hr id="title02"/>
+        <p class="p-grey">
+          <strong>Title 02:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 02" followed by paragraph text.]</p>
+        <section>
+          <header>
+            <h2 class="title title_02">Title 02 Style</h2>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 02 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h2 id="unique_heading_id" class="title title_02">Title 02</h2>
+                  </header>
+                  <p>...........</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 02 section ends -->
+
+        <!-- Title 03 section starts -->
+        <hr id="title03"/>
+        <p class="p-grey">
+          <strong>Title 03:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 03" followed by paragraph text.]</p>
+        <section >
+          <header>
+            <h3 class="title title_03">Title 03 Style</h3>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 03 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h3 id="unique_heading_id" class="title title_03">Title 03</h3>
+                  </header>
+                  <p>...........</p>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 03 section ends -->
+
+        <!-- Title 04 section starts -->
+        <hr id="title04"/>
+        <p class="p-grey">
+          <strong>Title 04:</strong>
+        </p>
+        <p class="p-grey">[Below is the style for "Title 04" followed by paragraph text.]</p>
+        <section>
+          <header>
+            <h4 class="title title_04">Title 04 Style</h4>
+          </header>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus</p>
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p class="p-darkred">[All titles 04 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <section id="unique_section_id" aria-labelledby="unique_header_id">
+                    <header id="unique_header_id">
+                      <h4 id="unique_heading_id" class="title title_04">Title 04</h4>
+                    </header>
+                    <p>...........</p>
+                  </section>
+                </code>
+              </div>
+            </p>
+          </section>
+          <!-- Title 04 section ends -->
+
+          <!-- Title 05 section starts -->
+          <hr id="title05"/>
+          <p class="p-grey">
+            <strong>Title 05:</strong>
+          </p>
+          <p class="p-grey">[Below is the style for "Title 05" followed by paragraph text. Note that Title 05 looks like Title 03 but it is semi-bold.]</p>
+          <section>
+            <header>
+              <h5 class="title title_05">Title 05 Style</h5>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p class="p-darkred">[All titles 05 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <section id="unique_section_id" aria-labelledby="unique_header_id">
+                    <header id="unique_header_id">
+                      <h5 id="unique_heading_id" class="title title_05">Title 05</h5>
+                    </header>
+                    <p>...........</p>
+                  </section>
+                </code>
+              </div>
+            </p>
+          </section>
+          <!-- Title 05 section ends -->
+
+          <!-- Title 06 section starts -->
+          <hr id="title06"/>
+          <p class="p-grey">
+            <strong>Title 06:</strong>
+          </p>
+          <p class="p-grey">[Below is the style for "Title 06" followed by paragraph text.]</p>
+          <section>
+            <header>
+              <h5 class="title title_06">Title 06 Style</h5>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p class="p-darkred">[All titles 06 should be enclosed in a header tag. Below is the code sample for how the title should be coded.]</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <section id="unique_section_id" aria-labelledby="unique_header_id">
+                    <header id="unique_header_id">
+                      <h5 id="unique_heading_id" class="title title_06">Title 06</h5>
+                    </header>
+                    <p>...........</p>
+                  </section>
+                </code>
+              </div>
+            </p>
+          </section>
+          <!-- Title 06 section ends -->
+
+          <!-- Title 07 section starts -->
+          <hr id="title07"/>
+          <p class="p-grey">
+            <strong>Title 07:</strong>
+          </p>
+          <p class="p-grey">[Below is the style for "Title 07". Title 07 will generally be the title design for all <strong>accordions</strong>.]</p>
+          <div>
+            <h3 class="title title_07"><span>Title 07 Style</span></h3>
+          </div>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 07 should be a heading tag enclosed inside a summary tag rather than header because it is part of an accordion. Below is the code sample for how the title should be coded.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                ...
+                <summary>
+                  <h3 id="unique_heading_id" class="title title_07">
+                    <span>Title 07</span>
+                    ...
+                  </h3>
+                </summary>
+                ...
+              </code>
+            </div>
+          </p>
+          <!-- Title 07 section ends -->
+
+          <!-- Title 08 section starts -->
+          <hr id="title08"/>
+          <p class="p-grey">
+            <strong>Title 08:</strong>
+          </p>
+          <p class="p-grey">[Below is the style for "Title 08" followed by paragraph text. Title 08 will generally be the subtitle design inside of <strong>cards</strong>.]</p>
+          <section>
+            <header>
+              <h5 class="title title_08" style="margin: 1.5rem 0;">Title 08 Style</h5>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[All titles 08 should be coded within a card and is most likely another section within the card.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+               <section id="unique_section_id" class="card card_01">
+                 ...
+                 <section id="unique_section_id">
+                    <header id="unique_header_id">
+                      <h5 id="unique_heading_id" class="title title_08">Title 08 Style</h5>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed risus urna.</p>
+                  </section>
+                  ...
+               </section>
+              </code>
+            </div>
+          </p>
+          <!-- Title 08 section ends -->
+
+        </section>
+        <!-- Title Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- List Section Starts -->
+      <section id="list">
+        <header>
+          <h1>List</h1>
+        </header>
+        <p class="p-grey">[This section displays each of the list style elements available in the RE6 Student ePub design template.]</p>
+
+        <!-- Ordered list section starts -->
+        <hr id="ordered_list"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Ordered List:</h2>
+          </header>
+          <p class="p-grey">[Below is how a standard “ordered list” will display.]</p>
+
+          <ol>
+            <li>
+              <p>Ordered List Item one.</p>
+            </li>
+            <li>
+              <p>Ordered List Item two.</p>
+            </li>
+            <li>
+              <p>Ordered List Item three.</p>
+            </li>
+            <li>
+              <p>Ordered List Item four.</p>
+            </li>
+            <li>
+              <p>Ordered List Item five.</p>
+            </li>
+            <li>
+              <p>Ordered List Item six.</p>
+            </li>
+          </ol>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ol id="unique_ol_id">
+                  <li>
+                    <p>Ordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item two.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item three.</p>
+                  </li>
+                </ol>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Ordered List Section Ends -->
+
+        <hr id="ordered_list_ol_none" />
+        <section>
+          <header>
+            <h2 class="p-grey">Ordered List without Numbers:</h2>
+          </header>
+          <p>[Below is how an “ordered list without numbers” will display. Notice there is no indent on the left.]</p>
+
+          <ol class="ol_none">
+            <li>
+              <p>Ordered List Item one.</p>
+            </li>
+            <li>
+              <p>Ordered List Item two.</p>
+            </li>
+            <li>
+              <p>Ordered List Item three.</p>
+            </li>
+            <li>
+              <p>Ordered List Item four.</p>
+            </li>
+            <li>
+              <p>Ordered List Item five.</p>
+            </li>
+            <li>
+              <p>Ordered List Item six.</p>
+            </li>
+          </ol>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ol id="unique_ol_id" class="ol_none">
+                  <li>
+                    <p>Ordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item two.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item three.</p>
+                  </li>
+                </ol>
+              </code>
+            </div>
+          </p>
+        </section>
+
+        <!-- Order list with Alphabets Section Star -->
+        <hr id="ordered_list_ol_01" />
+        <section>
+          <h2 class="p-grey">Ordered List (Alphabetical)</h2>
+          <p class="p-grey">[Below is how an "ordered list that is alphabetical" will display.]</p>
+
+          <ol class="ol_01">
+            <li>
+              <p>Ordered List Item one.</p>
+            </li>
+            <li>
+              <p>Ordered List Item two.</p>
+            </li>
+            <li>
+              <p>Ordered List Item three.</p>
+            </li>
+          </ol>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ol id="unique_ol_id" class="ol_01">
+                  <li>
+                    <p>Ordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item two.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item three.</p>
+                  </li>
+                </ol>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Ordered list with Alphabets Section ends -->
+
+        <!-- Practice list of questions Section Start -->
+        <hr id="practice_list"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Practice List of Questions:</h2>
+          </header>
+          <p class="p-grey">[Below is how a “practice list of questions” will display. This list style will generally appear within your practices.]</p>
+
+          <ol class="practicelist">
+            <li class="general-problem">
+              <div class="question">
+                <p>What does having faith mean?</p>
+              </div>
+            </li>
+            <li class="general-problem">
+              <div class="question">
+                <p>Why can we completely trust God, and how do we build that trust?</p>
+              </div>
+            </li>
+          </ol>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ol id="unique_practice_list_id" class="practicelist">
+                  <li class="general-problem">
+                    <div class="question">
+                      <p>Practice List Item one.</p>
+                    </div>
+                  </li>
+                  <li class="general-problem">
+                    <div class="question">
+                      <p>Practice List Item two.</p>
+                    </div>
+                  </li>
+                  <li class="general-problem">
+                    <div class="question">
+                      <p>Practice List Item three.</p>
+                    </div>
+                  </li>
+                </ol>
+              </code>
+            </div>
+          </p>
+        </section>
+         <!-- Practice list of questions Section End -->
+
+        <!-- Practice div list of questions Section Start -->
+        <hr id="practice_div_list" />
+        <section>
+          <header>
+            <h2 class="p-grey">Practice Div List of Questions:</h2>
+          </header>
+          <p class="p-grey">[Below is how a “practice div list of questions” will display. This list style will generally appear within your practices that have a vertical dotted line on the left.]</p>
+
+          <!-- no optional title starts -->
+          <section class="practice">
+            <header>
+              <h3></h3>
+            </header>
+            <div class="practicediv">
+              <ol class="practicelist ol_none">
+                <li class="general-problem">
+                  <div class="question">
+                    <p>What does having faith mean?</p>
+                  </div>
+                </li>
+                <li class="general-problem">
+                  <div class="question">
+                    <p>Why can we completely trust God, and how do we build that trust?</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice the ol class "practicelist" will require an additional div class "practicediv" to be wrapped around it in order for the dotted line to display.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <div id="unique_practicediv_id" class="practicediv">
+                  <ol id="unique_practice_list_id" class="practicelist ol_none">
+                    <li class="general-problem">
+                      <div class="question">
+                        <p>What does having faith mean?</p>
+                      </div>
+                    </li>
+                    <li class="general-problem">
+                      <div class="question">
+                        <p>Why can we completely trust God, and how do we build that trust?</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- no optional title ends -->
+
+        <hr />
+
+        <!-- optional title starts -->
+        <p class="p-grey">[Below is how a “practice div list of questions” with an optional title/text will display. This list style will generally appear within your practices that have a vertical dotted line on the left. Note that the first line here is orange and is  an optional title/text.]</p>
+
+        <section class="practice">
+          <header>
+            <h3></h3>
+          </header>
+          <section class="practicediv">
+            <header>
+              <h4 class="title title_05">To have students reflect on their learning in Lesson 1, ask:</h4>
+            </header>
+            <ol class="practicelist ol_none">
+              <li class="general-problem margin-top-0">
+                <div class="question">
+                  <p class="margin-top-0">Why can we completely trust God, and how do we build that trust?</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+        </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice the ol class "practicelist" will require an additional section class "practicediv" because there is a header within it.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" class="practicediv">
+                  <header id="header_unique_header_id">
+                    <h4 id="unique_heading_id" class="title title_05">To have students reflect on their learning in Lesson 1, ask:</h4>
+                  </header>
+                  <ol id="unique_ol_id" class="practicelist ol_none">
+                    <li class="general-problem margin-top-0">
+                      <div class="question">
+                        <p class="margin-top-0">Why can we completely trust God, and how do we build that trust?</p>
+                      </div>
+                    </li>
+                  </ol>
+                </section>
+              </code>
+            </div>
+          </p>
+
+          <!-- optional title ends -->
+        </section>
+        <!-- Practice list of questions Section End -->
+
+        <!-- Unordered list Section Starts -->
+        <hr id="unordered_list"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Unordered List:</h2>
+          </header>
+          <p class="p-grey">[Below is how a standard “unordered list” will display.]</p>
+
+          <ul>
+            <li>
+              <p>Unordered List Item one.</p>
+            </li>
+            <li>
+              <p>Unordered List Item two.</p>
+            </li>
+            <li>
+              <p>Unordered List Item three.</p>
+            </li>
+            <li>
+              <p>Unordered List Item four.</p>
+            </li>
+            <li>
+              <p>Unordered List Item five.</p>
+            </li>
+            <li>
+              <p>Unordered List Item six.</p>
+            </li>
+          </ul>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ul id="unique_ul_id">
+                  <li>
+                    <p>Unordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Unordered List Item two.</p>
+                  </li>
+                  <li>
+                    <p>Unordered List Item three.</p>
+                  </li>
+                </ul>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Unordered list section ends -->
+
+        <!-- Unordered list without bullets section starts -->
+        <hr id="unordered_list_ul_none"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Unordered List without Bullets:</h2>
+          </header>
+          <p class="p-grey">[Below is how an “unordered list without bullets” will display. Notice there is no indent on the left.]</p>
+
+          <ul class="ul_none">
+            <li>
+              <p>Unordered List Item one.</p>
+            </li>
+            <li>
+              <p>Unordered List Item two.</p>
+            </li>
+            <li>
+              <p>Unordered List Item three.</p>
+            </li>
+            <li>
+              <p>Unordered List Item four.</p>
+            </li>
+            <li>
+              <p>Unordered List Item five.</p>
+            </li>
+            <li>
+              <p>Unordered List Item six.</p>
+            </li>
+          </ul>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ul id="unique_ul_id" class="ul_none">
+                  <li>
+                    <p>Unordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Unordered List Item two.</p>
+                  </li>
+                  <li>
+                    <p>Unordered List Item three.</p>
+                  </li>
+                </ul>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Unordered list without bullets section ends -->
+
+        <!-- Unordered list with dash section starts -->
+        <hr id="unordered_list_ul_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Unordered List with Dash:</h2>
+          </header>
+          <p class="p-grey">[Below is how an “unordered list with dash” will display.]</p>
+
+          <ul class="ul_01">
+            <li>
+              <p>Unordered List Item one.</p>
+            </li>
+            <li>
+              <p>Unordered List Item two.</p>
+            </li>
+            <li>
+              <p>Unordered List Item three.</p>
+            </li>
+            <li>
+              <p>Unordered List Item four.</p>
+            </li>
+            <li>
+              <p>Unordered List Item five.</p>
+            </li>
+            <li>
+              <p>Unordered List Item six.</p>
+            </li>
+          </ul>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Note that if the dashed list requires no indent, just add helper classes padding-left-0 and margin-left default to align with the left boundary.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ul id="unique_ul_id" class="ul_01">
+                  <li>
+                    <p>Unordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Unordered List Item two.</p>
+                  </li>
+                  <li>
+                    <p>Unordered List Item three.</p>
+                  </li>
+                </ul>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Unordered list with dash section starts -->
+
+        <!-- Definition list section starts -->
+        <hr id="definition_list"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Definition List:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for "definition list" which consists of a key term followed by the definition on the next line that is automatically <strong>NOT</strong> indented. Bolded key terms and indentation of the definitions is optional.]</p>
+          
+          <dl>
+            <dt>
+              Apple
+            </dt>
+            <dd>
+              <p>I am a fruit.</p>
+            </dd>
+            <dt>
+              Orange
+            </dt>
+            <dd>
+              <p>I am a fruit.</p>
+            </dd>
+          </dl>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[If key terms needs to be bolded, wrapped the p tag with a strong tag. If the definitions needs to be indented, add a helper class padding-left-default to the dd tag.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <dl id="unique_dl_id">
+                  <dt>
+                    Apple
+                  </dt>
+                  <dd>
+                    <p>I am a fruit.</p>
+                  </dd>
+                  <dt>
+                    Orange
+                  </dt>
+                  <dd>
+                    <p>I am a fruit.</p>
+                  </dd>
+                </dl>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Definition List Section ends -->
+
+        <!-- Definition List Inline Section Starts -->
+        <hr id="definition_list_inline"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Definition List Inline:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for "definition list inline" which consists of a key term followed by the definition on the
+          same line.]</p>
+
+          <dl>
+            <dt class="inline">
+              Apple:
+            </dt>
+            <dd class="inline margin-left-0">
+              <p class="inline">I am a fruit.</p>
+            </dd>
+            <dt class="inline">
+              Orange:
+            </dt>
+            <dd class="inline margin-left-0">
+              <p class="inline">I am a fruit.</p>
+            </dd>
+          </dl>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <dl id="unique_dl_id">
+                  <dt class="inline">
+                    Apple:
+                  </dt>
+                  <dd class="inline margin-left-0">
+                    <p class="inline">I am a fruit.</p>
+                  </dd>
+                  <dt class="inline">
+                    Orange:
+                  </dt>
+                  <dd class="inline margin-left-0">
+                    <p class="inline">I am a fruit.</p>
+                  </dd>
+                </dl>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Definition List Inline Section Starts -->
+
+        <!-- Hybrid List Section Starts -->
+        <hr id="hybrid_list"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Hybrid List:</h2>
+          </header>
+          <p class="p-grey">[Below is the style for "hybrid list" which consists of an ordered list as well as nested unordered list or vice-versa.]</p>
+
+          <ol>
+            <li>
+              <p>Ordered List Item one.</p>
+            </li>
+            <li>
+              <p>Ordered List Item two.</p>
+              <ol class="ol_01">
+                <li>
+                  <p>Ordered List (alphabetical) Item one.</p>
+                </li>
+                <li>
+                  <p>Ordered List (alphabetical) Item two.</p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <p>Ordered List Item three.</p>
+              <ul>
+                <li>
+                  <p>Unordered List Item one.</p>
+                </li>
+                <li>
+                  <p>Unordered List Item two.</p>
+                </li>
+                <li>
+                  <p>Unordered List Item three.</p>
+                </li>
+                <li>
+                  <p>Unordered List Item four.</p>
+                </li>
+                <li>
+                  <p>Unordered List Item five.</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Ordered List Item four.</p>
+            </li>
+            <li>
+              <p>Ordered List Item five.</p>
+            </li>
+            <li>
+              <p>Ordered List Item six.</p>
+            </li>
+          </ol>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ol id="unique_hybrid_list_id">
+                  <li>
+                    <p>Ordered List Item one.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item two.</p>
+                    <ol class="ol_01">
+                      <li>
+                        <p>Ordered List (alphabetical) Item one.</p>
+                      </li>
+                      <li>
+                        <p>Ordered List (alphabetical) Item two.</p>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <p>Ordered List Item three.</p>
+                    <ul>
+                      <li>
+                        <p>Unordered List Item one.</p>
+                      </li>
+                      <li>
+                        <p>Unordered List Item two.</p>
+                      </li>
+                      <li>
+                        <p>Unordered List Item three.</p>
+                      </li>
+                      <li>
+                        <p>Unordered List Item four.</p>
+                      </li>
+                      <li>
+                        <p>Unordered List Item five.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>Ordered List Item four.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item five.</p>
+                  </li>
+                  <li>
+                    <p>Ordered List Item six.</p>
+                  </li>
+                </ol>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Hybrid list section ends -->
+
+        <!-- Step list section starts -->
+        <hr id="step_list" />
+        <section>
+          <header>
+            <h2 class="p-grey">Step List:</h2>
+          </header>
+          <p class="p-grey">[Below is how a “step list” will display.]</p>
+
+          <ol class="steplist">
+            <li class="step">
+              <p><strong><span class="label">Step</span> <span class="number">1</span></strong>: <span>Step list item one.</span></p>
+            </li>
+            <li class="step">
+              <p><strong><span class="label">Step</span> <span class="number">2</span></strong>: <span>Step list item two.</span></p>
+            </li>
+            <li class="step">
+              <p><strong><span class="label">Step</span> <span class="number">3</span></strong>: <span>Step list item three.</span>
+              </p>
+            </li>
+          </ol>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <ol class="steplist">
+                  <li class="step">
+                    <p><strong><span class="label">Step</span> <span class="number">1</span></strong>: <span>Step list item one.</span>
+                    </p>
+                  </li>
+                  <li class="step">
+                    <p><strong><span class="label">Step</span> <span class="number">2</span></strong>: <span>Step list item two.</span>
+                    </p>
+                  </li>
+                  <li class="step">
+                    <p><strong><span class="label">Step</span> <span class="number">3</span></strong>: <span>Step list item three.</span>
+                    </p>
+                  </li>
+                </ol>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Step list section ends -->
+      </section>
+      <!-- List Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Figures Section Starts -->
+      <section id="figures">
+        <header>
+          <h1>Informal Figure</h1>
+        </header>
+        <p class="p-grey">[This section displays each of the informal figure style elements available in the RE6 Student ePub design template.]</p>
+
+        <!-- INformalfigure section -->
+        <hr id="informalfigure"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Informal Figure:</h2>
+          </header>
+          <p class="p-grey">[This is how an "informal figure" will display by default. Caption is optional. Informal figure by default is center aligned.]</p>
+          
+          <figure class="informalfigure width-100" role="group" aria-labelledby="unique_figurecaption_id">
+            <img src="../../images/placeholder_images/RE5_ack.jpg" alt="alt text" />
+            <figcaption id="unique_figurecaption_id">
+              <div class="caption">
+                <p>Caption text will display below the figure like this.</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Informal figure requires a "width-100" class by default, if no width is specified in the markup. This only applies to content images that are <strong>NOT</strong> icons.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <figure id="unique_figure_id" class="informalfigure width-100" role="group" aria-labelledby="unique_figurecaption_id">
+                  <img id="unique_image_id" src="../images/RE5_ack.jpg" alt="alt text" />
+                  <figcaption id="unique_figurecaption_id">
+                    <div class="caption">
+                      <p>Caption text will display below the figure like this.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- INformalfigure section Ends -->
+
+        <!-- design icon section -->
+        <hr id="design-icon"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Design Icon:</h2>
+          </header>
+          <p class="p-grey">[This is how a "design-icon" will display by default. This generally appears beside the titles or by itself on it's own line.]</p>
+
+          <img class="design-icon inline" src="../../images/re6_teacher_icons/icon_img_handclick_004.png" alt="alt text" />
+          
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Design icons that are on it's own line not encapsulating within a heading or a paragraph tag needs to be wrapped by a figure tag with class informalfigure.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <img id="unique_image_id" class="design-icon inline" src="../images/icon_img_handclick_004.png" alt="alt text" />
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- design icon section Ends -->
+
+        <!-- design icon text inline section starts -->
+        <hr id="design-icon_text-inline" />
+        <section>
+          <header>
+            <h2 class="p-grey">Design Icon Text Inline:</h2>
+          </header>
+          <p class="p-grey">[This is how a "design-icon text inline" will display by default. The icon itself is part of the sentence inline.]</p>
+          <section>
+            <header>
+              <h3 class="title title_04">Title With Icon 
+                 <img class="design-icon inline design-icon_text-inline" src="../../images/re6_teacher_icons/icon_img_inquiry_task_003.png" alt="alt text" />
+              </h3>
+            </header>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unique_section_id" aria-labelledby="unique_header_id">
+                  <header id="unique_header_id">
+                    <h3 id="unique_heading_id" class="title title_04">Title With Icon 
+                       <img id="unique_image_id" class="design-icon inline design-icon_text-inline" src="../images/icon_img_inquiry_task_003.png" alt="alt text" />
+                    </h3>
+                  </header>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- design icon text inline section Ends -->
+
+      </section>
+      <!-- Figure Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Poem Section Starts -->
+      <section id="poem">
+        <header>
+          <h1 class="p-grey">Poem:</h1>
+        </header>
+        <p class="p-grey">[Use the "poem" element whenever you require a passage of text (i.e., prayer, hymn, poem) to have specific line breaks.
+        By default the content within the poem element will be italicized. Make sure to indicate which lines on the markup do
+        not need to be italicized.]</p>
+
+        <div class="poem">
+          <div class="linegroup margin-top-default margin-bottom-default">
+            <span class="line">
+              <em>Lord,</em>
+            </span>
+            <span class="line">
+              <em>open my eyes</em>
+            </span>
+            <span class="line">
+              <em>to see those who hunger</em>
+            </span>
+            <span class="line">
+              <em>so that I may share my food.</em>
+            </span>
+          </div>
+        
+          <div class="linegroup margin-top-default margin-bottom-default">
+            <span class="line">Open my heart</span>
+            <span class="line">to the lonely and ignored</span>
+            <span class="line">so that I may share my time.</span>
+          </div>
+        
+          <div class="linegroup margin-top-default margin-bottom-default">
+            <span class="line">
+              <em>Open my spirit</em>
+            </span>
+            <span class="line">
+              <em>to receive your charity</em>
+            </span>
+            <span class="line">
+              <em>so that I can share it with others.</em>
+            </span>
+            <span class="line">May I see a need,</span>
+            <span class="line">lend a hand,</span>
+            <span class="line">and touch a heart,</span>
+            <span class="line">one person at a time,</span>
+            <span class="line">knowing that each one I serve</span>
+            <span class="line">is You.</span>
+            <span class="line">Amen.</span>
+          </div>
+        </div>
+        
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p class="p-darkred">[Note that if editorial decides not to have a new line between each part of the poem. Put all the span tags inside the same div tag. Hence the last div tag example.]</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <div id="unique_poem_id" class="poem">
+                <div class="linegroup margin-top-default margin-bottom-default">
+                  <span class="line">
+                    <em>Lord,</em>
+                  </span>
+                  <span class="line">
+                    <em>open my eyes</em>
+                  </span>
+                  <span class="line">
+                    <em>to see those who hunger</em>
+                  </span>
+                  <span class="line">
+                    <em>so that I may share my food.</em>
+                  </span>
+                </div>
+                <div class="linegroup margin-top-default margin-bottom-default">
+                  <span class="line">Open my heart</span>
+                  <span class="line">to the lonely and ignored</span>
+                  <span class="line">so that I may share my time.</span>
+                </div>
+                <div class="linegroup margin-top-default margin-bottom-default">
+                  <span class="line">
+                    <em>Open my spirit</em>
+                  </span>
+                  <span class="line">
+                    <em>to receive your charity</em>
+                  </span>
+                  <span class="line">
+                    <em>so that I can share it with others.</em>
+                  </span>
+                  <span class="line">May I see a need,</span>
+                  <span class="line">lend a hand,</span>
+                  <span class="line">and touch a heart,</span>
+                  <span class="line">one person at a time,</span>
+                  <span class="line">knowing that each one I serve</span>
+                  <span class="line">is You.</span>
+                  <span class="line">Amen.</span>
+                </div>
+              </div>
+            </code>
+          </div>
+        </p>
+        
+      </section>
+      <!-- Poem Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Blockquote Section Starts -->
+      <section id="blockquotes">
+        <header>
+          <h1 class="p-grey">Blockquotes:</h1>
+        </header>
+        <p class="p-grey">[This is how a “blockquote” with a sourceline will display. Blockquote indicates the quotation of a large section of
+        text from another source. Specify on your markup if you will like the text within blockquote to be bolded and/or
+        italicize.]</p>
+
+        <div class="blockquotegroup">
+          <blockquote class="epigraph">
+            <p>Very truly, I tell you, unless a grain of wheat falls into the earth and dies, it remains just a single grain;
+              but if it dies, it bears much fruit.</p>
+          </blockquote>
+          <div class="source lc_align-right">
+            <p><cite>—John 12:24</cite></p>
+          </div>
+        </div>
+        <div class="blockquotegroup">
+          <blockquote class="epigraph">
+            <p>"Very truly,
+              <strong>I tell you</strong>, unless a grain of wheat falls into the earth and dies,
+              <em>it remains just a single grain; but if it dies</em>, it bears much fruit."</p>
+          </blockquote>
+          <div class="source lc_align-right">
+            <p><cite>—John 12:24</cite></p>
+          </div>
+        </div>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <div id="unique_blockquote_id" class="blockquotegroup">
+                <blockquote class="epigraph">
+                  <p>"Very truly, I tell you, unless a grain of wheat falls into the earth and dies, it remains just a single grain;
+                    but if it dies, it bears much fruit."</p>
+                </blockquote>
+                <div class="source lc_align-right">
+                  <p><cite>&#x2014;John 12:24</cite></p>
+                </div>
+              </div>
+            </code>
+          </div>
+        </p>
+
+        <hr />
+
+        <p class="p-grey">[This is how a “blockquote” without a sourceline will display. Blockquote indicates the quotation of a large section of
+        text from another source. Specify on your markup if you will like the text within blockquote to be bolded and/or
+        italicize.]</p>
+
+        <div class="blockquotegroup">
+          <blockquote>
+            <p>
+              "Blessed are those who hunger and thirst for righteousness, for they will be filled."
+            </p>
+          </blockquote>
+        </div>
+        <div class="blockquotegroup">
+          <blockquote>
+            <p>
+              <strong>"Blessed are those who hunger and thirst for
+                <em>righteousness</em>, for they will be filled."</strong>
+            </p>
+          </blockquote>
+        </div>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <div id="unique_blockquote_id" class="blockquotegroup">
+                <blockquote>
+                  <p>
+                    <strong>"Blessed are those who hunger and thirst for
+                      <em>righteousness</em>, for they will be filled."</strong>
+                  </p>
+                </blockquote>
+              </div>
+            </code>
+          </div>
+        </p>
+      </section>
+      <!-- Blockqoute Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Dialogue Section Starts -->
+      <section id="dialogues">
+        <header>
+          <h1 class="p-grey">Dialogue:</h1>
+        </header>
+        <p class="p-grey">[This section displays dialogue element available in the RE6 Teacher ePub design template.]</p>
+
+        <div class="dialogue">
+          <div class="speech">
+            <div class="persona width-15">
+              <p>Teacher:</p>
+            </div>
+            <div class="line width-85">
+              <p>God, we are amazed by the wonders of the world you created for your people. You have entrusted us to care for the world you made. Help us to believe in you.
+            </div>
+          </div>
+          <div class="speech">
+            <div class="persona width-15">
+              <p>Teacher:</p>
+            </div>
+            <div class="line width-85">
+              <p>All prayer helps us come closer to God.</p>
+            </div>
+          </div>
+        </div>
+        <p>(Raise your hand.)</p>
+        <div class="dialogue">
+          <div class="speech">
+            <div class="persona width-15">
+              <p>Student<br />Response:</p>
+            </div>
+            <div class="line width-85">
+              <p>Strengthen our faith, O Lord.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="code_snippet">Code Snippet for Vendor:</p>
+        <p class="p-darkred">[Notice there is a br tag between the Student and Response words. This is how to make sure the column does not extend too wide.]</p>
+        <p>
+          <div class="code_format">
+            <code>
+              <div id="unique_dialogue_id" class="dialogue">
+                <div class="speech">
+                  <div class="persona width-15">
+                    <p>Teacher:</p>
+                  </div>
+                  <div class="line width-85">
+                    <p>God, we are amazed by the wonders of the world you created for your people. You have entrusted us to care for the world you made. Help us to believe in you.</p>
+                  </div>
+                </div>
+                <div class="speech">
+                  <div class="persona width-15">
+                    <p>Teacher:</p>
+                  </div>
+                  <div class="line width-85">
+                    <p>All prayer helps us come closer to God.</p>
+                  </div>
+                </div>
+              </div>
+              <p>(Raise your hand.)</p>
+              <div id="unique_dialogue_id" class="dialogue">
+                <div class="speech">
+                  <div class="persona width-15">
+                    <p>Student<br />Response:</p>
+                  </div>
+                  <div class="line width-85">
+                    <p>Strengthen our faith, O Lord.</p>
+                  </div>
+                </div>
+              </div>
+            </code>
+          </div>
+        </p>
+        </section>
+      <!-- Dialogue Section Ends -->
+
+    </section> <!-- Readspeaker section closed-->
+  </body>
+
+</html>

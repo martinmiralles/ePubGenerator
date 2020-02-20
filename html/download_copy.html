@@ -1,0 +1,310 @@
+<html lang="en">
+  <head>
+    <title>Religion Teacher ePub Production Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    /> -->
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background-color: white;
+      }
+
+      .main_title {
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 2px;
+        margin: 0;
+        color: #008bb5;
+      }
+
+      .p-darkred {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+
+      .download-button {
+        display: inline-block;
+        border: 3px solid #600000;
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+        margin: 10px 0;
+        color: #600000;
+      }
+
+      a[aria-disabled="true"] {
+        background-color: lightgrey;
+        color: darkgrey;
+        border-color: lightgrey;
+        display: inline-block;
+        /* For IE11/ MS Edge bug */
+        pointer-events: none;
+        text-decoration: none;
+      }
+      .date_information {
+        font-size: 0.8rem;
+        color: green;
+        display: inline-block;
+        line-height: 15px;
+        vertical-align: middle;
+      }
+    </style>
+
+    <!-- BELOW: OLD DOWNLOAD SCRIPT -->
+    <script>
+      document.body.addEventListener("click", function(event) {
+        // filter out clicks on any other elements
+        if (
+          event.target.nodeName == "A" &&
+          event.target.getAttribute("aria-disabled") == "true"
+        ) {
+          event.preventDefault();
+        }
+      });
+      function fetchHeader(url, wch) {
+        try {
+          var req = new XMLHttpRequest();
+          req.open("HEAD", url, false);
+          req.send(null);
+          if (req.status == 200) {
+            return req.getResponseHeader(wch);
+          } else return false;
+        } catch (er) {
+          return er.message;
+        }
+      }
+      function getModifiedDate(queryUrl) {
+        var options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZoneName: "short",
+          timeZone: "America/Toronto"
+        };
+        var serverModifiedTime = Date.parse(
+          fetchHeader(queryUrl, "Last-Modified")
+        );
+        var modifyTime = new Date(serverModifiedTime).toLocaleString(
+          "en-US",
+          options
+        );
+        return modifyTime;
+      }
+    </script>
+
+    <!-- BELOW: MY DOWNLOAD SCRIPT -->
+    <script src="../app.js"></script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <!-- Read Speaker Section Starts -->
+    <section
+      id="read_speaker"
+      style="display: block; margin: 2.3rem 0; padding: 0;"
+    >
+      <p class="p-darkred">
+        <strong>Vendor Download:</strong>
+      </p>
+      <ol class="p-darkred">
+        <li>
+          <button id="test_button">
+            <a class="download-button p-darkred">RE4 Student Package </a>
+          </button>
+          <div id="re4_stu_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re4_stu_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re4_student.zip");
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re5_student.zip"
+            class="download-button p-darkred"
+            download="re5_student"
+            aria-disabled="true"
+            >RE5 Student Package</a
+          >
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re6_student.zip"
+            class="download-button p-darkred"
+            download="re6_student"
+            >RE6 Student Package</a
+          >
+          <div id="re6_stu_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re6_stu_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re6_student.zip");
+          </script>
+        </li>
+        <li>
+          <a class="download-button p-darkred">
+            RE6 Teacher Package
+          </a>
+          <div id="re6_tr_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re6_tr_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re6_teacher.zip");
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re4_student/OPS/css/re4_student.css"
+            class="download-button p-darkred"
+            download="re6_student"
+            >RE4 Student CSS</a
+          >
+          <div id="re4_stu_css" class="date_information"></div>
+          <script>
+            document.getElementById("re4_stu_css").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate(
+                "../epub_starter_template/re4_student/OPS/css/re4_student.css"
+              );
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re6_student/OPS/css/re6_student.css"
+            class="download-button p-darkred"
+            download="re6_student"
+            >RE6 Student CSS</a
+          >
+          <div id="re6_stu_css" class="date_information"></div>
+          <script>
+            document.getElementById("re6_stu_css").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate(
+                "../epub_starter_template/re6_student/OPS/css/re6_student.css"
+              );
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re6_teacher/OPS/css/re6_teacher.css"
+            class="download-button p-darkred"
+            download="re6_teacher"
+            >RE6 Teacher CSS</a
+          >
+          <div id="re6_tr_css" class="date_information"></div>
+          <script>
+            document.getElementById("re6_tr_css").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate(
+                "../epub_starter_template/re6_teacher/OPS/css/re6_teacher.css"
+              );
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re1_fa_student.zip"
+            class="download-button p-darkred"
+            download="re1_fa_student"
+            >RE1 Fully Alive Student Package</a
+          >
+          <div id="re1_fa_stu_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re1_fa_stu_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re1_fa_student.zip");
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re1_fa_student/OPS/css/re1_fa_student.css"
+            class="download-button p-darkred"
+            download="re1_fa_student"
+            >RE1 Fully Alive Student CSS</a
+          >
+          <div id="re1_fa_stu_css" class="date_information"></div>
+          <script>
+            document.getElementById("re1_fa_stu_css").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate(
+                "../epub_starter_template/re1_fa_student/OPS/css/re1_fa_student.css"
+              );
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re2_fa_student.zip"
+            class="download-button p-darkred"
+            download="re2_fa_student"
+            >RE2 Fully Alive Student Package</a
+          >
+          <div id="re2_fa_stu_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re2_fa_stu_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re2_fa_student.zip");
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re7_fa_teacher.zip"
+            class="download-button p-darkred"
+            download="re7_fa_tr"
+            >RE7 Fully Alive Teacher Package</a
+          >
+          <div id="re7_fa_tr_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re7_fa_tr_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re7_fa_teacher.zip");
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re1_fa_teacher.zip"
+            class="download-button p-darkred"
+            download="re1_fa_tr"
+            >RE1 Fully Alive Teacher Package</a
+          >
+          <div id="re1_fa_tr_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re1_fa_tr_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re1_fa_teacher.zip");
+          </script>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re2_fa_teacher.zip"
+            class="download-button p-darkred"
+            download="re1_fa_tr"
+            >RE2 Fully Alive Teacher Package</a
+          >
+          <div id="re2_fa_tr_pck" class="date_information"></div>
+          <script>
+            document.getElementById("re2_fa_tr_pck").innerHTML =
+              "Last Modified On: <br/>" +
+              getModifiedDate("../epub_starter_template/re2_fa_teacher.zip");
+          </script>
+        </li>
+      </ol>
+    </section>
+    <!-- Read Speaker Section Ends -->
+  </body>
+</html>

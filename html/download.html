@@ -1,0 +1,206 @@
+<html lang="en">
+  <head>
+    <title>Religion Teacher ePub Production Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background-color: white;
+      }
+
+      .main_title {
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 2px;
+        margin: 0;
+        color: #008bb5;
+      }
+
+      .p-darkred {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+      }
+
+      .p-darkred {
+        color: #600000;
+      }
+
+      .download-button {
+        display: inline-block;
+        border: 3px solid #600000;
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px 20px;
+        text-decoration: none;
+        margin: 10px 0;
+        color: #600000;
+      }
+
+      a[aria-disabled="true"] {
+        background-color: lightgrey;
+        color: darkgrey;
+        border-color: lightgrey;
+        display: inline-block;
+        /* For IE11/ MS Edge bug */
+        pointer-events: none;
+        text-decoration: none;
+      }
+      .date_information {
+        font-size: 0.8rem;
+        color: green;
+        display: inline-block;
+        line-height: 15px;
+        vertical-align: middle;
+      }
+    </style>
+
+    <!-- BELOW: OLD DOWNLOAD SCRIPT -->
+  </head>
+
+  <body epub:type="bodymatter">
+    <div id="manifest" hidden></div>
+
+    <!-- Read Speaker Section Starts -->
+    <section
+      id="read_speaker"
+      style="display: block; margin: 2.3rem 0; padding: 0;"
+    >
+      <p class="p-darkred">
+        <strong>Vendor Download:</strong>
+      </p>
+      <ol class="p-darkred">
+        <!-- Testing 'app.js' on this -->
+        <li>
+          <a
+            href="#"
+            id="button"
+            class="download-button p-darkred"
+            data-json="../json/re6_teacher/content_json.json"
+            data-fonts="../fonts/re6_teacher_fonts/"
+            >RE6 Teacher Package (TEST)
+          </a>
+          <div id="re4_stu_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re5_student.zip"
+            class="download-button p-darkred"
+            download="re5_student"
+            aria-disabled="true"
+            >RE5 Student Package</a
+          >
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re6_student.zip"
+            class="download-button p-darkred"
+            download="re6_student"
+            >RE6 Student Package</a
+          >
+          <div id="re6_stu_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a class="download-button p-darkred">
+            RE6 Teacher Package
+          </a>
+          <div id="re6_tr_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re4_student/OPS/css/re4_student.css"
+            class="download-button p-darkred"
+            download="re6_student"
+            >RE4 Student CSS</a
+          >
+          <div id="re4_stu_css" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re6_student/OPS/css/re6_student.css"
+            class="download-button p-darkred"
+            download="re6_student"
+            >RE6 Student CSS</a
+          >
+          <div id="re6_stu_css" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re6_teacher/OPS/css/re6_teacher.css"
+            class="download-button p-darkred"
+            download="re6_teacher"
+            >RE6 Teacher CSS</a
+          >
+          <div id="re6_tr_css" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re1_fa_student.zip"
+            class="download-button p-darkred"
+            download="re1_fa_student"
+            >RE1 Fully Alive Student Package</a
+          >
+          <div id="re1_fa_stu_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re1_fa_student/OPS/css/re1_fa_student.css"
+            class="download-button p-darkred"
+            download="re1_fa_student"
+            >RE1 Fully Alive Student CSS</a
+          >
+          <div id="re1_fa_stu_css" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re2_fa_student.zip"
+            class="download-button p-darkred"
+            download="re2_fa_student"
+            >RE2 Fully Alive Student Package</a
+          >
+          <div id="re2_fa_stu_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re7_fa_teacher.zip"
+            class="download-button p-darkred"
+            download="re7_fa_tr"
+            >RE7 Fully Alive Teacher Package</a
+          >
+          <div id="re7_fa_tr_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re1_fa_teacher.zip"
+            class="download-button p-darkred"
+            download="re1_fa_tr"
+            >RE1 Fully Alive Teacher Package</a
+          >
+          <div id="re1_fa_tr_pck" class="date_information"></div>
+        </li>
+        <li>
+          <a
+            href="../epub_starter_template/re2_fa_teacher.zip"
+            class="download-button p-darkred"
+            download="re1_fa_tr"
+            >RE2 Fully Alive Teacher Package</a
+          >
+          <div id="re2_fa_tr_pck" class="date_information"></div>
+        </li>
+      </ol>
+    </section>
+    <!-- Read Speaker Section Ends -->
+    <!-- BELOW: MY DOWNLOAD SCRIPT -->
+    <!-- <script src="../app.js"></script> -->
+    <script src="../bundle.js"></script>
+  </body>
+</html>

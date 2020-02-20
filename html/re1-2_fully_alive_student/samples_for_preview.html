@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Religion Samples for Preview Styles</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../css/re1-2_fully_alive_student.css" />
+    <style>
+      body {
+        max-width: 1024px;
+        margin: auto;
+        padding: 50px;
+        background: white;
+      }
+    
+      h1 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+      }
+    
+      .code_format {
+        display: block;
+        background-color: #e2f2f2;
+        border: solid #020202;
+        padding: 10px 20px;
+      }
+    
+      code {
+        display: block;
+        font-family: monospace;
+        margin-top: -20px;
+        white-space: pre;
+        overflow-x: auto;
+      }
+    
+      .code_format * {
+        padding: 0;
+        margin: 0;
+      }
+    
+      .template_hr {
+        display: block;
+        height: 10px;
+        border: 0;
+        border-top: 10px solid red;
+        margin: 1rem 0;
+        padding: 0;
+      }
+    
+      .code_snippet {
+        color: #600000;
+        font-weight: bold;
+        font-size: 1.15rem;
+        margin: 1.5rem 0;
+      }
+    
+      .main_title {
+        text-align: center;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3.25rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-variant: small-caps;
+      }
+    
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+    
+      #myBtn:hover {
+        background-color: red;
+      }
+    
+      .links {
+        column-count: 3;
+        column-gap: 40px;
+      }
+    
+      .links li {
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links p {
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.45rem;
+      }
+    
+      .links ol {
+        list-style-type: upper-alpha;
+      }
+    
+      .links2 {
+        display: none;
+        width: 100%;
+        font-size: 1.15rem;
+        margin: 1.15rem 0;
+        border: 1px solid black;
+      }
+    
+      .p-darkred,
+      .p-grey {
+        color: #707070;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        line-height: 1.65rem;
+        margin: 1.5rem 0;
+      }
+    
+      .p-darkred {
+        color: #600000;
+      }
+    
+      @media only screen and (max-width: 600px) {
+        .links {
+          display: none;
+        }
+    
+        .links2 {
+          display: block;
+        }
+      }
+    
+      @media only screen and (max-width: 450px) {
+        #myBtn {
+          bottom: 70px;
+          right: 10px;
+        }
+    
+        .main_title {
+          font-size: 2.25rem;
+          line-height: 2.75rem;
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+
+    <script>
+      window.onload = function init() {
+        var codeblock = document.querySelectorAll(".code_format > code");
+        console.log(codeblock);
+        var len = codeblock.length;
+        console.log(typeof(len));
+        for (var i = 0; i < len; i++) {
+          var dom = codeblock[i];
+          var html = dom.innerHTML;
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          var pattern01 = html.match(/\s+\n*$/);
+          var pattern02 = html.match(/^\n*(\<)/);
+          html = html.replace(new RegExp(pattern, "g"), '\n');
+          html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+          html = html.replace(/—/gm, "&#x2014;");
+          html = html.replace(/–/gm, "&#x2013;");
+          var temphtml = html.match(/^[^\n]+\n/gm);
+
+          //html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<');
+          console.log(temphtml.join(""));
+          var text = document.createTextNode(String(temphtml.join("")));
+          dom.innerHTML = "";
+          dom.appendChild(text);
+        }
+      }
+
+      window.onscroll = function () {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+
+  <body epub:type="bodymatter">
+    <button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+    <section id="read_speaker">
+      <section>
+        <header>
+          <h1 class="main_title">Samples for Preview</h1>
+        </header>
+        <p class="p-grey">[A combination sample is comprised of different standard components combined together, or with different element(s) and/or layout(s). This section provides some common combination samples that will occur in the RE1 Fully Alive student ePub for your
+          preview and is not meant to be referenced in your markup]</p>
+        <hr/>
+
+        <ol class="links">
+
+          <li>
+            <p>
+              <strong>
+                <a href="#headers">Header Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#header_01">
+                    Print Page Ref. + <strong>Title 01</strong>
+                    + Poem</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#header_02">
+                    <strong>Title 02</strong> + Float Left Informalfigure + Float Right Poem</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#columns">Column Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#column_01">
+                    Title + Informalfigure + Text + <strong>2 Column Grid</strong> + 2 Informalfigures + Texts
+                  </a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#figuregroups">Figuregroup Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#figuregroup_01">
+                    Page ref. + 3-Column Figure Layout for Figures & <strong>Figuregroup</strong> + Blockquote and Source + Pale Green Background:
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_02">
+                    2-Column Figure Layout with Captions for Nested Figures only
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_03">
+                    2-Column Figure Layout with Caption for <strong>Figuregroup</strong> only
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_04">
+                    2-Column Figure Layout without Captions for both Figures and <strong>Figuregroup</strong>
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#figuregroup_05">
+                    2-Column Figure Layout with Captions for Figures and <strong>Figuregroup</strong>
+                  </a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              <strong>
+                <a href="#notes">Note Combinations</a>
+              </strong>
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <a href="#note_01">Title 01 + 4 Column Figuregroup + <strong>Note 01</strong> + Poem + 4 Column Figuregroup + Dark Yellow Background</a>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+        </ol>
+
+        <select class="links2" onchange="location = this.value;">
+          <option>** Pick from dropdown **</option>
+          <option value="#headers">- Header Combinations -</option>
+          <option value="#header_01">Print Page Ref. + Title 01 + Poem</option>
+          <option value="#header_02">Title 02 + Float Left Informalfigure + Float Right Poem</a></option>
+
+          <option value="#columns">- Column Combinations -</option>
+          <option href="#column_01">Title + Informalfigure + Text + 2 Column Grid + 2 Informalfigures + Texts</option>
+
+          <option value="#figuregroups">- Figuregroup Combinations -</option>
+          <option value="#figuregroup_01">2-Column Figure Layout with Captions for Figures and Figuregroup</option>
+          <option value="#figuregroup_02">2-Column Figure Layout with Captions for Nested Figures only</option>
+          <option value="#figuregroup_03">2-Column Figure Layout with Caption for Figuregroup only</option>
+          <option value="#figuregroup_04">2-Column Figure Layout without Captions for both Figures and Figuregroup</option>
+          <option value="#figuregroup_05">2-Column Figure Layout with Captions for Figures and Figuregroup</option>
+
+          <option value="#notes">- Note Combinations -</option>
+          <option value="#note_01">Title 01 + 4 Column Figuregroup + Note 01 + Poem + 4 Column Figuregroup + Dark Yellow Background</option>
+        </select>
+      </section>
+
+      <hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+      <!-- Headers Section Starts-->
+      <section id="headers">
+        <header>
+          <h1>Header Combinations</h1>
+        </header>
+        <p class="p-grey">[This section displays some previews that consist of headers with elements and layouts that will generally occured in the RE5 ePub.]</p>
+
+        <!-- Print page ref + title 01 + poem Section Starts -->
+        <hr id="header_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Print Page Ref. + Title 01 + Poem:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a print page reference 01 with Title 01 that is centered aligned and a Poem 02 below the title. The poem has typeface style changes as well.]</p>
+          <section id="unit01_pg04" aria-labelledby="header_unit01_pg04">
+            <span class="pagebreak_01 margin-top-default lc_align-right padding-right-default" id="page4">
+              <span>printed p. 4</span>
+            </span>
+            <header id="header_unit01_pg04">
+              <h1 id="h1_header_unit01_pg04" class="title title_01 lc_align-center">
+                It's a <span class="text-kidprint">Wonderful World</span>
+              </h1>
+            </header>
+            <div class="poem poem_02 text-color-darkgreen">
+              <div class="linegroup margin-top-default margin-bottom-default">
+                <span class="line">
+                  I wish I were a rocket ship,
+                </span>
+                <span class="line">
+                  I’d blast off to the sky.
+                </span>
+                <span class="line">
+                  And then I’d figure out just how
+                </span>
+                <span class="line">
+                  God made the world so high.
+                </span>
+              </div>
+
+              <div class="linegroup margin-top-default margin-bottom-default">
+                <span class="line text-color-darkblue padding-left-default">It's a <span class="text-kidprint">wonderful world!</span></span>
+              </div>
+
+              <div class="linegroup margin-top-default margin-bottom-default">
+                <span class="line">
+                  I wish I were a fuzzy bug;
+                </span>
+                <span class="line">
+                  I’d crawl along the ground.
+                </span>
+                <span class="line">
+                  And wiggle underneath a rock
+                </span>
+                <span class="line">
+                  Without a single sound.
+                </span>
+              </div>
+
+              <div class="linegroup margin-top-default margin-bottom-default">
+                <span class="line text-color-darkblue padding-left-default">It's a <span class="text-kidprint">wonderful
+                    world!</span></span>
+              </div>
+            </div>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit01_pg04" aria-labelledby="header_unit01_pg04">
+                  <span class="pagebreak_01 margin-top-default lc_align-right padding-right-default" id="page4">
+                    <span>printed p. 4</span>
+                  </span>
+                  <header id="header_unit01_pg04">
+                    <h1 id="h1_header_unit01_pg04" class="title title_01 lc_align-center">
+                      It's a <span class="text-kidprint">Wonderful World</strong></span>
+                    </h1>
+                  </header>
+                  <div id="unit01_pg04_poem01" class="poem poem_02 text-color-darkgreen">
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line">
+                        I wish I were a rocket ship,
+                      </span>
+                      <span class="line">
+                        I’d blast off to the sky.
+                      </span>
+                      <span class="line">
+                        And then I’d figure out just how
+                      </span>
+                      <span class="line">
+                        God made the world so high.
+                      </span>
+                    </div>
+                
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line text-color-darkblue padding-left-default">It's a <span class="text-kidprint">wonderful
+                          world!</span></span>
+                    </div>
+                
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line">
+                        I wish I were a fuzzy bug;
+                      </span>
+                      <span class="line">
+                        I’d crawl along the ground.
+                      </span>
+                      <span class="line">
+                        And wiggle underneath a rock
+                      </span>
+                      <span class="line">
+                        Without a single sound.
+                      </span>
+                    </div>
+                
+                    <div class="linegroup margin-top-default margin-bottom-default">
+                      <span class="line text-color-darkblue padding-left-default">It's a <span class="text-kidprint">wonderful
+                          world!</span></span>
+                    </div>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Print page ref + title 01 + poem Section Ends -->
+
+        <!-- Title 02 + 2 Float Left Informalfigures + Poem Section Starts -->
+        <hr id="header_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">Title 02 + Float Left Informalfigure + Float Right Poem:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a Title 02 with a dark blue text style, float left informalfigure and a float right poem 02 that is on the right side with a different colour for text.]</p>
+
+          <section id="unit01_pg04" aria-labelledby="header_unit01_pg04">
+            <header id="header_unit01_pg04">
+              <h3 id="h3_header_unit01_pg04" class="title title_02 text-color-darkblue">
+                'Cause you are my friend
+              </h3>
+            </header>
+          
+            <figure class="informalfigure width-40 float-left" id="c_img_unit01_pg04_f01">
+              <img id="c_img_unit01_pg04_01" alt="image01" src="../../images/placeholder_images/fa_img.jpg" />
+            </figure>
+
+            <div class="float-right poem poem_02 width-50 text-color-teal margin-top-0">
+              <div class="linegroup margin-left-0 margin-right-0 margin-top-0 margin-bottom-default">
+                <span class="line">Where are you going?</span>
+                <span class="line">Can I come too?</span>
+                <span class="line">Let’s go together</span>
+                <span class="line">Whatever we do.</span>
+              </div>
+              <div class="linegroup margin-left-0 margin-right-0 margin-top-default margin-bottom-default">
+                <span class="line">When you are laughing</span>
+                <span class="line">or when you are sad,</span>
+                <span class="line">I’ll laugh along with you;</span>
+                <span class="line">I’ll make you glad.</span>
+              </div>
+            </div>
+            
+            <div class="clear-both"></div>
+          </section>
+          
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice there is an empty div class of clear-both is being used so the next elements do not float next to the images.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit01_pg04" aria-labelledby="header_unit01_pg04">
+                  <header id="header_unit01_pg04">
+                    <h3 id="h3_header_unit01_pg04" class="title title_02 text-color-darkblue">
+                      'Cause you are my friend
+                    </h3>
+                  </header>
+                
+                  <figure class="informalfigure width-40 float-left" id="c_img_unit01_pg04_f01">
+                    <img id="c_img_unit01_pg04_01" alt="image01" src="../../images/placeholder_images/fa_img.jpg" />
+                  </figure>
+                
+                  <div class="float-right poem poem_02 width-50 text-color-teal margin-top-0">
+                    <div class="linegroup margin-left-0 margin-right-0 margin-top-0 margin-bottom-default">
+                      <span class="line">Where are you going?</span>
+                      <span class="line">Can I come too?</span>
+                      <span class="line">Let’s go together</span>
+                      <span class="line">Whatever we do.</span>
+                    </div>
+                    <div class="linegroup margin-left-0 margin-right-0 margin-top-default margin-bottom-default">
+                      <span class="line">When you are laughing</span>
+                      <span class="line">or when you are sad,</span>
+                      <span class="line">I’ll laugh along with you;</span>
+                      <span class="line">I’ll make you glad.</span>
+                    </div>
+                  </div>
+                
+                  <div class="clear-both"></div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title 02 + 2 Float Left Informalfigures + Poem Section Ends -->
+      </section>
+      <!-- Unit and Chapter Headers Section Ends -->
+
+      <hr class="template_hr"/>
+
+      <!-- Columns Section Starts -->
+      <section id="columns">
+        <header>
+          <h1>Column Combinations</h1>
+        </header>
+        <p class="p-grey">[This section displays an example responsive column layouts available in the RE1 Fully Alive Student ePub design template.]</p>
+
+        <!-- Title + informalfigure + text + 2 column grid + 2 Informalfigures + texts section starts -->
+        <hr id="column_01"/>
+        <section>
+          <header>
+            <h2 class="p-grey">Title + informalfigure + text + 2 column grid + 2 informalfigures + texts:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a section with a Title 01 that is centered with an informalfigure width-90 and regular text. After that it is a 2 column grid with an informalfigure and text within each column. Notice the 2 column grid is not a 2-Column figure layout because there are individual paragraph text not figurecaptions under each informalfigure in the grid.]</p>
+          <section class="note shadow_orange padding-left-default padding-right-default" id="unit04_pg43" aria-labelledby="header_unit04_pg43">
+            <header id="header_unit04_pg43">
+              <h5 id="h5_header_unit04_pg43" class="title title_01 lc_align-center">Amy and Susan</h5>
+            </header>
+            <figure class="informalfigure width-90" id="c_img_unit04_pg43_f01">
+              <img id="c_img_unit04_pg43_01" alt="image01" src="../../images/placeholder_images/fa_img.jpg" />
+            </figure>
+            <p class="lc_align-center">Amy and Susan are twins. They look alike.</p>
+
+            <div id="unit04__pg43_grid-container01" class="grid-container">
+              <div class="grid-row margin-top-0 margin-bottom-0">
+                <div class="grid-col">
+                  <figure class="informalfigure margin-top-0" id="c_img_unit04_pg43_f02">
+                    <img id="c_img_unit04_pg43_02" alt="image02" src="../../images/placeholder_images/fa_img2.jpg" />
+                  </figure>
+                  <p>They both like to play the piano.</p>
+                </div>
+                <div class="grid-col">
+                  <figure class="informalfigure margin-top-0" id="c_img_unit04_pg43_f02">
+                    <img id="c_img_unit04_pg43_02" alt="image02" src="../../images/placeholder_images/fa_img2.jpg" />
+                  </figure>
+                  <p>They are both seven years old.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p class="p-darkred">[Notice the 2 column grid is not a 2-Column figure layout.]</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section class="note shadow_orange padding-left-default padding-right-default" id="unit04_pg43"
+                  aria-labelledby="header_unit04_pg43">
+                  <header id="header_unit04_pg43">
+                    <h5 id="h5_header_unit04_pg43" class="title title_01 lc_align-center">Amy and Susan</h5>
+                  </header>
+                  <figure class="informalfigure width-90" id="c_img_unit04_pg43_f01">
+                    <img id="c_img_unit04_pg43_01" alt="image01" src="../../images/placeholder_images/fa_img.jpg" />
+                  </figure>
+                  <p class="lc_align-center">Amy and Susan are twins. They look alike.</p>
+                
+                  <div id="unit04__pg43_grid-container01" class="grid-container">
+                    <div class="grid-row margin-top-0 margin-bottom-0">
+                      <div class="grid-col">
+                        <figure class="informalfigure margin-top-0" id="c_img_unit04_pg43_f02">
+                          <img id="c_img_unit04_pg43_02" alt="image02" src="../../images/placeholder_images/fa_img2.jpg" />
+                        </figure>
+                        <p>They both like to play the piano.</p>
+                      </div>
+                      <div class="grid-col">
+                        <figure class="informalfigure margin-top-0" id="c_img_unit04_pg43_f02">
+                          <img id="c_img_unit04_pg43_02" alt="image02" src="../../images/placeholder_images/fa_img2.jpg" />
+                        </figure>
+                        <p>They are both seven years old.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+        <!-- Title + 2 column grid + text + Informalfigure + shadow section ends -->
+
+      </section>
+      <!-- Columns Section Ends -->
+
+      <hr class="template_hr" />
+      
+      <!-- Figuregroup Section Starts -->
+      <hr id="figuregroups" />
+      <section>
+        <header>
+          <h1>Figuregroup Combinations</h1>
+        </header>
+        <p class="p-grey">[Figuregroup layout that have a combination of figure captions.]</p>
+      
+        <!-- 3-Column Figure Layout for Figures & Figuregroup + Blockquote and Source + Pale Green Background Section starts -->
+        <hr id="figuregroup_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Page ref. + 3-Column Figure Layout for Figures & Figuregroup + Blockquote and Source + Pale Green Background:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a page ref. + 3-Column figure layout for figures and figuregroup with blockquote & source over a pale green background.]</p>
+
+          <section id="unit04_pg43" aria-labelledby="header_unit04_pg43" class="bg_palegreen padding-left-default padding-right-default padding-top-default padding-bottom-default">
+            <span id="page43" class="float-right pagebreak_02 margin-top-default margin-right-default margin-bottom-default">
+              <span>printed p. 43</span>
+            </span>
+            <header id="header_unit04_pg43" class="clear-both">
+              <h3 id="h3_header_unit04_pg43" class="title title_01 lc_align-center">Each One is Special</h3>
+            </header>
+
+            <figure class="figuregroup" id="c_img_unit03_pg44_fg01" role="group" aria-labelledby="3column_figure01">
+              <figure class="informalfigure" id="c_img_unit03_pg44_f01" role="group">
+                <img id="c_img_unit03_pg44_01" alt="img 01" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit03_pg44_f02" role="group">
+                <img id="c_img_unit03_pg44_02" alt="img 02" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit03_pg44_f03" role="group">
+                <img id="c_img_unit03_pg44_03" alt="img_03" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+
+              <figure class="informalfigure" id="c_img_unit03_pg44_f04" role="group">
+                <img id="c_img_unit03_pg44_04" alt="img 04" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit03_pg44_f05" role="group">
+                <img id="c_img_unit03_pg44_05" alt="img 05" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit03_pg44_f06" role="group">
+                <img id="c_img_unit03_pg44_06" alt="img_06" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+
+              <figure class="informalfigure" id="c_img_unit03_pg44_f07" role="group">
+                <img id="c_img_unit03_pg44_07" alt="img 07" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit03_pg44_f08" role="group">
+                <img id="c_img_unit03_pg44_08" alt="img 08" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit03_pg44_f09" role="group">
+                <img id="c_img_unit03_pg44_09" alt="img_09" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+            </figure>
+
+            <div id="unit01_pg04_poem01" class="blockquotegroup">
+              <blockquote class="epigraph">
+                <p>I have called you by name — you are mine.</p>
+              </blockquote>
+              <div class="source lc_align-right">
+                <p>
+                  <cite>Isaiah 43:1</cite>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <header><h3></h3></header>
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <section id="unit04_pg43" aria-labelledby="header_unit04_pg43"
+                    class="bg_palegreen padding-left-default padding-right-default padding-top-default padding-bottom-default">
+                    <span id="page43" class="float-right pagebreak_02 margin-top-default margin-right-default margin-bottom-default">
+                      <span>printed p. 43</span>
+                    </span>
+                    <header id="header_unit04_pg43" class="clear-both">
+                      <h3 id="h3_header_unit04_pg43" class="title title_01 lc_align-center">Each One is Special</h3>
+                    </header>
+                  
+                    <figure class="figuregroup" id="c_img_unit03_pg44_fg01" role="group" aria-labelledby="3column_figure01">
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f01" role="group">
+                        <img id="c_img_unit03_pg44_01" alt="img 01" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f02" role="group">
+                        <img id="c_img_unit03_pg44_02" alt="img 02" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f03" role="group">
+                        <img id="c_img_unit03_pg44_03" alt="img_03" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                  
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f04" role="group">
+                        <img id="c_img_unit03_pg44_04" alt="img 04" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f05" role="group">
+                        <img id="c_img_unit03_pg44_05" alt="img 05" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f06" role="group">
+                        <img id="c_img_unit03_pg44_06" alt="img_06" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                  
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f07" role="group">
+                        <img id="c_img_unit03_pg44_07" alt="img 07" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f08" role="group">
+                        <img id="c_img_unit03_pg44_08" alt="img 08" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit03_pg44_f09" role="group">
+                        <img id="c_img_unit03_pg44_09" alt="img_09" src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                    </figure>
+                  
+                    <div id="unit01_pg04_poem01" class="blockquotegroup">
+                      <blockquote class="epigraph">
+                        <p>I have called you by name — you are mine.</p>
+                      </blockquote>
+                      <div class="source lc_align-right">
+                        <p>
+                          <cite>Isaiah 43:1</cite>
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                </code>
+              </div>
+            </p>
+          </section>
+        </section>
+        <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+
+        <!-- 2-Column Figure Layout with Captions for Nested Figure only Section starts -->
+        <hr id="figuregroup_02" />
+        <section>
+          <header>
+            <h2 class="p-grey">2-Column Figure Layout with Captions for Nested Figures only:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for nested figures only.]</p>
+        
+          <section>
+            <header>
+              <h3></h3>
+            </header>
+            <figure class="figuregroup" id="c_img_unitXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+              <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX" role="group" aria-labelledby="c_img_unitXX_pgXX_fcXX">
+                <img id="c_img_unitXX_pgXX_XX" alt=""
+                  src="../../images/placeholder_images/fa_img2.jpg" />
+                <figcaption id="c_img_unitXX_pgXX_fcXX">
+                  <div class="caption">
+                    <p>I am figure caption for the first figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX" role="group" aria-labelledby="c_img_unitXX_pgXX_fcXX">
+                <img id="c_img_unitXX_pgXX_XX" alt=""
+                  src="../../images/placeholder_images/fa_img2.jpg" />
+                <figcaption id="c_img_unitXX_pgXX_fcXX">
+                  <div class="caption">
+                    <p>I am figure caption for the second figure.</p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figcaption id="2column_figure01" class="sr-only">
+                <div class="caption">
+                  <p>Group of 2 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <p class="code_snippet">Code Snippet for Vendor:</p>
+            <p>
+              <div class="code_format">
+                <code>
+                  <figure class="figuregroup" id="c_img_unit01_pg10_fg01" role="group" aria-labelledby="c_img_unit01_pg10_fgc01">
+                    <figure class="informalfigure" id="c_img_unit01_pg10_f01" role="group" aria-labelledby="c_img_unit01_pg10_fc01">
+                      <img id="c_img_unit01_pg10_01" alt="image01"
+                        src="../../images/placeholder_images/fa_img2.jpg" />
+                      <figcaption id="c_img_unit01_pg10_fc01">
+                        <div class="caption">
+                          <p>I am figure caption for the first figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit01_pg10_f02" role="group" aria-labelledby="c_img_unit01_pg10_fc02">
+                      <img id="c_img_unit01_pg19_02" alt="image02"
+                        src="../../images/placeholder_images/fa_img2.jpg" />
+                      <figcaption id="c_img_unit01_pg10_fc02">
+                        <div class="caption">
+                          <p>I am figure caption for the second figure.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                    <figcaption id="c_img_unit01_pg10_fgc01" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 2 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </code>
+              </div>
+            </p>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Nested Figure only Section ends -->
+
+          <!-- 2-Column Figure Layout with Caption for Figuregroup only Section starts -->
+          <hr id="figuregroup_03" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout with Caption for Figuregroup only:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout with caption for figuregroup only.]</p>
+          
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" id="c_img_unitXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX">
+                  <img id="c_img_unitXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/fa_img2.jpg" />
+                </figure>
+                <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX">
+                  <img id="c_img_unitXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/fa_img2.jpg" />
+                </figure>
+                <figcaption id="2column_figure01">
+                  <div class="caption">
+                    <p>I am caption for the figuregroup.</p>
+                  </div>
+                </figcaption>
+              </figure>
+          
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="c_img_unit01_pg10_fg01" role="group" aria-labelledby="c_img_unit01_pg10_fgc01">
+                      <figure class="informalfigure" id="c_img_unit01_pg10_f01">
+                        <img id="c_img_unit01_pg10_01" alt="image01"
+                          src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit01_pg10_f02">
+                        <img id="c_img_unit01_pg19_02" alt="image02"
+                          src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figcaption id="c_img_unit01_pg10_fgc01">
+                        <div class="caption">
+                          <p>I am caption for the figuregroup.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Figuregroup only Section Ends-->
+
+          <!-- 2-Column Figure Layout without Captions for both Figure and Figuregroup Section starts -->
+          <hr id="figuregroup_04" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout without Captions for both Figures and Figuregroup:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout without captions for both figures and figuregroup.]</p>
+          
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" id="c_img_unitXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX">
+                  <img id="c_img_unitXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/fa_img2.jpg" />
+                </figure>
+                <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX">
+                  <img id="c_img_unitXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/fa_img2.jpg" />
+                </figure>
+                <figcaption id="2column_figure01" class="sr-only">
+                  <div class="caption">
+                    <p>Group of 2 images.</p>
+                  </div>
+                </figcaption>
+              </figure>
+          
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="c_img_unit01_pg10_fg01" role="group" aria-labelledby="c_img_unit01_pg10_fgc01">
+                      <figure class="informalfigure" id="c_img_unit01_pg10_f01">
+                        <img id="c_img_unit01_pg10_01" alt="image01"
+                          src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit01_pg10_f02">
+                        <img id="c_img_unit01_pg19_02" alt="image02"
+                          src="../../images/placeholder_images/fa_img2.jpg" />
+                      </figure>
+                      <figcaption id="c_img_unit01_pg10_fgc01" class="sr-only">
+                        <div class="caption">
+                          <p>Group of 2 images.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+
+          <!-- 2-Column Figure Layout with Captions for Figures and Figuregroup Section starts -->
+          <hr id="figuregroup_05" />
+          <section>
+            <header>
+              <h2 class="p-grey">2-Column Figure Layout with Captions for Figures and Figuregroup:</h2>
+            </header>
+            <p class="p-grey">[Below is a sample preview of 2-Column figure layout with captions for figures and figuregroup.]</p>
+          
+            <section>
+              <header>
+                <h3></h3>
+              </header>
+              <figure class="figuregroup" id="c_img_unitXX_pgXX_fgXX" role="group" aria-labelledby="2column_figure01">
+                <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX" role="group"
+                  aria-labelledby="c_img_unitXX_pgXX_fcXX">
+                  <img id="c_img_unitXX_pgXX_XX" alt=""
+                    src="../../images/placeholder_images/fa_img2.jpg" />
+                  <figcaption id="c_img_unitXX_pgXX_fcXX">
+                    <div class="caption">
+                      <p>I am figure caption for the first figure.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure class="informalfigure" id="c_img_unitXX_pgXX_fXX" role="group"
+                  aria-labelledby="2column_figure01_02">
+                  <img id="c_img_unitXX_pgXX_XX" aria-labelledby="c_img_unitXX_pgXX_fcXX"
+                    src="../../images/placeholder_images/fa_img2.jpg" />
+                  <figcaption id="c_img_unitXX_pgXX_fcXX">
+                    <div class="caption">
+                      <p>I am figure caption for the second figure.</p>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figcaption id="2column_figure01">
+                  <div class="caption">
+                    <p>I am caption for the figuregroup.</p>
+                  </div>
+                </figcaption>
+              </figure>
+          
+              <p class="code_snippet">Code Snippet for Vendor:</p>
+              <p>
+                <div class="code_format">
+                  <code>
+                    <figure class="figuregroup" id="c_img_unit01_pg10_fg01" role="group" aria-labelledby="c_img_unit01_pg10_fgc01">
+                      <figure class="informalfigure" id="c_img_unit01_pg10_f01" role="group" aria-labelledby="c_img_unit01_pg10_fc01">
+                        <img id="c_img_unit01_pg10_01" alt="image01"
+                          src="../../images/placeholder_images/fa_img2.jpg" />
+                        <figcaption id="c_img_unit01_pg10_fc01">
+                          <div class="caption">
+                            <p>I am figure caption for the first figure.</p>
+                          </div>
+                        </figcaption>
+                      </figure>
+                      <figure class="informalfigure" id="c_img_unit01_pg10_f02" role="group" aria-labelledby="c_img_unit01_pg10_fc02">
+                        <img id="c_img_unit01_pg19_02" alt="image02"
+                          src="../../images/placeholder_images/fa_img2.jpg" />
+                        <figcaption id="c_img_unit01_pg10_fc02">
+                          <div class="caption">
+                            <p>I am figure caption for the second figure.</p>
+                          </div>
+                        </figcaption>
+                      </figure>
+                      <figcaption id="c_img_unit01_pg10_fgc01">
+                        <div class="caption">
+                          <p>I am caption for the figuregroup.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </code>
+                </div>
+              </p>
+            </section>
+          </section>
+          <!-- 2-Column Figure Layout with Captions for Figure and Figuregroup + Section Ends-->
+      </section>
+      <!-- Figuregroup Section Ends -->
+
+      <hr class="template_hr" />
+
+      <!-- Note Section Starts -->
+      <section id="notes">
+        <header>
+          <h1>Note Combinations</h1>
+        </header>
+        <p class="p-grey">[This section displays how each of the different note components are styled and will display. Please note that "Notes" can only be applied to book content that does not have a title or a heading level content.]</p>
+      
+        <!-- Title 01 + 4 Column Figuregroup + Note 01 + Poem + 4 Column Figuregroup section starts-->
+        <hr id="note_01" />
+        <section>
+          <header>
+            <h2 class="p-grey">Title 01 + 4 Column Figuregroup + Note 01 + Poem + 4 Column Figuregroup + Dark Yellow Background:</h2>
+          </header>
+          <p class="p-grey">[Below is a sample preview of a Note 01 between a title 01 and a 4 column figuregroup and another 4 column figuregroup all in front of a dark yellow background.]</p>
+
+          <section id="unit05_pg50" aria-labelledby="header_unit05_pg50"
+            class="bg_darkyellow padding-left-default padding-right-default padding-top-default padding-bottom-default">
+            <header id="header_unit05_pg50">
+              <h3 id="h3_header_unit05_pg50" class="title title_01 lc_align-center">A Prayer of Thanks</h3>
+            </header>
+            <figure id="c_img_unit05_pg50_fg01" class="figuregroup_01" role="group" aria-labelledby="c_img_unit05_pg50_fgc01">
+              <figure class="informalfigure" id="c_img_unit05_pg50_f01">
+                <img id="c_img_unit05_pg50_01" alt="image01" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit05_pg50_f02">
+                <img id="c_img_unit05_pg50_02" alt="image02" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit05_pg50_f03">
+                <img id="c_img_unit05_pg50_03" alt="image03" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit05_pg50_f04">
+                <img id="c_img_unit05_pg50_04" alt="image04" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figcaption id="c_img_unit05_pg50_fgc01" class="sr-only">
+                <div class="caption">
+                  <p>Group of 4 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <div id="unit05_pg50_note01" class="note note_01 width-66 padding-left-default padding-right-default lc_align-center margin-0-auto">
+              <div class="poem poem_01 text-heinemann margin-top-0 margin-bottom-0" id="unit_05_pg50_poem01">
+                <div class="linegroup margin-left-0 margin-right-0">
+                  <span class="line">Dear God, our Father,</span>
+                  <span class="line">We thank you for our lives.</span>
+                  <span class="line">We thank you for making</span>
+                  <span class="line">each one of us a unique person.</span>
+                  <span class="line">We thank you for each other.</span>
+                  <span class="line">We thank you for the many</span>
+                  <span class="line">gifts you have given us.</span>
+                </div>
+              </div>
+            </div>
+
+            <figure id="c_img_unit05_pg50_fg02" class="figuregroup_01" role="group" aria-labelledby="c_img_unit05_pg50_fgc02">
+              <figure class="informalfigure" id="c_img_unit05_pg50_f05">
+                <img id="c_img_unit05_pg50_05" alt="image05" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit05_pg50_f06">
+                <img id="c_img_unit05_pg50_06" alt="image06" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit05_pg50_f07">
+                <img id="c_img_unit05_pg50_07" alt="image07" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figure class="informalfigure" id="c_img_unit05_pg50_f08">
+                <img id="c_img_unit05_pg50_08" alt="image08" src="../../images/placeholder_images/fa_img2.jpg" />
+              </figure>
+              <figcaption id="c_img_unit05_pg50_fgc02" class="sr-only">
+                <div class="caption">
+                  <p>Group of 4 images.</p>
+                </div>
+              </figcaption>
+            </figure>
+          </section>
+
+          <p class="code_snippet">Code Snippet for Vendor:</p>
+          <p>
+            <div class="code_format">
+              <code>
+                <section id="unit05_pg50" aria-labelledby="header_unit05_pg50"
+                  class="bg_darkyellow padding-left-default padding-right-default padding-top-default padding-bottom-default">
+                  <header id="header_unit05_pg50">
+                    <h3 id="h3_header_unit05_pg50" class="title title_01 lc_align-center">A Prayer of Thanks</h3>
+                  </header>
+                  <figure id="c_img_unit05_pg50_fg01" class="figuregroup_01" role="group" aria-labelledby="c_img_unit05_pg50_fgc01">
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f01">
+                      <img id="c_img_unit05_pg50_01" alt="image01" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f02">
+                      <img id="c_img_unit05_pg50_02" alt="image02" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f03">
+                      <img id="c_img_unit05_pg50_03" alt="image03" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f04">
+                      <img id="c_img_unit05_pg50_04" alt="image04" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figcaption id="c_img_unit05_pg50_fgc01" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 4 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                
+                  <div id="unit05_pg50_note01"
+                    class="note note_01 width-66 padding-left-default padding-right-default lc_align-center margin-0-auto">
+                    <div class="poem poem_01 text-heinemann margin-top-0 margin-bottom-0" id="unit_05_pg50_poem01">
+                      <div class="linegroup margin-left-0 margin-right-0">
+                        <span class="line">Dear God, our Father,</span>
+                        <span class="line">We thank you for our lives.</span>
+                        <span class="line">We thank you for making</span>
+                        <span class="line">each one of us a unique person.</span>
+                        <span class="line">We thank you for each other.</span>
+                        <span class="line">We thank you for the many</span>
+                        <span class="line">gifts you have given us.</span>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <figure id="c_img_unit05_pg50_fg02" class="figuregroup_01" role="group" aria-labelledby="c_img_unit05_pg50_fgc02">
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f05">
+                      <img id="c_img_unit05_pg50_05" alt="image05" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f06">
+                      <img id="c_img_unit05_pg50_06" alt="image06" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f07">
+                      <img id="c_img_unit05_pg50_07" alt="image07" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figure class="informalfigure" id="c_img_unit05_pg50_f08">
+                      <img id="c_img_unit05_pg50_08" alt="image08" src="../../images/placeholder_images/fa_img2.jpg" />
+                    </figure>
+                    <figcaption id="c_img_unit05_pg50_fgc02" class="sr-only">
+                      <div class="caption">
+                        <p>Group of 4 images.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </section>
+              </code>
+            </div>
+          </p>
+        </section>
+      </section>
+      <!-- Note Section Ends -->
+    </section>
+    <!-- Readspeaker section closed-->
+  </body>
+
+</html>

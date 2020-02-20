@@ -1,0 +1,1481 @@
+<html lang="en">
+
+	<head>
+		<title>Religion Standard Component Styles</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="../../css/re_fully_alive_teacher.css"/>
+
+		<style>
+			body {
+				max-width: 1024px;
+				margin: auto;
+				padding: 50px;
+				font-size: 115%;
+			}
+
+			hr {
+				margin: 0;
+			}
+
+			h1 {
+				font-size: 1.75rem;
+				line-height: 2rem;
+			}
+
+			.code_format {
+				display: block;
+				background-color: #e2f2f2;
+				border: solid #020202;
+				padding: 10px 20px;
+			}
+
+			code {
+				display: block;
+				font-family: monospace;
+				margin-top: -20px;
+				white-space: pre;
+				overflow-x: auto;
+			}
+
+			.code_format * {
+				padding: 0;
+				margin: 0;
+			}
+
+			.grid-col {
+				background-color: #e2f2f2;
+				border: 1px dotted #020202;
+				text-align: center;
+			}
+
+			.template_hr {
+				display: block;
+				height: 10px;
+				border: 0;
+				border-top: 10px solid red;
+				margin: 1rem 0;
+				padding: 0;
+			}
+
+			.code_snippet {
+				color: #600000;
+				font-weight: bold;
+			}
+
+			.main_title {
+				text-align: center;
+				font-size: 3rem;
+				font-family: Arial, Helvetica, sans-serif;
+				line-height: 3.25rem;
+				letter-spacing: 5px;
+				margin: 0;
+				font-variant: small-caps;
+			}
+
+			#myBtn {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 99;
+				font-size: 1rem;
+				border: none;
+				outline: none;
+				background-color: black;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 4px;
+			}
+
+			#myBtn:hover {
+				background-color: red;
+			}
+
+			.links {
+				column-count: 3;
+				column-gap: 40px;
+			}
+
+			.links a {
+				font-weight: unset;
+			}
+
+			.links li {
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+				margin: 0;
+			}
+
+			.links p {
+				margin: 0;
+				font-size: 0.85rem;
+				line-height: 1.45rem;
+			}
+
+			.links ol {
+				list-style-type: upper-alpha;
+			}
+
+			.links2 {
+				display: none;
+				width: 100%;
+				font-size: 1.15rem;
+				margin: 1.15rem 0;
+				border: 1px solid black;
+			}
+
+			.p-darkred,
+			.p-grey {
+				color: #707070;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.15rem;
+				line-height: 1.65rem;
+			}
+
+			.p-darkred {
+				color: #600000;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.links { display: none; }
+				.links2 {display: block; }
+			}
+
+			@media only screen and (max-width: 450px) {
+				#myBtn {
+				bottom: 70px;
+				right: 10px;
+				}
+
+				.main_title {
+				font-size: 2.25rem;
+				line-height: 2.75rem;
+				letter-spacing: 1px;
+				}
+			}
+		</style>
+
+		<script>
+			window.onload = function init() {
+				var codeblock = document.querySelectorAll(".code_format > code");
+				console.log(codeblock);
+				var len = codeblock.length;
+				console.log(typeof(len));
+				for (var i = 0; i < len; i++) {
+					var dom = codeblock[i];
+					var html = dom.innerHTML;
+					var pattern = html.match(/\s*\n[\t\s]*/);
+					var pattern01 = html.match(/\s+\n*$/);
+					var pattern02 = html.match(/^\n*(\<)/);
+					html = html.replace(new RegExp(pattern, "g"), '\n');
+					html = html.replace(/(<img([\w\W]+?))(>)/gm, "$1/>");
+					html = html.replace(/—/gm, "&#x2014;");
+					html = html.replace(/–/gm, "&#x2013;");
+					var temphtml = html.match(/^[^\n]+\n/gm);
+
+					//html = html.replace(new RegExp(pattern01, "m"), ''); html = html.replace(new RegExp(pattern02, "m", "g"), '<'); console.log(temphtml.join(""));
+					var text = document.createTextNode(String(temphtml.join("")));
+					dom.innerHTML = "";
+					dom.appendChild(text);
+				}
+			}
+
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("myBtn").style.display = "block";
+				} else {
+					document.getElementById("myBtn").style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+	</head>
+
+	<body epub:type="bodymatter">
+		<button onclick="topFunction();" id="myBtn" title="Go to top">Top</button>
+		<section id="read_speaker">
+			<section>
+				<header>
+					<h1 class="main_title">Standard Components</h1>
+				</header>
+				<p class="p-grey">[A component is comprised of an element that is combined with other elements, styles, and/or layouts. This section displays a list of standard components that were created for those common book items and features in the RE Fully Alive teacher
+					book. Refer to this section as you mark up each book item in your printer PDF, and then refer to Layouts or Styles if you need to specify the arrangement or style of that component.]</p>
+				<hr/>
+
+				<ol class="links">
+					<li>
+						<p>
+							<strong>
+								<a href="#headers">Headers</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#header_01">Appendix Header</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#header_02">Theme Header</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#header_03">Topic Header</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+
+					<li>
+						<p>
+							<strong>
+								<a href="#sections">Section</a>
+							</strong>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#footnotes">Footnotes</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#footnote_ref">Footnote Reference</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#footnote_01">Footnote 01</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#notes">Note</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#note_01">Note 01</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#note_02">Note 02</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#informaltable">Informal Table</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#informaltable_01">Informaltable 01</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="#informaltable_data-table">Informaltable Data-Table</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+					<li>
+						<p>
+							<strong>
+								<a href="#accordions">Accordion</a>
+							</strong>
+						</p>
+						<ol>
+							<li>
+								<p>
+									<a href="#accordion_01">Accordion 01</a>
+								</p>
+							</li>
+						</ol>
+					</li>
+
+				</ol>
+
+				<select class="links2" onchange="location = this.value;">
+					<option>** Pick from dropdown **</option>
+					<option value="#headers">- Headers -</option>
+					<option value="#header_01">Appendix Header</option>
+					<option value="#header_02">Theme Header</option>
+					<option value="#header_03">Topic Header</option>
+
+					<option value="#sections">- Sections -</option>
+
+					<option value="#footnotes">- Footnotes -</option>
+					<option value="#footnote_ref">Footnote Reference</option>
+					<option value="#footnote_01">Footnote 01</option>
+
+					<option value="#notes">- Note -</option>
+					<option value="#note_01">Note 01</option>
+					<option value="#note_02">Note 02</option>
+
+					<option value="#informaltable">- Informal Table -</option>
+					<option value="#informaltable_01">Informaltable 01</option>
+					<option value="#informaltable_data-table">Informaltable Data-Table</option>
+					
+					<option value="#accordions">- Accordion -</option>
+					<option value="#accordion_01">Accordion 01</option>
+				</select>
+			</section>
+
+			<hr class="template_hr" style="border-top: 40px double MediumVioletRed;"/>
+
+			<!-- Headers Section Starts -->
+			<section id="headers">
+				<header>
+					<h1>Headers</h1>
+				</header>
+				<p class="p-grey">[This section displays how each of the different header components are styled and will display.]</p>
+
+				<!-- Appendix Header Section Starts -->
+				<hr id="header_01" />
+				<section>
+					<header>
+						<h2 class="p-grey">Appendix Header:</h2>
+					</header>
+					<p class="p-grey">[Use this design treatment for headers that have an appendix in the beginning. Note that the header design structure is templated and cannot be changed.]</p>
+
+					<section class="appendix">
+						<header>
+							<h3 class="title title_01">
+								<span class="label">Appendix</span>
+								<span class="number">B</span>
+								<span class="text width-66"><em>Fully Alive</em> and <span class="no-widow">Curriculum Connections</span></span>
+							</h3>
+						</header>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="appendix" aria-labelledby="header_unique_section_id">
+									<header id="header_unique_section_id">
+										<h1 id="unique_heading_id" class="title title_01">
+											<span class="label">Appendix</span>
+											<span class="number">B</span>
+											<span class="text width-66"><em>Fully Alive</em> and <span class="no-widow">Curriculum Connections</span></span>
+										</h1>
+									</header>
+									...etc
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Appendix Header Section Ends -->
+
+				<!-- Theme Header Section Starts -->
+				<hr id="header_02" />
+				<section>
+					<header>
+						<h2 class="p-grey">Theme Header:</h2>
+					</header>
+					<p class="p-grey">[Use this design treatment for theme headers. Note that the
+						header design structure is templated and cannot be changed.]</p>
+
+					<section class="part">
+						<header>
+							<h3 class="title title_01">
+								<img class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_002.jpg" />
+								<span>
+									<span class="label">Theme</span>
+									<span class="number">One</span>
+									<span class="text">Created and Loved by God</span>
+								</span>
+							</h3>
+						</header>
+					</section>
+				
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="part" aria-labelledby="header_unique_section_id">
+									<header id="header_unique_section_id">
+										<h1 id="unique_heading_id" class="title title_01">
+											<img id="unique_image_id" class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_002.jpg" alt="alt text" />
+											<span>
+												<span class="label">Theme</span>
+												<span class="number">One</span>
+												<span class="text">Created and Loved by God</span>
+											</span>
+										</h1>
+									</header>
+									...etc
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Theme Header Section Ends -->
+
+				<!-- Topic Header Section Starts -->
+				<hr id="header_03" />
+				<section>
+					<header>
+						<h2 class="p-grey">Topic Header:</h2>
+					</header>
+					<p class="p-grey">[Use this design treatment for topic headers. Note that the
+						header design structure is templated and cannot be changed.]</p>
+				
+					<section class="chapter">
+						<header>
+							<h3 class="title title_02">
+								<img class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_001.jpg" />
+								<span>
+									<span class="text">Created and Loved by God</span>
+									<span class="label">Topic</span>
+									<span class="number">1</span>
+								</span>
+								<br />
+								<br />
+								<span class="subtitle">Creation Is a Gift from God</span>
+							</h3>
+						</header>
+						<div class="blockquote blockquotegroup_02">
+							<blockquote class="epigraph">
+								<p>The world is charged with the grandeur of God ...</p>
+								<p>There lives the dearest freshness deep down things.</p>
+							</blockquote>
+							<div class="source">
+								<p><cite><strong><em>Gerard Manley Hopkins</em> “God’s Grandeur”</strong></cite></p>
+							</div>
+						</div>
+					</section>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[Note that there is a blockquote 02 right after the header tag. This is a must for this header design. All other elements and components can follow after the blockquote.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<section id="unique_section_id" class="chapter" aria-labelledby="header_unique_section_id">
+									<header id="header_unique_section_id">
+										<h2 id="unique_heading_id" class="title title_02">
+											<img id="unique_image_id" class="design-icon inline" src="../../images/re_fa_teacher_icons/icon_img_001.jpg" alt="alt text" />
+											<span>
+												<span class="text">Created and Loved by God</span>
+												<span class="label">Topic</span>
+												<span class="number">1</span>
+											</span>
+											<br />
+											<br />
+											<span class="subtitle">Creation Is a Gift from God</span>
+										</h2>
+									</header>
+									<div class="blockquote blockquotegroup_02">
+										<blockquote class="epigraph">
+											<p>The world is charged with the grandeur of God ...</p>
+											<p>There lives the dearest freshness deep down things.</p>
+										</blockquote>
+										<div class="source">
+											<p><cite><strong><em>Gerard Manley Hopkins</em> “God’s Grandeur”</strong></cite></p>
+										</div>
+									</div>
+									...etc
+								</section>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Topic Header Section Ends -->
+
+			</section>
+			<!-- Header Section Ends -->
+
+			<hr class="template_hr" />
+
+			<!-- Section Section Starts -->
+			<section id="sections">
+				<header>
+					<h1 class="p-grey">Section:</h1>
+				</header>
+				<p class="p-grey">[Below is how a standard "section" wrapper section will display.]</p>
+
+				<section class="chapter">
+					<header>
+						<h2 class="title title_01">This is a "section" section</h2>
+					</header>
+					<p>...etc</p>
+				</section>
+
+				<p class="code_snippet">Code Snippet for Vendor:</p>
+				<p class="p-darkred">[This is the base section. The title heading can be any level and any class depending on editorial markup. In this example, we are just showing it as h1 with class "title_01".]</p>
+				<p>
+					<div class="code_format">
+						<code>
+							<section id="unique_section_id" class="section" aria-labelledby="header_unique_section_id">
+								<header id="header_unique_section_id">
+									<h1 id="unique_heading_id" class="title title_01">This is a chapter section</h1>
+								</header>
+								...etc
+							</section>
+						</code>
+					</div>
+				</p>
+			</section>
+			<!-- Section Section Ends -->
+
+			<hr class="template_hr" />
+
+			<!-- Footer Section Starts -->
+			<section id="footnotes">
+				<header>
+					<h1>Footnotes</h1>
+				</header>
+				<p class="p-grey">[This section displays how footnote compontents and references are styled and will display. There can only be one footnote component per HTML page and has to be within the article tag.]</p>
+
+				<!-- footnote ref Section Starts -->
+				<hr id="footnote_ref" />
+				<section>
+					<header>
+						<h2 class="p-grey">Footnote Reference:</h2>
+					</header>
+					<p class="p-grey">[Below is a footnote reference that will be referencing to a footnote_01 later.]</p>
+
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+					dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <span class="no-widow">specimen
+					book. <a class="xref" href="#footnote_ref_1" target="_self" aria-label="go to footnote 1"><sup class="noteref noteref_footnote number">1</sup></a></span></p>
+
+					<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+									standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+									<span class="no-widow">specimen book. <a class="xref" href="#footnote_ref_1" target="_self" aria-label="go to footnote 1"><sup id="unique_footnoteref_id" class="noteref noteref_footnote number">1</sup></a></span></p>
+								
+								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+									unchanged.</p>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- footnote ref Section Ends -->
+
+				<!-- footnote 01 Section Starts -->
+				<hr id="footnote_01" />
+				<section>
+					<header>
+						<h2 class="p-grey">Footnote 01:</h2>
+					</header>
+					<p class="p-grey">[Below is footnote_01 that has been referenced by a footnote reference. <strong>Note that there can only be one footnote(footer) and is a last component that needs to be placed at the end of a html page.</strong>]</p>
+				
+					<article>
+						<section>
+							<header>
+								<h3 class="title title_03">Header title</h3>
+							</header>
+							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+							from 45 BC, making it over 2000 <span class="no-widow">years old.<a class="xref" href="#footnote_ref_01_id" target="_self" aria-label="go to footnote 3"><sup id="sup_footnote_ref_01_id" class="noteref noteref_footnote number">3</sup></a></span></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam.
+							Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed <span class="no-widow">risus urna.<a class="xref" href="#footnote_ref_02_id" target="_self" aria-label="go to footnote 4"><sup id="sup_footnote_ref_02_id" class="noteref noteref_footnote number">4</sup></a></span></p>
+							<hr class="hr_01" />
+						</section>
+						<footer>
+							<ol start="3" class="footnote footnote_01">
+								<li id="footnote_ref_01_id">
+									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+												essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+												containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+												PageMaker including versions of <span class="no-widow">Lorem Ipsum. <a class="xref xref_footnote" href="#sup_footnote_ref_01_id" aria-label="go to footnote reference 3">&#8617;</a></span></p>
+								</li>
+								<li id="footnote_ref_02_id">
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+										classical Latin literature from 45 BC, making it over 2000 years old.</p>
+									<p>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
+										more obscure Latin words, consectetur, from a Lorem <span class="no-widow">Ipsum passage. <a class="xref  xref_footnote" href="#sup_footnote_ref_02_id" aria-label="go to footnote reference 4">&#8617;</a></span></p>
+								</li>
+							</ol>
+						</footer>
+					</article>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[The footer must be placed as the last component inside of the main article. There can only be one footnote(footer) per html page. The icon unicode at the end is <strong>&amp#8617;</strong>.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<!--<body>-->
+								<article id="main">
+									<section id="unique_section_id" aria-labelledby="header_unique_section_id">
+										<header id="header_unique_section_id">
+											<h1 id="unique_heading_id" class="title title_03">Header title</h1>
+										</header>
+										<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 <span class="no-widow">years old.<a class="xref" href="#unique_footnote_ref_01_id" target="_self" aria-label="go to footnote 3"><sup id="unique_footnoteref_id_1" class="noteref noteref_footnote number">3</sup></a></span></p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit ex, suscipit ut ultrices quis, pharetra vel diam. Aenean volutpat tellus in tortor dictum, sed lacinia nunc lacinia. Vestibulum vitae risus est. Praesent sed <span class="no-widow">risus urna.<a class="xref" href="#unique_footnote_ref_02_id" target="_self" aria-label="go to footnote 4"><sup id="unique_footnoteref_id_2" class="noteref noteref_footnote number">4</sup></a></span></p>
+										<hr class="hr_01" />
+									</section>
+									...etc
+									<footer id="unique_footer_id">
+										<ol id="unique_ol_id" start="3" class="footnote footnote_01">
+											<li id="unique_footnote_ref_01_id">
+												<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <span class="no-widow">Lorem Ipsum. <a class="xref xref_footnote" href="#unique_footnoteref_id_1" aria-label="go to footnote reference 3">&#8617;</a></span></p>
+											</li>
+											<li id="unique_footnote_ref_02_id">
+												<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+												<p>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem <span class="no-widow">Ipsum passage. <a class="xref xref_footnote" href="#unique_footnoteref_id_2" aria-label="go to footnote reference 4">&#8617;</a></span></p>
+											</li>
+										</ol>
+									</footer>
+								</article>
+								<!--</body>-->
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- footnote 01 Section Ends -->
+
+			</section>
+			<!-- Footer Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Note Section Starts -->
+			<section id="notes">
+				<header>
+					<h1>Notes</h1>
+				</header>
+				<p class="p-grey">[This section displays how each of the different note components are styled and will display. Please note that "Notes" can only be applied to book content that does not have a title or a heading level content.]</p>
+
+				<!-- Note 01 Section Starts -->
+				<hr id="note_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Note 01:</h2>
+					</header>
+					<p class="p-grey">[Following is the style for "note 01".]</p>
+
+					<div class="note note_01">
+						<p>This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_01">
+									<p>This is your body text for note 01, which can be any element, layout, and/or component you specify in your markup.</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Note 01 Section Ends -->
+
+				<!-- Note 02 Section Starts -->
+				<hr id="note_02" />
+				<section>
+					<header>
+						<h2 class="p-grey">Note 02:</h2>
+					</header>
+					<p class="p-grey">[Following is the style for "note 02".]</p>
+				
+					<div class="note note_02">
+						<p>This is your body text for note 02, which can be any element, layout, and/or component you specify in your
+							markup.</p>
+					</div>
+				
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div id="unique_note_id" class="note note_02">
+									<p>This is your body text for note 02, which can be any element, layout, and/or component you specify in your markup.</p>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Note 02 Section Ends -->
+			</section>
+			<!-- Note Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Informal Table Section Starts -->
+			<section id="informaltable">
+				<header>
+					<h1>Informal Table</h1>
+				</header>
+				<p class="p-grey">[Use the "informal table" component for your tables that have column headers. Note that border style and text style (font, colour, and size) are templated and cannot be changed; however, the column widths and the number of rows and
+					columns can be customized.]</p>
+
+				<!-- INformaltable 01 SEction Starts -->
+				<hr style="margin-top: 1.5rem;" id="informaltable_01"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Informaltable 01:</h2>
+					</header>
+					<p class="p-grey">[This is the design treatment for "informaltable 01". The number of columns, colours for rows and columns can be changed based on markup.]</p>
+
+					<table class="informaltable informaltable_01 margin-top-default margin-bottom-default">
+						<caption class="caption">
+							<p>This is a caption for the table which can go above or below the table. Default is at the top. (Optional).</p>
+						</caption>
+						<colgroup>
+							<col />
+							<col />
+							<col />
+							<col class="bg_lightgrey" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr class="bg_gradientgrey">
+								<th class="lc_align-center" scope="col">
+									<p class="text-color-white">Category</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p class="text-color-white">Level 1</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p class="text-color-white">Level 2</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p class="text-color-white">Level 3</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p class="text-color-white">Level 4</p>
+								</th>
+							</tr>
+							<tr class="bg_lightgrey">
+								<th class="lc_align-center" scope="col">
+									<p>Second Level Headings</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Second Level Level 1</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Second Level Level 2</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Second Level Level 3</p>
+								</th>
+								<th class="lc_align-center" scope="col">
+									<p>Second Level Level 4</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>1</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>You shall have no other gods before God.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Put love of God above all else.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+								</td>
+								<td class="lc_align-left">
+									<ul>
+										<li>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</li>
+										<li>
+											<p>Proin et sapien quis ipsum ultricies convallis eu ac ligula.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>2</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Do not take God’s name in vain.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Respect God through your words, thoughts, and actions every day.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Church teachings help us know, love, respect, and serve God.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Phasellus dapibus sem ac risus facilisis, et gravida nisl viverra.</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="lc_align-left" scope="row">
+									<p>3</p>
+								</th>
+								<td class="lc_align-left">
+									<p>
+										<strong>Keep the Lord’s Day holy.</strong>
+									</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+								</td>
+								<td class="lc_align-left">
+									<p>Vestibulum vitae sapien et lectus bibendum auctor vel placerat sapien.</p>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr class="bg_mediumgrey">
+								<td class="lc_align-left" colspan="5">
+									<p class="text-color-white">
+										<strong>Optional</strong>
+										tfoot column span</p>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[The colgroup html tag is used to set an entire column a certain colour instead of adding a class to each individual table cell.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<table id="unique_table_id" class="informaltable informaltable_01 margin-top-default margin-bottom-default">
+									<caption id="unique_caption_id" class="caption">
+										<p>This is a caption for the table which can go above or below the table. Default is at the top. (Optional).</p>
+									</caption>
+									<colgroup>
+										<col/>
+										<col/>
+										<col/>
+										<col class="bg_lightgrey" />
+										<col/>
+									</colgroup>
+									<thead>
+										<tr class="bg_gradientgrey">
+											<th class="lc_align-center" scope="col">
+												<p class="text-color-white">Category</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p class="text-color-white">Level 1</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p class="text-color-white">Level 2</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p class="text-color-white">Level 3</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p class="text-color-white">Level 4</p>
+											</th>
+										</tr>
+										<tr class="bg_lightgrey">
+											<th class="lc_align-center" scope="col">
+												<p>Second Level Headings</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Second Level Level 1</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Second Level Level 2</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Second Level Level 3</p>
+											</th>
+											<th class="lc_align-center" scope="col">
+												<p>Second Level Level 4</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>1</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>You shall have no other gods before God.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Put love of God above all else.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Sacred Tradition and Sacred Scripture help us recognize the need to put God first in our lives.</p>
+											</td>
+											<td class="lc_align-left">
+												<ul>
+													<li>
+														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+													</li>
+													<li>
+														<p>Proin et sapien quis ipsum ultricies convallis eu ac ligula.</p>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>2</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Do not take God’s name in vain.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Respect God through your words, thoughts, and actions every day.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Church teachings help us know, love, respect, and serve God.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Phasellus dapibus sem ac risus facilisis, et gravida nisl viverra.</p>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_align-left" scope="row">
+												<p>3</p>
+											</th>
+											<td class="lc_align-left">
+												<p>
+													<strong>Keep the Lord’s Day holy.</strong>
+												</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Spend time with God in prayer, and honour His will by observing the Sabbath.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Going to Mass on the Lord’s Day helps us keep it holy.</p>
+											</td>
+											<td class="lc_align-left">
+												<p>Vestibulum vitae sapien et lectus bibendum auctor vel placerat sapien.</p>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr class="bg_mediumgrey">
+											<td class="lc_align-left" colspan="5">
+												<p class="text-color-white">
+													<strong>Optional</strong>
+													tfoot column span</p>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- INformaltable 01 SEction Ends -->
+
+				<!-- INformaltable data-table SEction Starts -->
+				<hr id="informaltable_data-table"/>
+				<section>
+					<header>
+						<h2 class="p-grey">Informaltable Data-Table:</h2>
+					</header>
+					<p class="p-grey">[Use the "informaltable data table" design treatment if you want your tables for just purely singluar data only and to look responsive. Data tables have no captions or table footers. By default informaltable data-table are centered
+						aligned and require a horizontal scroll when it is smaller.
+						<em>(Increase/Shrink your browser window size to see it in action)</em>]</p>
+
+					<div class="overflow-x">
+						<table class="informaltable informaltable_01 informaltable_data-table width-100 margin-top-default margin-bottom-default">
+							<thead>
+								<tr class="bg_gradientgrey">
+									<th scope="col">
+										<p class="text-color-white">Order</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Year</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Month</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Day</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Day of the Week</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Hour</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Minute</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">Second</p>
+									</th>
+									<th scope="col">
+										<p class="text-color-white">True or False</p>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">
+										<p>1</p>
+									</th>
+									<td>
+										<p>
+											<strong>2012</strong>
+										</p>
+									</td>
+									<td>
+										<p>December</p>
+									</td>
+									<td>
+										<p>18th</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Monday</p>
+									</td>
+									<td>
+										<p>20</p>
+									</td>
+									<td>
+										<p>32</p>
+									</td>
+									<td>
+										<p>48</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>2</p>
+									</td>
+									<td>
+										<p>
+											<strong>2015</strong>
+										</p>
+									</td>
+									<td>
+										<p>March</p>
+									</td>
+									<td>
+										<p>23rd</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Tuesday</p>
+									</td>
+									<td>
+										<p>23</p>
+									</td>
+									<td>
+										<p>33</p>
+									</td>
+									<td>
+										<p>48</p>
+									</td>
+									<td data-label="True or False">
+										<p>True</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>3</p>
+									</td>
+									<td>
+										<p>
+											<strong>2011</strong>
+										</p>
+									</td>
+									<td>
+										<p>April</p>
+									</td>
+									<td>
+										<p>1st</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Wednesday</p>
+									</td>
+									<td>
+										<p>10</p>
+									</td>
+									<td>
+										<p>42</p>
+									</td>
+									<td>
+										<p>58</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>4</p>
+									</td>
+									<td>
+										<p>
+											<strong>2018</strong>
+										</p>
+									</td>
+									<td>
+										<p>May</p>
+									</td>
+									<td>
+										<p>2nd</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Monday</p>
+									</td>
+									<td>
+										<p>20</p>
+									</td>
+									<td>
+										<p>32</p>
+									</td>
+									<td>
+										<p>48</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<p>5</p>
+									</td>
+									<td>
+										<p>
+											<strong>2019</strong>
+										</p>
+									</td>
+									<td>
+										<p>September</p>
+									</td>
+									<td>
+										<p>30th</p>
+									</td>
+									<td data-label="Day of the Week">
+										<p>Saturday</p>
+									</td>
+									<td>
+										<p>11</p>
+									</td>
+									<td>
+										<p>35</p>
+									</td>
+									<td>
+										<p>49</p>
+									</td>
+									<td data-label="True or False">
+										<p>False</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[The div class "overflow-x" is required to wrap all data tables.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<div class="overflow-x">
+									<table id="unique_table_id" class="informaltable informaltable_01 informaltable_data-table width-100 margin-top-default margin-bottom-default">
+										<thead>
+											<tr class="bg_gradientgrey">
+												<th scope="col">
+													<p class="text-color-white">Order</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Year</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Month</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Day</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Day of the Week</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Hour</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Minute</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">Second</p>
+												</th>
+												<th scope="col">
+													<p class="text-color-white">True or False</p>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td scope="row">
+													<p>1</p>
+												</th>
+												<td>
+													<p>
+														<strong>2012</strong>
+													</p>
+												</td>
+												<td>
+													<p>December</p>
+												</td>
+												<td>
+													<p>18th</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Monday</p>
+												</td>
+												<td>
+													<p>20</p>
+												</td>
+												<td>
+													<p>32</p>
+												</td>
+												<td>
+													<p>48</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>2</p>
+												</td>
+												<td>
+													<p>
+														<strong>2015</strong>
+													</p>
+												</td>
+												<td>
+													<p>March</p>
+												</td>
+												<td>
+													<p>23rd</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Tuesday</p>
+												</td>
+												<td>
+													<p>23</p>
+												</td>
+												<td>
+													<p>33</p>
+												</td>
+												<td>
+													<p>48</p>
+												</td>
+												<td data-label="True or False">
+													<p>True</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>3</p>
+												</td>
+												<td>
+													<p>
+														<strong>2011</strong>
+													</p>
+												</td>
+												<td>
+													<p>April</p>
+												</td>
+												<td>
+													<p>1st</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Wednesday</p>
+												</td>
+												<td>
+													<p>10</p>
+												</td>
+												<td>
+													<p>42</p>
+												</td>
+												<td>
+													<p>58</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>4</p>
+												</td>
+												<td>
+													<p>
+														<strong>2018</strong>
+													</p>
+												</td>
+												<td>
+													<p>May</p>
+												</td>
+												<td>
+													<p>2nd</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Monday</p>
+												</td>
+												<td>
+													<p>20</p>
+												</td>
+												<td>
+													<p>32</p>
+												</td>
+												<td>
+													<p>48</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+											<tr>
+												<td scope="row">
+													<p>5</p>
+												</td>
+												<td>
+													<p>
+														<strong>2019</strong>
+													</p>
+												</td>
+												<td>
+													<p>September</p>
+												</td>
+												<td>
+													<p>30th</p>
+												</td>
+												<td data-label="Day of the Week">
+													<p>Saturday</p>
+												</td>
+												<td>
+													<p>11</p>
+												</td>
+												<td>
+													<p>35</p>
+												</td>
+												<td>
+													<p>49</p>
+												</td>
+												<td data-label="True or False">
+													<p>False</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- INformaltable data-table SEction Starts -->
+			</section>
+			<!-- Informal Table Section Ends -->
+
+			<hr class="template_hr"/>
+
+			<!-- Accordions Section Starts -->
+			<section id="accordions">
+				<header>
+					<h1>Accordion:</h1>
+				</header>
+				<p class="p-grey">[This section displays how an accordion component is styled and will display. Note that accordion is generally used to transfer large table data to a singular column inside the accordion component.]
+				</p>
+
+				<!-- Accordion 01 section starts -->
+				<hr id="accordion_01" />
+				<section>
+					<header>
+						<h2 class="p-grey">Accordion 01</h2>
+					</header>
+					<p class="p-grey">[Below is the design for "Accordion 01". <strong>Note that any title design can be used inside the accordion 01 content itself.</strong>]</p>
+					<details class="fx-accordion fx-accordion_01">
+						<summary aria-controls="unique_div_id" class="fx-accordion-toggle">
+							<h2 class="title title_07">
+								<span>Unit Overall Religious
+									<span class="no-widow">Education Expectations</span></span>
+								<span class="fx-accordion-toggle-icon">&#9662;</span>
+							</h2>
+						</summary>
+						<div id="unique_div_id" class="fx-accordion-toggleable">
+							<section>
+								<header>
+									<h3 class="title title_06">Title Inside Accordion</h3>
+								</header>
+								<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.
+								</p>
+							</section>
+						</div>
+					</details>
+					
+					<p class="code_snippet">Code Snippet for Vendor:</p>
+					<p class="p-darkred">[The triangular icon on the right needs to be in unicode format
+						<strong>&amp#9662;</strong>.]</p>
+					<p>
+						<div class="code_format">
+							<code>
+								<details id="unique_details_id" class="fx-accordion fx-accordion_01">
+									<summary id="unique_summary_id" aria-controls="unique_div_id" class="fx-accordion-toggle">
+										<h2 id="unique_heading_id" class="title title_07">
+											<span>Unit Overall Religious
+												<span class="no-widow">Education Expectations</span></span>
+											<span class="fx-accordion-toggle-icon">&#9662;</span>
+										</h2>
+									</summary>
+									<div id="unique_div_id" class="fx-accordion-toggleable">
+										<section id="unique_section_id" aria-labelledby="header_unique_header_id">
+											<header id="header_unique_header_id">
+												<h3 id="unique_heading_id" class="title title_06">Title Inside Accordion</h3>
+											</header>
+											<p>This is your body text, which can be any element, layout, and/or component you specify in your markup.</p>
+										</section>
+									</div>
+								</details>
+							</code>
+						</div>
+					</p>
+				</section>
+				<!-- Accordion 01 section ends -->
+				
+			</section>
+			<!-- Accordions Section Ends -->
+
+		</section>
+		<!-- Readspeaker section closed-->
+	</body>
+
+</html>

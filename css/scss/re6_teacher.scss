@@ -1,0 +1,2774 @@
+@charset "UTF-8";
+
+//  ************************************* Pearson Custom variables for SCSS(SASS) *************************************
+// Background and Border Colors Styling
+$bodyBackgroundColor: #FFF; //Generic body background on all pages
+$accordionBackgroundAndBorderColor: #707070; //Accordion background color and the border surrounding it
+$poemBorderColor: #000; //Poem box border top and bottom colors
+$note01BackgroundColor: #E7E7E8; //note01 background color
+$note01BorderColor: #707070; //note01 border color
+$marginalia04BorderColor: #707070; //marginalia04 border color
+$marginalia04BackgroundColor: #E7E7E8; //note01 background color
+$card01BackgroundAndBorderColor: #1DA4D7; //card01 bg and border colors
+$card02BackgroundAndBorderColor: #6C757D; //card02 bg and border colors
+$card03BackgroundAndBorderColor: #DDEFF4; //card03 bg and border colors
+$card04BackgroundAndBorderColor: #D14800; //card04 bg and border colors
+$card05BackgroundAndBorderColor: #18819D; //card05 bg and border colors
+$card05TabsBorderColor: #FFF; //card05 border for tabs color
+$card05TabsDefaultBackgroundColor: #18819D; //card05 default tabs color untouched
+$card05TabsRolloverClickedBackgroundColor: #FFF; //card05 rollover, clicked tab color
+$card05BorderAccessibilityColor: #84C0FE;
+
+$cardSubTitleGreyBarColor: #6C757D; //card01-04 sub heading grey background color
+$sidebar02BorderColor: #DD9364; //sidebar02 border color
+$marginalia01HeadingBorderColor: #19833C; //marginalia01 heading border color
+$marginalia02HeadingBorderColor: #D24704; //marginalia02 and marginalia04 heading border color
+$marginalia03HeadingBorderColor: #D24704; //note03 heading border color
+//$annotation01BackgroundColor: #DDEFF4; //annotation01 background color
+$annotation01BackgroundColor: #F3FBFD; //annotation01 background color
+//$annotation02BackgroundColor: #DCF4DF; //annoation02 background color
+$annotation02BackgroundColor: #F2F9F3; //annoation02 background color
+$practice01BorderColor: #DDEFF4; //practice01 border color
+$practiceSubHeadingBorderColor: #D24704; //practice01-02 sub heading border color
+$informalTableborderColor: #6C757D; //informaltable01-03 border color
+$informalTableCellRowBackground01: #F6F6F6; //informaltable cell row variation 1 alternating
+$informalTableCellRowBackground02: #FFF; //informaltable cell row variation 2 alternating
+$informalTable01TableHeadingRowBackgroundColor: #CCFFFF; //informaltable01 table heading row bg color
+$informalTable02TableHeadingRowBackgroundColor: #DCE5EC; //informaltable02 table heading row bg color
+$informalTable03TableHeadingRowBackgroundColor: #6C757D; //informaltable03 table heading row bg color
+$informalTable03TableHeadingRowBorderColor: #FFF; //inforamltable03 borders between cells color
+
+// Font Colors Styling
+$pFontColor: #000; //Generic paragraph text font color
+$aFontColor: #017DBC; //Generic links text font color
+$title01FontColor: #009FDB; //title01 font color outside
+$title02FontColor: #D24704; //title02 font color outside
+$title02FontUnderlineColor: #F8B466; //title02 underline color outside
+$title03FontColor: #D24704; //title03 font color outside
+$title04FontColor: #017DBC; //title04 font color outside
+$title05FontColor: #D24704; //title05 font color outside
+$title06FontColor: #000; //title06 font color outside
+$title07FontColor: #000; //title07 font color outside
+$title07FontColorHover: #FFF; //title07 font color when user hovers or opened state
+
+$note2TitleFontColor: #CC4701; //note2 title heading color
+$informalTable03HeadingRowFontColor: #FFF; //informaltable03 font color for heading rows
+
+$card01TitleFontColor: #FFF; //card01 title heading color
+$card02TitleFontColor: #FFF; //card02 title heading color
+//$card03TitleFontColor: #1C5772; //card03 title heading color
+$card03TitleFontColor: #000; //card03 title heading color
+$card04TitleFontColor: #FFF; //card04 title heading color
+$cardSubTitleGreyBarFontColor: #FFF; //all card01-04 grey bar font color
+$card05TitleTabsFontColor: #FFF; // all card05 tabs font color
+$card05TitleTabsRolloverClickedFontColor: #000; //all card05 tabs rollover or clicked font color
+
+$sidebar01TitleFontColor: #19833C; //sidebar01 title heading color
+$marginalia01TitleFontColor: #19833C; //marginalia01 title heading color
+$marginalia02TitleFontColor: #D24704; //marginalia02 title heading color
+$marginalia03TitleFontColor: #D24704; //note03 title heading color
+$annotation01TitleFontColor: #1C5772; //annotation01 title heading color
+$annotation02TitleFontColor: #007C41; //annotation02 title heading color
+$practiceTitleFontColor: #017DBC; //practice01 and 02 title heading color
+$practiceTitleInstructionFontColor: #D24704; //practice 01 and 02 instruction title heading color
+
+// Font Size Styling
+$pFontSize: 1rem; //Generic paragraph text and links font size
+$title01FontSize: 1.75rem; //title01 font size outside
+$title02FontSize: 1.525rem; //title02 font size outside
+$title03FontSize: 1.4rem; //title03 font size outside
+$title04FontSize: 1.4rem; //title04 font size outside
+$title05FontSize: 1.25rem; //title05 font size outside
+$title06FontSize: 1.25rem; //title06 font size outside
+$title07FontSize: 1.4rem; //title07 font size outside
+$title07ArrowFontSize: 175%; //title07 arrow inside the accordion font size
+
+$titleNoteFontSize: 1.25rem; //ususally note2 title font size
+$pBlockquotePoemFontsize: 1rem; //pullquotes, blockquotes and lines in poem font size
+$pSourceFontSize: 0.85rem; //Generic image and blockquote caption font size
+
+$titleCardFontSize: 1.525rem; //All cards01-05 font size
+$subTitleCardFontSIze: 1.25rem; //All cards01-05 sub title font size
+$titleTabFontSize: 1.15rem; //Card05 tab font size
+
+$titleSidebarFontSize: 1.25rem; //All sidebars01 font size
+$titleSidebarFaithFontSize: 2rem; //All sidebar01 faith font size
+$titleMarginaliaFontSize: 1.25rem; //All marginalia01-03 font size
+$titleAnnotationFontSize: 1.25rem; //All annotation01-02 font size
+$titlePracticeFontSize: 1.4rem; //All practice01-02 font size
+$titlePracticeInstructionFontSize: 1rem; //All practice01-02 instruction font size
+
+//Font Sizes (< 768px)-------------------
+$title01FontSize_768: 1.5rem;
+$title02FontSize_768: 1.325rem;
+$title03FontSize_768: 1.25rem;
+$title04FontSize_768: 1.25rem;
+$title05FontSize_768: 1.25rem;
+$title06FontSize_768: 1.25rem;
+$title07FontSize_768: 1.25rem;
+$title07ArrowFontSize_768: 175%;
+
+$titleCardFontSize_768: 1.325rem;
+$titleTabFontSize_768: 1rem;
+
+$titlePracticeFontSize_768: 1.25rem;
+
+//Font Sizes (< 600px)------------------
+$titleTabFontSize_600: 1.25rem;
+
+// Font Line Height Styling
+$pFontLineHeight: 1.4rem; //Generic paragraph and links line height
+$title01LineHeight: 2rem; //title01 line height outside
+$title02LineHeight: 2.25rem; //title02 line height outside
+$title03LineHeight: 1.65rem; //title03 line height outside
+$title04LineHeight: 1.65rem; //title04 line height outside
+$title05LineHeight: 1.5rem; //title05 line height outside
+$title06LineHeight: 1.5rem; //title06 line height outside
+$title07LineHeight: 2.25rem; //title07 line height outside
+$title07ArrowLineHeight: 1.5rem; //title07 arrow line height to prevent shifting when rotating
+
+$titleNoteLineHeight: 1.65rem; //usually note2 title line height
+
+$pBlockquoteLineHeight: 1.4rem; //pullquotes, and blockquotes line height
+$pSourceLineHeight: 1.25rem; //Generic image and blockquote caption line height
+$pPoemLineHeight: 2.25rem; //poem line height
+
+$titleCardLineHeight: 1.775rem; //All cards01-05 line height
+$subTitleCardLineHeight: 1.5rem; //All cards01-05 line height
+$titleTabLineHeight: 1.4rem; //Card05 Tabs line height
+
+$titleSidebarLineHeight: 1.65rem; //All sidebar01 line height
+$titleSidebarFaithLineHeight: 2.25rem; //All sidebar01 faith line height
+$titleMarginaliaLineHeight: 1.65rem; //All marginalia01-03 line height
+$titleAnnotationLineHeight: 1.65rem; //All marginalia01-02 line height
+$titlePracticeLineHeight: 1.65rem; //All practice01-02 line height
+$titlePracticeInstructionLineHeight: 1.5rem; //All practice01-02 line height
+
+// Font Line Height Styling (< 768px)-------------------
+$title01LineHeight_768: 1.75rem;
+$title02LineHeight_768: 2rem;
+$title03LineHeight_768: 1.65rem;
+$title04LineHeight_768: 1.65rem;
+$title05LineHeight_768: 1.5rem;
+$title06LineHeight_768: 1.5rem;
+$title07LineHeight_768: 1.5rem;
+$title07ArrowLineHeight_768: 1.5rem;
+
+$titleCardLineHeight_768: 1.65rem;
+$titlePracticeLineHeight_768: 1.65rem;
+
+$titleTabLineHeight_768: 1.15rem;
+
+// Font Line Height Styling (< 600px)------------------
+
+// ************************************* Function to replace spaces with underscore in font names *************************************
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// ************************************* Font mixin for general CSS styling *************************************
+
+@mixin generateGeneralFontCSS($fontSize, $fontLineHeight, $fontColor:null) {
+    font-size: $fontSize;
+    line-height: $fontLineHeight;
+    color: $fontColor;
+}
+
+// ************************************* Font mixin for @font-face *************************************
+
+//@mixin font-face($name, $pathname, $path, $svgid, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $pathname, $path, $svgid, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+    $src: null;
+    $svgidfinal: "";
+
+    @if $svgid !="" {
+        $svgidfinal: $svgid;
+    }
+
+    @else {
+        $svgidfinal: str-replace($name, " ", "_");
+    }
+
+    //$extmods: (eot: "?iefix",
+    //svg: "#"+ $svgidfinal);
+
+    $formats: (eot: "embedded-opentype",
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        //$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        //$src: append($src, url(quote($path + $pathname + "." + $extmod)) format(quote($format)), comma);
+        $src: append($src, url(quote($path + $pathname + "." + $ext)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+/* ------------------------------------Load the fonts into CSS-------------------------------------------- */
+
+@include font-face("StoneSansIIITCW05-Medium",
+    "StoneSansIIITCW05-Medium",
+    "../fonts/re6_teacher_fonts/",
+    "ffe366cd-0433-4598-8984-32e061a72ac8",
+    400,
+    normal);
+@include font-face("StoneSansIIITCW05-Medium",
+    "StoneSansIIITCW05-Semibold",
+    "../fonts/re6_teacher_fonts/",
+    "40992efb-765e-4f00-b22c-99ff82be4a4c",
+    600,
+    normal);
+@include font-face("StoneSansIIITCW05-Medium",
+    "StoneSansIIITCW05-Bold",
+    "../fonts/re6_teacher_fonts/",
+    "417150d7-1600-4e64-9b69-31a372c0dc8c",
+    800,
+    normal);
+@include font-face("StoneSansIIITCW05-Medium",
+    "StoneSansIIITCW05-MediumIt",
+    "../fonts/re6_teacher_fonts/",
+    "6f143f4f-ad62-45fb-acf9-386b9c0e9d68",
+    400,
+    italic);
+@include font-face("StoneSansIIITCW05-Medium",
+    "StoneSansIIITCW05-SmBdIt",
+    "../fonts/re6_teacher_fonts/",
+    "93954821-193c-414d-8b54-30c3d83a4da2",
+    600,
+    italic);
+@include font-face("StoneSansIIITCW05-Medium",
+    "StoneSansIIITCW05-BoldIt",
+    "../fonts/re6_teacher_fonts/",
+    "feccab9d-9361-4b7b-be45-81b25c67fcd0",
+    800,
+    italic);
+
+@include font-face("StoneSerifITCW05-Medium",
+    "StoneSerifITCW05-Medium",
+    "../fonts/re6_teacher_fonts/",
+    "9ed62227-1618-4738-9b2c-b37c0c6c3ebc",
+    400,
+    normal);
+@include font-face("StoneSerifITCW05-Medium",
+    "StoneSerifITCW05-SemiBold",
+    "../fonts/re6_teacher_fonts/",
+    "e3f9af10-a7b6-4932-b5c0-ed099c371516",
+    600,
+    normal);
+@include font-face("StoneSerifITCW05-Medium",
+    "StoneSerifITCW05-Bold",
+    "../fonts/re6_teacher_fonts/",
+    "193e9601-682b-4ffa-9499-fec4bc407412",
+    800,
+    normal);
+@include font-face("StoneSerifITCW05-Medium",
+    "StoneSerifITCW05-MediumIt",
+    "../fonts/re6_teacher_fonts/",
+    "8a8600e9-d716-4d7a-8313-77de5bcc4bf9",
+    400,
+    italic);
+@include font-face("StoneSerifITCW05-Medium",
+    "StoneSerifITCW05-SemiBoldIt",
+    "../fonts/re6_teacher_fonts/",
+    "24b23921-d943-4c4b-b130-8db11f173283",
+    600,
+    italic);
+@include font-face("StoneSerifITCW05-Medium",
+    "StoneSerifITCW05-BoldItalic",
+    "../fonts/re6_teacher_fonts/",
+    "32489be5-5d87-4ecb-b100-5736d4fdbd64",
+    800,
+    italic);
+
+@include font-face("AquinasW05-Regular",
+    "AquinasW05-Regular",
+    "../fonts/re6_teacher_fonts/",
+    "b4fce9e4-0e2b-4745-b604-ddb10b54ae60",
+    400,
+    normal);
+
+
+// ************************************* Font includes to be used on and inside elements *************************************
+
+@mixin itcStoneSans_Medium {
+    font-family: "StoneSansIIITCW05-Medium", Arial, sans-serif;
+    font-weight: 400;
+}
+
+@mixin itcStoneSans_SemiBold {
+    font-family: "StoneSansIIITCW05-SemiBold", Arial, sans-serif;
+    font-weight: 600;
+}
+
+@mixin itcStoneSans_Bold {
+    font-family: "StoneSansIIITCW05-Bold", Arial, sans-serif;
+    font-weight: 800;
+}
+
+@mixin itcStoneSans_MediumItalic {
+    font-family: "StoneSansIIITCW05-MediumIt", Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin itcStoneSans_SemiBoldItalic {
+    font-family: "StoneSansIIITCW05-SmBdIt", Arial, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@mixin itcStoneSans_BoldItalic {
+    font-family: "StoneSansIIITCW05-BoldIt", Arial, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+@mixin itcStoneSerif_Medium {
+    font-family: "StoneSerifITCW05-Medium", Times, serif;
+    font-weight: 400;
+}
+
+@mixin itcStoneSerif_SemiBold {
+    font-family: "StoneSerifITCW05-SemiBold", Times, serif;
+    font-weight: 600;
+}
+
+@mixin itcStoneSerif_Bold {
+    font-family: "StoneSerifITCW05-Bold", Times, serif;
+    font-weight: 800;
+}
+
+@mixin itcStoneSerif_MediumItalic {
+    font-family: "StoneSerifITCW05-MediumIt", Times, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin itcStoneSerif_SemiBoldItalic {
+    font-family: "StoneSerifITCW05-SemiBoldIt", Times, serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@mixin itcStoneSerif_BoldItalic {
+    font-family: "StoneSerifITCW05-BoldItalic", Times, serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+@mixin aquinasStd_Regular {
+    font-family: "AquinasW05-Regular", Courier, monospace;
+    font-weight: 400;
+}
+
+// ************************************* Common Margin & Padding @mixin *************************************
+
+@mixin marginPaddingZero {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin box-sizingAllBrowsers {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin marginPaddingGeneral {
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+// ************************************* Normalization Styles CSS *************************************
+
+@mixin normalizationBaseHtmlCSS {
+    html {
+        line-height: 1.15rem;
+        /* 1 */
+        -webkit-text-size-adjust: 100%;
+        /* 2 */
+        display: block;
+        font-size: 100%;
+        @include box-sizingAllBrowsers;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        -moz-box-sizing: inherit;
+        -webkit-box-sizing: inherit;
+    }
+
+    :root {
+        -moz-tab-size: 4;
+        tab-size: 4;
+    }
+
+    body {
+        background-color: $bodyBackgroundColor;
+        margin: 0;
+        padding: 1.5rem;
+        letter-spacing: 0.015rem;
+    }
+
+    header {
+        display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+    }
+
+    p,
+    ol,
+    ul,
+    dl {
+        display: block;
+        margin-block-start: 1.5rem;
+        margin-block-end: 1.5rem;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    p,
+    a,
+    dt {
+        @include itcStoneSans_Medium;
+        //@include itcStoneSerif_Medium;
+        background-color: transparent;
+        @include generateGeneralFontCSS($pFontSize,
+            $pFontLineHeight,
+            $pFontColor);
+        @include marginPaddingGeneral;
+    }
+
+    a {
+        color: $aFontColor;
+        display: inline;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    label {
+        @include itcStoneSans_Medium;
+        font-weight: bold;
+        @include generateGeneralFontCSS($pFontSize,
+            $pFontLineHeight,
+            $card05TitleTabsFontColor);
+        display: block;
+        margin: 0;
+        padding: .75rem 0;
+        cursor: pointer;
+    }
+
+    ol,
+    ul {
+        @include itcStoneSans_Medium;
+        //@include itcStoneSerif_Medium;
+        margin: 1.5rem 0;
+        padding: 0 0 0 1.75rem;
+        display: block;
+        padding-inline-start: 1.75rem;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    li {
+        padding: 0;
+        margin: 1.5rem 0;
+        font-size: $pFontSize;
+        display: list-item;
+        text-align: left;
+        text-align: -webkit-match-parent;
+    }
+
+    dl,
+    dt,
+    dd {
+        @include marginPaddingGeneral;
+        display: block;
+        @include box-sizingAllBrowsers;
+    }
+
+    dd {
+        margin-inline-start: 0;
+    }
+
+    dd:after {
+        display: block;
+        content: "";
+    }
+
+    em {
+        font-style: italic;
+        text-decoration: inherit;
+    }
+
+    strong {
+        font-weight: 800;
+        text-decoration: inherit;
+    }
+
+    blockquote {
+        display: block;
+        margin: 0;
+        padding: 0 3rem;
+    }
+
+    cite {
+        font-style: unset;
+    }
+
+    hr {
+        box-sizing: content-box;
+        /* 1 */
+        height: 0;
+        /* 1 */
+        overflow: visible;
+        /* 2 */
+        border: 1px solid #C3C3C3;
+        margin: 0 2rem;
+        display: block;
+        //unicode-bidi: isolate;
+    }
+
+    figure {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 1.5rem auto;
+        padding: 0;
+        margin-block-start: 1.5rem;
+        margin-block-end: 1.5rem;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        @include box-sizingAllBrowsers;
+    }
+
+    figcaption {
+        margin: 0 auto;
+        display: block;
+        text-align: left;
+    }
+
+    img {
+        border-style: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        @include box-sizingAllBrowsers;
+    }
+
+    table {
+        @include marginPaddingGeneral;
+        @include box-sizingAllBrowsers;
+        border-spacing: 0;
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 768px;
+        height: auto;
+        border-color: #000;
+    }
+
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+    }
+
+    td,
+    th {
+        display: table-cell;
+        vertical-align: inherit;
+        border-color: inherit;
+        min-width: 150px;
+    }
+
+    th {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    caption {
+        text-align: left;
+        display: table-caption;
+    }
+
+    aside,
+    section {
+        display: block;
+        margin: 1.5rem 0;
+        @include box-sizingAllBrowsers;
+    }
+
+    div {
+        display: block;
+        @include box-sizingAllBrowsers;
+    }
+
+    button,
+    input {
+        font-family: inherit;
+        /* 1 */
+        font-size: 100%;
+        /* 1 */
+        line-height: 1.15rem;
+        /* 1 */
+        margin: 0;
+        /* 2 */
+        overflow: visible;
+    }
+
+    button {
+        text-transform: none;
+        @include itcStoneSans_Medium;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+    }
+
+    [type="checkbox"],
+    [type="radio"] {
+        box-sizing: border-box;
+        /* 1 */
+        padding: 0;
+        /* 2 */
+        display: none;
+    }
+
+    details {
+        display: block;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    details[open] {
+        cursor: initial;
+        pointer-events: auto;
+    }
+
+    summary {
+        display: list-item;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    summary:hover {
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    details[open]>summary {
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    @keyframes swingDown {
+        0% {
+            opacity: 0;
+            margin: -1rem 0 0 0;
+        }
+
+        100% {
+            opacity: 1;
+            margin: 0;
+        }
+    }
+
+    @keyframes swingUp {
+        0% {
+            opacity: 1;
+            margin: 0;
+        }
+
+        100% {
+            opacity: 0;
+            margin: -1rem 0 0 0;
+        }
+    }
+
+    @keyframes flipClockwise {
+        0% {
+            transform: rotateZ(0deg);
+        }
+
+        25% {
+            transform: rotateZ(45deg);
+        }
+
+        50% {
+            transform: rotateZ(90deg);
+        }
+
+        75% {
+            transform: rotateZ(135deg);
+        }
+
+        100% {
+            transform: rotateZ(180deg);
+        }
+    }
+
+    template {
+        display: none;
+    }
+
+    [hidden] {
+        display: none;
+    }
+}
+
+// ************************************* Pearson Custom Global Styles CSS *************************************
+
+// ************************************* .title headings outside of everything *************************************
+@mixin titleCSS {
+
+    //Generic PXE class for title headings
+    .title {
+        margin: 1.5rem 0;
+    }
+
+    //Main headings that are light blue
+    .title_01 {
+        @include itcStoneSans_Medium;
+        font-weight: 800;
+        @include generateGeneralFontCSS($title01FontSize,
+            $title01LineHeight,
+            $title01FontColor);
+    }
+
+    //Headings that are orange with the underline
+    .title_02 {
+        @include itcStoneSans_Medium;
+        font-weight: 800;
+        @include generateGeneralFontCSS($title02FontSize,
+            $title02LineHeight,
+            $title02FontColor);
+        text-transform: uppercase;
+        border-bottom: 3px solid $title02FontUnderlineColor;
+        display: inline;
+    }
+
+    //To make sure whatever is under title02 has proper margins because display: inline prevents all margins
+    .title_02:after {
+        content: "";
+        margin: 0 0 calc(1.5rem + 8px) 0;
+        display: block;
+    }
+
+    //Headings that are orange only
+    .title_03 {
+        @include itcStoneSans_Medium;
+        font-weight: 800;
+        @include generateGeneralFontCSS($title03FontSize,
+            $title03LineHeight,
+            $title03FontColor);
+    }
+
+    //Headings that are dark blue
+    .title_04 {
+        @include itcStoneSans_Medium;
+        font-weight: 800;
+        @include generateGeneralFontCSS($title04FontSize,
+            $title04LineHeight,
+            $title04FontColor);
+    }
+
+    //Headings that are orange but are thinner in weight
+    .title_05 {
+        @include itcStoneSans_Medium;
+        font-weight: 600;
+        @include generateGeneralFontCSS($title05FontSize,
+            $title05LineHeight,
+            $title05FontColor);
+    }
+
+    //Headings that are black
+    .title_06 {
+        @include itcStoneSans_Medium;
+        font-weight: 800;
+        @include generateGeneralFontCSS($title06FontSize,
+            $title06LineHeight,
+            $title06FontColor);
+    }
+
+    //Headings that are black for Accordions and Tabs
+    .title_07 {
+        margin: 0;
+        @include itcStoneSans_Medium;
+        font-weight: 800;
+        @include generateGeneralFontCSS($title07FontSize,
+            $title07LineHeight,
+            $title07FontColor);
+    }
+
+    //special case grey sub heading title that spans across horizontally
+    //if need to be used on any card
+    .title_08 {
+        margin: 1.5rem -1.5rem;
+        padding: .75rem 1.5rem;
+        background-color: $cardSubTitleGreyBarColor;
+        @include itcStoneSans_Medium;
+        font-weight: 600;
+        @include generateGeneralFontCSS($subTitleCardFontSIze,
+            $subTitleCardLineHeight,
+            $cardSubTitleGreyBarFontColor);
+    }
+}
+
+// ************************************* Accordions created from details & summary tags *************************************
+@mixin accordionCSS {
+
+    //general accordion whole body that is coded for the details HTML tag
+    .fx-accordion {
+        width: 100%;
+        margin: calc(1.5rem + 3px) 0;
+        padding: 0;
+        background-color: $bodyBackgroundColor;
+
+        //general accordion clickable area that is coded for the summary HTML tag
+        &>.fx-accordion-toggle {
+            padding: .75rem 1.5rem;
+            border: 3px solid $accordionBackgroundAndBorderColor;
+            background-color: $bodyBackgroundColor;
+            width: 100%;
+            @include box-sizingAllBrowsers;
+
+            //The heading tag is a flex
+            &>.title_07 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+            }
+
+            //The fancy arrow of the accordion
+            &>.title_07>.fx-accordion-toggle-icon {
+                flex: 0 0 1%;
+                font-size: $title07ArrowFontSize;
+                color: $title06FontColor;
+                will-change: transform;
+                transition: transform .5s ease;
+                -webkit-transition: transform .5s ease;
+                -moz-transition: transform .5s ease;
+                -o-transition: transform .5s ease;
+                line-height: $title07ArrowLineHeight;
+                height: 28px;
+            }
+        }
+
+        //when user hovers over the accordion effect
+        //when user clicks the accordion effect and is in an opened state
+        &>.fx-accordion-toggle:hover,
+        &[open]>.fx-accordion-toggle {
+            background-color: $accordionBackgroundAndBorderColor;
+
+            //The heading title of the accordion - during hover state
+            //The fancy arrow of the accordion - during hover state
+            &>.title_07>span {
+                color: $title07FontColorHover;
+            }
+        }
+
+        //when the triangle is in opened state of the accordion
+        &[open]>.fx-accordion-toggle>.title_07>.fx-accordion-toggle-icon {
+            transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+            backface-visibility: hidden;
+        }
+
+        //when the triangle is in default (closed) state of the accordion
+        &:not([open])>.fx-accordion-toggle>.title_07>.fx-accordion-toggle-icon {
+            transform: rotateZ(0deg);
+            -ms-transform: rotateZ(0deg);
+            -webkit-transform: rotateZ(0deg);
+            -moz-transform: rotateZ(0deg);
+            -o-transform: rotateZ(0deg);
+            backface-visibility: hidden;
+        }
+
+        //when anything (section, ...etc) is clicked on to be in open stated
+        &[open]>.fx-accordion-toggle~* {
+            animation: swingDown .5s ease-out;
+            -webkit-animation: swingDown .5s ease-out;
+            -moz-animation: swingDown .5s ease-out;
+            -o-animation: swingDown .5s ease-out;
+        }
+
+        //when anything (section, ...etc) is clicked on in the opened state already
+        &[open]>.fx-accordion-toggle:active~* {
+            animation: swingUp .5s ease-out;
+            -webkit-animation: swingDown .5s ease-out;
+            -moz-animation: swingDown .5s ease-out;
+            -o-animation: swingDown .5s ease-out;
+        }
+
+        //for chrome and safari browsers to remove the default triangle icon
+        &>.fx-accordion-toggle::-webkit-details-marker {
+            display: none;
+        }
+
+        //for firefox browser to remove the default triangle icon
+        &>.fx-accordion-toggle:first-of-type {
+            list-style-type: none;
+        }
+
+        //usually the section tag that is inside an accordion that wraps everything
+        &>.fx-accordion-toggleable {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 0 1.5rem;
+            border-top: 0;
+            border-left: 3px;
+            border-right: 3px;
+            border-bottom: 3px;
+            border-style: solid;
+            border-color: $accordionBackgroundAndBorderColor;
+            @include box-sizingAllBrowsers;
+        }
+    }
+
+    //accordions that have no icon
+    .fx-accordion_01 {
+        &>.fx-accordion-toggle {
+
+            //The heading title of the accordion with an no icon
+            &>.title_07>span:first-child {
+                //flex: 0 0 calc(99% - (20px + 1.5rem));
+                //padding: 0 20px 0 0;
+                flex: 0 0 97%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    //accordions that have an icon
+    .fx-accordion_02 {
+        &>.fx-accordion-toggle {
+
+            //accordion icon if any
+            &>.title_07>.fx-design-icon {
+                width: 40px;
+                max-width: 40px;
+                height: 40px;
+                max-height: 40px;
+                margin: 0 10px 0 0;
+                flex: 0 0 50px;
+            }
+
+            //The heading title of the accordion with an icon
+            &>.title_07>span:first-of-type {
+                flex: 0 0 calc(97% - 50px);
+                margin-right: 10px;
+                padding: 0;
+            }
+        }
+    }
+
+}
+
+// ************************************* Tabs created from  tags *************************************
+@mixin tabsCSS {
+
+    //custom class NOT in PXE for the element nav element tag used as a wrapper for tab links
+    .nav_tabs {
+
+        // used in "div" wrapper element tags for the link tab
+        & .fx-toggle {
+            flex: 1;
+            margin: 0;
+            background-color: $card05TabsDefaultBackgroundColor;
+            border-top-width: 0;
+            border-bottom-width: 0;
+            border-left-width: 2px;
+            border-right-width: 2px;
+            border-style: solid;
+            border-right-color: $card05TabsBorderColor;
+            border-left-color: $card05TabsBorderColor;
+            text-decoration: none;
+            color: $card05TitleTabsFontColor;
+            padding: .75rem 0;
+            font-weight: bold;
+        }
+
+        //first div of the tab
+        & .fx-toggle:first-of-type {
+            border-left-width: 0;
+            border-right-width: 2px;
+        }
+
+        //last div of the tab
+        & .fx-toggle:last-of-type {
+            border-right-width: 0;
+            border-left-width: 2px;
+        }
+
+        & .fx-toggle:hover,
+        & .fx-toggle:focus,
+        & .fx-toggle[aria-selected="true"]:hover,
+        & .fx-toggle[aria-selected="true"]:focus,
+        & .fx-toggle[aria-selected="true"] {
+            background-color: $card05TabsRolloverClickedBackgroundColor;
+            cursor: pointer;
+            color: $card05TitleTabsRolloverClickedFontColor;
+
+        }
+
+        & .fx-toggle:hover,
+        & .fx-toggle:focus,
+        & .fx-toggle:active {
+            outline: 4px solid $card05BorderAccessibilityColor;
+            z-index: 1;
+        }
+    }
+}
+
+// ************************************* Grid Layouts ***************************************************
+@mixin gridLayouts {
+    .grid-container {
+        &>.grid-row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 1.5rem 0;
+
+            &>.grid-col:first-of-type:nth-last-of-type(2),
+            &>.grid-col:first-of-type:nth-last-of-type(2)~.grid-col {
+                width: 49%;
+            }
+        }
+    }
+}
+
+// ************************************* Listgroups and other type of lists *************************************
+@mixin listCSS {
+
+    //when text requires to be unordered or ordered but no bullets or numbering is required
+    //eg: (anything) > ol.ol_none
+    //when the list is a step list, need custom ordering. Will be coded as ordered list.
+    .ul_none,
+    .ol_none,
+    .steplist {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    //unordered lists that needs to have a dash
+    .ul_01 {
+        &>li {
+            list-style: none;
+            margin: -1.5rem 0 0 0;
+        }
+
+        &>li:before {
+            content: "- ";
+            font-family: Times;
+            display: block;
+            position: relative;
+            max-width: 0;
+            max-height: 0;
+            left: -1rem;
+            top: 1.5rem;
+            font-size: 1rem;
+        }
+    }
+
+    //ordered list that requires to be alphabetical
+    //ordered lists that needs to be alpahabetical a. ...etc
+    .ol_01 {
+        &>li {
+            list-style-type: lower-alpha;
+        }
+    }
+
+    //indent with no bullet/numbering lists that still maintains the padding.
+    //Will need to coded these letter/numbering manually.
+
+    /*.ul_none_indent, .ol_none_indent {
+        padding: 0 0 0 1.5rem;
+        list-style-type: none;
+    }*/
+
+    ol .ol_none,
+    ul .ul_none {
+        padding: 0 0 0 1.5rem;
+    }
+
+    //custom listings that require no padding left for bullets/numbering lists
+    //Align the list bullet/number to the current paragraph
+    .ul_no-padding,
+    .ol_no-padding {
+        padding: 0 0 0 1.25rem;
+    }
+
+    .ul_column {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+        -webkit-column-fill: balance;
+        -moz-column-fill: balance;
+        column-fill: balance;
+        list-style-position: outside;
+
+        &>li {
+            margin: 0 15px 0 0;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    }
+
+    //header title06 inside a listed item for lists that have a heading
+    //default is San serif ITC stone, card fonts are serif
+    //li>header {
+    //&>.title_06 {
+    //@include itcStoneSans_Medium;
+    //@include itcStoneSerif_Medium;
+    //font-weight: 800;
+    //}
+    //}
+
+    //header title06 inside a listed item for lists that have a heading inside sidebars, marginalias and annotations
+    .sidebar,
+    .marginalia,
+    .annotation {
+
+        //list titles inside these
+        & li>header {
+            &>.title_06 {
+                @include itcStoneSans_Medium;
+                //@include itcStoneSerif_Medium;
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+// ************************************* Pullquotes, Poems & Dialogues *************************************
+@mixin pullquotePoemDialogueCSS {
+
+    //pullquotes are divs that look like a blockquote without a source
+    //blockquotegroups are divs that are blockquote with a source
+    .blockquotegroup {
+        @include marginPaddingGeneral;
+
+        //the text that is within the blockquote or pullquote
+        /*
+        & blockquote {
+            & p {
+                font-size: $pBlockquotePoemFontsize;
+                line-height: $pBlockquoteLineHeight;
+            }
+        }*/
+
+        //blockquotegroups that have a source
+        & .source {
+            text-align: right;
+            padding: 0 2rem 0 0;
+
+            //blockquotegroups source name of the person
+            & p {
+                @include itcStoneSans_Medium;
+                font-size: $pSourceFontSize;
+                line-height: $pSourceLineHeight;
+                margin: 0 0 1.5rem 0;
+            }
+        }
+    }
+
+    //poems that look like blockquotes with it's margins/paddings
+    .poem {
+        margin: calc(1.5rem + 1px) 0;
+        padding: 0;
+
+        & .linegroup {
+            display: block;
+            margin: 0 3rem;
+        }
+
+        //the text that is in a poem, uses span tags
+        & .line {
+            @include itcStoneSerif_Medium;
+            font-size: $pBlockquotePoemFontsize;
+            line-height: $pPoemLineHeight;
+            display: block;
+        }
+    }
+
+    //dialogue type of element designs
+    //eg: Teacher: What the heck is this
+    //dialogue is usually a div
+    .dialogue {
+        margin: 1.5rem 0;
+
+        //speech is a div tag
+        & .speech {
+            //text-indent: -4.2rem;
+            //padding-left: 4.2rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 1.5rem 0;
+
+            //too much margins need to make it 0
+            &>.persona {
+                &>p:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &>p:first-of-type {
+                    margin-top: 0;
+                }
+            }
+
+            //too much margins need to make it 0
+            &>.line {
+                &>p:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &>p:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+// ************************************* Notes *************************************
+@mixin noteCSS {
+
+    //note box usually under a table and is coded as a div element
+    //generic style
+    .note {
+        margin: calc(1.5rem + 1px) auto;
+        padding: 0 1.5rem;
+
+        //notes are wrapped in div, so no header tags for p .titles
+        & .title {
+            font-size: $titleNoteFontSize;
+            line-height: $titleNoteLineHeight
+        }
+    }
+
+    //note box, that is grey ususally under tables
+    .note_01 {
+        width: 100%;
+        background-color: $note01BackgroundColor;
+        border: 1px solid $note01BorderColor;
+    }
+}
+
+// ************************************* All image types and icons ************************************* */
+@mixin imageCSS {
+
+    //single image standalones using the figure tag with class...
+    .informalfigure {
+        border: 0;
+    }
+
+    //icon class that is used in the img tag
+    .design-icon {
+        max-width: 50px;
+        max-height: 50px;
+        width: 50px;
+        height: auto;
+        vertical-align: middle;
+        object-fit: contain;
+    }
+
+    .design-icon_text-inline {
+        max-width: 25px;
+        max-height: 25px;
+    }
+
+    //the last icon in a group of icons does not need padding
+    /*
+    .design-icon:last-of-type {
+        padding: 0;
+    }
+
+    //the last and only icon needs padding - if this is needed at all
+    .design-icon:only-of-type {
+        padding: 0 20px 0 0;
+    }*/
+
+    // Group images using .figuregroup class in a figure tag
+    .figuregroup {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: space-between;
+        max-width: 100%;
+        @include marginPaddingGeneral;
+
+        //images inside a figuregroup just uses informalfigure class only
+        &>.informalfigure {
+            @include marginPaddingZero;
+        }
+
+        //if the figcaption comes before the image
+        &>figcaption:first-child {
+            //flex: 0 0 100%;
+            width: 100%;
+        }
+
+        //image group that are in sets of 2s, 2 images on a row
+        &>.informalfigure:first-of-type:nth-last-of-type(2),
+        &>.informalfigure:first-of-type:nth-last-of-type(2)~.informalfigure {
+            //flex: 0 0 calc(50% - 10px); // flex: flex-grow | flex-shrink | flex-basis;
+            width: calc(50% - 10px);
+        }
+    }
+
+    //single and multiple images captions using the div tag with class...
+    .caption {
+
+        //remove all margins on everything that is in an image caption
+        //eg: lists, blockquotes
+        & * {
+            margin: 0;
+        }
+
+        //all paragraph type of text inside an image caption is this style
+        & p {
+            @include itcStoneSans_Medium;
+            font-size: $pSourceFontSize;
+            line-height: $pSourceLineHeight;
+        }
+
+        //remove the padding left and right on any blockquotes that are in a caption
+        & .epigraph {
+            padding: 0;
+        }
+    }
+
+    //images that require long description as their captions or in addition with the captions
+    //used in detail html tag
+    .longdesc {
+        margin: 1.5rem 0;
+
+        //long description clickable area paragraph text, wrapped it with a p tag to be consistent
+        &>summary {
+            & p {
+                @include marginPaddingZero;
+                display: inline;
+            }
+        }
+
+        //remove the outline when the user clicks the summary "button"
+        &>summary:focus {
+            outline: none;
+        }
+
+        //long description standard paragraph text size, line height and font
+        & p {
+            @include itcStoneSans_Medium;
+            font-size: $pSourceFontSize;
+            line-height: $pSourceLineHeight;
+        }
+
+        //long description italic font
+        & em {
+            @include itcStoneSans_MediumItalic;
+        }
+
+        //long description bolded font
+        & strong {
+            @include itcStoneSans_Bold;
+        }
+
+        //long description bolded italic font
+        & strong em,
+        & em strong {
+            @include itcStoneSans_BoldItalic;
+        }
+    }
+}
+
+// ************************************* Generic tables and table lookalike *************************************
+@mixin tableCSS {
+
+    //general table css styles using table element
+    .informaltable {
+        border: 1px solid $informalTableborderColor;
+        margin: 0;
+
+        //all generic cells in tables have this style
+        & td,
+        & th {
+            border: 1px solid $informalTableborderColor;
+            vertical-align: top;
+            padding: 0 1.5rem;
+        }
+
+        //all even rows are greyed
+        & tr:nth-of-type(even) {
+            background-color: $informalTableCellRowBackground01;
+        }
+    }
+
+    //big tables that need to be wrapped by a div.overflow-x for horizontal scrolling
+    //tables that has to look like this way even in responsive.
+    //div is a block and the table inside is using the margins inside of the div
+    //need to set margin to 0;
+
+    //any table columns can be set by the width helper classes
+
+    //light blue header table
+    .informaltable_01 {
+
+        //all informaltable_01 header row have this bg color
+        & thead>tr {
+            background-color: $informalTable01TableHeadingRowBackgroundColor;
+        }
+    }
+
+    //medium grey header table
+    .informaltable_02 {
+
+        //all informaltable_02 header row have this bg color
+        & thead>tr {
+            background-color: $informalTable02TableHeadingRowBackgroundColor;
+        }
+    }
+
+    //darker grey header table
+    .informaltable_03 {
+
+        //all informaltable_03 header row have this bg color
+        & thead>tr {
+            background-color: $informalTable03TableHeadingRowBackgroundColor;
+
+            //make sure the right side border is white
+            //Either th or td tags will be targetted
+            &>* {
+                border: 1px;
+                border-style: solid;
+                border-right-color: $informalTable03TableHeadingRowBorderColor;
+                border-left-color: $informalTable03TableHeadingRowBackgroundColor;
+                border-top-color: $informalTable03TableHeadingRowBackgroundColor;
+                border-bottom-color: $informalTable03TableHeadingRowBackgroundColor;
+            }
+
+            //make sure the left side border is white for the last th or td
+            &>*:last-child {
+                border-width: 1px;
+                border-style: solid;
+                border-right-color: $informalTable03TableHeadingRowBackgroundColor;
+                border-left-color: $informalTable03TableHeadingRowBorderColor;
+                border-top-color: $informalTable03TableHeadingRowBackgroundColor;
+                border-bottom-color: $informalTable03TableHeadingRowBackgroundColor;
+            }
+
+            //informaltable_03 has it's own heading color
+            & p {
+                color: $informalTable03HeadingRowFontColor;
+            }
+        }
+    }
+
+    //huge data table turns into a 2 column on responsive
+    .informaltable_data-table {
+
+        //informal data table has less padding
+        th,
+        td {
+            padding: 0 4px;
+            text-align: center;
+            min-width: 10px;
+
+            & p {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+
+// ************************************* Cards *************************************
+@mixin cardCSS {
+
+    //general card rules that are most likely sections
+    .card {
+        margin: calc(1.5rem + 8px) 0;
+        padding: 0 1.5rem;
+        border-width: 8px;
+        border-style: solid;
+        display: block;
+        border-radius: 0;
+
+        //all card header bar that spans accross horizontally
+        &>header,
+        &>.nav_tabs {
+            margin: 0 -1.5rem;
+            padding: .75rem 1.5rem calc(.75rem + 8px) 1.5rem;
+
+            //all card title headings
+            &>.title {
+                margin: 0;
+                font-size: $titleCardFontSize;
+                line-height: $titleCardLineHeight;
+            }
+
+            &>.fx-toggle {
+                font-size: $titleTabFontSize;
+                line-height: $titleTabLineHeight;
+            }
+        }
+    }
+
+    //green weekly planner card
+    .card_01 {
+        border-color: $card01BackgroundAndBorderColor;
+
+        //card01 specific header bar
+        &>header {
+            background-color: $card01BackgroundAndBorderColor;
+
+            //card01 title headings
+            &>.title_04 {
+                text-align: center;
+                color: $card01TitleFontColor;
+            }
+        }
+    }
+
+    //grey lesson learning focus card
+    .card_02 {
+        border-color: $card02BackgroundAndBorderColor;
+
+        //card02 specific header bar
+        &>header {
+            background-color: $card02BackgroundAndBorderColor;
+
+            //card02 title headings
+            &>.title_04 {
+                text-transform: uppercase;
+                color: $card02TitleFontColor;
+            }
+        }
+    }
+
+    //light blue "pause to pray" icon card
+    .card_03 {
+        border-color: $card03BackgroundAndBorderColor;
+
+        //card03 specific header bar
+        &>header {
+            background-color: $card03BackgroundAndBorderColor;
+
+            //card03 title headings
+            &>.title_04 {
+                color: $card03TitleFontColor;
+            }
+        }
+    }
+
+    //orange archangel card
+    .card_04 {
+        border-color: $card04BackgroundAndBorderColor;
+
+        //card04 specific header bar
+        &>header {
+            background-color: $card04BackgroundAndBorderColor;
+            padding: 0.5rem 1.5rem;
+
+            //card04 title headings
+            &>.title_04 {
+                color: $card04TitleFontColor;
+            }
+        }
+    }
+
+    //website generic blue card for holding tabs
+    //card_05 has to be used in a div tag because card_05 has no title thus no header
+    .card_05 {
+        border-color: $card05BackgroundAndBorderColor;
+
+        & .nav_tabs {
+            padding: 0;
+            margin: 0 -1.5rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            //background-color: $card05BackgroundAndBorderColor;
+        }
+    }
+}
+
+// ************************************* Sidebars *************************************
+@mixin sidebarCSS {
+
+    //generic sidebar css created from the section tag
+    .sidebar {
+        margin: 1.5rem 0;
+        padding: 0 1.5rem;
+
+        //generic sidebar title heading font size and line height
+        &>header {
+            & .title {
+                font-size: $titleSidebarFontSize;
+                line-height: $titleSidebarLineHeight;
+
+                //custom font class inside the title heading wrapped by a span tag
+                & .faith {
+                    @include aquinasStd_Regular;
+                    text-transform: lowercase;
+                    font-size: $titleSidebarFaithFontSize;
+                    line-height: $titleSidebarFaithLineHeight;
+                }
+            }
+        }
+
+        //sidebar paragraph text
+        & p {
+            @include itcStoneSans_Medium;
+        }
+    }
+
+    //sidebar01 green color
+    .sidebar_01 {
+
+        //sidebar01 title heading color
+        &>header {
+            & .title_06 {
+                color: $sidebar01TitleFontColor;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    //sidebar02 dashed border
+    .sidebar_02 {
+        border-color: $sidebar02BorderColor;
+        border-style: dashed;
+        border-width: 5px;
+        border-radius: 20px;
+    }
+}
+
+// ************************************* Marginalias *************************************
+@mixin marginaliaCSS {
+
+    //generic marginalia css created from the aside tag or div tag for marginalia_03
+    .marginalia {
+        margin: 1.5rem 0; //incase it needs to be centered with smaller width
+        padding: 0 1.5rem;
+
+        //generic header title set to negative margin to it will push to the edge pass the padding
+        //generic title heading in marginalia
+
+        &>header {
+            & .title {
+                @include itcStoneSans_Medium;
+                font-weight: 600;
+                font-size: $titleMarginaliaFontSize;
+                line-height: $titleMarginaliaLineHeight;
+                text-transform: uppercase;
+                padding: 0 calc(1.5rem - 10px);
+                margin: 0 0 0 -1.5rem;
+                display: inline-block;
+                border-left: 10px;
+                border-bottom: 5px;
+                border-top: 0;
+                border-right: 0;
+                border-style: solid;
+
+                & .design-icon_text-inline {
+                    max-width: 30px;
+                    max-height: 30px;
+                    margin: 0 calc(1.5rem - 10px) 0 -1.5rem;
+                }
+            }
+        }
+
+
+        //marginalia paragraph text
+        & p {
+            @include itcStoneSans_Medium;
+        }
+    }
+
+    //green color marginalia_01
+    .marginalia_01 {
+
+        &>header {
+
+            //marginalia01 title heading and border color
+            & .title_06 {
+                border-color: $marginalia01HeadingBorderColor;
+                color: $marginalia01TitleFontColor;
+            }
+        }
+    }
+
+    //orange color marginalia_02 and marginalia_04
+    .marginalia_02 {
+        &>header {
+
+            //marginalia02 title heading and border color;
+            & .title_06 {
+                border-color: $marginalia02HeadingBorderColor;
+                color: $marginalia02TitleFontColor;
+                display: inline-flex;
+            }
+        }
+    }
+
+    //orange color marginalia_03 that has custom margins due to having no inside text
+    //uses a div tag rather than aside because there is no body text
+
+    .marginalia_03 {
+        margin: 1.5rem auto -.5rem auto;
+
+        //note03 title heading and border color;
+        & .title_06 {
+            @include itcStoneSans_Medium;
+            font-weight: 600;
+            font-size: $titleSidebarFontSize;
+            line-height: $titleSidebarLineHeight;
+            text-transform: uppercase;
+            padding: .1rem calc(1.5rem - 10px) 0 calc(1.5rem - 10px);
+            margin: 0 0 0 -1.5rem;
+            display: inline-block;
+            border-left: 10px;
+            border-bottom: 5px;
+            border-top: 0;
+            border-right: 0;
+            border-style: solid;
+            border-color: $marginalia03HeadingBorderColor;
+            color: $marginalia03TitleFontColor;
+        }
+    }
+
+    //marginalia_04 has a grey background surrounding it like a note_01
+    .marginalia_04 {
+        margin: 1.5rem 0;
+        padding: 1.5rem 3rem 0 3rem;
+        background-color: $marginalia04BackgroundColor;
+        border: 1px solid $marginalia04BorderColor;
+    }
+}
+
+// ************************************* Annotations *************************************
+@mixin annotationCSS {
+
+    //generic all annotation styles using aside tag
+    .annotation {
+        margin: calc(1.5rem + 1px) 0;
+        padding: 0 1.5rem;
+        border: 1px solid transparent; //used so i don't need to increase the margin due to the the heading margin
+
+        //generic all annotation title heading style
+        &>header {
+            & .title {
+                @include itcStoneSans_Bold;
+                font-size: $titleAnnotationFontSize;
+                line-height: $titleAnnotationLineHeight;
+            }
+        }
+
+        //annotation paragraph text
+        & p {
+            @include itcStoneSans_Medium;
+        }
+    }
+
+    //at home with family annotation01 light blue
+    .annotation_01 {
+        background-color: $annotation01BackgroundColor;
+
+        //annotation01 title heading style
+        &>header {
+            & .title_05 {
+                color: $annotation01TitleFontColor;
+            }
+        }
+    }
+
+    //in the parish annotation02 light green
+    .annotation_02 {
+        background-color: $annotation02BackgroundColor;
+
+        //annotation02 title heading style
+        &>header {
+            & .title_05 {
+                color: $annotation02TitleFontColor;
+            }
+        }
+    }
+}
+
+// ************************************* Practices *************************************
+@mixin practiceCSS {
+
+    //generic practice style using section tag
+    .practice {
+        margin: calc(1.5rem + 5px) 0;
+        padding: 0 1.5rem;
+
+        //generic practice main title heading
+        &>header {
+            & .title {
+                font-size: $titlePracticeFontSize;
+                line-height: $titlePracticeLineHeight;
+            }
+        }
+
+        //generic practice sub title heading (instructional heading)
+        & .practicediv {
+
+            //generic sub title heading style
+            &>header>.title {
+                @include itcStoneSans_SemiBold;
+                font-size: $titlePracticeInstructionFontSize;
+                line-height: $titlePracticeInstructionLineHeight;
+                margin: 0;
+                padding: 0 0 1.5rem 1.5rem;
+                margin: 1.5rem 0 0 0;
+                background: linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -o-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -o-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -o-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -o-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -moz-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -moz-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -moz-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -moz-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -webkit-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -webkit-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -webkit-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -webkit-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -ms-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -ms-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -ms-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -ms-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background-size: 100% 0, 100% 0, 5px 100%, 0 100%; // top, bottom, left, right (Used to crop the background to get a border)
+            }
+
+            //the list of questions inside a practice
+            & .practicelist {
+                padding: 0 1.5rem;
+                margin: 0 0 1.5rem 0;
+                background: linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -o-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -o-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -o-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -o-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -moz-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -moz-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -moz-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -moz-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -webkit-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -webkit-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -webkit-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -webkit-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background: -ms-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                    -ms-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                    -ms-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                    -ms-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+                background-size: 100% 0, 100% 0, 5px 100%, 0 100%; // top, bottom, left, right (Used to crop the background to get a border)
+            }
+
+            //the instruction text that goes with a practice
+            & .instructions {
+                @include marginPaddingGeneral;
+            }
+        }
+
+        //practice paragraph text
+        & p {
+            @include itcStoneSans_Medium;
+        }
+    }
+
+    //practice_01 the practice with a light blue border and a heading on top
+    .practice_01 {
+        border: 5px solid $practice01BorderColor;
+        border-radius: 40px;
+
+        //practice01 title heading using title05
+        &>header {
+            & .title_04 {
+                @include itcStoneSans_Bold;
+                color: $practiceTitleFontColor;
+            }
+        }
+
+        //practice01 sub title heading using title06
+        & .practicediv {
+
+            //practice01 sub title heading header tag
+            &>header {
+                & .title_05 {
+                    color: $practiceTitleInstructionFontColor;
+                }
+            }
+        }
+    }
+
+    //practice_02 the practice with no border, no heading but a sub heading instead
+    .practice_02 {
+        border: 0;
+
+        &>header {
+            padding: 0 0 1.5rem 1.5rem;
+            margin: 1.5rem 0 0 0;
+            background: linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -o-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -o-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -o-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -o-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -moz-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -moz-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -moz-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -moz-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -webkit-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -webkit-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -webkit-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -webkit-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -ms-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -ms-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -ms-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -ms-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background-size: 100% 0, 100% 0, 5px 100%, 0 100%; // top, bottom, left, right (Used to crop the background to get a border)
+
+            //generic sub title heading style for practice_02
+            & .title_05 {
+                @include itcStoneSans_SemiBold;
+                font-size: $titlePracticeInstructionFontSize;
+                line-height: $titlePracticeInstructionLineHeight;
+                margin: 0;
+                color: $practiceTitleInstructionFontColor;
+            }
+        }
+
+        //the list of questions inside a practice
+        & .practicelist {
+            padding: 0 1.5rem;
+            margin: 0 0 1.5rem 0;
+            background: linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -o-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -o-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -o-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -o-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -moz-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -moz-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -moz-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -moz-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -webkit-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -webkit-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -webkit-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -webkit-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background: -ms-linear-gradient(to right, transparent 0, transparent 100%) top no-repeat, //top
+                -ms-linear-gradient(to right, transparent 0, transparent 100%) bottom no-repeat, //bottom
+                -ms-repeating-linear-gradient($practiceSubHeadingBorderColor 0, $practiceSubHeadingBorderColor 5px, transparent 5px, transparent 10px) left no-repeat, //left
+                -ms-linear-gradient(to top, transparent 0, transparent 100%) right no-repeat; //right
+            background-size: 100% 0, 100% 0, 5px 100%, 0 100%; // top, bottom, left, right (Used to crop the background to get a border)
+        }
+
+    }
+
+}
+
+// ************************************* Helper Classes *************************************
+@mixin helperClassCSS {
+
+    //helper width sizes 100% used for anything
+    .width-100 {
+        width: 100% !important;
+    }
+
+    //helper width sizes 90% used for anything
+    .width-90 {
+        width: 90% !important;
+    }
+
+    //helper width size 85% used for anything
+    .width-85 {
+        width: 85% !important;
+    }
+
+    //helper width sizes 75% used for anything
+    .width-75 {
+        width: 75% !important;
+    }
+
+    //helper width sizes 66.6% used for anything
+    .width-66 {
+        width: 66.6% !important;
+    }
+
+    //helper width sizes 57.5% used for anything
+    .width-57 {
+        width: 57.5% !important;
+    }
+
+    //helper width sizes 50% used for anything
+    .width-50 {
+        width: 50% !important;
+    }
+
+    //helper width sizes 40% used for anything
+    .width-40 {
+        width: 40% !important;
+    }
+
+    //helper width sizes 33% used for anything
+    .width-33 {
+        width: 33.3% !important;
+    }
+
+    //helper width sizes 30% used for anything
+    .width-30 {
+        width: 30% !important;
+    }
+
+    //helper width sizes 25% used for anything
+    .width-25 {
+        width: 25% !important;
+    }
+
+    //helper width sizes 15% used for anything
+    .width-15 {
+        width: 15% !important;
+    }
+
+    //helper width sizes 10% used for anything
+    .width-10 {
+        width: 10% !important;
+    }
+
+    //helper width size 5% used for anything
+    .width-5 {
+        width: 5% !important;
+    }
+
+    //used for paragraphs to make sure there is no widows or orphans
+    .no-widow {
+        display: inline-block;
+        text-decoration: inherit;
+    }
+
+    //elements that need to float left
+    .float-left {
+        float: left;
+    }
+
+    //elements that need to float right
+    .float-right {
+        float: right;
+    }
+
+    //elements that need to clear after floating
+    .clear-both {
+        clear: both;
+    }
+
+    //elements that need to be inline rather than block usually
+    .inline {
+        display: inline;
+    }
+
+    //elements that need to have an overflow-x, usually tables
+    .overflow-x {
+        overflow-x: auto;
+    }
+
+    //text that needs to align center
+    .lc_align-center {
+        text-align: center !important;
+    }
+
+    //text that needs to align left
+    .lc_align-left {
+        text-align: left !important;
+    }
+
+    //text that needs to align right
+    .lc_align-right {
+        text-align: right !important;
+    }
+
+    //to make text-uppercase
+    .text_uppercase {
+        text-transform: uppercase;
+    }
+
+    //to make text color white, usually found on informaltable_03 table headers
+    .text-color-white {
+        color: $informalTable03HeadingRowFontColor !important;
+    }
+
+    //elements that need to be centered but need to have 0 vertical margins
+    .margin-0-auto {
+        margin: 0 auto !important;
+    }
+
+    //elements that need margin-left 0
+    .margin-left-0 {
+        margin-left: 0 !important;
+    }
+
+    //elements that need margin-right 0
+    .margin-right-0 {
+        margin-right: 0 !important;
+    }
+
+    //elements that need margin-top 0
+    .margin-top-0 {
+        margin-top: 0 !important;
+    }
+
+    //elements that need margin-bottom 0
+    .margin-bottom-0 {
+        margin-bottom: 0 !important;
+    }
+
+    //elements that need to be centered but required standard margins vertically
+    .margin-default-auto {
+        margin: 1.5rem auto !important;
+    }
+
+    //for stuff that needs regular standard margins for top side
+    .margin-top-default {
+        margin-top: 1.5rem !important;
+    }
+
+    //for stuff that needs regular standard margins for bottom side
+    .margin-bottom-default {
+        margin-bottom: 1.5rem !important;
+    }
+
+    //elements that need to have standard margins on the left
+    .margin-left-default {
+        margin-left: 1.5rem !important;
+    }
+
+    //elements that need to have standard margins on the right
+    .margin-right-default {
+        margin-right: 1.5rem !important;
+    }
+
+    //elements that need to have top padding 0
+    .padding-top-0 {
+        padding-top: 0 !important;
+    }
+
+    //elements that need to have bottom padding 0
+    .padding-bottom-0 {
+        padding-bottom: 0 !important;
+    }
+
+    //elements that need to have left padding 0
+    .padding-left-0 {
+        padding-left: 0 !important;
+    }
+
+    //elements that need to have right padding 0
+    .padding-right-0 {
+        padding-right: 0 !important;
+    }
+
+    //elements that need to have top padding standard
+    .padding-top-default {
+        padding-top: 1.5rem !important;
+    }
+
+    //elements that need to have bottom padding standard
+    .padding-bottom-default {
+        padding-bottom: 1.5rem !important;
+    }
+
+    //elements that need to have left padding standard
+    .padding-left-default {
+        padding-left: 1.5rem !important;
+    }
+
+    //elements that need to have right padding standard
+    .padding-right-default {
+        padding-right: 1.5rem !important;
+    }
+
+    //text elements that need to be sans-serif stone sans
+    .text_sans-serif {
+        font-family: "StoneSansIIITCW05-Medium", Arial, sans-serif !important;
+    }
+
+    //text elements that need to be serif stone sans
+    .text_serif {
+        font-family: "StoneSerifITCW05-Medium", Times, serif !important;
+    }
+
+    //text elements that need to be small caps
+    .text_smallcaps {
+        font-variant: small-caps !important;
+        font-size: 0.75rem !important;
+    }
+
+    //table caption element that needs to be below the table, used on the caption tag
+    .table_caption-bottom {
+        caption-side: bottom;
+    }
+
+    //table caption element that needs to be above the table, used on the caption tag
+    .table_caption-top {
+        caption-side: top;
+    }
+
+    //used to make the base section a fix width because we can't change the body tag
+    .chapter {
+        max-width: 1024px;
+        margin-top: 0;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        background-color: $bodyBackgroundColor;
+        margin: 0;
+        padding: 0 1.5rem;
+        letter-spacing: 0.015em;
+    }
+
+    //used mostly as seperators for rows in tables
+    .bg_lightgrey {
+        background-color: $informalTableCellRowBackground01;
+    }
+
+    .bg_darkgrey {
+        background-color: $informalTable03TableHeadingRowBackgroundColor;
+    }
+
+    //for accessiblity
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    //for accessiblity
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
+// ************************************* Responsive Tablet (<768px) Starts *************************************
+
+// --------------------------------- .title headings outside of everything (<768px) ---------------------------------
+@mixin titleCSS_768 {
+    .title_01 {
+        @include generateGeneralFontCSS($title01FontSize_768,
+            $title01LineHeight_768);
+    }
+
+    .title_02 {
+        @include generateGeneralFontCSS($title02FontSize_768,
+            $title02LineHeight_768);
+    }
+
+    .title_03 {
+        @include generateGeneralFontCSS($title03FontSize_768,
+            $title03LineHeight_768);
+    }
+
+    .title_04 {
+        @include generateGeneralFontCSS($title04FontSize_768,
+            $title04LineHeight_768);
+    }
+
+    .title_05 {
+        @include generateGeneralFontCSS($title05FontSize_768,
+            $title05LineHeight_768);
+    }
+
+    .title_06 {
+        @include generateGeneralFontCSS($title06FontSize_768,
+            $title06LineHeight_768);
+    }
+
+    .title_07 {
+        @include generateGeneralFontCSS($title07FontSize_768,
+            $title07LineHeight_768);
+    }
+}
+
+// ---------------------------------  Cards (<768px) ---------------------------------
+@mixin cardCSS_768 {
+    .card {
+        &>header {
+            &>.title {
+                font-size: $titleCardFontSize_768;
+                line-height: $titleCardLineHeight_768;
+            }
+        }
+
+        &>.nav_tabs {
+            &>.fx-toggle {
+                font-size: $titleTabFontSize_768;
+                line-height: $titleTabLineHeight_768;
+            }
+        }
+    }
+}
+
+// ---------------------------------  Practices (< 768px) ---------------------------------
+@mixin practiceCSS_768 {
+    .practice {
+        &>header {
+            & .title {
+                font-size: $titlePracticeFontSize_768;
+                line-height: $titlePracticeLineHeight_768;
+            }
+        }
+    }
+}
+
+// ********************************** Responsive Tablet (<768px) Ends *************************************
+
+// ********************************** Responsive Big Phones (<600px) Starts *************************************
+
+// ---------------------------------  Normalization Styles CSS (<600px) ---------------------------------
+@mixin normalizationBaseHtmlCSS_600 {
+    blockquote {
+        padding: 0 1.5rem;
+    }
+}
+
+// --------------------------------- .title headings outside of everything (<600px) ---------------------------------
+@mixin titleCSS_600 {
+    .title_08 {
+        margin: 1.5rem -1rem;
+        padding: .75rem 1rem;
+    }
+}
+
+// -------------------------------- Accordions created from details & summary tags (<600px) --------------------------------
+@mixin accordionCSS_600 {
+    .fx-accordion {
+        &>.fx-accordion-toggle {
+            padding: .75rem 2.5rem .75rem 1rem;
+        }
+    }
+}
+
+// --------------------------------- Tabs created from tags (<600px) ---------------------------------
+@mixin tabsCSS_600 {
+    .nav_tabs {
+
+        & .fx-toggle:hover,
+        & .fx-toggle:focus,
+        & .fx-toggle:active {
+            outline-offset: -3px;
+        }
+    }
+}
+
+// --------------------------------- Grid Layouts (<600px) ---------------------------------
+@mixin gridLayouts_600 {
+    .grid-container {
+        &>.grid-row {
+
+            &>.grid-col:first-of-type:nth-last-of-type(2),
+            &>.grid-col:first-of-type:nth-last-of-type(2)~.grid-col {
+                width: 100%;
+                margin: .75rem 0;
+            }
+        }
+    }
+}
+
+// --------------------------------- Listgroups and other type of lists (<600px) ---------------------------------
+@mixin listCSS_600 {
+    .ul_column {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
+}
+
+// --------------------------------- Notes (<600px) ---------------------------------
+@mixin noteCSS_600 {
+    .note {
+        padding: 0 1rem;
+    }
+}
+
+// --------------------------------- Pullquotes, Poems & Dialogues (<600px) ---------------------------------
+@mixin pullquotePoemDialogueCSS_600 {
+    .blockquotegroup {
+        & .source {
+            padding: 0 1.5rem 0 0;
+        }
+    }
+
+    .poem {
+        & .linegroup {
+            margin: 0 1.5rem;
+        }
+    }
+
+    .dialogue {
+        & .speech {
+            flex-direction: column;
+
+            &>.persona {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+// --------------------------------- All image types and icons (<600px) ---------------------------------
+@mixin imageCSS_600 {
+    .figuregroup {
+        flex-direction: column;
+
+        &>.informalfigure {
+            margin: .75rem 0;
+        }
+
+        &>.informalfigure:first-of-type:nth-last-of-type(2),
+        &>.informalfigure:first-of-type:nth-last-of-type(2)~.informalfigure {
+            width: 100%;
+        }
+    }
+}
+
+// --------------------------------- Cards (<600px) ---------------------------------
+@mixin cardCSS_600 {
+    .card {
+        padding: 0 1rem;
+
+        &>.nav_tabs {
+            &>.fx-toggle {
+                margin: 0 -5px 0 0;
+                padding: .75rem 1.5rem;
+                white-space: normal;
+            }
+
+            &>.fx-toggle:first-of-type:nth-last-of-type(2),
+            &>.fx-toggle:first-of-type:nth-last-of-type(2)~.fx-toggle {
+                width: 50%;
+            }
+
+            &>.fx-toggle:first-of-type:nth-last-of-type(3),
+            &>.fx-toggle:first-of-type:nth-last-of-type(3)~.fx-toggle {
+                width: 33.333%;
+            }
+        }
+    }
+
+    .card_05 {
+        & .nav_tabs {
+            display: block;
+            width: calc(100% + 2rem);
+            margin: 0 -1rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            scrollbar-color: grey $card03BackgroundAndBorderColor; //scrollbar css for firefox 64+
+        }
+
+        .nav_tabs::-webkit-scrollbar {
+            height: 10px; // height of horizontal scrollbar
+            width: 4px; // width of vertical scrollbar
+            background: $card03BackgroundAndBorderColor;
+        }
+
+        .nav_tabs::-webkit-scrollbar-thumb:horizontal {
+            background: grey;
+            border-radius: 10px;
+        }
+    }
+}
+
+// --------------------------------- Sidebars (<600px) ---------------------------------
+@mixin sidebarCSS_600 {
+    .sidebar_01 {
+        padding: 0;
+    }
+
+    .sidebar_02 {
+        padding: 0 1rem;
+    }
+}
+
+// --------------------------------- Marginalias (<600px) ---------------------------------
+@mixin marginaliaCSS_600 {
+    .marginalia {
+        padding: 0 1rem;
+
+        &>header {
+            & .title {
+                border-left: 8px;
+                border-bottom: 5px;
+                border-top: 0;
+                border-right: 0;
+                border-style: solid;
+                padding: 0 calc(1rem - 8px);
+                margin: 0 0 0 -1rem;
+
+                & .design-icon_text-inline {
+                    margin: 0 calc(1rem - 8px) 0 -1rem;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------- Annotations (<600px) ---------------------------------
+@mixin annotationCSS_600 {
+    .annotation {
+        padding: 0 1rem;
+    }
+}
+
+// --------------------------------- Practices (<600px) ---------------------------------
+@mixin practiceCSS_600 {
+    .practice {
+        padding: 0 1rem;
+
+        & .practicediv {
+            &>header>.title {
+                padding: 0 0 1rem 1rem;
+            }
+
+            & .practicelist {
+                padding: 0 1rem;
+            }
+        }
+    }
+
+    .practice_01 {
+        border-radius: 25px;
+
+        & .practicediv {
+            clear: both;
+        }
+    }
+
+    .practice_02 {
+        &>header {
+            padding: 0 0 1rem 1rem;
+        }
+
+        & .practicelist {
+            padding: 0 1rem
+        }
+    }
+}
+
+// --------------------------------- Helper Classes (<600px) ---------------------------------
+@mixin helperClassCSS_600 {
+
+    .width-90,
+    .width-85,
+    .width-75,
+    .width-66,
+    .width-57,
+    .width-50,
+    .width-40,
+    .width-33,
+    .width-30,
+    .width-25,
+    .width-15,
+    .width-10,
+    .width-5 {
+        width: 100% !important;
+    }
+
+    .chapter {
+        padding: 0 1rem;
+    }
+}
+
+// ********************************** Responsive Big Phones (<600px) Ends *************************************
+
+// ********************************** Responsive Small Phones (<450px) Starts *************************************
+
+// --------------------------------- Cards (<450px) ---------------------------------
+@mixin cardCSS_450 {
+    .card {
+        &>.nav_tabs {
+
+            &>.fx-toggle:first-of-type:nth-last-of-type(3),
+            &>.fx-toggle:first-of-type:nth-last-of-type(3)~.fx-toggle {
+                width: auto;
+            }
+        }
+    }
+}
+
+// --------------------------------- Sidebars (<450px) ---------------------------------
+@mixin sidebarCSS_450 {
+    .sidebar_02 {
+        &>header {
+            & .title {
+                &>.design-icon {
+                    float: left;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+// ********************************** Responsive Small Phones (<450px) Ends *************************************
+
+/* ------------------------------------Normalization Styles CSS-------------------------------------------- */
+@include normalizationBaseHtmlCSS;
+// ------------------------------------.title headings outside of everything ------------------------------------ */
+@include titleCSS;
+/* ------------------------------------Accordions created from details & summary tags------------------------------------ */
+@include accordionCSS;
+// ------------------------------------Tabs created from  tags------------------------------------ */
+@include tabsCSS;
+// ------------------------------------Grid Layouts------------------------------------ */
+@include gridLayouts;
+// ------------------------------------Type of lists------------------------------------ */
+@include listCSS;
+// ------------------------------------Pullquotes, poems and dialogues------------------------------------ */
+@include pullquotePoemDialogueCSS;
+// ------------------------------------Notes------------------------------------ */
+@include noteCSS;
+// ------------------------------------All image types and icons------------------------------------ */
+@include imageCSS;
+// ------------------------------------Generic tables and table lookalike------------------------------------ */
+@include tableCSS;
+// ------------------------------------Cards------------------------------------ */
+@include cardCSS;
+// ------------------------------------Sidebars------------------------------------ */
+@include sidebarCSS;
+// ------------------------------------Marginalias------------------------------------ */
+@include marginaliaCSS;
+// ------------------------------------Annotations------------------------------------ */
+@include annotationCSS;
+// ------------------------------------Practices------------------------------------ */
+@include practiceCSS;
+/* ------------------------------------Helper Classes------------------------------------ */
+@include helperClassCSS;
+
+/* ------------------------------------Responsive Tablet (<768px)--------------------------------- */
+@media only screen and (max-width: 768px) {
+    // ------------------------------------.title headings outside of everything (<768px) ------------------------------------ */
+    @include titleCSS_768;
+    // ------------------------------------Cards (<768px)------------------------------------ */
+    @include cardCSS_768;
+    // ---------------------------------Practices (< 768px)--------------------------------- */
+    @include practiceCSS_768;
+}
+
+/* ------------------------------------Responsive Big Phones (<600px)--------------------------------- */
+@media only screen and (max-width: 600px) {
+    // ------------------------------------Normalization Styles CSS (<600px)-------------------------------------------- */
+    @include normalizationBaseHtmlCSS_600;
+    // --------------------------------- .title headings outside of everything (<600px) ---------------------------------  */
+    @include titleCSS_600;
+    // ------------------------------------Accordions created from details & summary tags (<600px)-------------------------------------------- */
+    @include accordionCSS_600;
+    // --------------------------------- Tabs created from tags (<600px) ---------------------------------
+    @include tabsCSS_600;
+    // ------------------------------------Grid Layouts (<600px)------------------------------------ */
+    @include gridLayouts_600;
+    // --------------------------------- Listgroups and other type of lists (<600px) --------------------------------- */
+    @include listCSS_600;
+    // ------------------------------------Pullquotes, poems and dialogues (<600px)------------------------------------ */
+    @include pullquotePoemDialogueCSS_600;
+    // ------------------------------------Notes (<600px)------------------------------------ */
+    @include noteCSS_600;
+    // ------------------------------------All image types and icons (<600px)------------------------------------ */
+    @include imageCSS_600;
+    // ---------------------------------Cards (<600px)--------------------------------- */
+    @include cardCSS_600;
+    // ------------------------------------Sidebars (<600px)------------------------------------ */
+    @include sidebarCSS_600;
+    // ------------------------------------Marginalias (<600px)------------------------------------ */
+    @include marginaliaCSS_600;
+    // ------------------------------------Annotations (<600px)------------------------------------ */
+    @include annotationCSS_600;
+    // ------------------------------------Practices (<600px)------------------------------------ */
+    @include practiceCSS_600;
+    // ------------------------------------Helper Classes (<600px)------------------------------------ */
+    @include helperClassCSS_600;
+}
+
+/* ------------------------------------Responsive Small Phones (<450px)--------------------------------- */
+@media only screen and (max-width: 450px) {
+    // --------------------------------- Cards (<450px) ---------------------------------
+    @include cardCSS_450;
+    // ------------------------------------Sidebars (<450px)------------------------------------ */
+    @include sidebarCSS_450;
+}
