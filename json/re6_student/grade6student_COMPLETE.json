@@ -1,0 +1,4750 @@
+{
+  "toc": {
+    "Cover": [
+      {
+        "title": "Cover",
+        "digitalPageFileName": "cover_pg00.xhtml",
+        "documentType": "cover",
+        "secondLevel": []
+      }
+    ],
+    "Copyright page": [
+      {
+        "title": "Copyright page",
+        "digitalPageFileName": "fm_pg01.xhtml",
+        "documentType": "frontmatter",
+        "secondLevel": []
+      }
+    ],
+    "Acknowledgements": [
+      {
+        "title": "Acknowledgements",
+        "digitalPageFileName": "fm_pg02.xhtml",
+        "documentType": "frontmatter",
+        "secondLevel": []
+      }
+    ],
+    "Contents": [
+      {
+        "title": "Contents",
+        "digitalPageFileName": "fm_pg03.xhtml",
+        "documentType": "toc",
+        "secondLevel": []
+      }
+    ],
+    "Unit 1: God Calls Us to Know Him (pp. 2–3)": [
+      {
+        "title": "Unit 1: God Calls Us to Know Him (pp. 2–3)",
+        "digitalPageFileName": "unit01_pg04.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Unit Inquiry Question: How do we come to know God?",
+            "digitalPageFileName": "unit01_pg04.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          }
+        ]
+      }
+    ],
+    "": [],
+    "Chapter 1: How Does God Reveal Himself to Us? (pp. 4–9)": [
+      {
+        "title": "Chapter 1: How Does God Reveal Himself to Us? (pp. 4–9)",
+        "digitalPageFileName": "unit01_chap01_pg05.xhtml",
+        "documentType": "bodymatter",
+        "secondLevel": [
+          {
+            "title": "Divine Revelation",
+            "digitalPageFileName": "unit01_chap01_pg05.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "We Know God through Creation",
+            "digitalPageFileName": "unit01_chap01_pg05.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "The Wonders of the Natural World",
+                "digitalPageFileName": "unit01_chap01_pg05.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: Why We Pray",
+                "digitalPageFileName": "unit01_chap01_pg05.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Wonders of Each Human Person",
+                "digitalPageFileName": "unit01_chap01_pg05.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "We Know God through Scripture (pp. 10–14)",
+            "digitalPageFileName": "unit01_chap01_pg06.xhtml",
+            "documentType": "bodymatter",
+            "thirdLevel": [
+              {
+                "title": "Sacred Stories of Creation",
+                "digitalPageFileName": "unit01_chap01_pg06.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Scripture Reveals God's Truth",
+                "digitalPageFileName": "unit01_chap01_pg06.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Jesus Is the Word",
+                "digitalPageFileName": "unit01_chap01_pg06.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Celebrate",
+                "digitalPageFileName": "unit01_chap01_pg06.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "We Know God through Our Ability to Reason (pp. 15–22)",
+            "digitalPageFileName": "unit01_chap01_pg07.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Reason and Faith",
+                "digitalPageFileName": "unit01_chap01_pg07.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Why We Need Faith",
+                "digitalPageFileName": "unit01_chap01_pg07.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "St. Thomas Aquinas",
+                "digitalPageFileName": "unit01_chap01_pg07.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Knowing Jesus",
+                "digitalPageFileName": "unit01_chap01_pg07.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Live",
+                "digitalPageFileName": "unit01_chap01_pg07.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Faith Brings Us Closest to God (pp. 23–24)",
+            "digitalPageFileName": "unit01_chap01_pg08.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Faith Guides and Transforms Us",
+                "digitalPageFileName": "unit01_chap01_pg08.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Saul's Conversion",
+                "digitalPageFileName": "unit01_chap01_pg08.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "The Power of Faith (pp. 25–30)",
+            "digitalPageFileName": "unit01_chap01_pg09.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Faith and the Holy Spirit (pp. 31–33)",
+                "digitalPageFileName": "unit01_chap01_pg10.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Faith and Prayer",
+                "digitalPageFileName": "unit01_chap01_pg10.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit01_chap01_pg10.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 1: Growing in Faith": [
+      {
+        "title": "Chapter 1: Growing in Faith",
+        "digitalPageFileName": "unit01_chap01_pg10.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 2: How Does the Church Help Us Know God? (pp. 34–40)": [
+      {
+        "title": "Chapter 2: How Does the Church Help Us Know God? (pp. 34–40)",
+        "digitalPageFileName": "unit01_chap02_pg11.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "What Jesus Revealed",
+            "digitalPageFileName": "unit01_chap02_pg11.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "The Woman at the Well",
+                "digitalPageFileName": "unit01_chap02_pg11.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "What Jesus' Revelation Means for Us",
+                "digitalPageFileName": "unit01_chap02_pg11.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Jesus and the Church",
+                "digitalPageFileName": "unit01_chap02_pg11.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: What We Believe",
+                "digitalPageFileName": "unit01_chap02_pg11.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "The Catholicity of the Church (pp. 41–45)",
+            "digitalPageFileName": "unit01_chap02_pg12.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "The Mission of the Early Church",
+            "digitalPageFileName": "unit01_chap02_pg12.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Encouraging the Faithful",
+                "digitalPageFileName": "unit01_chap02_pg12.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Guiding and Uniting the Faithful",
+                "digitalPageFileName": "unit01_chap02_pg12.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "St. Lucy Yi ZhenMei",
+                "digitalPageFileName": "unit01_chap02_pg12.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "A Shepherd for the Flock (pp. 46–49)",
+            "digitalPageFileName": "unit01_chap02_pg13.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Jesus Appears to Seven Disciples",
+                "digitalPageFileName": "unit01_chap02_pg13.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Passing on the Faith",
+                "digitalPageFileName": "unit01_chap02_pg13.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: What We Believe",
+                "digitalPageFileName": "unit01_chap02_pg13.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "The Universal Church Today (pp. 50–54)",
+            "digitalPageFileName": "unit01_chap02_pg14.xhtml",
+            "documentType": "bodymatter",
+            "thirdLevel": [
+              {
+                "title": "Laws to Guide the Universal Church",
+                "digitalPageFileName": "unit01_chap02_pg14.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "United in the Sacraments",
+                "digitalPageFileName": "unit01_chap02_pg14.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "C.S. Lewis",
+                "digitalPageFileName": "unit01_chap02_pg14.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 2: Growing in Faith": [
+      {
+        "title": "Chapter 2: Growing in Faith",
+        "digitalPageFileName": "unit01_chap02_pg14.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 3: How Does the Mass Help Us Know God? (pp. 55–64)": [
+      {
+        "title": "Chapter 3: How Does the Mass Help Us Know God? (pp. 55–64)",
+        "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "God's Word at Mass",
+            "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Catholic Faith: What We Believe",
+                "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Prayer at Mass",
+            "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Prayer Brings Us Closer to God",
+                "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Walk to Emmaus",
+                "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Walking with Jesus",
+                "digitalPageFileName": "unit01_chap03_pg15.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Mass and Our Mission (p. 65)",
+            "digitalPageFileName": "unit01_chap03_pg16.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "We Go with a Mission (pp. 66–71)",
+            "digitalPageFileName": "unit01_chap03_pg17.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Glorify God by Your Life (pp. 72–75)",
+                "digitalPageFileName": "unit01_chap03_pg18.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: Why We Pray",
+                "digitalPageFileName": "unit01_chap03_pg18.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Faith in Action",
+                "digitalPageFileName": "unit01_chap03_pg18.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 3: Growing in Faith": [
+      {
+        "title": "Chapter 3: Growing in Faith",
+        "digitalPageFileName": "unit01_chap03_pg18.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 1: Show What You Know (pp. 76–77)": [
+      {
+        "title": "Unit 1: Show What You Know (pp. 76–77)",
+        "digitalPageFileName": "unit01_pg19.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 2: O Come, Divine Messiah (pp. 78–79)": [
+      {
+        "title": "Unit 2: O Come, Divine Messiah (pp. 78–79)",
+        "digitalPageFileName": "unit02_pg20.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit Inquiry Question: How does the Holy Family help us know and love God?": [
+      {
+        "title": "Unit Inquiry Question: How does the Holy Family help us know and love God?",
+        "digitalPageFileName": "unit02_pg20.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 4: What Does Mary Teach Us about God? (pp. 80–88)": [
+      {
+        "title": "Chapter 4: What Does Mary Teach Us about God? (pp. 80–88)",
+        "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Mary Is Part of God's Plan",
+            "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "St. Anne",
+                "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Mary Says \"Yes!\"",
+                "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Mary Is Our New Beginning",
+                "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Mary Is the New Eve",
+                "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Mary, Mother of the Church",
+            "digitalPageFileName": "unit02_chap04_pg21.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "Mary Strengthens Our Faith (pp. 89–96)",
+            "digitalPageFileName": "unit02_chap04_pg22.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Catholic Faith: What We Believe",
+                "digitalPageFileName": "unit02_chap04_pg22.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Mary's Words to Us",
+            "digitalPageFileName": "unit02_chap04_pg22.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Lady of Fatima",
+                "digitalPageFileName": "unit02_chap04_pg22.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "In Mary's Footsteps (pp. 97–102)",
+            "digitalPageFileName": "unit02_chap04_pg23.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          }
+        ]
+      }
+    ],
+    "Chapter 4: Growing in Faith": [
+      {
+        "title": "Chapter 4: Growing in Faith",
+        "digitalPageFileName": "unit02_chap04_pg23.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 5: How Does Jesus Reveal God? (pp. 103–107)": [
+      {
+        "title": "Chapter 5: How Does Jesus Reveal God? (pp. 103–107)",
+        "digitalPageFileName": "unit02_chap05_pg24.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Jesus' Life in the Church Seasons",
+            "digitalPageFileName": "unit02_chap05_pg24.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Year Begins with Jesus",
+                "digitalPageFileName": "unit02_chap05_pg24.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: What We Believe",
+                "digitalPageFileName": "unit02_chap05_pg24.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit02_chap05_pg24.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "We Praise the Father through the Son (pp. 108–112)",
+            "digitalPageFileName": "unit02_chap05_pg25.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "The Names of Jesus",
+                "digitalPageFileName": "unit02_chap05_pg25.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: Why We Pray",
+                "digitalPageFileName": "unit02_chap05_pg25.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Faith in Action",
+                "digitalPageFileName": "unit02_chap05_pg25.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Jesus Is God's Revelation to the World (pp. 113–127)",
+            "digitalPageFileName": "unit02_chap05_pg26.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "The Faithfulness of the Holy Family",
+                "digitalPageFileName": "unit02_chap05_pg26.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Celebrating our Faith through the Holy Family",
+                "digitalPageFileName": "unit02_chap05_pg26.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "St. Joseph",
+                "digitalPageFileName": "unit02_chap05_pg26.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "We Share in Life's Journey (pp. 118–125)",
+            "digitalPageFileName": "unit02_chap05_pg27.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          }
+        ]
+      }
+    ],
+    "Chapter 5: Growing in Faith": [
+      {
+        "title": "Chapter 5: Growing in Faith",
+        "digitalPageFileName": "unit02_chap05_pg27.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 2: Show What You Know (pp. 126–127)": [
+      {
+        "title": "Unit 2: Show What You Know (pp. 126–127)",
+        "digitalPageFileName": "unit02_pg28.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 3: Answering God's Call to Serve (pp. 128–129)": [
+      {
+        "title": "Unit 3: Answering God's Call to Serve (pp. 128–129)",
+        "digitalPageFileName": "unit03_pg29.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit Inquiry Question: How can we answer God’s call to service?": [
+      {
+        "title": "Unit Inquiry Question: How can we answer God’s call to service?",
+        "digitalPageFileName": "unit03_pg29.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 6: What Does It Mean to Serve God? (pp. 130–136)": [
+      {
+        "title": "Chapter 6: What Does It Mean to Serve God? (pp. 130–136)",
+        "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Being Open to God's Call",
+            "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "Trust, Honour, and Believe",
+            "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "God Equips Moses",
+                "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "God Perfects Jonah",
+                "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "God Stands with Jeremiah",
+                "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "God Strengthens Esther",
+                "digitalPageFileName": "unit03_chap06_pg30.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Called to a Personal Encounter with Jesus (pp. 137–144)",
+            "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Catholic Faith: How We Celebrate",
+                "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "God's Grace in Us",
+                "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "God's Grace through Us",
+                "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Living Out Our Responsibility",
+            "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Faith in Action",
+                "digitalPageFileName": "unit03_chap06_pg31.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Pray, Speak, Lead (pp. 145–149)",
+            "digitalPageFileName": "unit03_chap06_pg32.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          }
+        ]
+      }
+    ],
+    "Chapter 6: Growing in Faith": [
+      {
+        "title": "Chapter 6: Growing in Faith",
+        "digitalPageFileName": "unit03_chap06_pg32.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 7: How Can We Lead Lives That Fulfill God's Call? (pp. 150–155)": [
+      {
+        "title": "Chapter 7: How Can We Lead Lives That Fulfill God's Call? (pp. 150–155)",
+        "digitalPageFileName": "unit03_chap07_pg33.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Discerning God's Plan",
+            "digitalPageFileName": "unit03_chap07_pg33.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Paths of Lifelong Commitment",
+                "digitalPageFileName": "unit03_chap07_pg33.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "A Guide to Living Our Vocation",
+                "digitalPageFileName": "unit03_chap07_pg33.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "The Laity",
+            "digitalPageFileName": "unit03_chap07_pg33.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "The Laity in the Church",
+                "digitalPageFileName": "unit03_chap07_pg33.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "The Consecrated (pp. 156–167)",
+            "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Types of Religious Orders",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "St. Alphonsa of the Immaculate Conception",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Live",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Exploring Religious Orders",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "St. Benedict of Nursia",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "The Clergy",
+            "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Priesthood in the Old Testament",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Priesthood in the New Testament",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Sacrament of Holy Orders",
+                "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": [
+                  {
+                    "title": "Symbols of the Sacrament of Holy Orders",
+                    "digitalPageFileName": "unit03_chap07_pg34.xhtml",
+                    "documentType": "frontmatter|bodymatter|backmatter",
+                    "fifthLevel": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "The Authority of Church Ministry (pp. 168–176)",
+            "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "The Responsibilities of Church Ministry",
+            "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Bishops",
+                "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Priests",
+                "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Live",
+                "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Deacons",
+                "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: Why We Pray",
+                "digitalPageFileName": "unit03_chap07_pg35.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "A Life of Service (pp. 177–181)",
+                "digitalPageFileName": "unit03_chap07_pg36.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 7: Growing in Faith": [
+      {
+        "title": "Chapter 7: Growing in Faith",
+        "digitalPageFileName": "unit03_chap07_pg36.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 3: Show What You Know (pp. 182–183)": [
+      {
+        "title": "Unit 3: Show What You Know (pp. 182–183)",
+        "digitalPageFileName": "unit03_pg37.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 4: Take Up Your Cross (pp. 184–185)": [
+      {
+        "title": "Unit 4: Take Up Your Cross (pp. 184–185)",
+        "digitalPageFileName": "unit04_pg38.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit Inquiry Question: How does our journey through Lent\nand Easter help us follow God’s will to live a moral life?": [
+      {
+        "title": "Unit Inquiry Question: How does our journey through Lent\nand Easter help us follow God’s will to live a moral life?",
+        "digitalPageFileName": "unit04_pg38.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 8: How Do We Honour God's Will during Lent? (pp. 186–195)": [
+      {
+        "title": "Chapter 8: How Do We Honour God's Will during Lent? (pp. 186–195)",
+        "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Jesus Shows Us the Way",
+            "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "The Temptation in the Desert",
+                "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Transfiguration on the Mountaintop",
+                "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Agony in the Garden",
+                "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Jesus' Passion",
+                "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Daily Bread",
+                "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Lenten Scripture",
+                "digitalPageFileName": "unit04_chap08_pg39.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "God's Plan for Our Salvation (pp. 196–202)",
+            "digitalPageFileName": "unit04_chap08_pg40.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Reflecting on the Paschal Mystery",
+                "digitalPageFileName": "unit04_chap08_pg40.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Symbols of the Season",
+                "digitalPageFileName": "unit04_chap08_pg40.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Celebrate",
+                "digitalPageFileName": "unit04_chap08_pg40.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Faith in Action",
+                "digitalPageFileName": "unit04_chap08_pg40.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 8: Growing in Faith": [
+      {
+        "title": "Chapter 8: Growing in Faith",
+        "digitalPageFileName": "unit04_chap08_pg40.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 9: How Do We Show Our Love for God during Lent? (pp. 203–210)": [
+      {
+        "title": "Chapter 9: How Do We Show Our Love for God during Lent? (pp. 203–210)",
+        "digitalPageFileName": "unit04_chap09_pg41.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "Following Our Conscience",
+            "digitalPageFileName": "unit04_chap09_pg41.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Formed by God's Word",
+                "digitalPageFileName": "unit04_chap09_pg41.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Formed by the Spirit",
+                "digitalPageFileName": "unit04_chap09_pg41.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Reason and Conscience",
+                "digitalPageFileName": "unit04_chap09_pg41.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: Why We Pray",
+                "digitalPageFileName": "unit04_chap09_pg41.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Blessed Are the Peacemakers (pp. 211–217)",
+            "digitalPageFileName": "unit04_chap09_pg42.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Catholic Faith: What We Believe (pp. 218–223)",
+                "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "God's Laws Guide Our Lives",
+            "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Three Kinds of Laws",
+                "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Building Just Communities",
+                "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "St. Vincent de Paul and St. Louise de Marillac",
+                "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Following Church Teachings",
+                "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Live",
+                "digitalPageFileName": "unit04_chap09_pg43.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Conscience, Virtues, and Holiness (pp. 224–228)",
+            "digitalPageFileName": "unit04_chap09_pg44.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit04_chap09_pg44.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Jesus and Holiness",
+                "digitalPageFileName": "unit04_chap09_pg44.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": [
+                  {
+                    "title": "Jesus Teaches Us Humility",
+                    "digitalPageFileName": "unit04_chap09_pg44.xhtml",
+                    "documentType": "frontmatter|bodymatter|backmatter",
+                    "fifthLevel": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 9: Growing In Faith": [
+      {
+        "title": "Chapter 9: Growing In Faith",
+        "digitalPageFileName": "unit04_chap09_pg44.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 10: How Do We Celebrate God's Love at Easter? (pp. 229–233)": [
+      {
+        "title": "Chapter 10: How Do We Celebrate God's Love at Easter? (pp. 229–233)",
+        "digitalPageFileName": "unit04_chap10_pg45.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "The Resurrection",
+            "digitalPageFileName": "unit04_chap10_pg45.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "The Ascension",
+            "digitalPageFileName": "unit04_chap10_pg45.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Catholic Faith: How We Celebrate",
+                "digitalPageFileName": "unit04_chap10_pg45.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Owen's Alleluia (pp. 234–240)",
+            "digitalPageFileName": "unit04_chap10_pg46.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "Peter's Journey of Faith (pp. 241–247)",
+            "digitalPageFileName": "unit04_chap10_pg47.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          },
+          {
+            "title": "The Power of Prayer",
+            "digitalPageFileName": "unit04_chap10_pg47.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "St. Pio of Pietrelcina",
+                "digitalPageFileName": "unit04_chap10_pg47.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 10: Growing in Faith": [
+      {
+        "title": "Chapter 10: Growing in Faith",
+        "digitalPageFileName": "unit04_chap10_pg47.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 4: Show What You Know (pp. 248–249)": [
+      {
+        "title": "Unit 4: Show What You Know (pp. 248–249)",
+        "digitalPageFileName": "unit04_pg48.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 5: Gather Us Together (pp. 250–251)": [
+      {
+        "title": "Unit 5: Gather Us Together (pp. 250–251)",
+        "digitalPageFileName": "unit05_pg49.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit Inquiry Question: How do we live our mission to honour\ndignity through justice and service?": [
+      {
+        "title": "Unit Inquiry Question: How do we live our mission to honour\ndignity through justice and service?",
+        "digitalPageFileName": "unit05_pg49.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 11: How Does the Word of God Guide Us to Recognize Dignity? (pp 252–258)": [
+      {
+        "title": "Chapter 11: How Does the Word of God Guide Us to Recognize Dignity? (pp 252–258)",
+        "digitalPageFileName": "unit05_chap11_pg50.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "God Gives Us Dignity",
+            "digitalPageFileName": "unit05_chap11_pg50.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Catholic Social Teaching",
+                "digitalPageFileName": "unit05_chap11_pg50.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Honouring Human Dignity",
+                "digitalPageFileName": "unit05_chap11_pg50.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Jesus Teaches Us about Dignity",
+                "digitalPageFileName": "unit05_chap11_pg50.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "We Look upon Our Neighbours",
+                "digitalPageFileName": "unit05_chap11_pg50.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Inequity Contradicts God's Plan (pp. 259–264)",
+            "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Every Person Has Value",
+                "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Jesus Teaches Us to Fight Injustice",
+                "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Called to Challenge Injustice",
+                "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Venerable Pierre Toussaint",
+                "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 11: Growing in Faith": [
+      {
+        "title": "Chapter 11: Growing in Faith",
+        "digitalPageFileName": "unit05_chap11_pg51.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 12: How Does Our Faith Help Us Respect Diversity and Dignity? (pp. 265–271)": [
+      {
+        "title": "Chapter 12: How Does Our Faith Help Us Respect Diversity and Dignity? (pp. 265–271)",
+        "digitalPageFileName": "unit05_chap12_pg52.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "We Are One",
+            "digitalPageFileName": "unit05_chap12_pg52.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Faith Is Respectful",
+                "digitalPageFileName": "unit05_chap12_pg52.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: What We Believe",
+                "digitalPageFileName": "unit05_chap12_pg52.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Church Guides Us",
+                "digitalPageFileName": "unit05_chap12_pg52.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Celebrate",
+                "digitalPageFileName": "unit05_chap12_pg52.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Our Faith Guides Us in Dialogue (pp. 272–281)",
+            "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Dialogue and Our Mission",
+                "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Our Catholic Faith: How We Live",
+                "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Learning about God's Children",
+            "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Common Bonds",
+                "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Prayer, Fasting and Almsgiving",
+                "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "The Power of Scripture",
+                "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Celebrating Our Faith in God",
+                "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": [
+                  {
+                    "title": "God Is In Our Shared History",
+                    "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                    "documentType": "frontmatter|bodymatter|backmatter",
+                    "fifthLevel": []
+                  },
+                  {
+                    "title": "God Is with Us in Our Lives",
+                    "digitalPageFileName": "unit05_chap12_pg53.xhtml",
+                    "documentType": "frontmatter|bodymatter|backmatter",
+                    "fifthLevel": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Our Faith Guides Us to Suspend Judgment (pp. 282–284)",
+            "digitalPageFileName": "unit05_chap12_pg54.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Collaboration and Unity",
+                "digitalPageFileName": "unit05_chap12_pg54.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Focus on Scripture",
+                "digitalPageFileName": "unit05_chap12_pg54.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Celebrating Father Pierre (pp. 285–291)",
+            "digitalPageFileName": "unit05_chap12_pg55.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": []
+          }
+        ]
+      }
+    ],
+    "Chapter 12: Growing in Faith": [
+      {
+        "title": "Chapter 12: Growing in Faith",
+        "digitalPageFileName": "unit05_chap12_pg55.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Chapter 13: How Do We Witness to Justice with Our Service? (pp. 292–301)": [
+      {
+        "title": "Chapter 13: How Do We Witness to Justice with Our Service? (pp. 292–301)",
+        "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": [
+          {
+            "title": "We Are the Hands and Feet of Christ",
+            "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Working to Serve",
+                "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Working Together",
+                "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Dorothy Day",
+                "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Working for Truth and Reconciliation",
+                "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              },
+              {
+                "title": "Faith in Action",
+                "digitalPageFileName": "unit05_chap13_pg56.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          },
+          {
+            "title": "Let Justice Roll (pp. 302–306)",
+            "digitalPageFileName": "unit05_chap13_pg57.xhtml",
+            "documentType": "frontmatter|bodymatter|backmatter",
+            "thirdLevel": [
+              {
+                "title": "Our Catholic Faith: Why We Pray (p. 307)",
+                "digitalPageFileName": "unit05_chap13_pg58.xhtml",
+                "documentType": "frontmatter|bodymatter|backmatter",
+                "fourthLevel": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Chapter 13: Growing in Faith": [
+      {
+        "title": "Chapter 13: Growing in Faith",
+        "digitalPageFileName": "unit05_chap13_pg58.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Unit 5: Show What You Know (pp. 308–309)": [
+      {
+        "title": "Unit 5: Show What You Know (pp. 308–309)",
+        "digitalPageFileName": "unit05_pg59.xhtml",
+        "documentType": "frontmatter|bodymatter|backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Glossary (pp. 310–315)": [
+      {
+        "title": "Glossary (pp. 310–315)",
+        "digitalPageFileName": "bm_pg60.xhtml",
+        "documentType": "backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Index (pp. 316–319)": [
+      {
+        "title": "Index (pp. 316–319)",
+        "digitalPageFileName": "bm_pg61.xhtml",
+        "documentType": "backmatter",
+        "secondLevel": []
+      }
+    ],
+    "Credits (pp. 320–322)": [
+      {
+        "title": "Credits (pp. 320–322)",
+        "digitalPageFileName": "bm_pg62.xhtml",
+        "documentType": "backmatter",
+        "secondLevel": []
+      }
+    ]
+  },
+  "content_structure": {
+    "cover_pg00": {
+      "digitalFileName": "cover_pg00.xhtml",
+      "documentType": "cover",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "fm_pg01": {
+      "digitalFileName": "fm_pg01.xhtml",
+      "documentType": "frontmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "fm_pg02": {
+      "digitalFileName": "fm_pg02.xhtml",
+      "documentType": "frontmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "fm_pg03": {
+      "digitalFileName": "fm_pg03.xhtml",
+      "documentType": "toc",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit01_pg04": {
+      "digitalFileName": "unit01_pg04.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 1: God Calls Us to Know Him",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Let's Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap01_pg05": {
+      "digitalFileName": "unit01_chap01_pg05.xhtml",
+      "documentType": "bodymatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 1: How Does God Reveal Himself to Us?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Divine Revelation",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "We Know God through Creation",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Wonders of the Natural World",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Why We Pray",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Wonders of Each Human Person",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Made in the Image of God",
+                      "type": "section",
+                      "fifthLevel": [
+                        {
+                          "screenReaderOnly": false,
+                          "text": "Words to Inspire",
+                          "type": "aside"
+                        },
+                        {
+                          "screenReaderOnly": false,
+                          "text": "Let Us Pray",
+                          "type": "aside"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap01_pg06": {
+      "digitalFileName": "unit01_chap01_pg06.xhtml",
+      "documentType": "bodymatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "We Know God through Scripture",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Sacred Stories of Creation",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Scripture Reveals God's Truths",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Jesus Is the Word",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "How We Celebrate",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap01_pg07": {
+      "digitalFileName": "unit01_chap01_pg07.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "We Know God through Our Ability to Reason",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Reason and Faith",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Why We Need Faith",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Thomas Aquinas",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Knowing Jesus",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "How We Live",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap01_pg08": {
+      "digitalFileName": "unit01_chap01_pg08.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Faith Brings Us Closest to God",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith Guides and Transforms Us",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Saul's Conversion",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap01_pg09": {
+      "digitalFileName": "unit01_chap01_pg09.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "The Power of Faith",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap01_pg10": {
+      "digitalFileName": "unit01_chap01_pg10.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": true,
+          "text": "Faith Brings Us Closest to God (Continued)",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith and the Holy Spirit",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Faith and Prayer",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Let Us Pray",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Focus on Scripture",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit01_chap02_pg11": {
+      "digitalFileName": "unit01_chap02_pg11.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 2: How Does the Church Help Us Know God?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What Jesus Revealed",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Woman at the Well",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "What Jesus' Revelation Means for Us",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Jesus and the Church",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "What We Believe",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap02_pg12": {
+      "digitalFileName": "unit01_chap02_pg12.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "The Catholicity of the Church",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith Facts",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "The Mission of the Early Church",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Encouraging the Faithful",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Guiding and Uniting the Faithful",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "At Home",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Lucy Yi ZhenMei",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap02_pg13": {
+      "digitalFileName": "unit01_chap02_pg13.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "A Shepherd for the Flock",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith Facts",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Jesus Appears to Seven Disciples",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Passing on the Faith",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What We Believe",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap02_pg14": {
+      "digitalFileName": "unit01_chap02_pg14.xhtml",
+      "documentType": "bodymatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "The Universal Church Today",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith Facts",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Laws to Guide the Universal Church",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "In the Parish",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "United in the Sacraments",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "C.S. Lewis",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit01_chap03_pg15": {
+      "digitalFileName": "unit01_chap03_pg15.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 3: How Does the Mass Help Us Know God?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "God's Word at Mass",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "What We Believe",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Prayer at Mass",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Prayer Brings Us Closer to God",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Walk to Emmaus",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Walking with Jesus",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap03_pg16": {
+      "digitalFileName": "unit01_chap03_pg16.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Mass and Our Mission",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "In the Parish",
+              "type": "aside"
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap03_pg17": {
+      "digitalFileName": "unit01_chap03_pg17.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "We Go with a Mission",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit01_chap03_pg18": {
+      "digitalFileName": "unit01_chap03_pg18.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": true,
+          "text": "Mass and Our Mission (continued)",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Glorify God by Your Life",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Why We Pray",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Faith in Action",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Living Our Faith",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit01_pg19": {
+      "digitalFileName": "unit01_pg19.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 1: Show What You Know",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What Did We Learn?",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_pg20": {
+      "digitalFileName": "unit02_pg20.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 2: O Come, Divine Messiah",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Let's Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_chap04_pg21": {
+      "digitalFileName": "unit02_chap04_pg21.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 4: What Does Mary Teach Us about God?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Mary Is Part of God's Plan",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "In the Parish",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "St. Anne",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Mary Says \"Yes!\"",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Mary Is Our New Beginning",
+                      "type": "section",
+                      "fifthLevel": []
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Mary Is the New Eve",
+                      "type": "section",
+                      "fifthLevel": [
+                        {
+                          "screenReaderOnly": false,
+                          "text": "At Home",
+                          "type": "aside"
+                        },
+                        {
+                          "screenReaderOnly": false,
+                          "text": "Words to Inspire",
+                          "type": "aside"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Mary, Mother of the Church",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_chap04_pg22": {
+      "digitalFileName": "unit02_chap04_pg22.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Mary Strengthens Our Faith",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: What We Believe",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Mary's Words to Us",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith Facts",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Lady of Fatima",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Let Us Pray",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_chap04_pg23": {
+      "digitalFileName": "unit02_chap04_pg23.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "In Mary's Footsteps",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 4: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit02_chap05_pg24": {
+      "digitalFileName": "unit02_chap05_pg24.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 5: How Does Jesus Reveal God?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Jesus' Life in the Church Seasons",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Year Begins with Jesus",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Catholic Faith: What We Believe",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Focus on Scripture",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_chap05_pg25": {
+      "digitalFileName": "unit02_chap05_pg25.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "We Praise the Father through the Son",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "The Names of Jesus",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: Why We Pray",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "In the Parish",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Faith in Action",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Living Our Faith",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_chap05_pg26": {
+      "digitalFileName": "unit02_chap05_pg26.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Jesus Is God's Revelation to the World",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "The Faithfulness of the Holy Family",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Celebrating our Faith through the Holy Family",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Let Us Pray",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Joseph",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "At Home",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit02_chap05_pg27": {
+      "digitalFileName": "unit02_chap05_pg27.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "We Share in Life's Journey",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 5: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit02_pg28": {
+      "digitalFileName": "unit02_pg28.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 2: Show What You Know",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What Did We Learn?",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_pg29": {
+      "digitalFileName": "unit03_pg29.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 3: Answering God's Call to Serve",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Let's Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_chap06_pg30": {
+      "digitalFileName": "unit03_chap06_pg30.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 6: What Does It Mean to Serve God?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Being Open to God's Call",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Trust, Honour, and Believe",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "God Equips Moses",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "God Perfects Jonah",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "God Stands with Jeremiah",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "God Strengthens Esther",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_chap06_pg31": {
+      "digitalFileName": "unit03_chap06_pg31.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Called to a Personal Encounter with Jesus",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: How We Celebrate",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "God's Grace in Us",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "In the Parish",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "God's Grace through Us",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "At Home",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Living Out Our Responsibility",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Focus on Scripture",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Faith in Action",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Living Our Faith",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_chap06_pg32": {
+      "digitalFileName": "unit03_chap06_pg32.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Pray, Speak, Lead",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 6: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit03_chap07_pg33": {
+      "digitalFileName": "unit03_chap07_pg33.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 7: How Can We Lead Lives That Fulfill God's Call?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Discerning God's Plan",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Paths of Lifelong Commitment",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Let Us Pray",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "A Guide to Living Our Vocation",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "The Laity",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Laity in the Church",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_chap07_pg34": {
+      "digitalFileName": "unit03_chap07_pg34.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "The Consecrated",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Types of Religious Orders",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Alphonsa of the Immaculate Conception",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: How We Live",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Exploring Religious Orders",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Benedict of Nursia",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "The Clergy",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Priesthood in the Old Testament",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Priesthood in the New Testament",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Focus on Scripture",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "The Sacrament of Holy Orders",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Symbols of the Sacrament of Holy Orders",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_chap07_pg35": {
+      "digitalFileName": "unit03_chap07_pg35.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "The Authority of Church Ministry",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "The Responsibilities of Church Ministry",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "In the Parish",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Bishops",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Pope",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Bishops",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Priests",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Diocesan Priests",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Religious Priests",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: How We Live",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Deacons",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Deacons",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: Why We Pray",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Let Us Pray",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit03_chap07_pg36": {
+      "digitalFileName": "unit03_chap07_pg36.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "A Life of Service",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 7: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit03_pg37": {
+      "digitalFileName": "unit03_pg37.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 3: Show What You Know",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What Did We Learn?",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inqiury Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_pg38": {
+      "digitalFileName": "unit04_pg38.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 4: Take Up Your Cross",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Let's Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap08_pg39": {
+      "digitalFileName": "unit04_chap08_pg39.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 8: How Do We Honour God's Will during Lent?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Jesus Shows Us the Way",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Temptation in the Desert",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the BIble",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Transfiguration on the Mountaintop",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Agony in the Garden",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Jesus' Passion",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Daily Bread",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Lenten Scripture",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "In the Parish",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap08_pg40": {
+      "digitalFileName": "unit04_chap08_pg40.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "God's Plan for Our Salvation",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Reflecting on the Paschal Mystery",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "In the Parish",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Symbols of the Season",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "At Home",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: How We Celebrate",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Faith in Action",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Living Our Faith",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 8: Growing In Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit04_chap09_pg41": {
+      "digitalFileName": "unit04_chap09_pg41.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 9: How Do We Show Our Love for God during Lent?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Following Our Conscience",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Formed by God's Word",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "At Home",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Formed by the Spirit",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Reason and Conscience",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Catholic Faith: Why We Pray",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap09_pg42": {
+      "digitalFileName": "unit04_chap09_pg42.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Blessed Are the Peacemakers",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "aside"
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap09_pg43": {
+      "digitalFileName": "unit04_chap09_pg43.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": true,
+          "text": "Following Our Conscience (continued)",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: What We Believe",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "God's Laws Guide Our Lives",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Three Kinds of Laws",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Building Just Communities",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Vincent de Paul and St. Louise de Marillac",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Following Church Teachings",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: How We Live",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Let Us Pray",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap09_pg44": {
+      "digitalFileName": "unit04_chap09_pg44.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Conscience, Virtues, and Holiness",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Focus on Scripture",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Jesus and Holiness",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Jesus Teaches Us Humility",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Words to Inspire",
+                      "type": "aside"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 9: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit04_chap10_pg45": {
+      "digitalFileName": "unit04_chap10_pg45.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 10: How Do We Celebrate God's Love at Easter?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "The Resurrection",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "The Ascension",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Catholic Faith: How We Celebrate",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "In The Parish",
+                      "type": "aside"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap10_pg46": {
+      "digitalFileName": "unit04_chap10_pg46.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Owen's Alleluia",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit04_chap10_pg47": {
+      "digitalFileName": "unit04_chap10_pg47.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Peter's Journey of Faith",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "The Power of Prayer",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Let Us Pray",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "St. Pio of Pietrelcina",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 10: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit04_pg48": {
+      "digitalFileName": "unit04_pg48.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 4: Show What You Know",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What Did We Learn?",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_pg49": {
+      "digitalFileName": "unit05_pg49.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 5: Gather Us Together",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Let's Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap11_pg50": {
+      "digitalFileName": "unit05_chap11_pg50.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 11: How Does the Word of God Guide Us to Recognize Dignity?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "God Gives Us Dignity",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Catholic Social Teaching",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Honouring Human Dignity",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Jesus Teaches Us about Dignity",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "At Home",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Look upon Our Neighbours",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap11_pg51": {
+      "digitalFileName": "unit05_chap11_pg51.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Inequity Contradicts God's Plan",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Every Person Has Value",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Jesus Teaches Us to Fight Injustice",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Called to Challenge Injustice",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Focus on Scripture",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Venerable Pierre Toussaint",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 11: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit05_chap12_pg52": {
+      "digitalFileName": "unit05_chap12_pg52.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 12: How Does Our Faith Help Us Respect Diversity and Dignity?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "We Are One",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Words to Inspire",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Faith Is Respectful",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "We Read the Bible",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Catholic Faith: What We Believe",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "The Church Guides Us",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Our Catholic Faith: How We Celebrate",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Let Us Pray",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap12_pg53": {
+      "digitalFileName": "unit05_chap12_pg53.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Our Faith Guides Us in Dialogue",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Dialogue and Our Mission",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: How We Live",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Learning about God's Children",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Words to Inspire",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Our Common Bonds",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Prayer, Fasting and Almsgiving",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "The Power of Scripture",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith Facts",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Celebrating Our Faith in God",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "God Is in Our Shared History",
+                  "type": "section",
+                  "fourthLevel": []
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "God Is with Us in Our Lives",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "In the Parish",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Words to Inspire",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap12_pg54": {
+      "digitalFileName": "unit05_chap12_pg54.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Our Faith Guides Us to Suspend Judgment",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Faith Facts",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Collaboration and Unity",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                }
+              ]
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Focus on Scripture",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Know, Think, Infer",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap12_pg55": {
+      "digitalFileName": "unit05_chap12_pg55.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Celebrating Father Pierre",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 12: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit05_chap13_pg56": {
+      "digitalFileName": "unit05_chap13_pg56.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 13: How Do We Witness to Justice with Our Service?",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "We Read the Bible",
+              "type": "aside"
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "We Are the Hands and Feet of Christ",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "We Read the Bible",
+                  "type": "aside"
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Working to Serve",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Words to Inspire",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Faith Facts",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Working Together",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Words to Inspire",
+                      "type": "aside"
+                    },
+                    {
+                      "screenReaderOnly": false,
+                      "text": "In the Parish",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Dorothy Day",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Words to Inspire",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Working for Truth and Reconciliation",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Words to Inspire",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Faith in Action",
+                  "type": "section",
+                  "fourthLevel": [
+                    {
+                      "screenReaderOnly": false,
+                      "text": "Living Our Faith",
+                      "type": "aside"
+                    }
+                  ]
+                },
+                {
+                  "screenReaderOnly": false,
+                  "text": "Know, Think, Infer",
+                  "type": "section",
+                  "fourthLevel": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap13_pg57": {
+      "digitalFileName": "unit05_chap13_pg57.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Let Justice Roll",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "My Faith Journey",
+              "type": "section",
+              "thirdLevel": [
+                {
+                  "screenReaderOnly": false,
+                  "text": "Let Us Pray",
+                  "type": "aside"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "unit05_chap13_pg58": {
+      "digitalFileName": "unit05_chap13_pg58.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": true,
+          "text": "We Are the Hands and Feet of Christ (continued)",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Our Catholic Faith: Why We Pray",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        },
+        {
+          "screenReaderOnly": false,
+          "text": "Chapter 13: Growing in Faith",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "unit05_pg59": {
+      "digitalFileName": "unit05_pg59.xhtml",
+      "documentType": "frontmatter|bodymatter|backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Unit 5: Show What You Know",
+          "type": "section",
+          "secondLevel": [
+            {
+              "screenReaderOnly": false,
+              "text": "Explore",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "What Did We Learn?",
+              "type": "section",
+              "thirdLevel": []
+            },
+            {
+              "screenReaderOnly": false,
+              "text": "Unit Inquiry Task",
+              "type": "section",
+              "thirdLevel": []
+            }
+          ]
+        }
+      ]
+    },
+    "bm_pg60": {
+      "digitalFileName": "bm_pg60.xhtml",
+      "documentType": "backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Glossary",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "bm_pg61": {
+      "digitalFileName": "bm_pg61.xhtml",
+      "documentType": "backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Credits",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    },
+    "bm_pg62": {
+      "digitalFileName": "bm_pg62.xhtml",
+      "documentType": "backmatter",
+      "pageTitle": "Insert Page Title Here",
+      "level_1": [
+        {
+          "screenReaderOnly": false,
+          "text": "Index",
+          "type": "section",
+          "secondLevel": []
+        }
+      ]
+    }
+  }
+}

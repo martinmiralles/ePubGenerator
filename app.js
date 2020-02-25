@@ -13,7 +13,7 @@ var pretty = require("pretty");
 var zip = new JSZip();
 const { JSDOM } = jsdom;
 const reader = new FileReader();
-var content_json;
+var selected_json;
 
 var css_input;
 var js_input;
@@ -35,9 +35,9 @@ document
     const reader = new FileReader();
     reader.onload = function fileReadCompleted() {
       // when the reader is done, the content is in reader.result.
-      content_json = JSON.parse(reader.result);
+      selected_json = JSON.parse(reader.result);
       // console.log("Content JSON: ");
-      // console.log(content_json);
+      console.log(selected_json);
     };
     reader.readAsText(this.files[0]);
   });
@@ -50,8 +50,8 @@ document.getElementById("button").addEventListener("click", buttonTest);
 
 function buttonTest() {
   console.log("Button clicked!");
-
-  const result = createXHTMLZipFolder(content_json);
+  // console.log(selected_json);
+  const result = createXHTMLZipFolder(selected_json);
 }
 
 function fetchJSON() {
@@ -97,11 +97,12 @@ function createXHTMLZipFolder(data) {
   /* CREATION OF .XHTML FILES STARTS */
   /***********************************/
 
-  for (var key in data) {
+  for (var key in data.content_structure) {
     //console.log(key);
-    for (let i = 0; i < data[key].length; i++) {
+    for (let i = 0; i < data.content_structure[key].level_1.length; i++) {
       //BELOW: Level 1 Tag Creation
-      let items = data[key];
+      let items = data.content_structure[key].level_1;
+      //console.log(data.content_structure[key].level_1);
 
       var test = doc.createElement("div");
 
@@ -393,6 +394,7 @@ function createXHTMLZipFolder(data) {
         }
       } else {
         // console.log("sidebar");
+        //END OF LEVEL 2 TAG CREATON
       }
 
       //BELOW: The line to create the page!!
