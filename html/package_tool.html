@@ -144,7 +144,7 @@
               class="custom-file-input"
               id="json_input"
             />
-            <label class="custom-file-label" for="json_input" id="testing"
+            <label class="custom-file-label" for="json_input"
               >Choose File</label
             >
           </div>
@@ -158,7 +158,12 @@
             <h4>CSS File Name:</h4>
           </div>
           <div class="col-md-6">
-            <input type="text" class="css_input" id="css_input" required />
+            <input
+              type="text"
+              class="css_input"
+              id="css_input"
+              placeholder="CSS file name"
+            />
           </div>
         </div>
 
@@ -198,14 +203,14 @@
           </div>
         </div>
 
-        <a
+        <button
+          type="submit"
           href="#"
           id="button"
           class="download-button p-darkred mt-5"
-          data-json="../json/re6_teacher/content_json.json"
-          data-fonts="../fonts/re6_teacher_fonts/"
-          >Generate
-        </a>
+        >
+          Generate
+        </button>
         <!-- LOADER TEST -->
         <div class="lds-dual-ring" id="lds-dual-ring"></div>
       </form>

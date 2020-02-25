@@ -36,8 +36,9 @@ document
     reader.onload = function fileReadCompleted() {
       // when the reader is done, the content is in reader.result.
       selected_json = JSON.parse(reader.result);
+
       // console.log("Content JSON: ");
-      console.log(selected_json);
+      // console.log(selected_json);
     };
     reader.readAsText(this.files[0]);
   });
@@ -48,26 +49,19 @@ document
 
 document.getElementById("button").addEventListener("click", buttonTest);
 
-function buttonTest() {
+function buttonTest(e) {
+  e.preventDefault();
+
   console.log("Button clicked!");
-  // console.log(selected_json);
+
+  // console.log("CSS: " + document.getElementById("css_input").value);
+  // console.log("JS: " + document.getElementById("js_input").value);
+  // console.log("ID: " + document.getElementById("id_input").value);
+  // console.log("CLASS: " + document.getElementById("class_input").value);
+
+  css_input = document.getElementById("css_input").value;
+
   const result = createXHTMLZipFolder(selected_json);
-}
-
-function fetchJSON() {
-  //BELOW: A the attribute in the tag has the path to the JSON folder & file
-  fetch(document.getElementsByClassName("custom-file-label")[0])
-    .then(response => response.json())
-    .then(data => {
-      /*** UNCOMMENT BELOW TO SUCCESFULLY CREATE .XHTML FILES + FOLDER ON CLIENT-SIDE ***/
-      //console.log(data);
-      //console.log("Creating ePub.zip file...");
-      const result = createXHTMLZipFolder(data);
-
-      /*** BELOW: TESTING FUNCTIONS ***/
-      // const result = test();
-    });
-  //.catch(error => console.log(error));
 }
 
 function createXHTMLZipFolder(data) {
@@ -82,6 +76,116 @@ function createXHTMLZipFolder(data) {
   let xhtml;
 
   let results = [];
+
+  /********************************************************************************************************************************/
+
+  /*********************************/
+  /* FAKE DOM FOR CONTENT.OPF FILE */
+  /*********************************/
+  const content_dom = new JSDOM(
+    `
+<!DOCTYPE html>
+    <body id="app">
+        <?xml version="1.0" encoding="utf-8"?>
+        <package xmlns="http://www.idpf.org/2007/opf" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" version="3.0" xml:lang="en" unique-identifier="ISBN-978-0-13-458983-1">
+        <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:title>{book title goes here}</dc:title>
+        <dc:language>en-CA</dc:language>
+        <dc:identifier id="ISBN-978-0-13-458983-1">{book isbn goes here}</dc:identifier>
+        <dc:creator id="creator">The Catholic Bishops of Ontario, Alberta, Saskatchewan, and Northwest Territories</dc:creator>
+        <meta property="dcterms:creator">The Catholic Bishops of Ontario, Alberta, Saskatchewan, and Northwest Territories</meta>
+        <dc:publisher>Pearson Canada</dc:publisher>
+        <dc:date>{created date goes here}</dc:date>
+        <meta property="dcterms:modified">{last modified date goes here}</meta>
+        <dc:rights>Copyright &#x00A9; {copyright year}</dc:rights>
+        <meta property="rendition:layout">reflowable</meta>
+        <meta property="rendition:orientation">auto</meta>
+        <meta property="rendition:spread">auto</meta>
+        <meta property="ibooks:specified-fonts">true</meta>
+        <meta name="cover" content="cover-image"/>
+        </metadata>
+        
+        <manifest>
+        </manifest>
+        
+        <spine toc="ncx">
+        </spine>
+        </package>
+    </body>
+</html>
+`,
+    {
+      includeNodeLocations: true
+    }
+  );
+  content_dom.serialize();
+  const content_document = content_dom.window.document;
+
+  /********************************************************************************************************************************/
+
+  /*********************************/
+  /* FAKE DOM FOR toc.xhtml FILE */
+  /*********************************/
+
+  var toc_dom = new JSDOM(
+    `
+<html xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Insert Title Here</title>
+        <link rel="stylesheet" type="text/css" href="../css/${css_input}.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/re6_student.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/re_fmbm.css"/>
+        <meta charset="UTF-8"/>
+    </head>
+
+    <body>
+      <nav class="toc" epub:type="toc" id="toc">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPPR596" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <h1 class="title title_01" epub:type="title" id="h1_01_toc">Content</h1>
+        <ol>
+        </ol>
+      </nav>
+    </body>
+</html>
+  `
+  );
+  toc_dom.serialize();
+  var toc_doc = toc_dom.window.document;
+
+  /********************************************************************************************************************************/
+
+  /****************************/
+  /* FAKE DOM FOR XHTML FILES */
+  /****************************/
+  var dom = new JSDOM(
+    `
+<?xml version="1.0" encoding="utf-8"?>
+<html
+  xmlns:m="http://www.w3.org/1998/Math/MathML"
+  xmlns:epub="http://www.idpf.org/2007/ops"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="en"
+  lang="en"
+>
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/${css_input}.css" />
+  </head><body epub:type="frontmatter|bodymatter|backmatter">
+    <section></section></body></html>`,
+    {
+      includeNodeLocations: true
+    }
+  );
+  dom.serialize();
+  const doc = dom.window.document;
+
+  /********************************************************************************************************************************/
 
   var meta_inf = zip.folder("META-INF");
   meta_inf.file("container.xml", "Testing");
@@ -99,12 +203,15 @@ function createXHTMLZipFolder(data) {
 
   for (var key in data.content_structure) {
     //console.log(key);
+
     for (let i = 0; i < data.content_structure[key].level_1.length; i++) {
       //BELOW: Level 1 Tag Creation
       let items = data.content_structure[key].level_1;
       //console.log(data.content_structure[key].level_1);
 
-      var test = doc.createElement("div");
+      // var test = doc.createElement("div");
+      var titleTag = doc.querySelector("title");
+      titleTag.innerHTML = data.content_structure[key].digitalFileName;
 
       var badge1 = doc.createElement("section");
       if (items[i].digitalPageNumber < 10) {
@@ -428,9 +535,12 @@ function createXHTMLZipFolder(data) {
   /* CREATION OF .XHTML FILES ENDS */
   /*********************************/
 
+  /********************************************************************************************************************************/
+
   /***************************************/
   /* CREATION OF CONTENT.OPF FILE STARTS */
   /***************************************/
+  // var lineBreak = content_document.createElement("br");
 
   var tableOfContents = content_document.createComment("Table of Contents");
   content_document.querySelector("manifest").appendChild(tableOfContents);
@@ -451,9 +561,10 @@ function createXHTMLZipFolder(data) {
   /* Creates XHTML Items */
 
   var xhtmlPages = content_document.createComment("XHTML pages");
+
   content_document.querySelector("manifest").appendChild(xhtmlPages);
 
-  for (var key in data) {
+  for (var key in data.content_structure) {
     //console.log(key);
 
     var item = content_document.createElement("item");
@@ -466,7 +577,7 @@ function createXHTMLZipFolder(data) {
   }
 
   /* Creates Spine references */
-  for (var key in data) {
+  for (var key in data.content_structure) {
     var itemref = content_document.createElement("itemref");
     itemref.setAttribute("idref", key);
     itemref.setAttribute("linear", "yes");
@@ -486,6 +597,167 @@ function createXHTMLZipFolder(data) {
   /* CREATION OF CONTENT.OPF FILE ENDS */
   /*************************************/
 
+  /********************************************************************************************************************************/
+
+  /*************************************/
+  /* CREATION OF TOC.XHTML FILE STARTS */
+  /*************************************/
+
+  for (var key in data.toc) {
+    // console.log(key);
+    for (let i = 0; i < data.toc[key].length; i++) {
+      //BELOW: Level 1 Tag Creation
+      let items = data.toc[key];
+      // console.log(items[i].digitalPageFileName);
+
+      var listItem1 = toc_doc.createElement("li");
+      toc_doc.querySelector("ol").appendChild(listItem1);
+
+      var anchor1 = toc_doc.createElement("a");
+      anchor1.className = "xref";
+      anchor1.href = items[i].digitalPageFileName;
+
+      listItem1.appendChild(anchor1);
+
+      var span1 = toc_doc.createElement("span");
+      span1.className = "title";
+      span1.innerHTML = items[i].title;
+
+      anchor1.appendChild(span1);
+
+      // listItem1.innerHTML = anchor1;
+
+      if (items[i].secondLevel.length > 0) {
+        var orderedList2 = toc_doc.createElement("ol");
+        listItem1.appendChild(orderedList2);
+
+        for (let ii = 0; ii < items[i].secondLevel.length; ii++) {
+          var listItem2 = toc_doc.createElement("li");
+
+          var anchor2 = toc_doc.createElement("a");
+          anchor2.className = "xref";
+          anchor2.href = items[i].secondLevel[ii].digitalPageFileName;
+
+          var span2 = toc_doc.createElement("span");
+          span2.className = "title";
+          span2.innerHTML = items[i].secondLevel[ii].title;
+
+          anchor2.appendChild(span2);
+          listItem2.appendChild(anchor2);
+          orderedList2.appendChild(listItem2);
+
+          if (items[i].secondLevel[ii].thirdLevel.length > 0) {
+            var orderedList3 = toc_doc.createElement("ol");
+            listItem2.appendChild(orderedList3);
+
+            for (
+              let iii = 0;
+              iii < items[i].secondLevel[ii].thirdLevel.length;
+              iii++
+            ) {
+              var listItem3 = toc_doc.createElement("li");
+
+              var anchor3 = toc_doc.createElement("a");
+              anchor3.className = "xref";
+              anchor3.href =
+                items[i].secondLevel[ii].thirdLevel[iii].digitalPageFileName;
+
+              var span3 = toc_doc.createElement("span");
+              span3.className = "title";
+              span3.innerHTML = items[i].secondLevel[ii].thirdLevel[iii].title;
+
+              anchor3.appendChild(span3);
+              listItem3.appendChild(anchor3);
+              orderedList3.appendChild(listItem3);
+
+              if (
+                items[i].secondLevel[ii].thirdLevel[iii].fourthLevel.length > 0
+              ) {
+                var orderedList4 = toc_doc.createElement("ol");
+                listItem3.appendChild(orderedList4);
+
+                for (
+                  let iv = 0;
+                  iv <
+                  items[i].secondLevel[ii].thirdLevel[iii].fourthLevel.length;
+                  iv++
+                ) {
+                  var listItem4 = toc_doc.createElement("li");
+
+                  var anchor4 = toc_doc.createElement("a");
+                  anchor4.className = "xref";
+                  anchor4.href =
+                    items[i].secondLevel[ii].thirdLevel[iii].fourthLevel[
+                      iv
+                    ].digitalPageFileName;
+
+                  var span4 = toc_doc.createElement("span");
+                  span4.className = "title";
+                  span4.innerHTML =
+                    items[i].secondLevel[ii].thirdLevel[iii].fourthLevel[
+                      iv
+                    ].title;
+
+                  anchor4.appendChild(span4);
+                  listItem4.appendChild(anchor4);
+                  orderedList4.appendChild(listItem4);
+
+                  if (
+                    items[i].secondLevel[ii].thirdLevel[iii].fourthLevel[iv]
+                      .fifthLevel.length > 0
+                  ) {
+                    var orderedList5 = toc_doc.createElement("ol");
+                    listItem4.appendChild(orderedList5);
+
+                    for (
+                      let v = 0;
+                      v <
+                      items[i].secondLevel[ii].thirdLevel[iii].fourthLevel[iv]
+                        .fifthLevel.length;
+                      v++
+                    ) {
+                      var listItem5 = toc_doc.createElement("li");
+
+                      var anchor5 = toc_doc.createElement("a");
+                      anchor5.className = "xref";
+                      anchor5.href =
+                        items[i].secondLevel[ii].thirdLevel[iii].fourthLevel[
+                          iv
+                        ].fifthLevel[v].digitalPageFileName;
+
+                      var span5 = toc_doc.createElement("span");
+                      span5.className = "title";
+                      span5.innerHTML =
+                        items[i].secondLevel[ii].thirdLevel[iii].fourthLevel[
+                          iv
+                        ].fifthLevel[v].title;
+
+                      anchor5.appendChild(span5);
+                      listItem5.appendChild(anchor5);
+                      orderedList5.appendChild(listItem5);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ops.file(
+    "toc.xhtml",
+    '<?xml version="1.0" encoding="utf-8"?>\n' +
+      pretty(toc_doc.querySelector("html").outerHTML)
+  );
+
+  /***********************************/
+  /* CREATION OF TOC.XHTML FILE ENDS */
+  /***********************************/
+
+  /********************************************************************************************************************************/
+
   /*********************************/
   /* CREATION OF OVERALL .ZIP FILE */
   /*********************************/
@@ -495,72 +767,3 @@ function createXHTMLZipFolder(data) {
 }
 
 /********************************************************************************************************************************/
-
-/****************************/
-/* FAKE DOM FOR XHTML FILES */
-/****************************/
-const dom = new JSDOM(
-  `
-<?xml version="1.0" encoding="utf-8"?>
-<html
-  xmlns:m="http://www.w3.org/1998/Math/MathML"
-  xmlns:epub="http://www.idpf.org/2007/ops"
-  xmlns="http://www.w3.org/1999/xhtml"
-  xml:lang="en"
-  lang="en"
->
-  <head>
-    <title>Page Title Goes Here</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/re6_student.css" />
-  </head><body epub:type="frontmatter|bodymatter|backmatter">
-    <section></section></body></html>`,
-  {
-    includeNodeLocations: true
-  }
-);
-dom.serialize();
-const doc = dom.window.document;
-
-/*********************************/
-/* FAKE DOM FOR CONTENT.OPF FILE */
-/*********************************/
-const content_dom = new JSDOM(
-  `
-<!DOCTYPE html>
-    <body id="app">
-        <?xml version="1.0" encoding="utf-8"?>
-        <package xmlns="http://www.idpf.org/2007/opf" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" version="3.0" xml:lang="en" unique-identifier="ISBN-978-0-13-458983-1">
-        <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:title>{book title goes here}</dc:title>
-        <dc:language>en-CA</dc:language>
-        <dc:identifier id="ISBN-978-0-13-458983-1">{book isbn goes here}</dc:identifier>
-        <dc:creator id="creator">The Catholic Bishops of Ontario, Alberta, Saskatchewan, and Northwest Territories</dc:creator>
-        <meta property="dcterms:creator">The Catholic Bishops of Ontario, Alberta, Saskatchewan, and Northwest Territories</meta>
-        <dc:publisher>Pearson Canada</dc:publisher>
-        <dc:date>{created date goes here}</dc:date>
-        <meta property="dcterms:modified">{last modified date goes here}</meta>
-        <dc:rights>Copyright &#x00A9; {copyright year}</dc:rights>
-        <meta property="rendition:layout">reflowable</meta>
-        <meta property="rendition:orientation">auto</meta>
-        <meta property="rendition:spread">auto</meta>
-        <meta property="ibooks:specified-fonts">true</meta>
-        <meta name="cover" content="cover-image"/>
-        </metadata>
-        
-        <manifest>
-        </manifest>
-        
-        <spine toc="ncx">
-        </spine>
-        </package>
-    </body>
-</html>
-`,
-  {
-    includeNodeLocations: true
-  }
-);
-content_dom.serialize();
-const content_document = content_dom.window.document;
