@@ -18,7 +18,7 @@ var selected_json;
 var css_input;
 var js_input;
 var section_id_input;
-var section_id_input;
+var section_class_input;
 
 /************************/
 /* FORM EVENT LISTENERS */
@@ -54,14 +54,16 @@ function buttonTest(e) {
 
   console.log("Button clicked!");
 
-  // console.log("CSS: " + document.getElementById("css_input").value);
-  // console.log("JS: " + document.getElementById("js_input").value);
-  // console.log("ID: " + document.getElementById("id_input").value);
-  // console.log("CLASS: " + document.getElementById("class_input").value);
-
   css_input = document.getElementById("css_input").value;
+  js_input = document.getElementById("js_input").value;
+  section_id_input = document.getElementById("id_input").value;
+  section_class_input = document.getElementById("class_input").value;
 
-  const result = createXHTMLZipFolder(selected_json);
+  if (css_input == "") {
+    alert("A CSS file is required!");
+  } else {
+    const result = createXHTMLZipFolder(selected_json);
+  }
 }
 
 function createXHTMLZipFolder(data) {
@@ -133,8 +135,6 @@ function createXHTMLZipFolder(data) {
     <head>
         <title>Insert Title Here</title>
         <link rel="stylesheet" type="text/css" href="../css/${css_input}.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/re6_student.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/re_fmbm.css"/>
         <meta charset="UTF-8"/>
     </head>
 
@@ -148,42 +148,11 @@ function createXHTMLZipFolder(data) {
         <h1 class="title title_01" epub:type="title" id="h1_01_toc">Content</h1>
         <ol>
         </ol>
-      </nav>
-    </body>
-</html>
+      </nav></body></html>
   `
   );
   toc_dom.serialize();
   var toc_doc = toc_dom.window.document;
-
-  /********************************************************************************************************************************/
-
-  /****************************/
-  /* FAKE DOM FOR XHTML FILES */
-  /****************************/
-  var dom = new JSDOM(
-    `
-<?xml version="1.0" encoding="utf-8"?>
-<html
-  xmlns:m="http://www.w3.org/1998/Math/MathML"
-  xmlns:epub="http://www.idpf.org/2007/ops"
-  xmlns="http://www.w3.org/1999/xhtml"
-  xml:lang="en"
-  lang="en"
->
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/${css_input}.css" />
-  </head><body epub:type="frontmatter|bodymatter|backmatter">
-    <section></section></body></html>`,
-    {
-      includeNodeLocations: true
-    }
-  );
-  dom.serialize();
-  const doc = dom.window.document;
 
   /********************************************************************************************************************************/
 
@@ -204,14 +173,72 @@ function createXHTMLZipFolder(data) {
   for (var key in data.content_structure) {
     //console.log(key);
 
+    /********************************************************************************************************************************/
+
+    /****************************/
+    /* FAKE DOM FOR XHTML FILES */
+    /****************************/
+    var dom = new JSDOM(
+      `
+<?xml version="1.0" encoding="utf-8"?>
+<html
+  xmlns:m="http://www.w3.org/1998/Math/MathML"
+  xmlns:epub="http://www.idpf.org/2007/ops"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="en"
+  lang="en"
+>
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+  </head><body>
+    <section></section></body></html>`,
+      {
+        includeNodeLocations: true
+      }
+    );
+    dom.serialize();
+    const doc = dom.window.document;
+
+    //Adding JS (script tage) within the Head Tag
+    if (js_input != "") {
+      var jsTag = doc.createElement("script");
+      jsTag.setAttribute("type", "text/javascript");
+      jsTag.setAttribute("src", "../js/" + js_input + ".js");
+      doc.querySelector("head").appendChild(jsTag);
+    }
+
+    //Adding CSS (link tag) within Head Tag
+    var linkTag = doc.createElement("link");
+    linkTag.setAttribute("rel", "stylesheet");
+    linkTag.setAttribute("type", "text/css");
+    linkTag.setAttribute("href", "../css/" + css_input + ".css");
+    doc.querySelector("head").appendChild(linkTag);
+
+    /********************************************************************************************************************************/
+
     for (let i = 0; i < data.content_structure[key].level_1.length; i++) {
       //BELOW: Level 1 Tag Creation
       let items = data.content_structure[key].level_1;
       //console.log(data.content_structure[key].level_1);
 
-      // var test = doc.createElement("div");
+      //Adding Digital Page File Name to the Title Tag
       var titleTag = doc.querySelector("title");
-      titleTag.innerHTML = data.content_structure[key].digitalFileName;
+      titleTag.innerHTML = data.content_structure[key].pageTitle;
+
+      //Adding Parent Section ID and CLASS
+      var sectionTag = doc.querySelector("section");
+      sectionTag.id = section_id_input;
+      sectionTag.className = section_class_input;
+
+      //Adding epub:type to the Body Tag
+      var bodyTag = doc.querySelector("body");
+      bodyTag.setAttribute(
+        "epub:type",
+        data.content_structure[key].documentType
+      );
 
       var badge1 = doc.createElement("section");
       if (items[i].digitalPageNumber < 10) {
@@ -765,5 +792,7 @@ function createXHTMLZipFolder(data) {
     saveAs(blob, "ePub.zip");
   });
 }
+
+/********************************************************************************************************************************/
 
 /********************************************************************************************************************************/
